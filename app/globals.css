@@ -9,6 +9,15 @@
   --color-brand: #5b4fe0;
   --color-brand-light: #a79fcb;
   --color-brand-tint: #f2f0ff;
+
+  /* Additional accents introduced by the Global Markets page design.
+     Kept distinct from --color-brand because the Figma source uses a
+     visibly different violet for its category eyebrows/links, plus a
+     separate amber used for coverage caveats, and a light neutral
+     surface tone used to alternate section backgrounds. */
+  --color-accent-violet: #6c5ce7;
+  --color-accent-amber: #b98132;
+  --color-surface: #f6f5fb;
 }
 
 @theme inline {
@@ -19,6 +28,9 @@
   --color-brand: var(--color-brand);
   --color-brand-light: var(--color-brand-light);
   --color-brand-tint: var(--color-brand-tint);
+  --color-accent-violet: var(--color-accent-violet);
+  --color-accent-amber: var(--color-accent-amber);
+  --color-surface: var(--color-surface);
   --font-sans: var(--font-ibm-plex-sans);
 }
 

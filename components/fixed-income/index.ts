@@ -1,0 +1,11 @@
+export { default as HeroSection } from "./HeroSection";
+export { default as TrustBarSection } from "./TrustBarSection";
+export { default as ScopeDefinitionSection } from "./ScopeDefinitionSection";
+export { default as EvidenceStackSection } from "./EvidenceStackSection";
+export { default as MinimumEvidenceCardSection } from "./MinimumEvidenceCardSection";
+export { default as CoverageTruthSection } from "./CoverageTruthSection";
+export { default as ChangeDetectionSection } from "./ChangeDetectionSection";
+export { default as AiGovernanceSection } from "./AiGovernanceSection";
+export { default as DiscoverabilitySection } from "./DiscoverabilitySection";
+export { default as FaqSection } from "./FaqSection";
+export { default as FinalCtaSection } from "./FinalCtaSection";
