@@ -1,0 +1,41 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #171335;
+
+  --color-ink: #171335;
+  --color-ink-2: #24204a;
+  --color-brand: #5b4fe0;
+  --color-brand-light: #a79fcb;
+  --color-brand-tint: #f2f0ff;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-ink: var(--color-ink);
+  --color-ink-2: var(--color-ink-2);
+  --color-brand: var(--color-brand);
+  --color-brand-light: var(--color-brand-light);
+  --color-brand-tint: var(--color-brand-tint);
+  --font-sans: var(--font-ibm-plex-sans);
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+}
+
+/* Respect reduced-motion preferences for anyone not covered by
+   framer-motion's own useReducedMotion checks (e.g. hover transforms). */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
