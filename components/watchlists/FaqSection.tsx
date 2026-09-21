@@ -104,7 +104,7 @@ export default function FaqSection() {
 
           <Reveal delay={0.2} className="relative hidden min-h-[420px] overflow-hidden rounded-2xl lg:block">
             <Image
-              src="/images/product/watchlist/Frame 45.webp"
+              src="/images/product/watchlist/watchlist-faq-team.webp"
               alt="Research team reviewing a workflow diagram at a table"
               fill
               sizes="320px"
