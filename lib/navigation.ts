@@ -131,7 +131,7 @@ export const megaMenus: Record<string, MegaMenuContent> = {
           {
             title: "Product Overview",
             description: "What Talvrin does and how the evidence workflow fits together.",
-            href: "/product/platform-overview",
+            href: "/product/overview",
           },
           {
             title: "Research Workspace",
