@@ -105,7 +105,7 @@ export default function ChangeDetectionSection() {
             className="relative min-h-[260px] overflow-hidden rounded-2xl lg:aspect-[565/409] lg:min-h-0"
           >
             <Image
-              src="/images/fixed-income/fixed-income-change-detection-meeting.webp"
+              src="/images/markets/fixed-income/fixed-income-change-detection-meeting.webp"
               alt="Research team reviewing evidence together in an office"
               fill
               sizes="(min-width: 1024px) 565px, 100vw"

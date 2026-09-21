@@ -30,7 +30,7 @@ export default function RelationshipsSection() {
 
           <Reveal delay={0.1} className="relative min-h-[260px] overflow-hidden rounded-[14px] border border-ink/8 bg-surface">
             <Image
-              src="/images/global-markets/global-markets-relationships-map.webp"
+              src="/images/markets/global-markets/global-markets-relationships-map.webp"
               alt="Analysts reviewing a lit global market map on a table display"
               fill
               sizes="(min-width: 1024px) 40vw, 100vw"

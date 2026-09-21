@@ -1,0 +1,12 @@
+export { default as HeroSection } from "./HeroSection";
+export { default as PrinciplesSection } from "./PrinciplesSection";
+export { default as WhatBelongsSection } from "./WhatBelongsSection";
+export { default as AnatomySection } from "./AnatomySection";
+export { default as MonitoringHandoffSection } from "./MonitoringHandoffSection";
+export { default as CreateEditSection } from "./CreateEditSection";
+export { default as BulkActionsSection } from "./BulkActionsSection";
+export { default as ThreeLayersSection } from "./ThreeLayersSection";
+export { default as AiBoundarySection } from "./AiBoundarySection";
+export { default as CoverageFreshnessSection } from "./CoverageFreshnessSection";
+export { default as FaqSection } from "./FaqSection";
+export { default as FinalCtaSection } from "./FinalCtaSection";

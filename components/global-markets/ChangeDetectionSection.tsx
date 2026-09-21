@@ -82,7 +82,7 @@ export default function ChangeDetectionSection() {
 
           <Reveal delay={0.15} className="relative min-h-[260px] overflow-hidden rounded-2xl lg:min-h-0">
             <Image
-              src="/images/global-markets/global-markets-change-detection-meeting.webp"
+              src="/images/markets/global-markets/global-markets-change-detection-meeting.webp"
               alt="Research team reviewing evidence on a large wall display"
               fill
               sizes="(min-width: 1024px) 40vw, 100vw"

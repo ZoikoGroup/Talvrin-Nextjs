@@ -28,8 +28,8 @@ export const primaryNav: NavGroup[] = [
     label: "Markets",
     href: "/markets",
     items: [
-      { label: "Global Markets", href: "/global-markets" },
-      { label: "Fixed Income", href: "/fixed-income" },
+      { label: "Global Markets", href: "/markets/global-markets" },
+      { label: "Fixed Income", href: "/markets/fixed-income" },
       { label: "Equities", href: "/markets/equities" },
       { label: "Macro & Economics", href: "/markets/macro-economics" },
       { label: "Funds & Other Assets", href: "/markets/funds-other-assets" },
@@ -154,9 +154,9 @@ export const megaMenus: Record<string, MegaMenuContent> = {
         heading: "Work Management",
         items: [
           {
-            title: "Watchlists & Alerts",
+            title: "Watchlists",
             description: "Persistent research universes and evidence-change alerts.",
-            href: "/product/watchlists-alerts",
+            href: "/product/watchlists",
           },
           {
             title: "Saved Research",
@@ -206,7 +206,7 @@ export const megaMenus: Record<string, MegaMenuContent> = {
           {
             title: "Fixed Income",
             description: "Supported sovereign and other debt-market coverage.",
-            href: "/fixed-income",
+            href: "/markets/fixed-income",
           },
           {
             title: "Equities",

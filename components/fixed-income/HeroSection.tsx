@@ -70,7 +70,7 @@ export default function HeroSection() {
           className="relative mt-[41.4px] aspect-[500/513.8] w-full overflow-hidden rounded-2xl border border-white/14 bg-white/4"
         >
           <Image
-            src="/images/fixed-income/fixed-income-hero-team.webp"
+            src="/images/markets/fixed-income/fixed-income-hero-team.webp"
             alt="A research team reviewing fixed-income evidence together in an office"
             fill
             priority
