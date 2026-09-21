@@ -29,23 +29,23 @@ export default function AiBoundarySection() {
           </SectionHeading>
         </Reveal>
 
-        <div className="mt-11 grid grid-cols-1 gap-6 lg:grid-cols-[minmax(0,1fr)_420px]">
-          <Reveal className="rounded-2xl border border-white/12 bg-white/5 p-7">
+        <div className="mt-11 grid grid-cols-1 gap-6 lg:grid-cols-[minmax(0,1fr)_340px] lg:items-stretch">
+          <Reveal className="rounded-2xl border border-white/12 bg-white/5 p-6">
             <p className="text-xs font-bold uppercase tracking-widest text-accent-violet">
               AI May Assist With
             </p>
-            <div className="mt-4 flex flex-wrap gap-2.5">
+            <div className="mt-4 flex flex-wrap gap-2">
               {mayAssistWith.map((item) => (
                 <span
                   key={item}
-                  className="rounded-full border border-white/15 px-4 py-2 text-sm font-medium text-white/85"
+                  className="whitespace-nowrap rounded-full border border-white/15 px-3 py-1.5 text-xs font-medium text-white/85"
                 >
                   {item}
                 </span>
               ))}
             </div>
 
-            <p className="mt-7 border-t border-white/10 pt-6 text-xs font-bold uppercase tracking-widest text-accent-amber">
+            <p className="mt-6 border-t border-white/10 pt-5 text-xs font-bold uppercase tracking-widest text-accent-amber">
               AI Must Not
             </p>
             <ul className="mt-4 space-y-3">
@@ -66,7 +66,7 @@ export default function AiBoundarySection() {
               src="/images/product/watchlist/Background+Border (1).png"
               alt="Analysts working at a row of monitors displaying research dashboards"
               fill
-              sizes="(min-width: 1024px) 420px, 100vw"
+              sizes="(min-width: 1024px) 340px, 100vw"
               className="object-cover"
             />
           </Reveal>
