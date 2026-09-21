@@ -42,7 +42,7 @@ export default function AnatomySection() {
         <div className="mt-9 grid grid-cols-1 gap-10 lg:grid-cols-[380px_minmax(0,1fr)] lg:items-stretch">
           <Reveal className="relative min-h-[320px] w-full overflow-hidden rounded-2xl border border-ink/8 lg:min-h-0">
             <Image
-              src="/images/product/watchlist/Background+Border (1).webp"
+              src="/images/product/watchlist/watchlist-anatomy-dashboard.webp"
               alt="Analyst pointing to a research dashboard on a large monitor"
               fill
               sizes="(min-width: 1024px) 380px, 100vw"

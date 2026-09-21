@@ -94,7 +94,7 @@ export default function CreateEditSection() {
             className="relative min-h-[220px] overflow-hidden rounded-[14px] border border-ink/8 bg-white sm:col-span-2 lg:col-span-1 lg:min-h-0"
           >
             <Image
-              src="/images/product/watchlist/Frame 44.png"
+              src="/images/product/watchlist/watchlist-create-edit-team.png"
               alt="Research team reviewing data together at their workstations"
               fill
               sizes="(min-width: 1024px) 25vw, (min-width: 640px) 50vw, 100vw"

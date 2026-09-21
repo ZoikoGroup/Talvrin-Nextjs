@@ -49,7 +49,7 @@ export default function MonitoringHandoffSection() {
             className="relative min-h-[260px] overflow-hidden rounded-2xl border border-white/12 lg:min-h-0"
           >
             <Image
-              src="/images/product/watchlist/Overlay+Border (1).webp"
+              src="/images/product/watchlist/watchlist-monitoring-handoff.webp"
               alt="Team reviewing a low-code monitoring workflow on a large display"
               fill
               sizes="(min-width: 1024px) 420px, 100vw"

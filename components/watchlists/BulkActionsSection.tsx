@@ -54,7 +54,7 @@ export default function BulkActionsSection() {
 
           <Reveal delay={0.15} className="relative min-h-[260px] overflow-hidden rounded-2xl border border-ink/8 lg:min-h-0">
             <Image
-              src="/images/product/watchlist/Frame 43.png"
+              src="/images/product/watchlist/watchlist-bulk-actions-presentation.png"
               alt="Analyst presenting a growth strategy dashboard to a boardroom"
               fill
               sizes="(min-width: 1024px) 380px, 100vw"

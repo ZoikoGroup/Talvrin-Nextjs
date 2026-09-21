@@ -61,7 +61,7 @@ export default function HeroSection() {
           className="relative aspect-[520/401] w-full overflow-hidden rounded-2xl border border-white/14 bg-white/4"
         >
           <Image
-            src="/images/product/watchlist/Overlay+Border.webp"
+            src="/images/product/watchlist/watchlist-hero-review.webp"
             alt="Two analysts reviewing research on a tablet in a meeting room"
             fill
             priority

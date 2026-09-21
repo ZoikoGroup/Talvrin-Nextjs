@@ -59,7 +59,7 @@ export default function WhatBelongsSection() {
             className="relative min-h-[220px] overflow-hidden rounded-[14px] border border-ink/8 bg-white sm:col-span-2 lg:col-span-1 lg:min-h-0"
           >
             <Image
-              src="/images/product/watchlist/Background+Border.png"
+              src="/images/product/watchlist/watchlist-belongs-team-meeting.png"
               alt="Team reviewing research together in a meeting room"
               fill
               sizes="(min-width: 1024px) 20vw, (min-width: 640px) 50vw, 100vw"

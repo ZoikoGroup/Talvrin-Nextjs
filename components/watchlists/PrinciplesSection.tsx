@@ -45,7 +45,7 @@ export default function PrinciplesSection() {
 
           <div className="relative min-h-[220px] lg:min-h-0">
             <Image
-              src="/images/product/watchlist/image 17.webp"
+              src="/images/product/watchlist/watchlist-principles-analyst.webp"
               alt="Analyst smiling while reviewing research on a laptop"
               fill
               sizes="(min-width: 1024px) 320px, 100vw"

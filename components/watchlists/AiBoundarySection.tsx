@@ -63,7 +63,7 @@ export default function AiBoundarySection() {
             className="relative min-h-[260px] overflow-hidden rounded-2xl border border-white/12 lg:min-h-0"
           >
             <Image
-              src="/images/product/watchlist/Background+Border (1).png"
+              src="/images/product/watchlist/watchlist-ai-boundary-team.png"
               alt="Analysts working at a row of monitors displaying research dashboards"
               fill
               sizes="(min-width: 1024px) 340px, 100vw"
