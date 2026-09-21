@@ -80,7 +80,7 @@ export default function ResearchLoopSection() {
 
         <Reveal delay={0.2} className="relative mt-11 aspect-[1309/362] w-full overflow-hidden rounded-2xl bg-white">
           <Image
-            src="/images/global-markets/global-markets-research-loop-meeting.webp"
+            src="/images/markets/global-markets/global-markets-research-loop-meeting.webp"
             alt="Research team discussing evidence in an office lounge"
             fill
             sizes="100vw"

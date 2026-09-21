@@ -45,7 +45,7 @@ export default function EvidenceStackSection() {
 
           <Reveal delay={0.08} className="relative min-h-[260px] overflow-hidden rounded-[14px] border border-ink/8 lg:min-h-0">
             <Image
-              src="/images/fixed-income/fixed-income-evidence-stack-team.webp"
+              src="/images/markets/fixed-income/fixed-income-evidence-stack-team.webp"
               alt="Two analysts reviewing evidence on a laptop in a research office"
               fill
               sizes="(min-width: 1024px) 773px, 100vw"

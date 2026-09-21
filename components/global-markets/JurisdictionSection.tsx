@@ -62,7 +62,7 @@ export default function JurisdictionSection() {
 
         <Reveal delay={0.15} className="relative mt-10 aspect-[238/430] w-full max-w-xs overflow-hidden rounded-2xl lg:mt-0">
           <Image
-            src="/images/global-markets/global-markets-jurisdiction-office.webp"
+            src="/images/markets/global-markets/global-markets-jurisdiction-office.webp"
             alt="Two colleagues reviewing research on a laptop in a modern office"
             fill
             sizes="(min-width: 1024px) 260px, 100vw"

@@ -56,7 +56,7 @@ export default function MarketAreasSection() {
 
           <Reveal delay={0.24} className="relative min-h-[220px] overflow-hidden rounded-[14px] border border-ink/8 bg-white sm:col-span-2 lg:col-span-1 lg:min-h-0">
             <Image
-              src="/images/global-markets/global-markets-market-areas-team.webp"
+              src="/images/markets/global-markets/global-markets-market-areas-team.webp"
               alt="Analysts reviewing research together on laptops"
               fill
               sizes="(min-width: 1024px) 25vw, (min-width: 640px) 50vw, 100vw"

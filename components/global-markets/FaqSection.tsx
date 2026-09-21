@@ -82,7 +82,7 @@ export default function FaqSection() {
 
           <Reveal delay={0.2} className={clsx("relative hidden min-h-[420px] overflow-hidden rounded-2xl lg:block")}>
             <Image
-              src="/images/global-markets/global-markets-faq-handshake.webp"
+              src="/images/markets/global-markets/global-markets-faq-handshake.webp"
               alt="Two colleagues shaking hands across a conference table"
               fill
               sizes="320px"

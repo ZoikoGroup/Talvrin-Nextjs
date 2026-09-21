@@ -23,7 +23,7 @@ export default function MinimumEvidenceCardSection() {
           className="relative mt-[11.4px] aspect-[1309/410] w-full overflow-hidden rounded-2xl bg-surface"
         >
           <Image
-            src="/images/fixed-income/fixed-income-evidence-card-group.webp"
+            src="/images/markets/fixed-income/fixed-income-evidence-card-group.webp"
             alt="A group of colleagues discussing fixed-income research at a table"
             fill
             sizes="100vw"

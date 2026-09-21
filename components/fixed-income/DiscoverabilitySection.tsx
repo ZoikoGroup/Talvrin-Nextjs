@@ -38,7 +38,7 @@ export default function DiscoverabilitySection() {
         <div className="mt-9 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
           <Reveal className="relative min-h-[220px] overflow-hidden rounded-[14px] border border-ink/8 lg:min-h-0">
             <Image
-              src="/images/fixed-income/fixed-income-discoverability-team.webp"
+              src="/images/markets/fixed-income/fixed-income-discoverability-team.webp"
               alt="Colleagues reviewing fixed-income research together"
               fill
               sizes="(min-width: 1024px) 25vw, (min-width: 640px) 50vw, 100vw"

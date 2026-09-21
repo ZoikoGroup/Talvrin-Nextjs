@@ -84,7 +84,7 @@ export default function FaqSection() {
 
           <Reveal delay={0.2} className="relative hidden min-h-[420px] overflow-hidden rounded-2xl lg:block">
             <Image
-              src="/images/fixed-income/fixed-income-faq-speaker.webp"
+              src="/images/markets/fixed-income/fixed-income-faq-speaker.webp"
               alt="A speaker presenting fixed-income research to colleagues"
               fill
               sizes="423px"
