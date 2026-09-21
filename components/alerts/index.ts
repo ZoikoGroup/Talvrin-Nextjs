@@ -1,0 +1,10 @@
+export { default as HeroSection } from "./HeroSection";
+export { default as TrustBarSection } from "./TrustBarSection";
+export { default as WhatAlertsAreSection } from "./WhatAlertsAreSection";
+export { default as AnatomySection } from "./AnatomySection";
+export { default as ThreeLayersSection } from "./ThreeLayersSection";
+export { default as NoiseControlSection } from "./NoiseControlSection";
+export { default as AiBoundarySection } from "./AiBoundarySection";
+export { default as CoverageTrustSection } from "./CoverageTrustSection";
+export { default as FaqSection } from "./FaqSection";
+export { default as FinalCtaSection } from "./FinalCtaSection";
