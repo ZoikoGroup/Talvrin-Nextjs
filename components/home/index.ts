@@ -1,3 +1,12 @@
 export { default as HeroSection } from "./HeroSection";
-export { default as HighlightsSection } from "./HighlightsSection";
-export { default as CtaSection } from "./CtaSection";
+export { default as TrustBarSection } from "./TrustBarSection";
+export { default as CoreWorkflowSection } from "./CoreWorkflowSection";
+export { default as PrimaryDifferentiatorSection } from "./PrimaryDifferentiatorSection";
+export { default as ChangeDetectionSection } from "./ChangeDetectionSection";
+export { default as GlobalPositioningSection } from "./GlobalPositioningSection";
+export { default as AiGovernanceSection } from "./AiGovernanceSection";
+export { default as SolutionsRoutingSection } from "./SolutionsRoutingSection";
+export { default as TrustArchitectureSection } from "./TrustArchitectureSection";
+export { default as DiscoverabilitySection } from "./DiscoverabilitySection";
+export { default as FaqSection } from "./FaqSection";
+export { default as FinalCtaSection } from "./FinalCtaSection";

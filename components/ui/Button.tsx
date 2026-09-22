@@ -2,7 +2,7 @@ import Link from "next/link";
 import { AnchorHTMLAttributes, ButtonHTMLAttributes, ReactNode } from "react";
 import clsx from "clsx";
 
-type Variant = "primary" | "secondary" | "ghost" | "onDark";
+type Variant = "primary" | "secondary" | "ghost" | "onDark" | "brand";
 
 /**
  * Each variant's resting look (border + fill + text) plus the sweep-fill
@@ -28,6 +28,11 @@ const variants: Record<Variant, { rest: string; fill: string; hoverText: string 
     rest: "border-white bg-white text-ink",
     fill: "bg-brand",
     hoverText: "group-hover:text-white",
+  },
+  brand: {
+    rest: "border-brand bg-brand text-white",
+    fill: "bg-white",
+    hoverText: "group-hover:text-brand",
   },
 };
 

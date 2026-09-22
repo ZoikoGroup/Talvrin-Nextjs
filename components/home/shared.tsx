@@ -1,18 +1,69 @@
 import { ReactNode } from "react";
 import clsx from "clsx";
 
-export function SectionEyebrow({ children, className }: { children: ReactNode; className?: string }) {
+type Tone = "amber" | "violet";
+
+const eyebrowTones: Record<Tone, string> = {
+  amber: "text-accent-amber",
+  violet: "text-accent-violet",
+};
+
+export function SectionEyebrow({
+  tone = "violet",
+  children,
+  className,
+}: {
+  tone?: Tone;
+  children: ReactNode;
+  className?: string;
+}) {
   return (
-    <p className={clsx("text-xs font-semibold uppercase tracking-wider text-brand", className)}>
+    <p className={clsx("text-xs font-bold uppercase tracking-widest", eyebrowTones[tone], className)}>
       {children}
     </p>
   );
 }
 
-export function SectionHeading({ children, className }: { children: ReactNode; className?: string }) {
+export function SectionHeading({
+  inverted,
+  children,
+  className,
+}: {
+  inverted?: boolean;
+  children: ReactNode;
+  className?: string;
+}) {
   return (
-    <h2 className={clsx("mt-3 text-3xl font-semibold tracking-tight text-ink sm:text-4xl", className)}>
+    <h2
+      className={clsx(
+        "mt-4 text-4xl font-bold leading-[1.08] tracking-tight sm:text-5xl lg:text-[44px]",
+        inverted ? "text-white" : "text-ink",
+        className
+      )}
+    >
       {children}
     </h2>
+  );
+}
+
+export function SectionLede({
+  inverted,
+  children,
+  className,
+}: {
+  inverted?: boolean;
+  children: ReactNode;
+  className?: string;
+}) {
+  return (
+    <p
+      className={clsx(
+        "mt-6 max-w-2xl text-lg leading-relaxed",
+        inverted ? "text-white/72" : "text-slate-600",
+        className
+      )}
+    >
+      {children}
+    </p>
   );
 }
