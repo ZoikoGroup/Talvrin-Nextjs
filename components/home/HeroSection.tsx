@@ -15,7 +15,7 @@ export default function HeroSection() {
         className="object-cover"
       />
 
-      <Container className="relative grid grid-cols-1 items-center gap-12 lg:grid-cols-[minmax(0,560px)_minmax(0,480px)] lg:gap-x-16">
+      <Container className="relative grid grid-cols-1 items-center gap-12 lg:grid-cols-[minmax(0,580px)_minmax(0,560px)] lg:gap-x-12">
         <div>
           <Reveal>
             <p className="text-xs font-bold uppercase tracking-widest text-accent-amber">
@@ -24,8 +24,10 @@ export default function HeroSection() {
           </Reveal>
 
           <Reveal delay={0.1}>
-            <h1 className="mt-4 text-4xl font-bold leading-[1.08] tracking-tight text-white sm:text-5xl lg:text-[54px]">
-              See the evidence. Before you trust the view.
+            <h1 className="mt-4 text-4xl font-bold leading-[1.08] tracking-tight text-white sm:text-5xl lg:text-[44px]">
+              See the evidence.
+              <br />
+              Before you trust the view.
             </h1>
           </Reveal>
 
