@@ -32,6 +32,16 @@
   --color-accent-amber: var(--color-accent-amber);
   --color-surface: var(--color-surface);
   --font-sans: var(--font-ibm-plex-sans);
+  --animate-marquee: marquee 32s linear infinite;
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
 }
 
 body {

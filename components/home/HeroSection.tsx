@@ -15,7 +15,7 @@ export default function HeroSection() {
         className="object-cover"
       />
 
-      <Container className="relative grid grid-cols-1 items-center gap-12 lg:grid-cols-[minmax(0,580px)_minmax(0,560px)] lg:gap-x-12">
+      <Container className="relative grid grid-cols-1 items-center gap-12 lg:grid-cols-[minmax(0,580px)_minmax(0,670px)] lg:gap-x-12">
         <div>
           <Reveal>
             <p className="text-xs font-bold uppercase tracking-widest text-accent-amber">

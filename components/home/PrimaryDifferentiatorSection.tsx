@@ -43,10 +43,10 @@ export default function PrimaryDifferentiatorSection() {
           <SectionHeading inverted>Don&rsquo;t just show me the answer. Show me why.</SectionHeading>
         </Reveal>
 
-        <Reveal delay={0.15} className="mt-10 flex flex-wrap items-center gap-x-2 gap-y-3">
+        <Reveal delay={0.15} className="mt-10 flex flex-nowrap items-center justify-between overflow-x-auto">
           {chain.map((step, index) => (
-            <div key={step} className="flex items-center gap-2">
-              <span className="rounded-full border border-white/15 px-4 py-2 text-sm text-white/85">
+            <div key={step} className="flex shrink-0 items-center gap-1.5">
+              <span className="whitespace-nowrap rounded-full border border-white/15 px-3 py-1.5 text-xs text-white/85">
                 {step}
               </span>
               {index < chain.length - 1 && (
@@ -58,27 +58,28 @@ export default function PrimaryDifferentiatorSection() {
           ))}
         </Reveal>
 
-        <div className="mt-14 grid grid-cols-1 gap-10 lg:grid-cols-[minmax(0,1fr)_420px] lg:items-stretch">
-          <Reveal delay={0.2}>
-            <p className="text-xs font-bold uppercase tracking-widest text-accent-violet">
-              Example Evidence Card
-            </p>
-            <div className="mt-5 rounded-2xl border border-white/12 bg-white p-7">
-              <div className="grid grid-cols-1 gap-x-8 gap-y-5 sm:grid-cols-2">
-                {evidenceFields.map((field) => (
-                  <div key={field.label}>
-                    <p className="text-xs text-slate-500">{field.label}</p>
-                    <p className="mt-1 text-sm font-semibold text-ink">{field.value}</p>
-                  </div>
-                ))}
-              </div>
-              <Link
-                href="/product/evidence"
-                className="mt-6 inline-block border-t border-ink/8 pt-5 text-sm font-semibold text-accent-violet transition-colors hover:text-ink"
-              >
-                Open source document →
-              </Link>
+        <Reveal delay={0.2} className="mt-14">
+          <p className="text-xs font-bold uppercase tracking-widest text-accent-violet">
+            Example Evidence Card
+          </p>
+        </Reveal>
+
+        <div className="mt-5 grid grid-cols-1 gap-10 lg:grid-cols-2 lg:items-stretch">
+          <Reveal delay={0.25} className="flex flex-col rounded-2xl border border-white/12 bg-white p-7">
+            <div className="grid grid-cols-1 gap-x-8 gap-y-5 sm:grid-cols-2">
+              {evidenceFields.map((field) => (
+                <div key={field.label}>
+                  <p className="text-xs text-slate-500">{field.label}</p>
+                  <p className="mt-1 text-sm font-semibold text-ink">{field.value}</p>
+                </div>
+              ))}
             </div>
+            <Link
+              href="/product/evidence"
+              className="mt-auto inline-block border-t border-ink/8 pt-5 text-sm font-semibold text-accent-violet transition-colors hover:text-ink"
+            >
+              Open source document →
+            </Link>
           </Reveal>
 
           <Reveal
