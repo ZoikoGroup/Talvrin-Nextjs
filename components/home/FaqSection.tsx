@@ -89,7 +89,7 @@ export default function FaqSection() {
 
           <Reveal delay={0.2} className="relative hidden min-h-[420px] overflow-hidden rounded-2xl lg:block">
             <Image
-              src="/images/home/Frame 52.png"
+              src="/images/home/home-faq-team-meeting.png"
               alt="Team reviewing an AI governance framework presentation in a meeting room"
               fill
               sizes="320px"

@@ -71,7 +71,7 @@ export default function ChangeDetectionSection() {
             className="relative min-h-[280px] overflow-hidden rounded-2xl border border-ink/8 lg:min-h-0"
           >
             <Image
-              src="/images/home/Frame 51.png"
+              src="/images/home/home-change-detection-analyst.png"
               alt="Analyst reviewing a research-evidence flowchart on a large display"
               fill
               sizes="(min-width: 1024px) 460px, 100vw"

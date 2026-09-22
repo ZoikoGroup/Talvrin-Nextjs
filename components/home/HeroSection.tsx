@@ -7,7 +7,7 @@ export default function HeroSection() {
   return (
     <section className="relative overflow-hidden bg-ink py-20 sm:py-28">
       <Image
-        src="/images/home/bg.jpg"
+        src="/images/home/home-hero-background.jpg"
         alt=""
         fill
         priority
@@ -57,7 +57,7 @@ export default function HeroSection() {
 
         <Reveal delay={0.2} className="relative mx-auto w-full max-w-md lg:max-w-none">
           <Image
-            src="/images/home/image 111.png"
+            src="/images/home/home-hero-workspace-mockup.png"
             alt="Talvrin research workspace answering &ldquo;What changed in Apple's latest filing?&rdquo; with source-verified evidence"
             width={672}
             height={448}

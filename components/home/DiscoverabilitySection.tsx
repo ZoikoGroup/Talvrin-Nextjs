@@ -52,7 +52,7 @@ export default function DiscoverabilitySection() {
             className="relative min-h-[220px] overflow-hidden rounded-2xl border border-ink/8 sm:col-span-2 lg:col-span-1 lg:min-h-0"
           >
             <Image
-              src="/images/home/Background+Border (3).png"
+              src="/images/home/home-discoverability-presentation.png"
               alt="Analyst presenting a workflow diagram to colleagues in a meeting room"
               fill
               sizes="(min-width: 1024px) 25vw, (min-width: 640px) 50vw, 100vw"

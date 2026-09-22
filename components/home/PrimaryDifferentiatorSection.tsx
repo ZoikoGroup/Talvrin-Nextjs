@@ -86,7 +86,7 @@ export default function PrimaryDifferentiatorSection() {
             className="relative min-h-[280px] overflow-hidden rounded-2xl border border-white/12 lg:min-h-0"
           >
             <Image
-              src="/images/home/Background (1).png"
+              src="/images/home/home-differentiator-analyst.png"
               alt="Analyst reviewing a data visualization overlay on a laptop"
               fill
               sizes="(min-width: 1024px) 420px, 100vw"

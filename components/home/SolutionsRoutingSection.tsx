@@ -34,7 +34,7 @@ export default function SolutionsRoutingSection() {
             className="relative min-h-[220px] overflow-hidden rounded-2xl border border-ink/8 lg:min-h-0"
           >
             <Image
-              src="/images/home/Background+Border (2).png"
+              src="/images/home/home-solutions-meeting.png"
               alt="Meeting room reviewing a Q4 growth strategy presentation with a city skyline view"
               fill
               sizes="(min-width: 1024px) 45vw, 100vw"

@@ -66,7 +66,7 @@ export default function AiGovernanceSection() {
             className="relative min-h-[280px] overflow-hidden rounded-2xl border border-ink/8 lg:min-h-0"
           >
             <Image
-              src="/images/home/Container (18).png"
+              src="/images/home/home-ai-governance-office.png"
               alt="Analyst reviewing evidence on a large screen in a glass-walled office"
               fill
               sizes="(min-width: 1024px) 420px, 100vw"

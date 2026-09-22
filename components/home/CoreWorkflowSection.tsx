@@ -59,7 +59,7 @@ export default function CoreWorkflowSection() {
 
           <Reveal delay={0.3} className="relative aspect-[280/320] w-full overflow-hidden rounded-2xl border border-ink/8 shadow-xl">
             <Image
-              src="/images/home/Container (17).png"
+              src="/images/home/home-core-workflow-dashboard.png"
               alt="Analyst pointing to a research capability flowchart on a large display"
               fill
               sizes="(min-width: 1024px) 280px, 100vw"
