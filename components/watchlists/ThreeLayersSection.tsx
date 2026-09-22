@@ -32,8 +32,11 @@ export default function ThreeLayersSection() {
           <SectionHeading>Three layers, one continuous workflow.</SectionHeading>
         </Reveal>
 
-        <Reveal delay={0.1} className="mt-11 overflow-hidden rounded-2xl border border-ink/10 bg-white">
-          <div className="min-w-[720px] overflow-x-auto sm:min-w-0">
+        <Reveal
+          delay={0.1}
+          className="mt-11 overflow-x-auto rounded-2xl border border-ink/10 bg-white"
+        >
+          <div className="min-w-[720px] sm:min-w-0">
             <div className="grid grid-cols-[140px_repeat(3,minmax(0,1fr))] border-b border-ink/10">
               <div />
               {columns.map((col) => (
@@ -51,7 +54,7 @@ export default function ThreeLayersSection() {
                 {row.cells.map((cell, index) => (
                   <div
                     key={columns[index]}
-                    className="border-l border-ink/10 px-6 py-5 text-sm leading-relaxed text-slate-600"
+                    className="break-words border-l border-ink/10 px-6 py-5 text-sm leading-relaxed text-slate-600"
                   >
                     {cell}
                   </div>
