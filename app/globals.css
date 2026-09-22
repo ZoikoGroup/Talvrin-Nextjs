@@ -18,6 +18,12 @@
   --color-accent-violet: #6c5ce7;
   --color-accent-amber: #b98132;
   --color-surface: #f6f5fb;
+
+  /* Solution-page palette. --color-muted is the slate-gray body tone used
+     across the Asset Managers design; --color-ink-soft is the deep
+     blue-violet used for row detail text in its comparison tables. */
+  --color-muted: #5d5a72;
+  --color-ink-soft: #322e52;
 }
 
 @theme inline {
@@ -31,6 +37,8 @@
   --color-accent-violet: var(--color-accent-violet);
   --color-accent-amber: var(--color-accent-amber);
   --color-surface: var(--color-surface);
+  --color-muted: var(--color-muted);
+  --color-ink-soft: var(--color-ink-soft);
   --font-sans: var(--font-ibm-plex-sans);
 }
 
