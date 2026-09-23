@@ -7,9 +7,10 @@ import { menuImage, type MegaMenuContent } from "@/lib/navigation";
 type MegaMenuPanelProps = {
   content: MegaMenuContent | null;
   isOpen: boolean;
+  onNavigate?: () => void;
 };
 
-export default function MegaMenuPanel({ content, isOpen }: MegaMenuPanelProps) {
+export default function MegaMenuPanel({ content, isOpen, onNavigate }: MegaMenuPanelProps) {
   return (
     <div
       className={clsx(
@@ -33,7 +34,7 @@ export default function MegaMenuPanel({ content, isOpen }: MegaMenuPanelProps) {
                     <ul className="mt-4 space-y-5">
                       {column.items.map((item) => (
                         <li key={item.href}>
-                          <Link href={item.href} className="group block">
+                          <Link href={item.href} onClick={onNavigate} className="group block">
                             <p className="text-[15px] leading-none font-semibold text-[#10211D] transition-colors group-hover:text-brand">
                               {item.title}
                             </p>
@@ -51,6 +52,7 @@ export default function MegaMenuPanel({ content, isOpen }: MegaMenuPanelProps) {
               <div className="mt-6 border-t border-slate-100 pt-4">
                 <Link
                   href={content.cta.href}
+                  onClick={onNavigate}
                   className="inline-flex items-center gap-1.5 text-sm font-semibold text-brand transition-colors hover:text-ink-2"
                 >
                   {content.cta.label} <ArrowRight className="size-4" aria-hidden="true" />

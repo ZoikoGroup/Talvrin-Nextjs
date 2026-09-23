@@ -62,7 +62,11 @@ export default function Header() {
           </div>
         </Container>
 
-        <MegaMenuPanel content={openGroup ? megaMenus[openGroup] : null} isOpen={openGroup !== null} />
+        <MegaMenuPanel
+          content={openGroup ? megaMenus[openGroup] : null}
+          isOpen={openGroup !== null}
+          onNavigate={() => setOpenGroup(null)}
+        />
       </header>
 
       <MobileNav open={mobileOpen} onClose={() => setMobileOpen(false)} />
