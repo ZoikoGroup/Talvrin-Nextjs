@@ -1,52 +1,128 @@
+import Image from "next/image";
+import Container from "@/components/ui/Container";
+import Reveal from "@/components/ui/Reveal";
+
 export default function Principles() {
   return (
-    <div className="w-full  h-[784.40px] relative bg-violet-50 flex justify-center">
-      <div className="w-[1440px] h-full relative shrink-0">
-        <div className="w-[1000px] left-[79px] top-[106.80px] absolute inline-flex flex-col justify-start items-start">
-            <div className="self-stretch justify-center text-indigo-500 text-xs font-bold font-['IBM_Plex_Sans'] tracking-wide">PRINCIPLES SHAPING THE WORK</div>
+    <section id="principles" className="w-full bg-[#F6F5FB] py-20 lg:py-24 border-b border-slate-900/10">
+      <Container className="max-w-[1320px]">
+        {/* Header */}
+        <div className="flex flex-col items-start max-w-4xl">
+          <Reveal>
+            <p className="text-xs font-bold uppercase tracking-wider text-[#6C5CE7] font-['IBM_Plex_Sans']">
+              PRINCIPLES SHAPING THE WORK
+            </p>
+            <h2 className="mt-4 text-3xl font-bold leading-tight text-slate-900 font-['IBM_Plex_Sans'] sm:text-4xl lg:text-[44px] lg:leading-[50px]">
+              <span className="block whitespace-normal lg:whitespace-nowrap">
+                The product is being designed around
+              </span>
+              <span className="block whitespace-normal lg:whitespace-nowrap">
+                evidence, judgment, trust, and
+              </span>
+              <span className="block whitespace-normal lg:whitespace-nowrap">
+                truthful coverage.
+              </span>
+            </h2>
+            <p className="mt-4 text-base sm:text-lg text-[#5D5A72] font-['IBM_Plex_Sans'] leading-relaxed">
+              <span className="block whitespace-normal lg:whitespace-nowrap">
+                Evidence provenance, inspectable sources, contextual timing, responsible AI, human judgment,
+              </span>
+              <span className="block whitespace-normal lg:whitespace-nowrap">
+                security, privacy, and truthful coverage shape the standards relevant to building Talvrin.
+              </span>
+            </p>
+          </Reveal>
         </div>
-        <div className="w-[760px] max-w-[760px] left-[79px] top-[135.80px] absolute inline-flex flex-col justify-start items-start">
-            <div className="justify-center text-slate-900 text-4xl font-bold font-['IBM_Plex_Sans'] leading-[47.20px]">The product is being designed around<br/>evidence, judgment, trust, and<br/>truthful coverage.</div>
-        </div>
-        <div className="w-[760px] max-w-[760px] pt-2 left-[79px] top-[289.80px] absolute inline-flex flex-col justify-start items-start">
-            <div className="justify-center text-gray-600 text-base font-normal font-['IBM_Plex_Sans'] leading-7">Evidence provenance, inspectable sources, contextual timing, responsible AI, human judgment,<br/>security, privacy, and truthful coverage shape the standards relevant to building Talvrin.</div>
-        </div>
-        <div className="w-80 px-5 py-6 left-[79px] top-[381.80px] absolute bg-white rounded-xl outline outline-1 outline-offset-[-1px] outline-slate-900/10 inline-flex flex-col justify-start items-start gap-2">
-            <div className="self-stretch flex flex-col justify-start items-start">
-                <div className="self-stretch justify-center text-slate-900 text-base font-bold font-['IBM_Plex_Sans']">Evidence before assertion</div>
-            </div>
-            <div className="self-stretch flex flex-col justify-start items-start">
-                <div className="self-stretch justify-center text-gray-600 text-base font-normal font-['IBM_Plex_Sans'] leading-6">Important conclusions should remain<br/>connected to supporting information.</div>
-            </div>
-        </div>
-        <div className="w-[610px] h-80 left-[415px] top-[381.80px] absolute bg-slate-900 rounded-xl outline outline-1 outline-offset-[-1px] outline-slate-900/10 overflow-hidden">
-            <img className="w-[626px] h-96 left-[-8px] top-[-56px] absolute object-cover" src="/Careers/image 103 (1).png" />
-        </div>
-        <div className="w-80 px-5 py-6 left-[1048px] top-[381.80px] absolute bg-white rounded-xl outline outline-1 outline-offset-[-1px] outline-slate-900/10 inline-flex flex-col justify-start items-start gap-2">
-            <div className="self-stretch flex flex-col justify-start items-start">
-                <div className="self-stretch justify-center text-slate-900 text-base font-bold font-['IBM_Plex_Sans']">AI assistance, not AI authority</div>
-            </div>
-            <div className="self-stretch flex flex-col justify-start items-start">
-                <div className="self-stretch justify-center text-gray-600 text-base font-normal font-['IBM_Plex_Sans'] leading-6">AI may accelerate work without<br/>becoming the evidence.</div>
-            </div>
-        </div>
-        <div className="w-80 px-5 pt-6 pb-12 left-[79px] top-[536.80px] absolute bg-white rounded-xl outline outline-1 outline-offset-[-1px] outline-slate-900/10 inline-flex flex-col justify-start items-start gap-2">
-            <div className="self-stretch flex flex-col justify-start items-start">
-                <div className="self-stretch justify-center text-slate-900 text-base font-bold font-['IBM_Plex_Sans']">Judgment remains human</div>
-            </div>
-            <div className="self-stretch flex flex-col justify-start items-start">
-                <div className="self-stretch justify-center text-gray-600 text-base font-normal font-['IBM_Plex_Sans'] leading-6">People remain responsible for<br/>interpretation and decisions.</div>
-            </div>
-        </div>
-        <div className="w-80 px-5 py-6 left-[1048px] top-[536.80px] absolute bg-white rounded-xl outline outline-1 outline-offset-[-1px] outline-slate-900/10 inline-flex flex-col justify-start items-start gap-2">
-            <div className="self-stretch flex flex-col justify-start items-start">
-                <div className="self-stretch justify-center text-slate-900 text-base font-bold font-['IBM_Plex_Sans']">Coverage before claims</div>
-            </div>
-            <div className="self-stretch flex flex-col justify-start items-start">
-                <div className="self-stretch justify-center text-gray-600 text-base font-normal font-['IBM_Plex_Sans'] leading-6">Describe what is actually supported,<br/>not theoretical capability as live<br/>coverage.</div>
-            </div>
-        </div>
+
+        {/* 3-Column Grid: Left 2 Cards, Center Image, Right 2 Cards */}
+        <div className="mt-12 grid grid-cols-1 lg:grid-cols-12 gap-6 items-stretch">
+          {/* Left Column (2 Cards) */}
+          <div className="lg:col-span-3 flex flex-col gap-6 justify-between">
+            <Reveal delay={0.1} className="h-full">
+              <div className="h-full p-6 bg-white rounded-2xl border border-slate-900/10 shadow-xs flex flex-col justify-start">
+                <h3 className="text-base font-bold text-slate-900 font-['IBM_Plex_Sans']">
+                  Evidence before assertion
+                </h3>
+                <p className="mt-2 text-sm text-[#5D5A72] font-['IBM_Plex_Sans'] leading-relaxed">
+                  <span className="block whitespace-normal lg:whitespace-nowrap">
+                    Important conclusions should remain
+                  </span>
+                  <span className="block whitespace-normal lg:whitespace-nowrap">
+                    connected to supporting information.
+                  </span>
+                </p>
+              </div>
+            </Reveal>
+            <Reveal delay={0.2} className="h-full">
+              <div className="h-full p-6 bg-white rounded-2xl border border-slate-900/10 shadow-xs flex flex-col justify-start">
+                <h3 className="text-base font-bold text-slate-900 font-['IBM_Plex_Sans']">
+                  Judgment remains human
+                </h3>
+                <p className="mt-2 text-sm text-[#5D5A72] font-['IBM_Plex_Sans'] leading-relaxed">
+                  <span className="block whitespace-normal lg:whitespace-nowrap">
+                    People remain responsible for
+                  </span>
+                  <span className="block whitespace-normal lg:whitespace-nowrap">
+                    interpretation and decisions.
+                  </span>
+                </p>
+              </div>
+            </Reveal>
           </div>
-    </div>
+
+          {/* Center Column: Image */}
+          <div className="lg:col-span-6 flex justify-center">
+            <Reveal delay={0.3} className="w-full h-full">
+              <div className="relative aspect-[610/340] min-h-[300px] w-full h-full overflow-hidden rounded-2xl">
+                <Image
+                  src="/Careers/image 103 (1).png"
+                  alt="Principles shaping the work"
+                  fill
+                  sizes="(min-width: 1024px) 610px, 100vw"
+                  className="object-cover"
+                />
+              </div>
+            </Reveal>
+          </div>
+
+          {/* Right Column (2 Cards) */}
+          <div className="lg:col-span-3 flex flex-col gap-6 justify-between">
+            <Reveal delay={0.4} className="h-full">
+              <div className="h-full p-6 bg-white rounded-2xl border border-slate-900/10 shadow-xs flex flex-col justify-start">
+                <h3 className="text-base font-bold text-slate-900 font-['IBM_Plex_Sans']">
+                  AI assistance, not AI authority
+                </h3>
+                <p className="mt-2 text-sm text-[#5D5A72] font-['IBM_Plex_Sans'] leading-relaxed">
+                  <span className="block whitespace-normal lg:whitespace-nowrap">
+                    AI may accelerate work without
+                  </span>
+                  <span className="block whitespace-normal lg:whitespace-nowrap">
+                    becoming the evidence.
+                  </span>
+                </p>
+              </div>
+            </Reveal>
+            <Reveal delay={0.5} className="h-full">
+              <div className="h-full p-6 bg-white rounded-2xl border border-slate-900/10 shadow-xs flex flex-col justify-start">
+                <h3 className="text-base font-bold text-slate-900 font-['IBM_Plex_Sans']">
+                  Coverage before claims
+                </h3>
+                <p className="mt-2 text-sm text-[#5D5A72] font-['IBM_Plex_Sans'] leading-relaxed">
+                  <span className="block whitespace-normal lg:whitespace-nowrap">
+                    Describe what is actually supported,
+                  </span>
+                  <span className="block whitespace-normal lg:whitespace-nowrap">
+                    not theoretical capability as live
+                  </span>
+                  <span className="block whitespace-normal lg:whitespace-nowrap">
+                    coverage.
+                  </span>
+                </p>
+              </div>
+            </Reveal>
+          </div>
+        </div>
+      </Container>
+    </section>
   );
 }

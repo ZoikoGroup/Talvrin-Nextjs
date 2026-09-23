@@ -8,19 +8,24 @@ import CompanyContext from "@/components/careers/CompanyContext";
 import FAQ from "@/components/careers/FAQ";
 import CTA from "@/components/careers/CTA";
 
+export const metadata = {
+  title: "Careers | Talvrin",
+  description:
+    "Help build a source-linked research and monitoring platform. Explore current approved opportunities at Talvrin.",
+};
+
 export default function CareersPage() {
   return (
-    <div className="w-full min-h-[900px] bg-violet-50 inline-flex flex-col justify-start items-start mx-auto relative overflow-hidden">
-        
-        <Hero />
-        <Navigation />
-        <Building />
-        <Principles />
-        <OpenRoles />
-        <CandidateInfo />
-        <CompanyContext />
-        <FAQ />
-        <CTA />
-    </div>
+    <main className="flex min-h-screen flex-col pt-16 md:pt-0 bg-white">
+      <Hero />
+      <Navigation />
+      <Building />
+      <Principles />
+      <OpenRoles />
+      <CandidateInfo />
+      <CompanyContext />
+      <FAQ />
+      <CTA />
+    </main>
   );
 }

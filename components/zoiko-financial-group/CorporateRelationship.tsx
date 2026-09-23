@@ -1,61 +1,112 @@
+import Image from "next/image";
+import Link from "next/link";
+import Container from "@/components/ui/Container";
+import Reveal from "@/components/ui/Reveal";
+
 export default function CorporateRelationship() {
   return (
-    <div className="w-full  h-[764px] relative bg-violet-50 flex justify-center">
-      <div className="w-[1440px] h-full relative shrink-0">
-            <div className="w-[800px] left-[312.40px] top-[96px] absolute inline-flex flex-col justify-start items-center">
-                <div className="text-center justify-center text-indigo-500 text-xs font-bold font-['IBM_Plex_Sans'] tracking-wide">THE CORPORATE RELATIONSHIP</div>
-            </div>
-            <div className="w-[800px] left-[312.40px] top-[124.80px] absolute inline-flex flex-col justify-start items-center">
-                <div className="text-center justify-center text-slate-900 text-4xl font-bold font-['IBM_Plex_Sans'] leading-[47.20px]">Three names. One clear relationship.</div>
-            </div>
-            <div className="w-[640px] max-w-[640px] pt-2 left-[392.40px] top-[184.80px] absolute inline-flex flex-col justify-start items-center">
-                <div className="text-center justify-center text-gray-600 text-base font-normal font-['IBM_Plex_Sans'] leading-7">Zoiko Financial Group is the parent organization of Zoiko Markets. Talvrin is a trading<br/>name of Zoiko Markets.</div>
-            </div>
-            <div className="w-[460px] left-[162px] top-[260px] absolute inline-flex flex-col justify-start items-center gap-7">
-                <div className="w-full max-w-[460px] pt-5 flex flex-col justify-start items-center">
-                    <div className="self-stretch px-8 py-5 bg-white rounded-2xl outline outline-1 outline-offset-[-1px] outline-slate-900/10 flex flex-col justify-start items-start gap-1">
-                        <div className="self-stretch flex flex-col justify-start items-center">
-                            <div className="text-center justify-center text-gray-600 text-xs font-bold font-['IBM_Plex_Sans'] tracking-wide">PARENT ORGANIZATION</div>
-                        </div>
-                        <div className="self-stretch flex flex-col justify-start items-center">
-                            <div className="text-center justify-center text-slate-900 text-lg font-bold font-['IBM_Plex_Sans']">Zoiko Financial Group</div>
-                        </div>
-                    </div>
-                    <div className="w-[1.50px] h-8 bg-slate-900/20" />
-                    <div className="self-stretch px-8 py-5 bg-white rounded-2xl outline outline-1 outline-offset-[-1px] outline-slate-900/10 flex flex-col justify-start items-start gap-1">
-                        <div className="self-stretch flex flex-col justify-start items-center">
-                            <div className="text-center justify-center text-gray-600 text-xs font-bold font-['IBM_Plex_Sans'] tracking-wide">COMPANY WITHIN ZOIKO FINANCIAL GROUP</div>
-                        </div>
-                        <div className="self-stretch flex flex-col justify-start items-center">
-                            <div className="text-center justify-center text-slate-900 text-lg font-bold font-['IBM_Plex_Sans']">Zoiko Markets</div>
-                        </div>
-                    </div>
-                    <div className="w-[1.50px] h-8 bg-slate-900/20" />
-                    <div className="self-stretch px-8 py-5 bg-slate-900 rounded-2xl flex flex-col justify-start items-start gap-1">
-                        <div className="self-stretch flex flex-col justify-start items-center">
-                            <div className="text-center justify-center text-indigo-300 text-xs font-bold font-['IBM_Plex_Sans'] tracking-wide">TRADING NAME</div>
-                        </div>
-                        <div className="self-stretch flex flex-col justify-start items-center">
-                            <div className="text-center justify-center text-violet-50 text-lg font-bold font-['IBM_Plex_Sans']">Talvrin</div>
-                        </div>
-                        <div className="self-stretch flex flex-col justify-start items-center">
-                            <div className="text-center justify-center text-violet-50/70 text-sm font-normal font-['IBM_Plex_Sans']">a trading name of Zoiko Markets</div>
-                        </div>
-                    </div>
-                </div>
-                <div className="size- inline-flex justify-start items-center gap-6">
-                    <div className="h-5 inline-flex flex-col justify-start items-center">
-                        <div className="text-center justify-center text-indigo-500 text-sm font-semibold font-['IBM_Plex_Sans']">About Zoiko Markets <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg" className="inline-block ml-1 -mt-0.5 shrink-0"><path d="M2.5 6H9.5M9.5 6L6 2.5M9.5 6L6 9.5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/></svg></div>
-                    </div>
-                    <div className="h-5 inline-flex flex-col justify-start items-center">
-                        <div className="text-center justify-center text-indigo-500 text-sm font-semibold font-['IBM_Plex_Sans']">About Talvrin <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg" className="inline-block ml-1 -mt-0.5 shrink-0"><path d="M2.5 6H9.5M9.5 6L6 2.5M9.5 6L6 9.5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/></svg></div>
-                    </div>
-                </div>
-            </div>
-            <div className="w-[612px] h-80 left-[681px] top-[280px] absolute bg-rose-400 rounded-2xl overflow-hidden">
-                <img className="w-[736px] h-96 left-[-62px] top-[-36px] absolute object-cover" src="/zoiko-financial-group/image 91.png" />
-            </div>
+    <section className="w-full bg-[#F6F5FB] py-20 lg:py-24 border-b border-slate-900/10">
+      <Container className="max-w-[1120px]">
+        {/* Header */}
+        <div className="flex flex-col items-center text-center">
+          <Reveal>
+            <p className="text-xs font-bold uppercase tracking-wider text-[#6C5CE7] font-['IBM_Plex_Sans']">
+              THE CORPORATE RELATIONSHIP
+            </p>
+            <h2 className="mt-4 text-3xl font-bold leading-tight text-slate-900 font-['IBM_Plex_Sans'] sm:text-4xl lg:text-[44px] lg:leading-[50px]">
+              Three names. One clear relationship.
+            </h2>
+            <p className="mt-4 max-w-2xl text-sm sm:text-base text-[#5D5A72] font-['IBM_Plex_Sans'] leading-relaxed">
+              <span className="block whitespace-normal lg:whitespace-nowrap">
+                Zoiko Financial Group is the parent organization of Zoiko Markets. Talvrin is a trading
+              </span>
+              <span className="block whitespace-normal lg:whitespace-nowrap">
+                name of Zoiko Markets.
+              </span>
+            </p>
+          </Reveal>
+        </div>
+
+        {/* 2-Column Content: Left Hierarchy Cards + Right Image (Tight Gap) */}
+        <div className="mt-12 flex flex-col lg:flex-row items-center justify-center gap-6 lg:gap-10">
+          {/* Left Column: 3 Cards connected with vertical lines */}
+          <div className="w-full max-w-[440px] flex flex-col items-center shrink-0">
+            <Reveal delay={0.2} className="w-full flex flex-col items-center">
+              {/* Card 1: Parent Organization */}
+              <div className="w-full p-5 bg-white rounded-2xl border border-slate-900/10 shadow-xs flex flex-col items-center text-center gap-1">
+                <span className="text-xs font-bold uppercase tracking-wider text-[#5D5A72] font-['IBM_Plex_Sans']">
+                  PARENT ORGANIZATION
+                </span>
+                <span className="text-base sm:text-lg font-bold text-slate-900 font-['IBM_Plex_Sans']">
+                  Zoiko Financial Group
+                </span>
               </div>
-    </div>
+
+              {/* Vertical connector 1 */}
+              <div className="w-[1.5px] h-5 bg-slate-900/20" />
+
+              {/* Card 2: Company within ZFG */}
+              <div className="w-full p-5 bg-white rounded-2xl border border-slate-900/10 shadow-xs flex flex-col items-center text-center gap-1">
+                <span className="text-xs font-bold uppercase tracking-wider text-[#5D5A72] font-['IBM_Plex_Sans']">
+                  COMPANY WITHIN ZOIKO FINANCIAL GROUP
+                </span>
+                <span className="text-base sm:text-lg font-bold text-slate-900 font-['IBM_Plex_Sans']">
+                  Zoiko Markets
+                </span>
+              </div>
+
+              {/* Vertical connector 2 */}
+              <div className="w-[1.5px] h-5 bg-slate-900/20" />
+
+              {/* Card 3: Trading Name */}
+              <div className="w-full p-5 bg-[#171335] rounded-2xl border border-white/10 shadow-xs flex flex-col items-center text-center gap-1">
+                <span className="text-xs font-bold uppercase tracking-wider text-[#B4A8FF] font-['IBM_Plex_Sans']">
+                  TRADING NAME
+                </span>
+                <span className="text-base sm:text-lg font-bold text-[#F6F5FB] font-['IBM_Plex_Sans']">
+                  Talvrin
+                </span>
+                <span className="text-xs text-[#F6F5FB]/75 font-['IBM_Plex_Sans']">
+                  a trading name of Zoiko Markets
+                </span>
+              </div>
+
+              {/* Links below hierarchy */}
+              <div className="mt-6 flex flex-wrap items-center justify-center gap-6">
+                <Link
+                  href="/zoiko-financial-group"
+                  className="group inline-flex items-center gap-1.5 text-xs sm:text-sm font-semibold text-[#6C5CE7] font-['IBM_Plex_Sans'] hover:underline"
+                >
+                  <span>About Zoiko Markets</span>
+                  <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg" className="inline-block shrink-0 transition-transform group-hover:translate-x-1 text-[#6C5CE7]"><path d="M2.5 6H9.5M9.5 6L6 2.5M9.5 6L6 9.5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/></svg>
+                </Link>
+                <Link
+                  href="/about-talvrin"
+                  className="group inline-flex items-center gap-1.5 text-xs sm:text-sm font-semibold text-[#6C5CE7] font-['IBM_Plex_Sans'] hover:underline"
+                >
+                  <span>About Talvrin</span>
+                  <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg" className="inline-block shrink-0 transition-transform group-hover:translate-x-1 text-[#6C5CE7]"><path d="M2.5 6H9.5M9.5 6L6 2.5M9.5 6L6 9.5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/></svg>
+                </Link>
+              </div>
+            </Reveal>
+          </div>
+
+          {/* Right Column: Image (Tightly Positioned next to cards) */}
+          <div className="w-full max-w-[560px] flex justify-center">
+            <Reveal delay={0.3} className="w-full">
+              <div className="relative aspect-[560/360] w-full overflow-hidden rounded-2xl">
+                <Image
+                  src="/zoiko-financial-group/image 91.png"
+                  alt="Corporate Relationship"
+                  fill
+                  sizes="(min-width: 1024px) 560px, 100vw"
+                  className="object-cover"
+                />
+              </div>
+            </Reveal>
+          </div>
+        </div>
+      </Container>
+    </section>
   );
 }

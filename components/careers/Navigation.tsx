@@ -1,25 +1,30 @@
+import Link from "next/link";
+import Container from "@/components/ui/Container";
+
 export default function Navigation() {
+  const links = [
+    { name: "Mission", href: "#mission" },
+    { name: "Principles", href: "#principles" },
+    { name: "Open Roles", href: "#open-roles" },
+    { name: "Candidate Support", href: "#candidate-support" },
+    { name: "FAQ", href: "#faq" },
+  ];
+
   return (
-    <div className="w-full  h-12 relative bg-white border-b-[0.80px] border-slate-900/10 overflow-hidden flex justify-center">
-      <div className="w-[1440px] h-full relative shrink-0">
-        <div className="w-[1320px] h-12 max-w-[1320px] px-14 left-[52.40px] top-0 absolute inline-flex justify-start items-start gap-1">
-            <div className="self-stretch px-3.5 py-4 inline-flex flex-col justify-start items-start">
-                <div className="justify-center text-gray-600 text-sm font-semibold font-['IBM_Plex_Sans']">Mission</div>
-            </div>
-            <div className="self-stretch px-3.5 py-4 inline-flex flex-col justify-start items-start">
-                <div className="justify-center text-gray-600 text-sm font-semibold font-['IBM_Plex_Sans']">Principles</div>
-            </div>
-            <div className="self-stretch px-3.5 py-4 inline-flex flex-col justify-start items-start">
-                <div className="justify-center text-gray-600 text-sm font-semibold font-['IBM_Plex_Sans']">Open Roles</div>
-            </div>
-            <div className="self-stretch px-3.5 py-4 inline-flex flex-col justify-start items-start">
-                <div className="justify-center text-gray-600 text-sm font-semibold font-['IBM_Plex_Sans']">Candidate Support</div>
-            </div>
-            <div className="self-stretch px-3.5 py-4 inline-flex flex-col justify-start items-start">
-                <div className="justify-center text-gray-600 text-sm font-semibold font-['IBM_Plex_Sans']">FAQ</div>
-            </div>
+    <nav className="w-full bg-white border-b border-slate-900/10 sticky top-0 z-30 shadow-xs">
+      <Container className="max-w-[1320px]">
+        <div className="flex items-center gap-8 py-3.5 overflow-x-auto no-scrollbar">
+          {links.map((link) => (
+            <Link
+              key={link.name}
+              href={link.href}
+              className="text-sm font-medium text-[#5D5A72] hover:text-[#171335] font-['IBM_Plex_Sans'] transition-colors whitespace-nowrap"
+            >
+              {link.name}
+            </Link>
+          ))}
         </div>
-          </div>
-    </div>
+      </Container>
+    </nav>
   );
 }
