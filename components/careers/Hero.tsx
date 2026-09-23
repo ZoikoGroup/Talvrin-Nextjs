@@ -1,31 +1,85 @@
+import Image from "next/image";
+import Link from "next/link";
+import Container from "@/components/ui/Container";
+import Reveal from "@/components/ui/Reveal";
+
 export default function Hero() {
   return (
-    <div className="w-full  h-[591px] relative bg-slate-900 overflow-hidden flex justify-center">
-      <div className="w-[1440px] h-full relative shrink-0">
-        <div className="w-[1439.80px] h-[590.50px] left-0 top-0 absolute bg-radial-[at_12%_0%] from-indigo-500/20 to-indigo-500/0 to 65%" />
-        <div className="w-[720.40px] left-[80px] top-[157px] absolute inline-flex flex-col justify-start items-start gap-6">
-            <div className="self-stretch flex flex-col justify-start items-start">
-                <div className="self-stretch justify-center text-yellow-600 text-xs font-bold font-['IBM_Plex_Sans'] tracking-wide">CAREERS</div>
-            </div>
-            <div className="self-stretch flex flex-col justify-start items-start">
-                <div className="self-stretch justify-center text-violet-50 text-6xl font-bold font-['IBM_Plex_Sans'] leading-[61.60px]">Careers at Talvrin</div>
-            </div>
-            <div className="w-full max-w-[720px] flex flex-col justify-start items-start">
-                <div className="justify-center text-violet-50/90 text-lg font-normal font-['IBM_Plex_Sans'] leading-8">Help build a source-linked research and monitoring platform designed to make<br/>public-market evidence easier to find, understand, verify, and continuously monitor.</div>
-            </div>
-            <div className="self-stretch pt-2 inline-flex justify-start items-center gap-4">
-                <div className="size- px-7 py-4 bg-violet-50 rounded-lg inline-flex flex-col justify-start items-start">
-                    <div className="justify-center text-slate-900 text-base font-semibold font-['IBM_Plex_Sans']">View Open Roles</div>
-                </div>
-                <div className="size- inline-flex flex-col justify-start items-start">
-                    <div className="justify-center text-indigo-300 text-base font-semibold font-['IBM_Plex_Sans']">About Talvrin <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg" className="inline-block ml-1 -mt-0.5 shrink-0"><path d="M2.5 6H9.5M9.5 6L6 2.5M9.5 6L6 9.5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/></svg></div>
-                </div>
-            </div>
-        </div>
-        <div className="w-[494px] h-96 left-[866px] top-[115.50px] absolute bg-white rounded-2xl overflow-hidden">
-            <img className="w-[537px] h-96 left-[-21px] top-[0.50px] absolute object-cover" src="/Careers/image 102 (1).png" />
-        </div>
+    <section className="relative w-full overflow-hidden bg-[#171335] py-16 lg:pt-[108px] lg:pb-[100px]">
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_12%_0%,rgba(108,92,231,0.2)_0%,transparent_65%),radial-gradient(circle_at_85%_90%,rgba(185,129,50,0.12)_0%,transparent_60%)]"
+      />
+      <Container className="relative z-10 max-w-[1320px]">
+        <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-2 lg:gap-[40px]">
+          {/* Left Column */}
+          <div className="flex flex-col items-start">
+            <Reveal>
+              <p className="text-xs font-bold uppercase tracking-wide text-[#B98132] font-['IBM_Plex_Sans']">
+                CAREERS
+              </p>
+              <h1 className="mt-4 text-4xl font-bold leading-tight text-[#F6F5FB] font-['IBM_Plex_Sans'] sm:text-5xl lg:text-[56px]">
+                Careers at Talvrin
+              </h1>
+              <p className="mt-6 max-w-[620px] text-base sm:text-lg leading-relaxed text-[#F6F5FB]/75 font-['IBM_Plex_Sans'] font-normal">
+                <span className="block whitespace-normal lg:whitespace-nowrap">
+                  Help build a source-linked research and monitoring platform designed to make
+                </span>
+                <span className="block whitespace-normal lg:whitespace-nowrap">
+                  public-market evidence easier to find, understand, verify, and continuously monitor.
+                </span>
+              </p>
+            </Reveal>
+
+            <Reveal delay={0.2} className="mt-8 flex flex-wrap items-center gap-6">
+              <Link
+                href="#open-roles"
+                className="inline-flex h-[52px] items-center justify-center rounded-[10px] bg-[#F6F5FB] px-7 text-base font-semibold text-[#171335] font-['IBM_Plex_Sans'] transition-colors hover:bg-white shadow-xs"
+              >
+                View Open Roles
+              </Link>
+              <Link
+                href="/about-talvrin"
+                className="inline-flex items-center gap-1.5 text-sm sm:text-base font-semibold text-[#B4A8FF] font-['IBM_Plex_Sans'] hover:underline"
+              >
+                <span>About Talvrin</span>
+                <svg
+                  width="12"
+                  height="12"
+                  viewBox="0 0 12 12"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="text-[#B4A8FF]"
+                >
+                  <path
+                    d="M2.5 6H9.5M9.5 6L6 2.5M9.5 6L6 9.5"
+                    stroke="currentColor"
+                    strokeWidth="1.5"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  />
+                </svg>
+              </Link>
+            </Reveal>
           </div>
-    </div>
+
+          {/* Right Column: Image */}
+          <div className="w-full flex justify-center lg:justify-end">
+            <Reveal delay={0.3} className="w-full max-w-[540px]">
+              <div className="relative aspect-[494/360] w-full overflow-hidden rounded-2xl border border-white/10 shadow-2xl">
+                <Image
+                  src="/Careers/image 102 (1).png"
+                  alt="Careers at Talvrin"
+                  fill
+                  sizes="(min-width: 1024px) 540px, 100vw"
+                  className="object-cover"
+                  priority
+                />
+              </div>
+            </Reveal>
+          </div>
+        </div>
+      </Container>
+    </section>
   );
 }

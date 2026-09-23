@@ -7,6 +7,12 @@ import CorporateInformation from "@/components/zoiko-financial-group/CorporateIn
 import FAQ from "@/components/zoiko-financial-group/FAQ";
 import CTA from "@/components/zoiko-financial-group/CTA";
 
+export const metadata = {
+  title: "Zoiko Financial Group | Talvrin",
+  description:
+    "Zoiko Financial Group is the parent organization of Zoiko Markets. Talvrin is a trading name of Zoiko Markets.",
+};
+
 export default function ZoikoFinancialGroupPage() {
   return (
     <div className="w-full min-h-[900px] bg-violet-50 inline-flex flex-col justify-start items-start mx-auto relative overflow-hidden">
