@@ -1,0 +1,11 @@
+export { default as HeroSection } from "./HeroSection";
+export { default as ResourcePillsSection } from "./ResourcePillsSection";
+export { default as AvailableNowSection } from "./AvailableNowSection";
+export { default as EvidenceModelSection } from "./EvidenceModelSection";
+export { default as EcosystemSection } from "./EcosystemSection";
+export { default as JourneySection } from "./JourneySection";
+export { default as CoverageTruthSection } from "./CoverageTruthSection";
+export { default as AvailabilityTruthSection } from "./AvailabilityTruthSection";
+export { default as EnterpriseFitSection } from "./EnterpriseFitSection";
+export { default as FaqSection } from "./FaqSection";
+export { default as FinalCtaSection } from "./FinalCtaSection";
