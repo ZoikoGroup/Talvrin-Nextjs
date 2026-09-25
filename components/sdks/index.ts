@@ -1,0 +1,11 @@
+export { default as HeroSection } from "./HeroSection";
+export { default as ResourcePillsSection } from "./ResourcePillsSection";
+export { default as RegistryContractSection } from "./RegistryContractSection";
+export { default as CatalogSection } from "./CatalogSection";
+export { default as QuickStartSection } from "./QuickStartSection";
+export { default as BoundarySection } from "./BoundarySection";
+export { default as StateMatrixSection } from "./StateMatrixSection";
+export { default as BlockersSection } from "./BlockersSection";
+export { default as AccessibilitySection } from "./AccessibilitySection";
+export { default as FaqSection } from "./FaqSection";
+export { default as FinalCtaSection } from "./FinalCtaSection";
