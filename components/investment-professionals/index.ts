@@ -1,0 +1,14 @@
+export { default as HeroSection } from "./HeroSection";
+export { default as TrustBarSection } from "./TrustBarSection";
+export { default as ProblemSection } from "./ProblemSection";
+export { default as EvidenceChainSection } from "./EvidenceChainSection";
+export { default as ResearchObjectSection } from "./ResearchObjectSection";
+export { default as ReviewabilitySection } from "./ReviewabilitySection";
+export { default as WhatChangedSection } from "./WhatChangedSection";
+export { default as OutcomesSection } from "./OutcomesSection";
+export { default as CoverageTruthSection } from "./CoverageTruthSection";
+export { default as AiBoundarySection } from "./AiBoundarySection";
+export { default as JourneySection } from "./JourneySection";
+export { default as AdjacentSolutionsSection } from "./AdjacentSolutionsSection";
+export { default as FaqSection } from "./FaqSection";
+export { default as FinalCtaSection } from "./FinalCtaSection";
