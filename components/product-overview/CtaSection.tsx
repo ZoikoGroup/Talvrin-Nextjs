@@ -16,7 +16,7 @@ export default function CtaSection() {
         <Reveal delay={0.1}>
           <p className="mt-6 max-w-xl text-base leading-relaxed text-ink/70 sm:text-lg">
             Explore how Talvrin connects evidence, research views, and
-            monitoring into one platform — and see what's next for your
+            monitoring into one platform — and see what&apos;s next for your
             research.
           </p>
         </Reveal>
