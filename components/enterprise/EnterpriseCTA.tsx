@@ -74,7 +74,7 @@ export default function EnterpriseCTA() {
               text-gray-600
             "
           >
-            Explore how Talvrin fits your organization's research process
+            Explore how Talvrin&apos;s fits your organization&apos;s research process
             across teams and markets.
           </p>
 

@@ -1,0 +1,12 @@
+export { default as HeroSection } from "./HeroSection";
+export { default as PageNavSection } from "./PageNavSection";
+export { default as WhatItIsSection } from "./WhatItIsSection";
+export { default as WorkflowSection } from "./WorkflowSection";
+export { default as FirstTaskSection } from "./FirstTaskSection";
+export { default as EvidenceChainSection } from "./EvidenceChainSection";
+export { default as AiPrinciplesSection } from "./AiPrinciplesSection";
+export { default as StartingPathsSection } from "./StartingPathsSection";
+export { default as CoverageSection } from "./CoverageSection";
+export { default as FaqSection } from "./FaqSection";
+export { default as ContinueLearningSection } from "./ContinueLearningSection";
+export { default as FinalCtaSection } from "./FinalCtaSection";
