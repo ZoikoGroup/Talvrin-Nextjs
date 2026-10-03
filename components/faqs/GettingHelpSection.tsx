@@ -1,23 +1,44 @@
+import { ReactNode } from "react";
 import Container from "../ui/Container";
 import Reveal from "../ui/Reveal";
 import { SectionEyebrow, SectionHeading, SectionLede, StatusBadge, CardLink } from "./shared";
 
-const resources = [
+type ResourceItem = {
+  title: string;
+  description: ReactNode;
+  linkLabel?: string;
+  href?: string;
+  pending?: boolean;
+};
+
+const resources: ResourceItem[] = [
   {
     title: "Documentation",
-    description: "Task-oriented product documentation and concepts.",
+    description: (
+      <>
+        Task-oriented product documentation and<br className="hidden md:inline" /> concepts.
+      </>
+    ),
     linkLabel: "Browse Documentation",
     href: "/resources/documentation",
   },
   {
     title: "Contact Support",
-    description: "Submit a support request through the current active channel.",
+    description: (
+      <>
+        Submit a support request through the<br className="hidden md:inline" /> current active channel.
+      </>
+    ),
     linkLabel: "Contact Support",
     href: "/resources/contact-support",
   },
   {
     title: "Help Center",
-    description: "Support content for common product and account questions.",
+    description: (
+      <>
+        Support content for common product and<br className="hidden md:inline" /> account questions.
+      </>
+    ),
     pending: true,
   },
   {
@@ -27,12 +48,12 @@ const resources = [
   },
 ];
 
-function ResourceCard({ item }: { item: (typeof resources)[number] }) {
+function ResourceCard({ item }: { item: ResourceItem }) {
   return (
     <article className="flex h-full flex-col gap-2.5 rounded-2xl border border-ink/10 bg-surface px-5 py-6">
       <div className="flex items-start justify-between gap-3">
         <h3 className="text-base font-bold text-ink">{item.title}</h3>
-        {item.pending && <StatusBadge>Not Yet Available</StatusBadge>}
+        {item.pending && <StatusBadge className="uppercase">NOT YET AVAILABLE</StatusBadge>}
       </div>
       <p className="text-sm leading-5 text-muted">{item.description}</p>
       {item.href && item.linkLabel && (
@@ -47,9 +68,9 @@ function ResourceCard({ item }: { item: (typeof resources)[number] }) {
 export default function GettingHelpSection() {
   return (
     <section id="help" className="scroll-mt-32 bg-white py-20 sm:py-24">
-      <Container className="max-w-[1048px]">
+      <Container className="max-w-[1000px]">
         <Reveal>
-          <SectionEyebrow tone="violet">Getting Help</SectionEyebrow>
+          <SectionEyebrow tone="violet">GETTING HELP</SectionEyebrow>
           <SectionHeading size="md">
             Where to find documentation, guidance and support.
           </SectionHeading>
@@ -58,7 +79,7 @@ export default function GettingHelpSection() {
           </SectionLede>
         </Reveal>
 
-        <div className="mt-6 grid grid-cols-1 gap-4 sm:grid-cols-2">
+        <div className="mt-6 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {resources.map((item, index) => (
             <Reveal key={item.title} delay={index * 0.05}>
               <ResourceCard item={item} />

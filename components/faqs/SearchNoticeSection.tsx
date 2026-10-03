@@ -4,12 +4,18 @@ import Reveal from "../ui/Reveal";
 export default function SearchNoticeSection() {
   return (
     <section className="border-b border-ink/10 bg-white">
-      <Container className="py-7">
-        <Reveal className="flex flex-wrap items-start gap-3.5">
-          <span className="rounded-full bg-accent-amber/10 px-2.5 py-[5px] text-xs font-bold uppercase tracking-wide text-[#8A5A00]">
+      <Container className="py-[31px] lg:max-w-[1332px]">
+        <Reveal className="flex flex-wrap items-center gap-3.5">
+          <span
+            className="shrink-0 rounded-full px-3 py-1 text-xs font-bold uppercase tracking-wider font-['IBM_Plex_Sans']"
+            style={{
+              backgroundColor: "rgba(185, 129, 50, 0.14)",
+              color: "rgba(138, 90, 0, 1)",
+            }}
+          >
             FAQ search not published
           </span>
-          <p className="max-w-[1100px] flex-1 text-sm leading-6 text-muted">
+          <p className="max-w-[1100px] flex-1 text-sm leading-6 text-muted font-['IBM_Plex_Sans']">
             A governed public FAQ index is not yet available on this build. Every category and
             question below works by browsing — nothing here depends on search.
           </p>
@@ -18,3 +24,4 @@ export default function SearchNoticeSection() {
     </section>
   );
 }
+
