@@ -1,11 +1,22 @@
+import { ReactNode } from "react";
 import Container from "../ui/Container";
 import Reveal from "../ui/Reveal";
 import { SectionEyebrow, SectionHeading, SectionLede } from "./shared";
+import clsx from "clsx";
 
-const rows = [
+type UnansweredRow = {
+  label: string;
+  detail: ReactNode;
+};
+
+const rows: UnansweredRow[] = [
   {
     label: "Pricing & plans",
-    detail: "Not confirmed by an approved pricing source; routes to an approved pricing or contact destination once one exists.",
+    detail: (
+      <>
+        Not confirmed by an approved pricing source; routes to an approved pricing or contact destination once one<br className="hidden md:inline" /> exists.
+      </>
+    ),
   },
   {
     label: "Launch & availability date",
@@ -39,30 +50,35 @@ const rows = [
 
 export default function UnansweredSection() {
   return (
-    <section className="bg-surface py-20 sm:py-24">
-      <Container className="max-w-[1048px]">
+    <section
+      className="scroll-mt-32 bg-[#F6F5FB] py-20 sm:py-24"
+      style={{ backgroundColor: "rgba(246, 245, 251, 1)" }}
+    >
+      <Container className="max-w-[1000px]">
         <Reveal>
           <SectionEyebrow tone="amber">
-            Questions this FAQ doesn&apos;t answer
+            QUESTIONS THIS FAQ DOESN&apos;T ANSWER
           </SectionEyebrow>
           <SectionHeading size="md">Some questions stay unresolved on purpose.</SectionHeading>
           <SectionLede>
-            Rather than improvise, these areas route to their own authoritative source once one is
-            approved and published.
+            Rather than improvise, these areas route to their own authoritative source once one is approved and<br className="hidden md:inline" /> published.
           </SectionLede>
         </Reveal>
 
         <Reveal delay={0.1} className="mt-6">
-          <div className="flex flex-col rounded-2xl border border-ink/10 bg-white px-6 pt-7 pb-2">
-            {rows.map((row) => (
+          <div className="flex flex-col rounded-2xl border border-ink/10 bg-white px-8 py-4">
+            {rows.map((row, idx) => (
               <div
                 key={row.label}
-                className="flex flex-col gap-2 border-b border-ink/10 py-4 sm:flex-row sm:gap-5"
+                className={clsx(
+                  "flex flex-col gap-2 py-4 sm:flex-row sm:gap-5",
+                  idx !== rows.length - 1 && "border-b border-ink/10"
+                )}
               >
-                <h3 className="w-full shrink-0 text-sm font-bold text-ink sm:w-56">
+                <h3 className="w-full shrink-0 text-sm font-bold text-ink sm:w-56 font-['IBM_Plex_Sans']">
                   {row.label}
                 </h3>
-                <p className="min-w-0 flex-1 text-sm leading-5 text-muted">{row.detail}</p>
+                <p className="min-w-0 flex-1 text-sm leading-5 text-muted font-['IBM_Plex_Sans']">{row.detail}</p>
               </div>
             ))}
           </div>
