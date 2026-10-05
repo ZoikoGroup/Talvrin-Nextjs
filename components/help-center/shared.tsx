@@ -5,8 +5,8 @@ import clsx from "clsx";
 type Tone = "amber" | "violet";
 
 const eyebrowTones: Record<Tone, string> = {
-  amber: "text-accent-amber",
-  violet: "text-accent-violet",
+  amber: "text-[#B98132]",
+  violet: "text-[#6C5CE7]",
 };
 
 export function SectionEyebrow({
@@ -19,7 +19,16 @@ export function SectionEyebrow({
   className?: string;
 }) {
   return (
-    <p className={clsx("text-xs font-bold uppercase tracking-wide", eyebrowTones[tone], className)}>
+    <p
+      className={clsx(
+        "text-xs font-bold uppercase tracking-wide font-['IBM_Plex_Sans']",
+        eyebrowTones[tone],
+        className
+      )}
+      style={{
+        color: tone === "amber" ? "rgba(185, 129, 50, 1)" : "rgba(108, 92, 231, 1)",
+      }}
+    >
       {children}
     </p>
   );
@@ -44,9 +53,20 @@ export function SectionHeading({
   );
 }
 
-export function SectionLede({ children, className }: { children: ReactNode; className?: string }) {
+export function SectionLede({
+  children,
+  className,
+  style,
+}: {
+  children: ReactNode;
+  className?: string;
+  style?: React.CSSProperties;
+}) {
   return (
-    <p className={clsx("mt-4 max-w-[760px] text-base leading-6 text-muted", className)}>
+    <p
+      className={clsx("mt-4 max-w-[760px] text-base leading-6 text-muted font-['IBM_Plex_Sans']", className)}
+      style={style}
+    >
       {children}
     </p>
   );
@@ -54,20 +74,34 @@ export function SectionLede({ children, className }: { children: ReactNode; clas
 
 export type Status = "Available" | "Boundary" | "Not Yet Available";
 
-const statusStyles: Record<Status, string> = {
-  Available: "bg-[#2E7D5B]/10 text-[#2E7D5B]",
-  Boundary: "bg-ink/10 text-muted",
-  "Not Yet Available": "bg-accent-amber/10 text-[#8A5A00]",
+const statusConfig: Record<Status, { bg: string; text: string }> = {
+  Available: {
+    bg: "rgba(46, 125, 91, 0.12)",
+    text: "rgba(46, 125, 91, 1)",
+  },
+  Boundary: {
+    bg: "rgba(23, 19, 53, 0.08)",
+    text: "rgba(93, 90, 114, 1)",
+  },
+  "Not Yet Available": {
+    bg: "rgba(185, 129, 50, 0.14)",
+    text: "rgba(138, 90, 0, 1)",
+  },
 };
 
 /** Pill badge used across the guidance / continue-learning cards. */
-export function StatusBadge({ status }: { status: Status }) {
+export function StatusBadge({ status, className }: { status: Status; className?: string }) {
+  const config = statusConfig[status];
   return (
     <span
       className={clsx(
-        "shrink-0 rounded-full px-2 py-[3px] text-[10px] font-bold uppercase tracking-wide",
-        statusStyles[status]
+        "shrink-0 rounded-full px-2 py-[2px] text-[10px] font-bold tracking-wide font-['IBM_Plex_Sans']",
+        className
       )}
+      style={{
+        backgroundColor: config.bg,
+        color: config.text,
+      }}
     >
       {status}
     </span>
@@ -95,13 +129,29 @@ export function CardLink({
     <Link
       href={href}
       className={clsx(
-        "inline-flex items-center gap-1 font-semibold text-accent-violet transition-colors hover:text-ink",
+        "group inline-flex items-center gap-1.5 font-semibold font-['IBM_Plex_Sans']",
         linkSizes[size],
         className
       )}
+      style={{ color: "rgba(108, 92, 231, 1)" }}
     >
-      <span>{children}</span>
-      <span aria-hidden="true">→</span>
+      <span style={{ color: "rgba(108, 92, 231, 1)" }}>{children}</span>
+      <svg
+        width="11"
+        height="11"
+        viewBox="0 0 12 12"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+        className="transition-transform group-hover:translate-x-0.5"
+      >
+        <path
+          d="M2.5 6H9.5M9.5 6L6 2.5M9.5 6L6 9.5"
+          stroke="rgba(108, 92, 231, 1)"
+          strokeWidth="1.5"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        />
+      </svg>
     </Link>
   );
 }
