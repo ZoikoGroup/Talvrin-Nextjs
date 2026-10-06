@@ -13,7 +13,7 @@ const links = [
 export default function SectionNav() {
   return (
     <nav className="sticky top-16 z-30 border-b border-ink/10 bg-white md:top-[72px]">
-      <Container className="max-w-[1320px]">
+      <Container className="!max-w-[1200px] !px-4 sm:!px-6 lg:!px-0">
         <div className="flex h-12 items-center gap-1 overflow-x-auto no-scrollbar">
           {links.map((link) => (
             <a

@@ -2,80 +2,104 @@ import Image from "next/image";
 import Link from "next/link";
 import Container from "../ui/Container";
 import Reveal from "../ui/Reveal";
-import { LinkButton } from "../ui/Button";
 import { SectionEyebrow } from "./shared";
 
 export default function HeroSection() {
   return (
-    <section className="relative overflow-hidden bg-ink py-20 sm:py-28">
-      <div
-        aria-hidden="true"
-        className="pointer-events-none absolute inset-0"
-        style={{
-          backgroundImage:
-            "radial-gradient(600px 460px at 12% 0%, rgba(108,92,231,0.24), rgba(108,92,231,0) 65%)",
-        }}
-      />
-
-      <Container className="relative grid grid-cols-1 items-start gap-12 lg:grid-cols-[minmax(0,1fr)_minmax(0,440px)] lg:gap-16">
+    <section
+      className="relative overflow-hidden py-16 sm:py-20 lg:py-24"
+      style={{
+        backgroundColor: "rgba(23, 19, 53, 1)",
+        backgroundImage: `
+          radial-gradient(circle 800px at 12% 0%, rgba(108, 92, 231, 0.22) 0%, rgba(108, 92, 231, 0) 70%),
+          radial-gradient(circle 600px at 85% 90%, rgba(185, 129, 50, 0.12) 0%, rgba(185, 129, 50, 0) 70%)
+        `,
+      }}
+    >
+      <Container className="!max-w-[1200px] !px-4 sm:!px-6 lg:!px-0 relative grid grid-cols-1 items-center gap-12 lg:grid-cols-[minmax(0,1fr)_minmax(0,400px)] lg:gap-12 xl:grid-cols-[minmax(0,1fr)_minmax(0,440px)]">
         <div>
           <Reveal>
-            <SectionEyebrow tone="amber">Help Center</SectionEyebrow>
+            <SectionEyebrow tone="amber">HELP CENTER</SectionEyebrow>
           </Reveal>
 
           <Reveal delay={0.1}>
-            <h1 className="mt-4 text-4xl font-bold leading-[1.05] tracking-tight text-white sm:text-5xl lg:text-[56px]">
-              Find the guidance you need to
-              <br className="hidden sm:block" /> use Talvrin with confidence.
+            <h1 className="mt-4 text-3xl font-bold leading-tight tracking-tight text-white sm:text-4xl lg:text-[46px] lg:leading-[54px] font-['IBM_Plex_Sans']">
+              Find the guidance you need to<br className="hidden sm:inline" /> use Talvrin with confidence.
             </h1>
           </Reveal>
 
           <Reveal delay={0.2}>
-            <p className="mt-6 max-w-[720px] text-lg leading-8 text-white/90">
-              Get task-based help for understanding Talvrin, working with evidence, building
-              research views, monitoring change, and finding the right next step. Talvrin is a
-              research and market-intelligence platform; Help Center content is not investment
+            <p
+              className="mt-6 max-w-[720px] text-base sm:text-[17px] leading-[28px] font-['IBM_Plex_Sans']"
+              style={{ color: "rgba(246, 245, 251, 0.85)" }}
+            >
+              Get task-based help for understanding Talvrin, working with evidence, building<br className="hidden sm:inline" />
+              research views, monitoring change, and finding the right next step. Talvrin is a<br className="hidden sm:inline" />
+              research and market-intelligence platform; Help Center content is not investment<br className="hidden sm:inline" />
               advice.
             </p>
           </Reveal>
 
-          <Reveal delay={0.3} className="mt-8 flex flex-col items-stretch gap-4 sm:flex-row sm:items-center">
-            <LinkButton href="#quick-paths" variant="onDark">
+          {/* CTA Buttons: 55px tall, rounded-[10px], identical heights and matching Figma */}
+          <Reveal
+            delay={0.3}
+            className="mt-8 flex flex-col gap-4 sm:flex-row sm:items-center sm:gap-4"
+          >
+            <Link
+              href="#quick-paths"
+              className="inline-flex h-[55px] items-center justify-center rounded-[10px] bg-[#F6F5FB] px-7 text-[17px] font-semibold text-[#171335] font-['IBM_Plex_Sans'] transition-colors hover:bg-white"
+            >
               Browse help topics
-            </LinkButton>
+            </Link>
             <Link
               href="/resources/getting-started"
-              className="inline-flex items-center justify-center rounded-lg border-2 border-white/30 px-7 py-[15px] text-sm font-semibold text-white transition-colors duration-300 hover:border-white/60 hover:bg-white/5"
+              className="inline-flex h-[55px] items-center justify-center rounded-[10px] border border-[#F6F5FB]/[0.22] px-7 text-[17px] font-semibold text-[#F6F5FB] font-['IBM_Plex_Sans'] transition-colors hover:bg-[#F6F5FB]/10"
             >
               Start with Getting Started
             </Link>
             <Link
               href="/resources/contact-support"
-              className="inline-flex items-center justify-center text-sm font-semibold text-white/75 transition-colors hover:text-white"
+              className="group inline-flex items-center gap-1.5 text-sm font-semibold text-white/75 font-['IBM_Plex_Sans'] transition-colors hover:text-white"
             >
-              or Contact Support →
+              <span>or Contact Support</span>
+              <svg
+                width="11"
+                height="11"
+                viewBox="0 0 12 12"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                className="transition-transform group-hover:translate-x-0.5"
+              >
+                <path
+                  d="M2.5 6H9.5M9.5 6L6 2.5M9.5 6L6 9.5"
+                  stroke="currentColor"
+                  strokeWidth="1.5"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                />
+              </svg>
             </Link>
           </Reveal>
 
           <Reveal delay={0.4}>
-            <p className="mt-6 max-w-[660px] text-sm leading-6 text-white/60">
-              Help content is maintained by Talvrin content and product owners. Feature
-              availability and support channels follow current published product state.
+            <p className="mt-6 max-w-[660px] text-xs sm:text-[13px] leading-[21px] text-[#F6F5FB]/60 font-['IBM_Plex_Sans']">
+              Help content is maintained by Talvrin content and product owners. Feature availability and support<br className="hidden md:inline" />
+              channels follow current published product state.
             </p>
           </Reveal>
         </div>
 
         <Reveal
           delay={0.2}
-          className="relative aspect-[368/474] w-full overflow-hidden rounded-2xl border border-white/10 bg-white"
+          className="relative aspect-[368/460] w-full max-w-[400px] overflow-hidden rounded-2xl justify-self-center lg:justify-self-end lg:-translate-x-[150px]"
         >
           <Image
             src="/help-center/image 332.png"
             alt="Talvrin Help Center guidance overview"
             fill
             priority
-            sizes="(min-width: 1024px) 440px, 100vw"
-            className="object-cover"
+            sizes="(min-width: 1024px) 400px, 100vw"
+            className="object-cover rounded-2xl"
           />
         </Reveal>
       </Container>
