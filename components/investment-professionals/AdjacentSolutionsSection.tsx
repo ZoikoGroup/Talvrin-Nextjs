@@ -23,7 +23,7 @@ const solutions = [
   {
     title: "Wealth & Advisory Research",
     body: "Evidence-led market intelligence supporting analysis and client research processes.",
-    href: "/solutions/wealth-advisory",
+    href: "/solutions/wealth-advisory-research",
   },
 ];
 
