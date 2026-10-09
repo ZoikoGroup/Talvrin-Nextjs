@@ -33,14 +33,14 @@ export default function ResearchCTA() {
           {/* Buttons */}
           <div className="flex w-full flex-col items-stretch justify-center gap-3 pt-3.5 sm:w-auto sm:flex-row sm:items-center sm:gap-4">
             <a
-              href="/research"
+              href="/research/research-library"
               className="inline-flex items-center justify-center rounded-lg bg-slate-900 px-7 py-4 text-base font-semibold leading-5 text-violet-50 transition-all duration-200 hover:-translate-y-0.5 hover:bg-slate-800 [font-family:'IBM_Plex_Sans']"
             >
               Explore Talvrin Research
             </a>
 
             <a
-              href="/research/evidence-standards"
+              href="/trust/evidence-standards"
               className="inline-flex items-center justify-center rounded-lg border border-slate-900/25 px-7 py-4 text-base font-semibold leading-5 text-slate-900 transition-all duration-200 hover:-translate-y-0.5 hover:bg-slate-50 [font-family:'IBM_Plex_Sans']"
             >
               See Evidence Principles

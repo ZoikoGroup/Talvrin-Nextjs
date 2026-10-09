@@ -1,3 +1,4 @@
+import Link from "next/link";
 import Container from "../ui/Container";
 import Reveal from "../ui/Reveal";
 import ClaimTable, { type ClaimRow } from "./ClaimTable";
@@ -47,12 +48,13 @@ export default function CalendarRelationshipSection() {
           />
         </div>
 
-        {/* The design's own table forbids any route until the Route Registry
-            approves one, so this stays plain text rather than a link. */}
         <Reveal delay={0.2}>
-          <p className="mt-6 text-sm font-semibold text-accent-violet">
+          <Link
+            href="/research/economic-calendar"
+            className="mt-6 inline-block text-sm font-semibold text-accent-violet hover:underline"
+          >
             Explore Economic Calendar →
-          </p>
+          </Link>
         </Reveal>
       </Container>
     </section>

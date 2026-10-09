@@ -294,7 +294,7 @@ export default function StartByGoal() {
                 </>
               }
               link="See how Talvrin works"
-              href="#how-talvrin-works"
+              href="/product/how-talvrin-works"
             />
 
             {/* =================================================
@@ -315,7 +315,7 @@ export default function StartByGoal() {
                 </>
               }
               link="Explore evidence"
-              href="#evidence"
+              href="/product/evidence"
             />
 
             {/* =================================================
@@ -336,7 +336,7 @@ export default function StartByGoal() {
                 </>
               }
               link="See monitoring & alerts"
-              href="#monitoring"
+              href="/product/alerts"
             />
 
             {/* =================================================
@@ -439,7 +439,7 @@ export default function StartByGoal() {
                 </>
               }
               link="Read the AI boundary"
-              href="#ai-boundary"
+              href="/trust/ai-principles"
             />
           </div>
 
@@ -476,7 +476,7 @@ export default function StartByGoal() {
                 </>
               }
               link="See how Talvrin works"
-              href="#how-talvrin-works"
+              href="/product/how-talvrin-works"
             />
 
             {/* CARD 2 */}
@@ -491,7 +491,7 @@ export default function StartByGoal() {
                 </>
               }
               link="Explore evidence"
-              href="#evidence"
+              href="/product/evidence"
             />
 
             {/* CARD 3 */}
@@ -506,7 +506,7 @@ export default function StartByGoal() {
                 </>
               }
               link="See monitoring & alerts"
-              href="#monitoring"
+              href="/product/alerts"
             />
 
             {/* IMAGE */}
@@ -582,7 +582,7 @@ export default function StartByGoal() {
                 </>
               }
               link="Read the AI boundary"
-              href="#ai-boundary"
+              href="/trust/ai-principles"
             />
           </div>
         </div>

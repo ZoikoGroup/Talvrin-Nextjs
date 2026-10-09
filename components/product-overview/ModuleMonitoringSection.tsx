@@ -111,7 +111,7 @@ export default function ModuleMonitoringSection() {
         {/* Link Footer */}
         <Reveal delay={0.3} className="mt-8">
           <Link
-            href="/monitoring"
+            href="/product/monitoring"
             className="inline-flex items-center text-sm font-semibold text-[#6C5CE7] transition-colors hover:text-ink"
           >
             Explore Monitoring →

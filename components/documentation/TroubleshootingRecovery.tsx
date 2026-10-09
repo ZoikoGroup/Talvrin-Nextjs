@@ -38,6 +38,7 @@ const troubleshootingItems = [
 export default function TroubleshootingRecovery() {
   return (
     <section
+      id="troubleshooting"
       className="
         relative
         w-full
@@ -258,7 +259,7 @@ export default function TroubleshootingRecovery() {
                 </span>
 
                 <Link
-                  href="/support"
+                  href="/resources/contact-support"
                   className="
                     text-indigo-500
                     transition-opacity
@@ -471,7 +472,7 @@ export default function TroubleshootingRecovery() {
               </span>
 
               <Link
-                href="/support"
+                href="/resources/contact-support"
                 className="
                   text-indigo-500
                   transition-opacity

@@ -45,7 +45,7 @@ export default function ChangeDetectionSection() {
           <SectionHeading>Markets move. More importantly, the evidence moves.</SectionHeading>
         </Reveal>
 
-        <div className="mt-9 grid grid-cols-1 gap-6 lg:grid-cols-[720px_565px] lg:items-start">
+        <div className="mt-9 grid grid-cols-1 gap-6 lg:grid-cols-[minmax(0,720fr)_minmax(0,565fr)] lg:items-start">
           <div>
             <Reveal className="rounded-2xl bg-surface px-8 pb-8 pt-[24px]">
               <h3 className="text-xl font-bold text-ink">Research View: U.S. Treasury Yield Outlook</h3>

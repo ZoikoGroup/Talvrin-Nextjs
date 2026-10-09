@@ -15,7 +15,7 @@ export default function FinalCtaSection() {
             apply to funds and other public-market assets as coverage expands.
           </p>
           <div className="mt-3 flex w-full flex-col items-stretch gap-4 sm:w-auto sm:flex-row sm:items-center">
-            <LinkButton href="/company/contact" variant="primary">
+            <LinkButton href="/request-access" variant="primary">
               Request Access
             </LinkButton>
             <LinkButton href="#coverage-truth" variant="secondary">

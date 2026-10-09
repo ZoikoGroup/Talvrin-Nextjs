@@ -90,7 +90,7 @@ export default function Hero() {
               <div className="flex w-full flex-col items-stretch gap-3 pt-3 sm:w-auto sm:flex-row sm:items-start sm:gap-4">
                 {/* Request Access */}
                 <a
-                  href="#request-access"
+                  href="/request-access"
                   className="inline-flex min-h-[56px] items-center justify-center rounded-lg bg-violet-50 px-7 py-4 font-['IBM_Plex_Sans'] text-base font-semibold text-slate-900 transition-all duration-300 hover:-translate-y-1 hover:bg-white"
                 >
                   Request Access

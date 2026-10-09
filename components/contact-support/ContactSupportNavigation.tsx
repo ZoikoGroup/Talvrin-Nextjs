@@ -17,7 +17,7 @@ const supportNavigation = [
   },
   {
     label: "Trust & Escalation",
-    href: "#trust-escalation",
+    href: "#trust-and-escalation",
   },
 ];
 

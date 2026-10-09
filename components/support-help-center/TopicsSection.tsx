@@ -19,7 +19,7 @@ const topics: Topic[] = [
   {
     title: "Using Talvrin",
     body: "Evidence discovery, research views and monitoring concepts.",
-    link: { label: "See how Talvrin works", href: "/product/overview" },
+    link: { label: "See how Talvrin works", href: "/product/how-talvrin-works" },
   },
   { title: "Account & Access", body: "Sign-in, profile and workspace settings." },
   { title: "Accessibility", body: "Using Talvrin with assistive technology." },

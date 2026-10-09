@@ -153,7 +153,7 @@ export default function Coverage() {
             >
               {/* Primary CTA */}
               <a
-                href="#coverage"
+                href="#coverage-explorer"
                 className="
                   inline-flex
                   min-h-[52px]
@@ -177,11 +177,12 @@ export default function Coverage() {
                 Explore Coverage
               </a>
 
-              {/* Secondary CTA */}
-              <a
-                href="#supported-jurisdictions"
+              {/* Secondary CTA — Supported Jurisdictions page not published yet */}
+              <span
+                aria-disabled="true"
                 className="
                   inline-flex
+                  cursor-not-allowed
                   h-14
                   items-center
                   justify-center
@@ -195,14 +196,10 @@ export default function Coverage() {
                   font-semibold
                   leading-5
                   text-violet-50/60
-                  transition-all
-                  duration-200
-                  hover:border-violet-50/40
-                  hover:text-violet-50/80
                 "
               >
                 Supported Jurisdictions — publishing next
-              </a>
+              </span>
             </div>
 
             {/* Bottom disclaimer */}

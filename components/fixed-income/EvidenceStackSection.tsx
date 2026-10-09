@@ -34,7 +34,7 @@ export default function EvidenceStackSection() {
           </h2>
         </Reveal>
 
-        <div className="mt-10 grid grid-cols-1 gap-6 lg:grid-cols-[242.71px_773px_242.71px] lg:gap-[25.6px]">
+        <div className="mt-10 grid grid-cols-1 gap-6 lg:grid-cols-[minmax(0,242.71fr)_minmax(0,773fr)_minmax(0,242.71fr)] lg:gap-[25.6px]">
           <Reveal>
             <EvidenceCard
               title="Central-Bank / Policy"

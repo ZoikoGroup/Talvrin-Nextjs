@@ -68,7 +68,7 @@ export default function ResearchTeamsHero() {
               </a>
 
               <a
-                href="/research/talvrin-methodology"
+                href="/product/how-talvrin-works"
                 className="inline-flex items-center justify-center rounded-lg border border-violet-50/30 px-7 py-4 text-base font-semibold text-violet-50 transition-all duration-200 hover:-translate-y-0.5 hover:bg-violet-50/10 [font-family:'IBM_Plex_Sans']"
               >
                 See How Talvrin Works →

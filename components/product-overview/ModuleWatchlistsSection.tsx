@@ -33,7 +33,7 @@ export default function ModuleWatchlistsSection() {
 
             <Reveal delay={0.3} className="mt-8">
               <Link
-                href="/watchlists"
+                href="/product/watchlists"
                 className="inline-flex items-center text-sm font-semibold text-[#6C5CE7] transition-colors hover:text-ink"
               >
                 Explore Watchlists →

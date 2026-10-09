@@ -50,7 +50,7 @@ export default function ResearchWorkspaceSection() {
 
             <Reveal delay={0.4} className="mt-8">
               <Link
-                href="/research-workspace"
+                href="/product/research-workspace"
                 className="inline-flex items-center text-sm font-semibold text-[#6C5CE7] transition-colors hover:text-ink"
               >
                 Explore Research Workspace →

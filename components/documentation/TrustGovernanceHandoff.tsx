@@ -110,6 +110,7 @@ function GovernanceCard({
 export default function TrustGovernanceHandoff() {
   return (
     <section
+      id="trust"
       className="
         w-full
         overflow-hidden
