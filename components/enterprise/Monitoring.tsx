@@ -135,14 +135,14 @@ export default function Monitoring() {
               {/* Actions */}
               <div className="flex flex-col items-start gap-4 pt-6 sm:flex-row sm:items-center">
                 <a
-                  href="#research-view"
+                  href="/product/research-workspace"
                   className="inline-flex min-h-[44px] items-center rounded-lg bg-slate-900 px-5 py-3 font-['IBM_Plex_Sans'] text-sm font-semibold text-violet-50 transition-all duration-300 hover:-translate-y-0.5 hover:bg-slate-800"
                 >
                   Review the Research View
                 </a>
 
                 <a
-                  href="#evidence"
+                  href="/product/evidence"
                   className="font-['IBM_Plex_Sans'] text-sm font-semibold text-indigo-500 transition-colors duration-300 hover:text-indigo-600"
                 >
                   Open Evidence →

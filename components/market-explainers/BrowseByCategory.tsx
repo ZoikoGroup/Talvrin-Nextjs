@@ -56,7 +56,7 @@ const categories = [
 
 export default function BrowseByCategory() {
   return (
-    <section className="w-full overflow-hidden bg-white text-slate-900">
+    <section id="browse-by-category" className="w-full scroll-mt-20 overflow-hidden bg-white text-slate-900">
       <div
         className="
           mx-auto

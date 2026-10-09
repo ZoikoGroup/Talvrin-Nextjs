@@ -18,7 +18,7 @@ export default function FinalCtaSection() {
             <LinkButton href="/product/overview" className="px-7 py-[15px] text-base">
               Explore Talvrin
             </LinkButton>
-            <LinkButton href="/resources/getting-started" variant="ghost" className="px-7 py-[15px] text-base">
+            <LinkButton href="/product/how-talvrin-works" variant="ghost" className="px-7 py-[15px] text-base">
               See How Talvrin Works
             </LinkButton>
           </div>

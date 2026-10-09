@@ -5,6 +5,7 @@ import Link from 'next/link'
 export default function DocumentationFinalCta() {
   return (
     <section
+      id="support"
       className="
         relative
         w-full
@@ -104,7 +105,7 @@ export default function DocumentationFinalCta() {
               {/* PRIMARY BUTTON */}
 
               <Link
-                href="/"
+                href="/product/overview"
                 className="
                   inline-flex
                   h-[52px]
@@ -136,7 +137,7 @@ export default function DocumentationFinalCta() {
               {/* SECONDARY BUTTON */}
 
               <Link
-                href="/support"
+                href="/resources/contact-support"
                 className="
                   inline-flex
                   h-[52px]
@@ -280,7 +281,7 @@ export default function DocumentationFinalCta() {
             {/* PRIMARY */}
 
             <Link
-              href="/"
+              href="/product/overview"
               className="
                 inline-flex
                 h-[52px]
@@ -314,7 +315,7 @@ export default function DocumentationFinalCta() {
             {/* SECONDARY */}
 
             <Link
-              href="/support"
+              href="/resources/contact-support"
               className="
                 inline-flex
                 h-[52px]

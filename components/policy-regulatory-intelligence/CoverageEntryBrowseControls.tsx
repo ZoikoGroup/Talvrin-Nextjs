@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function CoverageEntryBrowseControls() {
   return (
-    <section className="w-full bg-white">
+    <section id="coverage-browse" className="w-full scroll-mt-20 bg-white">
       <div className="mx-auto w-full max-w-[1320px] px-6 py-20 sm:px-8 lg:px-10 lg:py-24 xl:px-0">
         {/* =====================================================
             SECTION HEADER

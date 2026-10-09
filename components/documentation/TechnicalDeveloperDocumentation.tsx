@@ -5,7 +5,7 @@ import Image from 'next/image'
 export default function TechnicalDeveloperDocumentation() {
   return (
     <section
-      id="technical-developer-documentation"
+      id="developer-docs"
       className="
         w-full
         overflow-hidden
@@ -127,7 +127,7 @@ export default function TechnicalDeveloperDocumentation() {
               ================================================= */}
 
           <a
-            href="#developer-overview"
+            href="/developers/overview"
             className="
               absolute
               left-0
@@ -160,7 +160,7 @@ export default function TechnicalDeveloperDocumentation() {
               ================================================= */}
 
           <a
-            href="#api-documentation"
+            href="/developers/api-documentation"
             className="
               absolute
               left-[197.71px]
@@ -366,7 +366,7 @@ export default function TechnicalDeveloperDocumentation() {
             "
           >
             <a
-              href="#developer-overview"
+              href="/developers/overview"
               className="
                 inline-flex
                 h-12
@@ -385,7 +385,7 @@ export default function TechnicalDeveloperDocumentation() {
             </a>
 
             <a
-              href="#api-documentation"
+              href="/developers/api-documentation"
               className="
                 inline-flex
                 h-12

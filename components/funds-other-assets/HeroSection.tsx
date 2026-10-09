@@ -49,7 +49,7 @@ export default function HeroSection() {
             delay={0.3}
             className="mt-6 flex flex-col items-stretch gap-3 sm:flex-row sm:items-center sm:gap-4"
           >
-            <LinkButton href="#request-access" variant="onDark">
+            <LinkButton href="/request-access" variant="onDark">
               Request Access
             </LinkButton>
             <Link

@@ -48,11 +48,11 @@ export default function ProductOverviewHero() {
             delay={0.3}
             className="mt-8 flex flex-col items-stretch gap-3 sm:flex-row sm:items-center sm:gap-4"
           >
-            <LinkButton href="/explore-talvrin" variant="onDark">
+            <LinkButton href="/request-access" variant="onDark">
               Explore Talvrin
             </LinkButton>
             <Link
-              href="#how-it-works"
+              href="/product/how-talvrin-works"
               className="inline-flex items-center justify-center rounded-lg border-2 border-white/30 px-7 py-[15px] text-sm font-semibold text-white transition-colors duration-300 hover:border-white/60 hover:bg-white/5"
             >
               See How Talvrin Works →

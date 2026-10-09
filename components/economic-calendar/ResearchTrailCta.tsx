@@ -66,7 +66,7 @@ export default function ResearchTrailCta() {
 
             {/* Secondary CTA */}
             <a
-              href="#"
+              href="/product/how-talvrin-works"
               className="inline-flex min-h-[52px] items-center justify-center rounded-lg px-7 py-4 font-['IBM_Plex_Sans'] text-base font-semibold text-slate-900 outline outline-1 outline-offset-[-1px] outline-slate-900/25 transition-all duration-200 hover:-translate-y-0.5 hover:bg-slate-50"
             >
               See How Talvrin Works

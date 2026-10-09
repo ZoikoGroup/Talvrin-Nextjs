@@ -45,19 +45,19 @@ export default function PolicyRegulationHero() {
 
             {/* Buttons */}
             <div className="flex w-full flex-col items-stretch gap-3 pt-4 sm:w-auto sm:flex-row sm:items-start sm:gap-4">
-              <button
-                type="button"
+              <a
+                href="#coverage-browse"
                 className="rounded-lg bg-[#F7F4FF] px-7 py-4 text-center font-['IBM_Plex_Sans'] text-base font-semibold text-[#171335] transition-opacity hover:opacity-90"
               >
                 Explore Policy &amp; Regulation
-              </button>
+              </a>
 
-              <button
-                type="button"
+              <a
+                href="/research/talvrin-methodology"
                 className="rounded-lg border border-[#F7F4FF]/30 px-7 py-4 text-center font-['IBM_Plex_Sans'] text-base font-semibold text-[#F7F4FF] transition-colors hover:bg-[#F7F4FF]/10"
               >
                 See Talvrin Methodology →
-              </button>
+              </a>
             </div>
 
             {/* Bottom disclaimer */}

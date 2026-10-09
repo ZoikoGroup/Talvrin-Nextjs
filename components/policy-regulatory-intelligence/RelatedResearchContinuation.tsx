@@ -1,26 +1,33 @@
+import Link from "next/link";
+
 const researchLinks = [
   {
     title: "Central Banks",
+    href: "/markets/central-banks",
     description:
       "Institution profiles, official decisions and evidence monitoring once the authority/event relationship is explicit and supported.",
   },
   {
     title: "Economic Calendar",
+    href: "/research/economic-calendar",
     description:
       "Scheduled and released economic events tied to a policy item where product data supports the link.",
   },
   {
     title: "Market Intelligence",
+    href: "/research/market-intelligence",
     description:
       "Broader market context, with evidence and analysis provenance kept visible.",
   },
   {
     title: "Research Library",
+    href: "/research/research-library",
     description:
       "Durable source and research collections once the capability exists.",
   },
   {
     title: "Talvrin Methodology",
+    href: "/research/talvrin-methodology",
     description:
       "How normalization, classification and monitoring doctrine are defined and reviewed.",
   },
@@ -56,9 +63,10 @@ export default function RelatedResearchContinuation() {
         {/* Research cards */}
         <div className="mt-7 grid w-full grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-5">
           {researchLinks.map((item) => (
-            <div
+            <Link
               key={item.title}
-              className="flex min-h-[190px] w-full flex-col rounded-2xl border border-slate-900/10 bg-white p-5"
+              href={item.href}
+              className="flex min-h-[190px] w-full flex-col rounded-2xl border border-slate-900/10 bg-white p-5 transition-colors duration-200 hover:border-slate-900/25"
             >
               <h3 className="font-['IBM_Plex_Sans'] text-base font-bold leading-6 text-slate-900">
                 {item.title}
@@ -68,7 +76,7 @@ export default function RelatedResearchContinuation() {
               <p className="mt-2 font-['IBM_Plex_Sans'] text-sm font-normal leading-5 text-gray-600">
                 {item.description}
               </p>
-            </div>
+            </Link>
           ))}
         </div>
       </div>

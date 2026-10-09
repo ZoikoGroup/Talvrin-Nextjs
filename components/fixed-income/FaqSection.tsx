@@ -55,7 +55,7 @@ export default function FaqSection() {
           <SectionHeading>Frequently asked, answered first.</SectionHeading>
         </Reveal>
 
-        <div className="mt-9 grid grid-cols-1 gap-10 lg:grid-cols-[840px_423px]">
+        <div className="mt-9 grid grid-cols-1 gap-10 lg:grid-cols-[minmax(0,840fr)_minmax(0,423fr)]">
           <Reveal delay={0.1} className="divide-y divide-ink/10 border-t border-ink/10">
             {faqs.map((faq, index) => {
               const isOpen = index === openIndex;

@@ -296,7 +296,7 @@ export default function DocumentationHero() {
               {/* PRIMARY */}
 
               <a
-                href="#documentation"
+                href="#start-by-goal"
                 className="
                   inline-flex
                   min-h-[50px]
@@ -322,7 +322,7 @@ export default function DocumentationHero() {
               {/* SECONDARY */}
 
               <a
-                href="#platform"
+                href="/product/overview"
                 className="
                   inline-flex
                   min-h-[50px]
