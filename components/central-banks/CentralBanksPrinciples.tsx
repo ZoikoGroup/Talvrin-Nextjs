@@ -8,7 +8,6 @@ const principles = [
   "INSTITUTION-SPECIFIC INSTRUMENTS",
   "EVIDENCE BEFORE INTERPRETATION",
   "CHANGE-MONITORED",
-  "NON-ADVISORY",
 ];
 
 export default function CentralBanksPrinciples() {
@@ -27,14 +26,16 @@ export default function CentralBanksPrinciples() {
         className="
           mx-auto
           flex
-          min-h-24
+          min-h-16
           w-full
           max-w-[1320px]
           items-center
           justify-center
-          px-6
-          py-5
-          sm:px-8
+          px-4
+          py-4
+          sm:px-6
+          sm:py-5
+          md:px-8
           lg:px-0
         "
       >

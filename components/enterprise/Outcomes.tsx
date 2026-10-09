@@ -75,9 +75,9 @@ export default function Outcomes() {
         ref={sectionRef}
         className="w-full overflow-hidden bg-white"
       >
-        <div className="mx-auto w-full max-w-[1440px] px-6 py-20 sm:px-8 md:px-10 lg:px-20 lg:py-24">
+        <div className="mx-auto w-full max-w-[1440px] px-4 py-12 sm:px-6 md:px-8 lg:px-8 xl:px-20 lg:py-16 xl:py-24">
           {/* Section heading */}
-          <div className="mb-10 flex w-full flex-col items-start lg:mb-[66px]">
+          <div className="mb-8 flex w-full flex-col items-start lg:mb-12 xl:mb-[66px]">
             <p
               data-reveal
               className="reveal-element m-0 font-['IBM_Plex_Sans'] text-xs font-bold tracking-wide text-yellow-600"
@@ -87,14 +87,14 @@ export default function Outcomes() {
 
             <h2
               data-reveal
-              className="reveal-element reveal-delay-1 mt-5 max-w-[780px] font-['IBM_Plex_Sans'] text-[36px] font-bold leading-[1.08] tracking-[-1px] text-slate-900 sm:text-[42px] sm:leading-[1.08] lg:text-5xl lg:leading-[48.72px]"
+              className="reveal-element reveal-delay-1 mt-4 max-w-[780px] font-['IBM_Plex_Sans'] text-[30px] font-bold leading-[1.12] tracking-[-1px] text-slate-900 sm:text-[38px] md:text-[42px] lg:text-5xl lg:leading-[48.72px]"
             >
               Seven source-backed outcomes for organization-scale research.
             </h2>
           </div>
 
           {/* Outcomes grid */}
-          <div className="grid w-full grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-[240px_240px_240px_minmax(0,1fr)] lg:gap-5">
+          <div className="grid w-full grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-[repeat(3,minmax(0,1fr))_minmax(0,1.2fr)] xl:grid-cols-[240px_240px_240px_minmax(0,1fr)] lg:gap-4 xl:gap-5">
             {/* Card 1 */}
             <OutcomeCard
               {...outcomes[0]}
@@ -116,13 +116,13 @@ export default function Outcomes() {
             {/* Large image */}
             <div
               data-reveal
-              className="reveal-element reveal-delay-3 relative min-h-[360px] overflow-hidden rounded-2xl border border-slate-900/10 bg-violet-50 sm:min-h-[400px] lg:row-span-2 lg:min-h-[452px]"
+              className="reveal-element reveal-delay-3 relative min-h-[260px] overflow-hidden rounded-2xl border border-slate-900/10 bg-violet-50 sm:min-h-[300px] lg:row-span-2 lg:min-h-[420px] xl:min-h-[452px]"
             >
               <Image
                 src="/images/solutions/enterprise/image.png"
                 alt="Enterprise research and evidence"
                 fill
-                sizes="(max-width: 1023px) 100vw, 498px"
+                sizes="(max-width: 1023px) 100vw, (max-width: 1279px) 30vw, 498px"
                 className="object-cover"
               />
             </div>

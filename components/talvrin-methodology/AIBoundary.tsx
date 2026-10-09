@@ -49,7 +49,7 @@ function BoundaryCard({
         delay: index * 0.06,
         ease: [0.22, 1, 0.36, 1],
       }}
-      className="flex min-h-[168px] flex-col gap-3.5 rounded-2xl border border-slate-900/10 bg-violet-50 px-6 py-6"
+      className="flex h-full min-h-[168px] flex-col gap-3.5 rounded-2xl border border-slate-900/10 bg-violet-50 px-6 py-6"
     >
       {/* Allowed */}
       <div className="flex items-start gap-2.5">
@@ -85,7 +85,7 @@ function BoundaryCard({
 export default function AIBoundary() {
   return (
     <section className="w-full overflow-hidden bg-white">
-      <div className="mx-auto w-full max-w-[1440px] px-5 py-16 sm:px-8 sm:py-20 lg:px-20 lg:py-[96px]">
+      <div className="mx-auto w-full max-w-[1440px] px-5 py-16 sm:px-8 sm:py-20 lg:px-8 lg:py-[96px] xl:px-20">
         {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 24 }}
@@ -108,7 +108,7 @@ export default function AIBoundary() {
         </motion.div>
 
         {/* Content */}
-        <div className="mt-10 grid grid-cols-1 gap-3 md:mt-12 md:grid-cols-2 lg:mt-[58px] lg:grid-cols-4 lg:gap-[13px]">
+        <div className="mt-10 grid grid-cols-1 gap-4 md:mt-12 md:grid-cols-2 lg:mt-[58px] lg:grid-cols-2 xl:grid-cols-4 xl:gap-[16px]">
           {/* First 3 cards */}
           {boundaries.slice(0, 3).map((item, index) => (
             <BoundaryCard
@@ -129,7 +129,7 @@ export default function AIBoundary() {
               delay: 0.18,
               ease: [0.22, 1, 0.36, 1],
             }}
-            className="relative min-h-[304px] overflow-hidden rounded-2xl border border-slate-900/10 bg-violet-50 md:col-span-2 lg:col-span-1 lg:row-span-2 lg:min-h-[304px]"
+            className="relative min-h-[304px] overflow-hidden rounded-2xl border border-slate-900/10 bg-violet-50 md:col-span-2 lg:col-span-2 xl:col-span-1 xl:row-span-2 xl:min-h-[304px]"
           >
             <Image
               src="/images/research/talvrin-methodology/image3.png"

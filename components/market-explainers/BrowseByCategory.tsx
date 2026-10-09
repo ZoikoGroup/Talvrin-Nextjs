@@ -62,12 +62,13 @@ export default function BrowseByCategory() {
           mx-auto
           w-full
           max-w-[1280px]
-          px-6
-          py-20
+          px-5
+          py-16
           sm:px-8
-          sm:py-24
-          lg:px-0
+          sm:py-20
+          lg:px-8
           lg:py-[96px]
+          xl:px-0
         "
       >
         {/* =====================================================
@@ -165,13 +166,10 @@ export default function BrowseByCategory() {
             w-full
             grid-cols-1
             gap-4
-
             sm:grid-cols-2
-
-            lg:grid-cols-4
-
+            lg:grid-cols-3
             xl:grid-cols-[repeat(4,minmax(0,1fr))_240px]
-            xl:grid-rows-[220px_220px]
+            xl:grid-rows-[minmax(220px,auto)_minmax(220px,auto)]
           "
         >
           {/* =================================================
@@ -179,7 +177,7 @@ export default function BrowseByCategory() {
 
               IMPORTANT:
               Explicitly placed in column 5
-              and spans both rows.
+              and spans both rows on xl.
           ================================================= */}
 
           <motion.div
@@ -204,17 +202,16 @@ export default function BrowseByCategory() {
             }}
             className="
               relative
-              min-h-[420px]
+              min-h-[260px]
               overflow-hidden
               rounded-2xl
               border
               border-slate-900/10
               bg-violet-50
-
               sm:col-span-2
-
-              lg:col-span-2
-
+              sm:min-h-[300px]
+              lg:col-span-1
+              lg:min-h-[220px]
               xl:col-span-1
               xl:col-start-5
               xl:row-span-2
@@ -226,7 +223,7 @@ export default function BrowseByCategory() {
               src="/images/research/market-explainers/image.png"
               alt="Talvrin research discussion"
               fill
-              sizes="(max-width: 639px) 100vw, (max-width: 1279px) 50vw, 240px"
+              sizes="(max-width: 639px) 100vw, (max-width: 1023px) 50vw, (max-width: 1279px) 33vw, 240px"
               className="
                 object-cover
                 object-center
@@ -291,6 +288,7 @@ function CategoryCard({
       }}
       className="
         flex
+        h-full
         min-h-[220px]
         w-full
         flex-col

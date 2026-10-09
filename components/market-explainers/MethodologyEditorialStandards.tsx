@@ -50,14 +50,13 @@ export default function MethodologyEditorialStandards() {
           mx-auto
           w-full
           max-w-[1280px]
-          px-6
-          py-20
-
+          px-5
+          py-16
           sm:px-8
-          sm:py-24
-
-          lg:px-0
+          sm:py-20
+          lg:px-8
           lg:py-[96px]
+          xl:px-0
         "
       >
         {/* =====================================================
@@ -162,20 +161,20 @@ export default function MethodologyEditorialStandards() {
             w-full
             grid-cols-1
             gap-4
-
             sm:grid-cols-2
-
-            lg:grid-cols-[240px_240px_240px_minmax(0,1fr)]
-            lg:grid-rows-[160px_160px]
-            lg:gap-x-[20px]
-            lg:gap-y-[18.8px]
+            lg:grid-cols-3
+            lg:gap-5
+            xl:grid-cols-[240px_240px_240px_minmax(0,1fr)]
+            xl:grid-rows-[minmax(160px,auto)_minmax(160px,auto)]
+            xl:gap-x-[20px]
+            xl:gap-y-[18.8px]
           "
         >
           {/* =================================================
               IMAGE
 
               Explicitly fixed to column 4 and spans
-              both desktop rows.
+              both desktop rows on xl.
           ================================================= */}
 
           <motion.div
@@ -201,23 +200,24 @@ export default function MethodologyEditorialStandards() {
             className="
               relative
               order-first
-              min-h-[320px]
+              h-[240px]
               w-full
               overflow-hidden
               rounded-2xl
               border
               border-slate-900/10
               bg-violet-50
-
               sm:col-span-2
-
-              lg:order-none
-              lg:col-start-4
-              lg:row-start-1
-              lg:row-span-2
-              lg:col-span-1
-              lg:h-[338.8px]
-              lg:min-h-0
+              sm:h-[280px]
+              lg:col-span-3
+              lg:h-[300px]
+              xl:order-none
+              xl:col-span-1
+              xl:col-start-4
+              xl:row-start-1
+              xl:row-span-2
+              xl:h-full
+              xl:min-h-0
             "
           >
             <Image
@@ -226,7 +226,7 @@ export default function MethodologyEditorialStandards() {
               fill
               sizes="
                 (max-width: 639px) 100vw,
-                (max-width: 1023px) 100vw,
+                (max-width: 1279px) 100vw,
                 500px
               "
               className="
@@ -345,6 +345,7 @@ function StageCard({
       }}
       className="
         flex
+        h-full
         min-h-[160px]
         w-full
         flex-col

@@ -97,12 +97,14 @@ export default function DataSourceRightsModel() {
           mx-auto
           w-full
           max-w-[1440px]
-          px-6
-          py-20
-          sm:px-8
-          md:px-10
-          lg:px-20
-          lg:py-[96px]
+          px-4
+          py-12
+          sm:px-6
+          md:px-8
+          lg:px-8
+          xl:px-20
+          lg:py-16
+          xl:py-[96px]
         "
       >
         {/* EYEBROW */}
@@ -134,7 +136,8 @@ export default function DataSourceRightsModel() {
         <div
           data-reveal
           className="
-            mt-5
+            mt-3
+            sm:mt-5
             translate-y-8
             opacity-0
             transition-all
@@ -150,18 +153,19 @@ export default function DataSourceRightsModel() {
               m-0
               max-w-[760px]
               font-['IBM_Plex_Sans']
-              text-[36px]
+              text-[30px]
               font-bold
-              leading-[1.1]
+              leading-[1.12]
               tracking-[-1px]
               text-violet-50
-              sm:text-[42px]
+              sm:text-[38px]
+              md:text-[42px]
               lg:text-5xl
               lg:leading-[48.72px]
             "
           >
-            Coverage depends on rights, not just
-            <br className="hidden lg:block" />
+            Coverage depends on rights, not just{" "}
+            <br className="hidden xl:block" />
             on evidence existing.
           </h2>
         </div>
@@ -170,7 +174,8 @@ export default function DataSourceRightsModel() {
         <div
           data-reveal
           className="
-            mt-5
+            mt-4
+            sm:mt-5
             translate-y-8
             opacity-0
             transition-all
@@ -186,9 +191,11 @@ export default function DataSourceRightsModel() {
               m-0
               max-w-[780px]
               font-['IBM_Plex_Sans']
-              text-base
+              text-sm
+              sm:text-base
               font-normal
-              leading-7
+              leading-6
+              sm:leading-7
               text-violet-50/70
             "
           >
@@ -201,11 +208,14 @@ export default function DataSourceRightsModel() {
         {/* MAIN CONTENT */}
         <div
           className="
-            mt-14
+            mt-8
+            sm:mt-14
             grid
             grid-cols-1
             gap-4
-            lg:grid-cols-[240px_240px_240px_minmax(0,1fr)]
+            sm:grid-cols-2
+            lg:grid-cols-4
+            xl:grid-cols-[240px_240px_240px_minmax(0,1fr)]
           "
         >
           {/* SOURCE AVAILABILITY */}
@@ -234,7 +244,8 @@ export default function DataSourceRightsModel() {
             data-reveal
             className="
               order-first
-              min-h-[360px]
+              min-h-[260px]
+              sm:min-h-[300px]
               translate-y-8
               scale-[0.98]
               overflow-hidden
@@ -246,10 +257,12 @@ export default function DataSourceRightsModel() {
               transition-all
               duration-1000
               ease-out
+              sm:col-span-2
+              lg:col-span-1
               lg:order-none
               lg:row-span-2
               lg:min-h-0
-              lg:h-[384px]
+              lg:h-full
             "
             style={{
               transitionDelay: "300ms",

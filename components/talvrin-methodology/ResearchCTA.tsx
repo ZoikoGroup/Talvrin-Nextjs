@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 export default function ResearchCTA() {
   return (
     <section className="w-full overflow-hidden border-t border-slate-900/10 bg-white">
-      <div className="mx-auto flex w-full max-w-[1440px] justify-center px-5 py-16 sm:px-8 sm:py-20 lg:px-20 lg:py-[88px]">
+      <div className="mx-auto flex w-full max-w-[1440px] justify-center px-5 py-16 sm:px-8 sm:py-20 lg:px-8 lg:py-[88px] xl:px-20">
         <motion.div
           initial={{ opacity: 0, y: 28 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -17,7 +17,7 @@ export default function ResearchCTA() {
           className="flex w-full max-w-[700px] flex-col items-center gap-4 text-center"
         >
           {/* Heading */}
-          <h2 className="text-[36px] font-bold leading-[1.08] tracking-[-0.02em] text-slate-900 sm:text-[44px] lg:text-5xl lg:leading-[48.3px] [font-family:'IBM_Plex_Sans']">
+          <h2 className="text-[32px] font-bold leading-[1.08] tracking-[-0.02em] text-slate-900 sm:text-[40px] lg:text-[44px] xl:text-5xl lg:leading-[48.3px] [font-family:'IBM_Plex_Sans']">
             Build research that remains
             <br className="hidden sm:block" />
             {" "}connected to the evidence.

@@ -36,7 +36,7 @@ const authorityDetails = [
 export default function AuthorityProfileSourceContext() {
   return (
     <section className="w-full bg-white">
-      <div className="mx-auto w-full max-w-[1280px] px-6 py-20 sm:px-8 lg:px-10 lg:py-24">
+      <div className="mx-auto w-full max-w-[1280px] px-5 py-16 sm:px-8 sm:py-20 lg:px-8 lg:py-24 xl:px-0">
         {/* Header */}
         <div className="w-full">
           <p className="font-['IBM_Plex_Sans'] text-xs font-bold tracking-wide text-yellow-600">
@@ -44,7 +44,7 @@ export default function AuthorityProfileSourceContext() {
           </p>
 
           <div className="w-full max-w-[1000px] pt-3">
-            <h2 className="font-['IBM_Plex_Sans'] text-[40px] font-bold leading-[1.08] tracking-[-0.02em] text-slate-900 sm:text-5xl sm:leading-[48.72px]">
+            <h2 className="font-['IBM_Plex_Sans'] text-[36px] font-bold leading-[1.08] tracking-[-0.02em] text-slate-900 sm:text-5xl sm:leading-[48.72px]">
               Stable identity, jurisdiction and rights
               <br className="hidden sm:block" />
               {" — "}never a guessed taxonomy.
@@ -61,9 +61,9 @@ export default function AuthorityProfileSourceContext() {
         </div>
 
         {/* Main Content */}
-        <div className="mt-10 flex w-full flex-col gap-10 lg:flex-row lg:items-start lg:gap-16">
+        <div className="mt-10 flex w-full flex-col gap-8 lg:flex-row lg:items-start lg:gap-10 xl:gap-16">
           {/* Image */}
-          <div className="relative w-full shrink-0 overflow-hidden rounded-2xl bg-slate-900 sm:max-w-[440px] lg:w-[440px]">
+          <div className="relative w-full shrink-0 overflow-hidden rounded-2xl bg-slate-900 sm:max-w-[440px] lg:w-[380px] xl:w-[440px]">
             <div className="relative aspect-square w-full">
               <Image
                 src="/images/research/policy-regulatory-intelligence/image2.png"

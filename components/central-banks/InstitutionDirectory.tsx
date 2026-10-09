@@ -114,13 +114,17 @@ export default function InstitutionDirectory() {
           mx-auto
           w-full
           max-w-[1440px]
-          px-6
-          pb-20
-          pt-24
-          sm:px-8
-          lg:px-[80px]
+          px-4
+          pb-16
+          pt-16
+          sm:px-6
+          sm:pb-20
+          sm:pt-20
+          md:px-8
+          lg:px-12
           lg:pb-[95px]
           lg:pt-[96px]
+          xl:px-[80px]
         "
       >
         <div className="w-full max-w-[1280px]">
@@ -164,12 +168,13 @@ export default function InstitutionDirectory() {
               mt-[16px]
               max-w-[1000px]
               font-['IBM_Plex_Sans']
-              text-[36px]
+              text-[30px]
               font-bold
-              leading-[1.08]
+              leading-[1.1]
               tracking-[-0.02em]
               text-slate-900
-              sm:text-[42px]
+              sm:text-[40px]
+              md:text-[44px]
               lg:text-5xl
               lg:leading-[48.72px]
             "
@@ -219,13 +224,15 @@ export default function InstitutionDirectory() {
             }}
             variants={fadeUp}
             className="
-              mt-[76px]
+              mt-8
               w-full
               rounded-2xl
               bg-violet-50
-              px-6
-              py-6
+              px-5
+              py-5
+              sm:mt-12
               sm:px-7
+              sm:py-6
               lg:mt-[76px]
               lg:px-7
             "
@@ -416,7 +423,8 @@ export default function InstitutionDirectory() {
               grid-cols-1
               gap-4
               sm:grid-cols-2
-              lg:grid-cols-4
+              lg:grid-cols-3
+              xl:grid-cols-4
             "
           >
             {institutions.map((institution, index) => (

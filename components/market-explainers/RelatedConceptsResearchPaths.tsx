@@ -44,11 +44,13 @@ export default function RelatedConceptsResearchPaths() {
           mx-auto
           w-full
           max-w-[1280px]
-          px-6
-          py-20
+          px-5
+          py-16
           sm:px-8
-          lg:px-0
+          sm:py-20
+          lg:px-8
           lg:py-[96px]
+          xl:px-0
         "
       >
         {/* ================================================
@@ -147,13 +149,13 @@ export default function RelatedConceptsResearchPaths() {
             w-full
             grid-cols-1
             gap-4
-
             sm:grid-cols-2
-
-            lg:grid-cols-[240px_240px_240px_minmax(0,1fr)]
-            lg:grid-rows-[192px_208px]
-            lg:gap-x-[20.8px]
-            lg:gap-y-[18.7px]
+            lg:grid-cols-3
+            lg:gap-5
+            xl:grid-cols-[240px_240px_240px_minmax(0,1fr)]
+            xl:grid-rows-[minmax(192px,auto)_minmax(208px,auto)]
+            xl:gap-x-[20.8px]
+            xl:gap-y-[18.7px]
           "
         >
           {/* ============================================
@@ -161,7 +163,7 @@ export default function RelatedConceptsResearchPaths() {
 
               IMPORTANT:
               Explicitly placed BEFORE the cards and
-              explicitly assigned to column 4 / rows 1-2.
+              explicitly assigned to column 4 / rows 1-2 on xl.
           ============================================= */}
 
           <motion.div
@@ -186,23 +188,24 @@ export default function RelatedConceptsResearchPaths() {
             className="
               relative
               order-first
-              min-h-[320px]
+              h-[240px]
               w-full
               overflow-hidden
               rounded-2xl
               border
               border-violet-50/10
               bg-violet-50/5
-
               sm:col-span-2
-
-              lg:order-none
-              lg:col-start-4
-              lg:row-start-1
-              lg:row-span-2
-              lg:col-span-1
-              lg:min-h-0
-              lg:h-full
+              sm:h-[280px]
+              lg:col-span-3
+              lg:h-[300px]
+              xl:order-none
+              xl:col-span-1
+              xl:col-start-4
+              xl:row-start-1
+              xl:row-span-2
+              xl:h-full
+              xl:min-h-0
             "
           >
             <Image
@@ -211,7 +214,7 @@ export default function RelatedConceptsResearchPaths() {
               fill
               sizes="
                 (max-width: 639px) 100vw,
-                (max-width: 1023px) 100vw,
+                (max-width: 1279px) 100vw,
                 497px
               "
               className="
@@ -322,6 +325,7 @@ function ResearchCard({
       }}
       className="
         flex
+        h-full
         min-h-[192px]
         w-full
         flex-col

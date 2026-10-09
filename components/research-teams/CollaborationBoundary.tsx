@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import { motion, type Variants } from "framer-motion";
+import type { ReactNode } from "react";
 
 /* =========================================================
    ANIMATION
@@ -19,7 +20,6 @@ const fadeUp: Variants = {
     opacity: 0,
     y: 24,
   },
-
   visible: {
     opacity: 1,
     y: 0,
@@ -37,78 +37,27 @@ const fadeUp: Variants = {
 const collaborationCards = [
   {
     title: "Shared evidence",
-
-    positive: <>Give teams a shared evidence base.</>,
-
-    negative: (
-      <>
-        Shared folders, permissions, access-
-        <br />
-        control inheritance, workspace sync
-        <br />
-        guarantees.
-      </>
-    ),
+    positive: "Give teams a shared evidence base.",
+    negative:
+      "Shared folders, permissions, access-control inheritance, workspace sync guarantees.",
   },
-
   {
     title: "Better collaboration",
-
-    positive: (
-      <>
-        Reduce parallel collections of tabs
-        <br />
-        and files.
-      </>
-    ),
-
-    negative: (
-      <>
-        Real-time co-editing, comments,
-        <br />
-        mentions, presence indicators.
-      </>
-    ),
+    positive: "Reduce parallel collections of tabs and files.",
+    negative:
+      "Real-time co-editing, comments, mentions, presence indicators.",
   },
-
   {
     title: "Scalable workflows",
-
-    positive: (
-      <>
-        Create repeatable research
-        <br />
-        processes.
-      </>
-    ),
-
-    negative: (
-      <>
-        Workflow automation builder, task
-        <br />
-        queues, SLAs, or templates.
-      </>
-    ),
+    positive: "Create repeatable research processes.",
+    negative:
+      "Workflow automation builder, task queues, SLAs, or templates.",
   },
-
   {
     title: "Reviewability",
-
-    positive: (
-      <>
-        Make it easier to inspect the basis of
-        <br />
-        a view.
-      </>
-    ),
-
-    negative: (
-      <>
-        Approval/rejection states, reviewer
-        <br />
-        assignment, sign-off.
-      </>
-    ),
+    positive: "Make it easier to inspect the basis of a view.",
+    negative:
+      "Approval/rejection states, reviewer assignment, sign-off.",
   },
 ];
 
@@ -118,8 +67,8 @@ const collaborationCards = [
 
 type CollaborationCardProps = {
   title: string;
-  positive: React.ReactNode;
-  negative: React.ReactNode;
+  positive: ReactNode;
+  negative: ReactNode;
   index: number;
 };
 
@@ -135,172 +84,58 @@ function CollaborationCard({
       whileInView="visible"
       viewport={{
         once: true,
-        amount: 0.2,
+        amount: 0.1,
       }}
       variants={fadeUp}
       transition={{
         delay: index * 0.08,
       }}
       className="
-        w-full
-        min-h-[192px]
-        lg:h-[192px]
-        p-6
-        bg-violet-50
-        rounded-2xl
-        outline
-        outline-1
-        outline-offset-[-1px]
-        outline-slate-900/10
-        flex
-        flex-col
-        justify-start
-        items-start
-        gap-3
+        flex h-full min-w-0 flex-col items-start
+        gap-3 rounded-2xl border border-slate-900/10
+        bg-violet-50 p-5 sm:p-6 lg:p-5
       "
     >
-      {/* ===================================================
-          TITLE
-      =================================================== */}
+      {/* TITLE */}
 
-      <div
+      <h3
         className="
-          self-stretch
-          flex
-          flex-col
-          justify-start
-          items-start
+          w-full break-words
+          font-['IBM_Plex_Sans']
+          text-base font-bold leading-6 text-slate-900
         "
       >
-        <h3
-          className="
-            self-stretch
-            text-slate-900
-            text-base
-            font-bold
-            font-['IBM_Plex_Sans']
-            leading-6
-          "
+        {title}
+      </h3>
+
+      {/* POSITIVE */}
+
+      <div className="flex w-full min-w-0 items-start gap-2.5">
+        <span
+          aria-hidden="true"
+          className="shrink-0 pt-0.5 font-['Segoe_UI_Symbol'] text-sm text-indigo-500"
         >
-          {title}
-        </h3>
+          ✓
+        </span>
+
+        <p className="min-w-0 flex-1 break-words font-['IBM_Plex_Sans'] text-sm leading-5 text-slate-700">
+          {positive}
+        </p>
       </div>
 
-      {/* ===================================================
-          POSITIVE
-      =================================================== */}
+      {/* NEGATIVE */}
 
-      <div
-        className="
-          self-stretch
-          pt-0.5
-          flex
-          justify-start
-          items-start
-          gap-2.5
-        "
-      >
-        <div
-          className="
-            shrink-0
-            pt-[2.8px]
-            flex
-            flex-col
-            justify-start
-            items-start
-          "
+      <div className="flex w-full min-w-0 items-start gap-2.5">
+        <span
+          aria-hidden="true"
+          className="shrink-0 pt-0.5 font-['Segoe_UI_Symbol'] text-sm text-pink-800"
         >
-          <span
-            className="
-              text-indigo-500
-              text-sm
-              font-normal
-              font-['Segoe_UI_Symbol']
-            "
-          >
-            ✓
-          </span>
-        </div>
+          ✕
+        </span>
 
-        <div
-          className="
-            min-w-0
-            flex
-            flex-col
-            justify-start
-            items-start
-          "
-        >
-          <p
-            className="
-              text-slate-700
-              text-sm
-              font-normal
-              font-['IBM_Plex_Sans']
-              leading-5
-            "
-          >
-            {positive}
-          </p>
-        </div>
-      </div>
-
-      {/* ===================================================
-          NEGATIVE
-      =================================================== */}
-
-      <div
-        className="
-          self-stretch
-          flex
-          justify-start
-          items-start
-          gap-2.5
-        "
-      >
-        <div
-          className="
-            shrink-0
-            pt-[2.8px]
-            flex
-            flex-col
-            justify-start
-            items-start
-          "
-        >
-          <span
-            className="
-              text-pink-800
-              text-sm
-              font-normal
-              font-['Segoe_UI_Symbol']
-            "
-          >
-            ✕
-          </span>
-        </div>
-
-        <div
-          className="
-            min-w-0
-            flex
-            flex-col
-            justify-start
-            items-start
-          "
-        >
-          <p
-            className="
-              text-gray-600
-              text-sm
-              font-normal
-              font-['IBM_Plex_Sans']
-              leading-5
-            "
-          >
-            {negative}
-          </p>
-        </div>
+        <p className="min-w-0 flex-1 break-words font-['IBM_Plex_Sans'] text-sm leading-5 text-gray-600">
+          {negative}
+        </p>
       </div>
     </motion.div>
   );
@@ -312,168 +147,102 @@ function CollaborationCard({
 
 export default function CollaborationBoundary() {
   return (
-    <section
-      className="
-        relative
-        w-full
-        bg-white
-        overflow-hidden
-      "
-    >
-      {/* ===================================================
-          MAIN CONTAINER
-      =================================================== */}
-
+    <section className="relative w-full overflow-hidden bg-white">
       <div
         className="
-          relative
-          w-full
-          max-w-[1440px]
-          min-h-[829.41px]
-          mx-auto
-          px-6
-          sm:px-8
-          lg:px-0
-          py-20
-          lg:py-0
+          mx-auto w-full max-w-[1440px]
+          px-4 py-12
+          min-[480px]:px-5
+          sm:py-16
+          md:px-8 md:py-20
+          lg:px-12
+          xl:px-20 xl:py-24
         "
       >
-        {/* =================================================
-            CONTENT WRAPPER
-        ================================================= */}
+        <div className="w-full max-w-[1280px]">
+          {/* EYEBROW */}
 
-        <div
-          className="
-            w-full
-            lg:w-[1280px]
-            lg:left-[80px]
-            lg:top-[95.9px]
-            lg:absolute
-          "
-        >
-          {/* =================================================
-              EYEBROW
-          ================================================= */}
-
-          <motion.div
+          <motion.p
             initial="hidden"
             whileInView="visible"
             viewport={{
               once: true,
-              amount: 0.25,
+              amount: 0.2,
             }}
             variants={fadeUp}
             className="
-              w-full
-              text-yellow-600
-              text-xs
-              font-bold
               font-['IBM_Plex_Sans']
-              tracking-wide
+              text-xs font-bold tracking-wide text-yellow-600
+              sm:text-sm
             "
           >
             COLLABORATION BOUNDARY
-          </motion.div>
+          </motion.p>
 
-          {/* =================================================
-              HEADING
-          ================================================= */}
+          {/* HEADING */}
 
-          <motion.div
+          <motion.h2
             initial="hidden"
             whileInView="visible"
             viewport={{
               once: true,
-              amount: 0.25,
+              amount: 0.2,
             }}
             variants={fadeUp}
             className="
-              w-full
-              max-w-[1000px]
-              mt-[16.3px]
+              mt-4 w-full max-w-[1000px]
+              break-words
+              font-['IBM_Plex_Sans']
+              text-[clamp(1.8rem,3.5vw,3rem)]
+              font-bold leading-[1.1]
+              tracking-[-0.02em] text-slate-900
             "
           >
-            <h2
-              className="
-                text-slate-900
-                text-[32px]
-                sm:text-[40px]
-                lg:text-5xl
-                font-bold
-                font-['IBM_Plex_Sans']
-                leading-[1.08]
-                lg:leading-[48.72px]
-              "
-            >
-              Collaboration as an outcome — not a
-              <br className="hidden lg:block" />
-              chat app or project board.
-            </h2>
-          </motion.div>
+            Collaboration as an outcome — not a chat app or project board.
+          </motion.h2>
 
-          {/* =================================================
-              DESCRIPTION
-          ================================================= */}
+          {/* DESCRIPTION */}
 
-          <motion.div
+          <motion.p
             initial="hidden"
             whileInView="visible"
             viewport={{
               once: true,
-              amount: 0.25,
+              amount: 0.2,
             }}
             variants={fadeUp}
             className="
-              w-full
-              max-w-[800px]
-              pt-2
-              mt-[17.4px]
+              mt-4 w-full max-w-[800px]
+              font-['IBM_Plex_Sans']
+              text-sm font-normal leading-6 text-gray-600
+              sm:text-base sm:leading-7
             "
           >
-            <p
-              className="
-                text-gray-600
-                text-sm
-                sm:text-base
-                font-normal
-                font-['IBM_Plex_Sans']
-                leading-6
-                lg:leading-7
-              "
-            >
-              Talvrin is designed as evidence-led research infrastructure.
-              Every outcome below has safe, source-
-              <br className="hidden lg:block" />
-              backed wording — and a boundary we do not cross without separate
-              approval.
-            </p>
-          </motion.div>
+            Talvrin is designed as evidence-led research infrastructure.
+            Every outcome below has safe, source-backed wording — and a
+            boundary we do not cross without separate approval.
+          </motion.p>
 
-          {/* =================================================
-              CONTENT GRID
-          ================================================= */}
+          {/* CARDS AND IMAGE */}
 
           <div
             className="
-              mt-10
-              lg:mt-[68.61px]
-              grid
-              grid-cols-1
-              lg:grid-cols-[630px_630px]
-              gap-5
+              mt-8 grid w-full
+              grid-cols-1 items-stretch gap-4
+              min-[520px]:grid-cols-2
+              lg:mt-12
+              xl:grid-cols-2 xl:gap-5
+              2xl:grid-cols-[minmax(0,1fr)_minmax(0,1fr)]
             "
           >
-            {/* ===============================================
-                LEFT — CARDS
-            =============================================== */}
+            {/* LEFT — CARDS */}
 
             <div
               className="
-                grid
-                grid-cols-1
-                sm:grid-cols-2
+                grid min-w-0 grid-cols-1
                 gap-4
-                lg:gap-[16px]
+                sm:grid-cols-2
+                lg:gap-4
               "
             >
               {collaborationCards.map((card, index) => (
@@ -487,9 +256,7 @@ export default function CollaborationBoundary() {
               ))}
             </div>
 
-            {/* ===============================================
-                RIGHT — IMAGE
-            =============================================== */}
+            {/* RIGHT — IMAGE */}
 
             <motion.div
               initial={{
@@ -502,25 +269,20 @@ export default function CollaborationBoundary() {
               }}
               viewport={{
                 once: true,
-                amount: 0.2,
+                amount: 0.15,
               }}
               transition={{
                 duration: 0.8,
                 ease: smoothEase,
               }}
               className="
-                relative
-                w-full
-                h-[384px]
-                lg:w-[630px]
-                lg:h-[384px]
+                relative min-w-0 w-full
+                aspect-[4/3] overflow-hidden
+                rounded-2xl border border-slate-900/10
                 bg-violet-50
-                rounded-2xl
-                outline
-                outline-1
-                outline-offset-[-1px]
-                outline-slate-900/10
-                overflow-hidden
+                sm:aspect-[5/3]
+                lg:aspect-[4/3]
+                xl:aspect-auto xl:min-h-full
               "
             >
               <Image
@@ -528,11 +290,8 @@ export default function CollaborationBoundary() {
                 alt="Collaboration boundary"
                 fill
                 priority
-                sizes="630px"
-                className="
-                  object-cover
-                  object-center
-                "
+                sizes="(max-width: 519px) calc(100vw - 32px), (max-width: 1023px) calc((100vw - 64px) / 2), (max-width: 1439px) calc((100vw - 112px) / 2), 630px"
+                className="object-cover object-center"
               />
             </motion.div>
           </div>

@@ -50,16 +50,20 @@ export default function UpcomingPolicyTimeline() {
           mx-auto
           w-full
           max-w-[1440px]
-          px-6
-          sm:px-8
-          lg:px-[80px]
+          px-4
+          sm:px-6
+          md:px-8
+          lg:px-12
+          xl:px-[80px]
         "
       >
         <div
           className="
             w-full
             max-w-[1280px]
-            py-[96px]
+            py-14
+            sm:py-16
+            lg:py-[96px]
           "
         >
           {/* =================================================
@@ -108,12 +112,13 @@ export default function UpcomingPolicyTimeline() {
               w-full
               max-w-[780px]
               font-['IBM_Plex_Sans']
-              text-[38px]
+              text-[30px]
               font-bold
-              leading-[1.08]
+              leading-[1.1]
               tracking-[-0.02em]
               text-violet-50
-              sm:text-[44px]
+              sm:text-[38px]
+              md:text-[44px]
               lg:text-5xl
               lg:leading-[48.72px]
             "
@@ -185,7 +190,7 @@ export default function UpcomingPolicyTimeline() {
             className="
               relative
               mt-[38px]
-              h-[260px]
+              h-[200px]
               w-full
               overflow-hidden
               rounded-2xl
@@ -194,7 +199,8 @@ export default function UpcomingPolicyTimeline() {
               outline-1
               outline-offset-[-1px]
               outline-violet-50/10
-              sm:h-[320px]
+              sm:h-[280px]
+              md:h-[340px]
               lg:h-[384px]
             "
           >

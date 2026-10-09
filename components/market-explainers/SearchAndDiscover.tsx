@@ -18,14 +18,13 @@ export default function SearchAndDiscover() {
           mx-auto
           w-full
           max-w-[1280px]
-          px-6
-          py-20
-
+          px-5
+          py-16
           sm:px-8
-          sm:py-24
-
-          lg:px-0
+          sm:py-20
+          lg:px-8
           lg:py-[96px]
+          xl:px-0
         "
       >
         {/* =====================================================

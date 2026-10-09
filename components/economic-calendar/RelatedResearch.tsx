@@ -30,7 +30,7 @@ const researchLinks = [
 export default function RelatedResearch() {
   return (
     <section className="relative overflow-hidden bg-slate-900">
-      <div className="mx-auto w-full max-w-[1320px] px-6 py-20 sm:px-8 lg:px-10 lg:py-24">
+      <div className="mx-auto w-full max-w-[1320px] px-4 py-14 sm:px-6 sm:py-16 md:px-8 lg:px-12 lg:py-24 xl:px-16">
         {/* =====================================================
             HEADER
         ===================================================== */}
@@ -49,12 +49,12 @@ export default function RelatedResearch() {
           </div>
 
           {/* Heading */}
-          <h2 className="max-w-[780px] pt-3 font-['IBM_Plex_Sans'] text-[36px] font-bold leading-[1.08] tracking-[-0.02em] text-violet-50 sm:text-[42px] lg:text-5xl lg:leading-[48.72px]">
+          <h2 className="max-w-[780px] pt-3 font-['IBM_Plex_Sans'] text-[28px] font-bold leading-[1.12] tracking-[-0.02em] text-violet-50 sm:text-[36px] md:text-[42px] lg:text-5xl lg:leading-[48.72px]">
             Turn an event into a research trail.
           </h2>
 
           {/* Description */}
-          <p className="max-w-[780px] pt-5 font-['IBM_Plex_Sans'] text-base font-normal leading-7 text-violet-50/70">
+          <p className="max-w-[780px] pt-4 font-['IBM_Plex_Sans'] text-sm sm:text-base font-normal leading-relaxed text-violet-50/70">
             An economic event can lead to relevant Research destinations,
             entity pages or saved research — only through approved routes,
             never a generic &quot;learn more.&quot;
@@ -64,7 +64,7 @@ export default function RelatedResearch() {
         {/* =====================================================
             RESEARCH CARDS + IMAGE
         ===================================================== */}
-        <div className="mt-12 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-5">
+        <div className="mt-10 sm:mt-12 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5">
           {/* Research cards */}
           {researchLinks.map((item, index) => (
             <motion.a
@@ -78,7 +78,7 @@ export default function RelatedResearch() {
                 delay: index * 0.07,
                 ease: "easeOut",
               }}
-              className="group flex min-h-[174px] flex-col rounded-2xl bg-violet-50/5 p-5 outline outline-1 outline-offset-[-1px] outline-violet-50/10 transition-all duration-300 hover:-translate-y-1 hover:bg-violet-50/10"
+              className="group flex min-h-[160px] h-full flex-col rounded-2xl bg-violet-50/5 p-5 outline outline-1 outline-offset-[-1px] outline-violet-50/10 transition-all duration-300 hover:-translate-y-1 hover:bg-violet-50/10"
             >
               {/* Card title */}
               <div className="flex items-center justify-between gap-2">

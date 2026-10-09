@@ -95,7 +95,7 @@ export default function Workflow() {
         ref={sectionRef}
         className="w-full overflow-hidden bg-slate-900 text-violet-50"
       >
-        <div className="mx-auto w-full max-w-[1440px] px-6 py-20 sm:px-8 md:px-10 lg:px-20 lg:py-[96px]">
+        <div className="mx-auto w-full max-w-[1440px] px-4 py-12 sm:px-6 md:px-8 lg:px-8 xl:px-20 lg:py-16 xl:py-[96px]">
           {/* =========================================
               HEADER
           ========================================= */}
@@ -109,7 +109,7 @@ export default function Workflow() {
 
             <h2
               data-reveal
-              className="reveal-element reveal-delay-1 m-0 max-w-[800px] pt-3 font-['IBM_Plex_Sans'] text-[36px] font-bold leading-[1.1] tracking-[-1px] text-violet-50 sm:text-[42px] lg:text-5xl lg:leading-[48.72px]"
+              className="reveal-element reveal-delay-1 m-0 max-w-[800px] pt-3 font-['IBM_Plex_Sans'] text-[30px] font-bold leading-[1.12] tracking-[-1px] text-violet-50 sm:text-[38px] md:text-[42px] lg:text-5xl lg:leading-[48.72px]"
             >
               A durable research object, repeatable across teams and markets.
             </h2>
@@ -122,14 +122,14 @@ export default function Workflow() {
           ========================================= */}
           <div
             data-reveal
-            className="reveal-element reveal-delay-2 mt-9 flex w-full flex-wrap items-center gap-x-2.5 gap-y-3"
+            className="reveal-element reveal-delay-2 mt-8 sm:mt-9 flex w-full flex-wrap items-center gap-x-2.5 gap-y-3"
           >
             {workflowSteps.map((step, index) => (
               <div
                 key={step.name}
                 className="flex items-center gap-2.5"
               >
-                <div className="inline-flex items-center rounded-full border border-violet-50/20 bg-violet-50/5 px-4 py-2.5">
+                <div className="inline-flex items-center rounded-full border border-violet-50/20 bg-violet-50/5 px-3.5 py-2 sm:px-4 sm:py-2.5">
                   <span className="font-['IBM_Plex_Sans'] text-xs font-semibold text-violet-50">
                     {step.name}
                   </span>
@@ -152,7 +152,7 @@ export default function Workflow() {
               BUILD does NOT appear here because
               Figma has no BUILD description box.
           ========================================= */}
-          <div className="mt-10 grid w-full grid-cols-1 gap-x-4 gap-y-10 sm:grid-cols-2 lg:grid-cols-[240px_240px_240px_minmax(0,495px)] lg:gap-y-7">
+          <div className="mt-8 sm:mt-10 grid w-full grid-cols-1 gap-x-4 gap-y-8 sm:grid-cols-2 lg:grid-cols-4 xl:grid-cols-[240px_240px_240px_minmax(0,495px)] lg:gap-y-7">
             {/* ASK */}
             <WorkflowItem
               step={workflowContent[0]}
@@ -180,7 +180,7 @@ export default function Workflow() {
                 src="/images/solutions/enterprise/image2.png"
                 alt="Talvrin research workflow"
                 fill
-                sizes="(max-width: 1023px) 100vw, 495px"
+                sizes="(max-width: 1023px) 100vw, (max-width: 1279px) 25vw, 495px"
                 className="object-cover"
               />
             </div>
@@ -271,7 +271,7 @@ function WorkflowItem({ step, index }: WorkflowItemProps) {
         {step.name}
       </p>
 
-      <p className="m-0 max-w-[240px] font-['IBM_Plex_Sans'] text-sm font-normal leading-5 text-violet-50/75">
+      <p className="m-0 w-full max-w-[240px] lg:max-w-none xl:max-w-[240px] font-['IBM_Plex_Sans'] text-sm font-normal leading-5 text-violet-50/75">
         {step.description}
       </p>
     </div>

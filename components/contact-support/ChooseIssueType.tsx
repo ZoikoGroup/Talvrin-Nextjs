@@ -197,6 +197,7 @@ function IssueCardComponent({
     <article
       className="
         flex
+        h-full
         min-h-[199px]
         w-full
         flex-col
@@ -217,12 +218,13 @@ function IssueCardComponent({
           w-full
           items-start
           justify-between
-          gap-3
+          gap-2
         "
       >
         <h3
           className="
             min-w-0
+            flex-1
             font-['IBM_Plex_Sans']
             text-base
             font-bold
@@ -339,11 +341,12 @@ export default function ChooseIssueType() {
           px-5
           py-16
 
-          sm:px-6
+          sm:px-8
           sm:py-20
 
-          lg:px-0
-          lg:py-[96px]
+          lg:px-8
+          lg:py-24
+          xl:px-0
         "
       >
         {/* =====================================================
@@ -380,7 +383,7 @@ export default function ChooseIssueType() {
           <h2
             className="
               font-['IBM_Plex_Sans']
-              text-[32px]
+              text-[28px]
               font-bold
               leading-9
               tracking-[-0.02em]
@@ -436,8 +439,8 @@ export default function ChooseIssueType() {
             gap-5
 
             sm:grid-cols-2
-
-            lg:grid-cols-4
+            lg:grid-cols-2
+            xl:grid-cols-4
           "
         >
           {issueCards.slice(0, 8).map((card) => (
@@ -461,8 +464,8 @@ export default function ChooseIssueType() {
             gap-5
 
             sm:grid-cols-2
-
-            lg:grid-cols-[288px_288px_minmax(0,1fr)]
+            lg:grid-cols-2
+            xl:grid-cols-[288px_288px_minmax(0,1fr)]
           "
         >
           {/* Commercial or Request Access */}
@@ -486,6 +489,11 @@ export default function ChooseIssueType() {
               border
               border-slate-900/10
               bg-violet-50
+              sm:col-span-2
+              lg:col-span-2
+              xl:col-span-1
+              xl:h-full
+              xl:min-h-[176px]
             "
           >
             <Image

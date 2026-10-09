@@ -19,11 +19,12 @@ export default function PublicationLifecycle() {
           w-full
           max-w-[1280px]
           px-5
-          py-20
+          py-16
           sm:px-7
-          sm:py-24
-          lg:px-0
+          sm:py-20
+          lg:px-8
           lg:py-[95.98px]
+          xl:px-0
         "
       >
         {/* ============================================================
@@ -160,13 +161,15 @@ export default function PublicationLifecycle() {
           className="
             relative
             mt-10
-            h-[384px]
+            h-[240px]
             w-full
             overflow-hidden
             rounded-2xl
             border
             border-slate-900/10
             bg-white
+            sm:h-[320px]
+            lg:h-[384px]
           "
         >
           <Image

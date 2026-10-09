@@ -75,14 +75,13 @@ export default function SevenPrinciples() {
           mx-auto
           w-full
           max-w-[1439.8px]
-          px-6
+          px-5
           py-16
-
           sm:px-8
           sm:py-20
-
-          lg:px-20
+          lg:px-8
           lg:py-[95.6px]
+          xl:px-20
         "
       >
         {/* =========================================================
@@ -191,15 +190,15 @@ export default function SevenPrinciples() {
 
           <div
             className="
-              mt-[76px]
+              mt-12
               grid
               grid-cols-1
-              gap-[16px]
-
+              gap-4
+              sm:mt-16
               sm:grid-cols-2
-
-              lg:grid-cols-4
-              lg:gap-[5px]
+              lg:grid-cols-2
+              xl:grid-cols-4
+              xl:gap-[16px]
             "
           >
             {/* -------------------------------------------------------
@@ -262,20 +261,20 @@ export default function SevenPrinciples() {
               className="
                 relative
                 order-last
-                min-h-[320px]
+                min-h-[280px]
                 overflow-hidden
                 rounded-2xl
                 border
                 border-slate-900/10
                 bg-white
-
                 sm:col-span-2
-                sm:min-h-[400px]
-
-                lg:order-none
-                lg:col-span-1
-                lg:row-span-2
-                lg:min-h-[462.6px]
+                sm:min-h-[340px]
+                lg:col-span-2
+                lg:min-h-[360px]
+                xl:order-none
+                xl:col-span-1
+                xl:row-span-2
+                xl:min-h-[462.6px]
               "
             >
               <Image
@@ -360,6 +359,7 @@ function PrincipleCard({
       }}
       className="
         flex
+        h-full
         min-h-[224px]
         w-full
         flex-col

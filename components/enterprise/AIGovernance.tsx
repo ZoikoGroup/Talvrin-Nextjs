@@ -69,7 +69,7 @@ export default function AIGovernance() {
         ref={sectionRef}
         className="w-full overflow-hidden bg-violet-50 text-slate-900"
       >
-        <div className="mx-auto w-full max-w-[1320px] px-6 py-20 sm:px-8 md:px-10 lg:px-20 lg:py-[96px]">
+        <div className="mx-auto w-full max-w-[1320px] px-4 py-12 sm:px-6 md:px-8 lg:px-8 xl:px-20 lg:py-16 xl:py-[96px]">
           {/* Header */}
           <div className="w-full">
             <p
@@ -83,9 +83,9 @@ export default function AIGovernance() {
               data-reveal
               className="reveal reveal-1 w-full max-w-[760px] pt-3"
             >
-              <h2 className="m-0 font-['IBM_Plex_Sans'] text-[36px] font-bold leading-[1.1] tracking-[-1px] text-slate-900 sm:text-[42px] lg:text-5xl lg:leading-[48.72px]">
-                AI assists the research. It does not
-                <br className="hidden lg:block" />
+              <h2 className="m-0 font-['IBM_Plex_Sans'] text-[30px] font-bold leading-[1.12] tracking-[-1px] text-slate-900 sm:text-[38px] md:text-[42px] lg:text-5xl lg:leading-[48.72px]">
+                AI assists the research. It does not{" "}
+                <br className="hidden xl:block" />
                 become organizational authority.
               </h2>
             </div>

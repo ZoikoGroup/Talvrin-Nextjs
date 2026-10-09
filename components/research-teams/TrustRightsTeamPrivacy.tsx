@@ -1,6 +1,7 @@
 "use client";
 
 import { motion, type Variants } from "framer-motion";
+import type { ReactNode } from "react";
 
 /* =========================================================
    ANIMATION
@@ -18,7 +19,6 @@ const fadeUp: Variants = {
     opacity: 0,
     y: 24,
   },
-
   visible: {
     opacity: 1,
     y: 0,
@@ -33,79 +33,60 @@ const fadeUp: Variants = {
    DATA
 ========================================================= */
 
-const trustItems = [
+type TrustItemData = {
+  title: string;
+  description: ReactNode;
+};
+
+const trustItems: TrustItemData[] = [
   {
     title: "Evidence provenance",
     description: (
       <>
-        Important outputs can be traced to
-        <br className="hidden lg:block" />
-        supporting material.
+        Important outputs can be traced to supporting material.
       </>
     ),
   },
-
   {
     title: "Data rights",
     description: (
       <>
-        Licensing and permitted-use
-        <br className="hidden lg:block" />
-        constraints are respected — a shared
-        <br className="hidden lg:block" />
+        Licensing and permitted-use constraints are respected — a shared
         object never bypasses entitlement.
       </>
     ),
   },
-
   {
     title: "Team access truth",
     description: (
       <>
-        Talvrin does not claim every team
-        <br className="hidden lg:block" />
-        member can access the same content
-        <br className="hidden lg:block" />
-        unless entitlement behavior is
-        <br className="hidden lg:block" />
-        approved.
+        Talvrin does not claim every team member can access the same content
+        unless entitlement behavior is approved.
       </>
     ),
   },
-
   {
     title: "Regional governance",
     description: (
       <>
-        Jurisdiction-sensitive execution and
-        <br className="hidden lg:block" />
-        data controls where claimed.
+        Jurisdiction-sensitive execution and data controls where claimed.
       </>
     ),
   },
-
   {
     title: "Privacy",
     description: (
       <>
-        Research topics, sources, and notes
-        <br className="hidden lg:block" />
-        are treated as potentially sensitive;
-        <br className="hidden lg:block" />
-        analytics exclude raw research
-        <br className="hidden lg:block" />
-        content by default.
+        Research topics, sources, and notes are treated as potentially
+        sensitive; analytics exclude raw research content by default.
       </>
     ),
   },
-
   {
     title: "AI governance",
     description: (
       <>
-        Generated interpretation stays
-        <br className="hidden lg:block" />
-        subordinate to evidence and policy.
+        Generated interpretation stays subordinate to evidence and policy.
       </>
     ),
   },
@@ -116,14 +97,12 @@ const trustItems = [
 ========================================================= */
 
 type TrustItemProps = {
-  title: string;
-  description: React.ReactNode;
+  item: TrustItemData;
   index: number;
 };
 
 function TrustItem({
-  title,
-  description,
+  item,
   index,
 }: TrustItemProps) {
   return (
@@ -139,74 +118,54 @@ function TrustItem({
         delay: index * 0.07,
       }}
       className="
-        self-stretch
         flex
+        h-full
+        min-w-0
         flex-col
-        justify-start
         items-start
+        justify-start
         gap-2
       "
     >
       {/* INDIGO LINE */}
 
       <div
-        className="
-          w-7
-          h-0.5
-          bg-indigo-500
-        "
+        aria-hidden="true"
+        className="h-0.5 w-7 shrink-0 bg-indigo-500"
       />
 
       {/* TITLE */}
 
-      <div
+      <h3
         className="
-          self-stretch
+          w-full
+          break-words
           pt-1.5
-          flex
-          flex-col
-          justify-start
-          items-start
+          font-['IBM_Plex_Sans']
+          text-base
+          font-bold
+          leading-6
+          text-slate-900
         "
       >
-        <h3
-          className="
-            self-stretch
-            text-slate-900
-            text-base
-            font-bold
-            font-['IBM_Plex_Sans']
-            leading-6
-          "
-        >
-          {title}
-        </h3>
-      </div>
+        {item.title}
+      </h3>
 
       {/* DESCRIPTION */}
 
-      <div
+      <p
         className="
-          self-stretch
-          flex
-          flex-col
-          justify-start
-          items-start
+          w-full
+          break-words
+          font-['IBM_Plex_Sans']
+          text-sm
+          font-normal
+          leading-5
+          text-gray-600
         "
       >
-        <p
-          className="
-            self-stretch
-            text-gray-600
-            text-sm
-            font-normal
-            font-['IBM_Plex_Sans']
-            leading-5
-          "
-        >
-          {description}
-        </p>
-      </div>
+        {item.description}
+      </p>
     </motion.div>
   );
 }
@@ -217,56 +176,29 @@ function TrustItem({
 
 export default function TrustRightsTeamPrivacy() {
   return (
-    <section
-      className="
-        relative
-        w-full
-        bg-white
-        overflow-hidden
-      "
-    >
-      {/* ===================================================
-          MAIN CONTAINER
-      =================================================== */}
+    <section className="relative w-full overflow-hidden bg-white">
+      {/* MAIN CONTAINER */}
 
       <div
         className="
-          relative
+          mx-auto
           w-full
           max-w-[1440px]
-          min-h-[696.41px]
-          mx-auto
-          px-6
-          sm:px-8
-          lg:px-0
-          py-20
-          lg:py-0
+          px-4
+          py-12
+          min-[480px]:px-5
+          sm:py-16
+          md:px-8
+          lg:px-12
+          lg:py-20
+          xl:px-20
+          xl:py-[96px]
         "
       >
-        {/* =================================================
-            CONTENT WRAPPER
-        ================================================= */}
+        <div className="w-full max-w-[1280px]">
+          {/* EYEBROW */}
 
-        <div
-          className="
-            w-full
-            lg:w-[1280px]
-            lg:max-w-[1320px]
-            lg:left-[80px]
-            lg:top-[96.19px]
-            lg:absolute
-            flex
-            flex-col
-            justify-start
-            items-start
-            gap-3
-          "
-        >
-          {/* =================================================
-              EYEBROW
-          ================================================= */}
-
-          <motion.div
+          <motion.p
             initial="hidden"
             whileInView="visible"
             viewport={{
@@ -275,32 +207,20 @@ export default function TrustRightsTeamPrivacy() {
             }}
             variants={fadeUp}
             className="
-              self-stretch
-              flex
-              flex-col
-              justify-start
-              items-start
+              font-['IBM_Plex_Sans']
+              text-xs
+              font-bold
+              tracking-wide
+              text-yellow-600
+              sm:text-sm
             "
           >
-            <div
-              className="
-                self-stretch
-                text-yellow-600
-                text-xs
-                font-bold
-                font-['IBM_Plex_Sans']
-                tracking-wide
-              "
-            >
-              TRUST, RIGHTS &amp; TEAM PRIVACY
-            </div>
-          </motion.div>
+            TRUST, RIGHTS &amp; TEAM PRIVACY
+          </motion.p>
 
-          {/* =================================================
-              HEADING
-          ================================================= */}
+          {/* HEADING */}
 
-          <motion.div
+          <motion.h2
             initial="hidden"
             whileInView="visible"
             viewport={{
@@ -309,38 +229,24 @@ export default function TrustRightsTeamPrivacy() {
             }}
             variants={fadeUp}
             className="
+              mt-5
               w-full
-              lg:w-[760px]
-              lg:max-w-[760px]
-              flex
-              flex-col
-              justify-start
-              items-start
+              max-w-[760px]
+              font-['IBM_Plex_Sans']
+              text-[clamp(1.8rem,3.5vw,3rem)]
+              font-bold
+              leading-[1.1]
+              tracking-[-0.02em]
+              text-slate-900
+              sm:mt-6
             "
           >
-            <h2
-              className="
-                text-slate-900
-                text-[32px]
-                sm:text-[40px]
-                lg:text-5xl
-                font-bold
-                font-['IBM_Plex_Sans']
-                leading-[1.08]
-                lg:leading-[48.72px]
-              "
-            >
-              Shared evidence never bypasses
-              <br className="hidden lg:block" />
-              rights or entitlements.
-            </h2>
-          </motion.div>
+            Shared evidence never bypasses rights or entitlements.
+          </motion.h2>
 
-          {/* =================================================
-              DESCRIPTION
-          ================================================= */}
+          {/* DESCRIPTION */}
 
-          <motion.div
+          <motion.p
             initial="hidden"
             whileInView="visible"
             viewport={{
@@ -349,37 +255,25 @@ export default function TrustRightsTeamPrivacy() {
             }}
             variants={fadeUp}
             className="
+              mt-4
               w-full
-              lg:w-[780px]
-              lg:max-w-[780px]
-              pt-2
-              flex
-              flex-col
-              justify-start
-              items-start
+              max-w-[780px]
+              font-['IBM_Plex_Sans']
+              text-sm
+              font-normal
+              leading-6
+              text-gray-600
+              sm:mt-5
+              sm:text-base
+              sm:leading-7
             "
           >
-            <p
-              className="
-                text-gray-600
-                text-sm
-                sm:text-base
-                font-normal
-                font-['IBM_Plex_Sans']
-                leading-6
-                lg:leading-7
-              "
-            >
-              Research topics, sources, notes, and team interests can be
-              sensitive organizational information.
-              <br className="hidden lg:block" />
-              Analytics do not capture raw research content by default.
-            </p>
-          </motion.div>
+            Research topics, sources, notes, and team interests can be
+            sensitive organizational information. Analytics do not capture
+            raw research content by default.
+          </motion.p>
 
-          {/* =================================================
-              TRUST ITEMS
-          ================================================= */}
+          {/* TRUST ITEMS */}
 
           <motion.div
             initial="hidden"
@@ -397,21 +291,27 @@ export default function TrustRightsTeamPrivacy() {
               },
             }}
             className="
-              self-stretch
-              pt-9
+              mt-8
               grid
+              w-full
               grid-cols-1
-              sm:grid-cols-2
+              gap-x-6
+              gap-y-8
+              min-[480px]:grid-cols-2
+              sm:mt-10
+              sm:gap-x-8
+              sm:gap-y-10
+              lg:mt-12
               lg:grid-cols-3
-              gap-x-10
-              gap-y-10
+              lg:gap-x-10
+              lg:gap-y-12
+              xl:mt-[52px]
             "
           >
             {trustItems.map((item, index) => (
               <TrustItem
                 key={item.title}
-                title={item.title}
-                description={item.description}
+                item={item}
                 index={index}
               />
             ))}

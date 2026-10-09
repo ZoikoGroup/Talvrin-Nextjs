@@ -62,12 +62,12 @@ export default function ContactSupportHero() {
           mx-auto
           w-full
           max-w-[1280px]
-          px-6
-          py-16
+          px-5
+          py-14
           sm:px-8
-          sm:py-20
-          lg:px-10
-          lg:py-[96px]
+          sm:py-16
+          lg:px-8
+          lg:py-20
           xl:px-0
         "
       >
@@ -76,10 +76,11 @@ export default function ContactSupportHero() {
             grid
             w-full
             items-center
-            gap-12
-            lg:grid-cols-[minmax(0,1fr)_462px]
-            lg:gap-12
-            xl:gap-[48px]
+            gap-10
+            lg:grid-cols-2
+            lg:gap-8
+            xl:grid-cols-[minmax(0,1fr)_462px]
+            xl:gap-12
           "
         >
           {/* =====================================================
@@ -136,17 +137,20 @@ export default function ContactSupportHero() {
                   w-full
                   max-w-[751px]
                   font-['IBM_Plex_Sans']
-                  text-[42px]
+                  text-[36px]
                   font-bold
-                  leading-[46px]
+                  leading-[42px]
                   tracking-[-0.02em]
                   text-violet-50
 
-                  sm:text-[48px]
-                  sm:leading-[52px]
+                  sm:text-[44px]
+                  sm:leading-[50px]
 
-                  lg:text-[56px]
-                  lg:leading-[61.6px]
+                  lg:text-[46px]
+                  lg:leading-[52px]
+
+                  xl:text-[56px]
+                  xl:leading-[61.6px]
                 "
               >
                 Get the right help for your
@@ -319,8 +323,11 @@ export default function ContactSupportHero() {
                 relative
                 aspect-square
                 w-full
-                max-w-[462px]
+                max-w-[340px]
                 overflow-hidden
+                sm:max-w-[420px]
+                lg:max-w-[380px]
+                xl:max-w-[462px]
               "
             >
               <Image

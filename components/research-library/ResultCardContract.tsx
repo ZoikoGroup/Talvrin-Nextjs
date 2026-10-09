@@ -73,11 +73,12 @@ export default function ResultCardContract() {
           w-full
           max-w-[1280px]
           px-5
-          py-20
+          py-16
           sm:px-7
-          sm:py-24
-          lg:px-0
+          sm:py-20
+          lg:px-8
           lg:py-[96.37px]
+          xl:px-0
         "
       >
         {/* ============================================================
@@ -190,8 +191,10 @@ export default function ResultCardContract() {
             w-full
             grid-cols-1
             gap-8
-            lg:grid-cols-[491px_minmax(0,1fr)]
-            lg:gap-[53px]
+            lg:grid-cols-1
+            lg:gap-10
+            xl:grid-cols-[491px_minmax(0,1fr)]
+            xl:gap-[53px]
           "
         >
           {/* ==========================================================
@@ -219,13 +222,14 @@ export default function ResultCardContract() {
             }}
             className="
               relative
-              h-[384px]
+              h-[280px]
               w-full
               overflow-hidden
               rounded-2xl
               bg-slate-900
-              sm:h-[430px]
+              sm:h-[380px]
               lg:h-[384px]
+              xl:h-[384px]
             "
           >
             <Image
@@ -233,7 +237,7 @@ export default function ResultCardContract() {
               alt="Research card contract"
               fill
               priority
-              sizes="(max-width: 639px) 100vw, (max-width: 1023px) 100vw, 491px"
+              sizes="(max-width: 639px) 100vw, (max-width: 1279px) 100vw, 491px"
               className="
                 object-cover
                 object-center
@@ -250,9 +254,8 @@ export default function ResultCardContract() {
               grid
               w-full
               grid-cols-1
-              gap-x-5
-              lg:grid-cols-2
-              lg:grid-rows-5
+              gap-x-6
+              sm:grid-cols-2
             "
           >
             {contractItems.map((item, index) => (

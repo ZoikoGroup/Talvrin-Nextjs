@@ -1,10 +1,10 @@
 export default function PolicyRegulationCta() {
   return (
     <section className="w-full border-t-[0.8px] border-slate-900/10 bg-violet-50">
-      <div className="mx-auto flex w-full max-w-[1000px] flex-col items-center gap-4 px-6 py-20 text-center sm:px-8 sm:py-[88px]">
+      <div className="mx-auto flex w-full max-w-[1000px] flex-col items-center gap-4 px-5 py-16 text-center sm:px-8 sm:py-20 lg:py-24">
         {/* Heading */}
         <div className="w-full">
-          <h2 className="font-['IBM_Plex_Sans'] text-[40px] font-bold leading-[1.08] tracking-[-0.02em] text-slate-900 sm:text-5xl sm:leading-[48.3px]">
+          <h2 className="font-['IBM_Plex_Sans'] text-[36px] font-bold leading-[1.08] tracking-[-0.02em] text-slate-900 sm:text-5xl sm:leading-[48.3px]">
             Keep policy research connected to
             <br className="hidden sm:block" />
             the evidence.

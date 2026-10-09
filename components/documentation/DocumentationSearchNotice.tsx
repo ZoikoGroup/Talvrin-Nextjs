@@ -15,16 +15,18 @@ export default function DocumentationSearchNotice() {
           min-h-[80px]
           w-full
           max-w-[1200px]
-          items-center
-          gap-3.5
-          px-6
+          flex-col
+          items-start
+          justify-center
+          gap-3
+          px-5
           py-5
-
+          sm:flex-row
+          sm:items-center
+          sm:gap-3.5
           sm:px-8
-
-          lg:h-[80px]
-          lg:px-0
-          lg:py-0
+          lg:px-8
+          xl:px-0
         "
       >
         {/* SEARCH NOT PUBLISHED BADGE */}

@@ -6,8 +6,8 @@ import { motion } from "framer-motion";
 export default function ResearchTeamsHero() {
   return (
     <section className="relative w-full overflow-hidden bg-[#171335]">
-      <div className="mx-auto w-full max-w-[1440px] px-5 sm:px-8 lg:px-20">
-        <div className="flex min-h-[680px] w-full flex-col justify-center gap-10 py-10 sm:min-h-[720px] sm:py-12 lg:min-h-[558px] lg:flex-row lg:items-center lg:justify-between lg:gap-14 lg:py-[42px]">
+      <div className="mx-auto w-full max-w-[1440px] px-4 min-[480px]:px-5 sm:px-8 lg:px-12 xl:px-20">
+        <div className="flex w-full flex-col justify-center gap-8 py-12 sm:gap-10 sm:py-14 lg:min-h-[650px] lg:flex-row lg:items-center lg:justify-between lg:gap-8 lg:py-16 xl:min-h-[680px] xl:gap-12 xl:py-20 2xl:min-h-[720px]">
           {/* LEFT CONTENT */}
           <motion.div
             initial={{ opacity: 0, x: -30 }}
@@ -17,71 +17,58 @@ export default function ResearchTeamsHero() {
               duration: 0.7,
               ease: [0.22, 1, 0.36, 1],
             }}
-            className="flex w-full max-w-[577.9px] flex-col items-start gap-4"
+            className="flex w-full min-w-0 flex-col items-start gap-4 lg:flex-1 lg:max-w-[580px]"
           >
             {/* Eyebrow */}
-            <div className="w-full">
-              <p className="text-xs font-bold tracking-[0.08em] text-indigo-500 [font-family:'IBM_Plex_Sans']">
-                SOLUTIONS / RESEARCH TEAMS
-              </p>
-            </div>
+            <p className="w-full break-words font-['IBM_Plex_Sans'] text-xs font-bold tracking-[0.08em] text-indigo-500 sm:text-sm">
+              SOLUTIONS / RESEARCH TEAMS
+            </p>
 
             {/* Heading */}
-            <div className="w-full pt-2">
-              <h1 className="text-[42px] font-bold leading-[1.08] tracking-[-0.02em] text-violet-50 sm:text-[52px] sm:leading-[1.08] lg:text-6xl lg:leading-[63.8px] [font-family:'IBM_Plex_Sans']">
-                Build research your
-                <br />
-                team can reuse,
-                <br />
-                review, and
-                <br />
-                reassess.
-              </h1>
-            </div>
+            <h1 className="w-full break-words pt-1 font-['IBM_Plex_Sans'] text-[clamp(2rem,5vw,3.5rem)] font-bold leading-[1.08] tracking-[-0.02em] text-violet-50 xl:text-6xl xl:leading-[1.08]">
+              Build research your team can reuse, review, and reassess.
+            </h1>
 
             {/* Main Description */}
-            <div className="w-full max-w-[560px] pt-2">
-              <p className="text-base font-normal leading-7 text-violet-50/70 sm:text-lg sm:leading-8 [font-family:'IBM_Plex_Sans']">
-                Talvrin connects research questions, source-linked evidence,
-                context, research views, and continuous monitoring — so teams
-                work from a more consistent evidence base and preserve why a
-                conclusion was reached.
-              </p>
-            </div>
+            <p className="w-full max-w-[560px] pt-1 font-['IBM_Plex_Sans'] text-base font-normal leading-7 text-violet-50/70 sm:text-lg sm:leading-8">
+              Talvrin connects research questions, source-linked evidence,
+              context, research views, and continuous monitoring — so teams
+              work from a more consistent evidence base and preserve why a
+              conclusion was reached.
+            </p>
 
             {/* Secondary Description */}
-            <div className="w-full max-w-[560px]">
-              <p className="text-sm font-normal leading-6 text-violet-50/60 sm:text-base [font-family:'IBM_Plex_Sans']">
-                Repeatable, collaborative, monitored workflows — without
-                turning shared access into invented approvals, permissions, or
-                audit mechanics.
-              </p>
-            </div>
+            <p className="w-full max-w-[560px] font-['IBM_Plex_Sans'] text-sm font-normal leading-6 text-violet-50/60 sm:text-base sm:leading-7">
+              Repeatable, collaborative, monitored workflows — without turning
+              shared access into invented approvals, permissions, or audit
+              mechanics.
+            </p>
 
             {/* Buttons */}
-            <div className="flex w-full flex-col gap-3 pt-4 sm:w-auto sm:flex-row sm:gap-4">
+            <div className="flex w-full flex-col gap-3 pt-3 min-[480px]:flex-row min-[480px]:flex-wrap sm:gap-4 lg:flex-wrap">
               <a
                 href="/solutions/research-teams"
-                className="inline-flex items-center justify-center rounded-lg bg-violet-50 px-7 py-4 text-base font-semibold text-slate-900 transition-all duration-200 hover:-translate-y-0.5 hover:bg-white [font-family:'IBM_Plex_Sans']"
+                className="inline-flex min-h-12 w-full items-center justify-center rounded-lg bg-violet-50 px-5 py-3 text-center font-['IBM_Plex_Sans'] text-sm font-semibold text-slate-900 transition-all duration-200 hover:-translate-y-0.5 hover:bg-white min-[480px]:w-auto sm:px-6 sm:py-4 sm:text-base"
               >
                 Explore Research Teams
               </a>
 
               <a
                 href="/research/talvrin-methodology"
-                className="inline-flex items-center justify-center rounded-lg border border-violet-50/30 px-7 py-4 text-base font-semibold text-violet-50 transition-all duration-200 hover:-translate-y-0.5 hover:bg-violet-50/10 [font-family:'IBM_Plex_Sans']"
+                className="inline-flex min-h-12 w-full items-center justify-center rounded-lg border border-violet-50/30 px-5 py-3 text-center font-['IBM_Plex_Sans'] text-sm font-semibold text-violet-50 transition-all duration-200 hover:-translate-y-0.5 hover:bg-violet-50/10 min-[480px]:w-auto sm:px-6 sm:py-4 sm:text-base"
               >
-                See How Talvrin Works →
+                See How Talvrin Works
+                <span aria-hidden="true" className="ml-2">
+                  →
+                </span>
               </a>
             </div>
 
             {/* Disclaimer */}
-            <div className="w-full pt-[4.8px]">
-              <p className="text-sm font-normal leading-6 text-violet-50/60 [font-family:'IBM_Plex_Sans']">
-                Research and intelligence. No trade execution. No
-                manufactured investment recommendations.
-              </p>
-            </div>
+            <p className="w-full pt-1 font-['IBM_Plex_Sans'] text-xs font-normal leading-5 text-violet-50/60 sm:text-sm sm:leading-6">
+              Research and intelligence. No trade execution. No manufactured
+              investment recommendations.
+            </p>
           </motion.div>
 
           {/* RIGHT IMAGE */}
@@ -94,26 +81,16 @@ export default function ResearchTeamsHero() {
               delay: 0.1,
               ease: [0.22, 1, 0.36, 1],
             }}
-            className="relative w-full max-w-[500px] shrink-0 lg:self-center"
+            className="relative w-full min-w-0 lg:w-[42%] lg:max-w-[500px] lg:flex-none"
           >
-            <div
-              className="
-                relative
-                h-[460px]
-                w-full
-                overflow-hidden
-                rounded-2xl
-                sm:h-[540px]
-                lg:h-[620px]
-              "
-            >
+            <div className="relative aspect-[4/3] w-full overflow-hidden rounded-2xl min-[480px]:aspect-[5/3] lg:aspect-[4/5] xl:aspect-[5/6]">
               <Image
                 src="/images/solutions/research-teams/hero.png"
                 alt="Research team collaborating in a professional environment"
                 fill
                 priority
+                sizes="(max-width: 479px) calc(100vw - 32px), (max-width: 639px) calc(100vw - 40px), (max-width: 1023px) calc(100vw - 64px), (max-width: 1279px) 42vw, 500px"
                 className="object-cover object-center"
-                sizes="(max-width: 639px) 100vw, (max-width: 1023px) 500px, 500px"
               />
             </div>
           </motion.div>

@@ -3,8 +3,8 @@ import Image from "next/image";
 export default function PolicyRegulationHero() {
   return (
     <section className="relative w-full overflow-hidden bg-[#171335]">
-      <div className="mx-auto flex min-h-[720px] w-full max-w-[1440px] items-center px-6 py-16 sm:px-8 lg:min-h-[720px] lg:px-20 lg:py-24">
-        <div className="flex w-full flex-col items-center justify-between gap-12 lg:flex-row lg:items-center lg:gap-16">
+      <div className="mx-auto flex w-full max-w-[1440px] items-center px-5 py-14 sm:px-8 sm:py-20 lg:px-10 lg:py-16 xl:px-20 xl:py-24">
+        <div className="grid w-full grid-cols-1 items-center gap-10 lg:grid-cols-2 lg:gap-8 xl:gap-16">
           {/* LEFT CONTENT */}
           <div className="flex w-full max-w-[578px] flex-col items-start gap-4">
             {/* Eyebrow */}
@@ -16,12 +16,12 @@ export default function PolicyRegulationHero() {
 
             {/* Heading */}
             <div className="w-full pt-1.5">
-              <h1 className="font-['IBM_Plex_Sans'] text-[42px] font-bold leading-[1.08] text-[#F7F4FF] sm:text-5xl lg:text-[60px] lg:leading-[63.8px]">
+              <h1 className="font-['IBM_Plex_Sans'] text-[34px] font-bold leading-[1.08] text-[#F7F4FF] sm:text-[44px] lg:text-[46px] lg:leading-[1.12] xl:text-[60px] xl:leading-[63.8px]">
                 Track policy and
-                <br />
-                regulation back to
-                <br />
-                the source.
+                <br className="hidden sm:block lg:hidden xl:block" />
+                {" "}regulation back to
+                <br className="hidden sm:block lg:hidden xl:block" />
+                {" "}the source.
               </h1>
             </div>
 
@@ -70,7 +70,7 @@ export default function PolicyRegulationHero() {
           </div>
 
           {/* RIGHT IMAGE */}
-          <div className="relative w-full max-w-[608px] shrink-0">
+          <div className="relative mx-auto w-full max-w-[500px] lg:mx-0 lg:max-w-none xl:max-w-[608px]">
             <div className="relative aspect-square w-full overflow-hidden rounded-2xl">
               <Image
                 src="/images/research/policy-regulatory-intelligence/hero.png"

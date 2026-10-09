@@ -38,8 +38,8 @@ export default function MarketIntelligenceHero() {
         className="pointer-events-none absolute -right-40 top-20 h-[500px] w-[500px] rounded-full bg-indigo-500/5 blur-3xl"
       />
 
-      <div className="relative mx-auto flex min-h-[773px] w-full max-w-[1280px] items-center px-5 py-20 sm:px-8 lg:px-10">
-        <div className="grid w-full grid-cols-1 items-center gap-14 lg:grid-cols-[minmax(0,1fr)_minmax(420px,560px)] lg:gap-16">
+      <div className="relative mx-auto flex min-h-auto w-full max-w-[1320px] items-center px-4 py-14 sm:px-6 sm:py-20 md:px-8 lg:min-h-[640px] lg:px-12 xl:min-h-[773px] xl:px-16">
+        <div className="grid w-full grid-cols-1 items-center gap-10 lg:grid-cols-2 lg:gap-8 xl:grid-cols-[minmax(0,1fr)_minmax(420px,560px)] xl:gap-16">
           {/* LEFT CONTENT */}
           <motion.div
             style={{ y: contentY }}
@@ -66,7 +66,7 @@ export default function MarketIntelligenceHero() {
                 delay: 0.08,
                 ease: "easeOut",
               }}
-              className="mt-5 max-w-[580px] text-[42px] font-bold leading-[1.08] tracking-[-0.025em] text-violet-50 sm:text-[50px] lg:text-[60px] lg:leading-[1.063]"
+              className="mt-5 max-w-[580px] text-[32px] font-bold leading-[1.08] tracking-[-0.025em] text-violet-50 sm:text-[42px] md:text-[50px] lg:text-[52px] xl:text-[60px] lg:leading-[1.063]"
             >
               Understand the
               <br />

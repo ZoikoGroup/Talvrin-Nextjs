@@ -147,12 +147,15 @@ export default function ResponsibleAI() {
         className="
           mx-auto
           w-full
-          max-w-[1277px]
-          px-5
-          py-20
-          sm:px-8
-          lg:px-0
-          lg:py-[96px]
+          max-w-[1320px]
+          px-4
+          py-14
+          sm:px-6
+          sm:py-16
+          md:px-8
+          lg:px-12
+          lg:py-24
+          xl:px-16
         "
       >
         {/* =====================================================
@@ -211,12 +214,13 @@ export default function ResponsibleAI() {
             mt-3
             max-w-[1000px]
             font-['IBM_Plex_Sans']
-            text-[36px]
+            text-[28px]
             font-bold
-            leading-[1.08]
+            leading-[1.12]
             tracking-[-0.025em]
             text-slate-900
-            sm:text-[42px]
+            sm:text-[36px]
+            md:text-[42px]
             lg:text-5xl
             lg:leading-[48.72px]
           "
@@ -228,10 +232,6 @@ export default function ResponsibleAI() {
 
         {/* =====================================================
             DESKTOP GRID
-
-            4 columns:
-            Card 1 | Card 2 | Card 3 | Image
-            Card 4 | Card 5 | Card 6 | Image
         ====================================================== */}
 
         <div
@@ -243,8 +243,10 @@ export default function ResponsibleAI() {
             gap-4
             sm:grid-cols-2
             lg:mt-[44px]
-            lg:grid-cols-4
-            lg:gap-[12px]
+            lg:grid-cols-2
+            xl:grid-cols-4
+            lg:gap-4
+            xl:gap-[12px]
           "
         >
           {/* CARD 1 */}
@@ -285,7 +287,8 @@ export default function ResponsibleAI() {
             }}
             className="
               relative
-              row-span-2
+              row-span-1
+              xl:row-span-2
               w-full
               self-start
               overflow-hidden
@@ -293,10 +296,12 @@ export default function ResponsibleAI() {
               border
               border-slate-900/10
               bg-violet-50
-              min-h-[280px]
-              sm:min-h-[300px]
-              lg:h-[396px]
-              lg:min-h-0
+              min-h-[190px]
+              h-[190px]
+              sm:h-[220px]
+              lg:h-[240px]
+              xl:h-[396px]
+              xl:min-h-0
             "
           >
             <Image

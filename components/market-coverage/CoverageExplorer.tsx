@@ -235,7 +235,7 @@ export default function CoverageExplorer() {
       ref={sectionRef}
       className="w-full overflow-hidden bg-white"
     >
-      <div className="mx-auto w-full max-w-[1440px] px-6 py-20 sm:px-8 md:px-10 lg:px-20 lg:py-[96px]">
+      <div className="mx-auto w-full max-w-[1440px] px-4 py-12 sm:px-6 md:px-8 lg:px-8 xl:px-20 lg:py-16 xl:py-[96px]">
 
         {/* --------------------------------------------- */}
         {/* HEADER */}
@@ -284,12 +284,13 @@ export default function CoverageExplorer() {
             className="
               m-0
               font-['IBM_Plex_Sans']
-              text-[36px]
+              text-[30px]
               font-bold
-              leading-[1.08]
+              leading-[1.12]
               tracking-[-1px]
               text-slate-900
-              sm:text-[42px]
+              sm:text-[38px]
+              md:text-[42px]
               lg:text-5xl
               lg:leading-[48.72px]
             "

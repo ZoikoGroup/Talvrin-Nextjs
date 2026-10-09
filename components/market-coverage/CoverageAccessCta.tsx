@@ -61,16 +61,21 @@ export default function CoverageAccessCta() {
         className="
           mx-auto
           flex
-          min-h-[490.8px]
+          min-h-[360px]
+          sm:min-h-[420px]
+          lg:min-h-[490.8px]
           w-full
           max-w-[1440px]
           items-start
           justify-center
-          px-6
-          py-[88.8px]
-          sm:px-8
-          md:px-10
-          lg:px-20
+          px-4
+          py-12
+          sm:px-6
+          md:px-8
+          lg:px-8
+          xl:px-20
+          lg:py-16
+          xl:py-[88.8px]
         "
       >
         <div
@@ -110,12 +115,13 @@ export default function CoverageAccessCta() {
                 m-0
                 text-center
                 font-['IBM_Plex_Sans']
-                text-[36px]
+                text-[28px]
                 font-bold
-                leading-[1.1]
+                leading-[36px]
                 tracking-[-0.8px]
                 text-slate-900
-                sm:text-[42px]
+                sm:text-[38px]
+                sm:leading-[44px]
                 lg:text-5xl
                 lg:leading-[48.3px]
               "

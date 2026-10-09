@@ -46,11 +46,12 @@ export default function SourcesProvenanceRights() {
           max-w-[1280px]
           flex-col
           px-5
-          py-20
+          py-16
           sm:px-7
-          sm:py-24
-          lg:px-0
+          sm:py-20
+          lg:px-8
           lg:py-[95.98px]
+          xl:px-0
         "
       >
         {/* ============================================================

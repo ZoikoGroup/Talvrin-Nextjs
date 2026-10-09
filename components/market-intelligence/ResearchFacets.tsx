@@ -129,12 +129,15 @@ export default function ResearchFacets() {
           relative
           mx-auto
           w-full
-          max-w-[1277px]
-          px-5
-          py-20
-          sm:px-8
-          lg:px-0
-          lg:py-[95px]
+          max-w-[1320px]
+          px-4
+          py-14
+          sm:px-6
+          sm:py-16
+          md:px-8
+          lg:px-12
+          lg:py-24
+          xl:px-16
         "
       >
         <motion.div style={{ y: contentY }}>
@@ -196,12 +199,13 @@ export default function ResearchFacets() {
               mt-5
               max-w-[780px]
               font-['IBM_Plex_Sans']
-              text-[36px]
+              text-[28px]
               font-bold
-              leading-[1.08]
+              leading-[1.12]
               tracking-[-0.025em]
               text-slate-900
-              sm:text-[42px]
+              sm:text-[36px]
+              md:text-[42px]
               lg:text-5xl
               lg:leading-[48.72px]
             "

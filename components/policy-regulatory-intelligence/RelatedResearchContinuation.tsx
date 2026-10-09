@@ -29,7 +29,7 @@ const researchLinks = [
 export default function RelatedResearchContinuation() {
   return (
     <section className="w-full bg-violet-50">
-      <div className="mx-auto w-full max-w-[1320px] px-6 py-20 sm:px-8 lg:px-10 lg:py-24">
+      <div className="mx-auto w-full max-w-[1320px] px-5 py-16 sm:px-8 sm:py-20 lg:px-8 lg:py-24 xl:px-0">
         {/* Header */}
         <div className="w-full">
           <p className="font-['IBM_Plex_Sans'] text-xs font-bold tracking-wide text-yellow-600">
@@ -37,7 +37,7 @@ export default function RelatedResearchContinuation() {
           </p>
 
           <div className="w-full max-w-[780px] pt-3">
-            <h2 className="font-['IBM_Plex_Sans'] text-[40px] font-bold leading-[1.08] tracking-[-0.02em] text-slate-900 sm:text-5xl sm:leading-[48.72px]">
+            <h2 className="font-['IBM_Plex_Sans'] text-[36px] font-bold leading-[1.08] tracking-[-0.02em] text-slate-900 sm:text-5xl sm:leading-[48.72px]">
               Continue a defensible research
               <br className="hidden sm:block" />
               workflow.
@@ -54,11 +54,11 @@ export default function RelatedResearchContinuation() {
         </div>
 
         {/* Research cards */}
-        <div className="mt-7 grid w-full grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-5">
+        <div className="mt-7 grid w-full grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-5">
           {researchLinks.map((item) => (
             <div
               key={item.title}
-              className="flex min-h-[190px] w-full flex-col rounded-2xl border border-slate-900/10 bg-white p-5"
+              className="flex h-full min-h-[190px] w-full flex-col rounded-2xl border border-slate-900/10 bg-white p-5"
             >
               <h3 className="font-['IBM_Plex_Sans'] text-base font-bold leading-6 text-slate-900">
                 {item.title}

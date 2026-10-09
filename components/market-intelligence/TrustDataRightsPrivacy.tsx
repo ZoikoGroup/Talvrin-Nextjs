@@ -148,12 +148,15 @@ export default function TrustDataRightsPrivacy() {
           relative
           mx-auto
           w-full
-          max-w-[1275px]
-          px-5
-          py-20
-          sm:px-8
-          lg:px-0
-          lg:py-[95.9px]
+          max-w-[1320px]
+          px-4
+          py-14
+          sm:px-6
+          sm:py-16
+          md:px-8
+          lg:px-12
+          lg:py-24
+          xl:px-16
         "
       >
         <motion.div style={{ y: contentY }}>
@@ -215,12 +218,13 @@ export default function TrustDataRightsPrivacy() {
               mt-3
               max-w-[760px]
               font-['IBM_Plex_Sans']
-              text-[36px]
+              text-[28px]
               font-bold
-              leading-[1.08]
+              leading-[1.12]
               tracking-[-0.025em]
               text-slate-900
-              sm:text-[42px]
+              sm:text-[36px]
+              md:text-[42px]
               lg:text-5xl
               lg:leading-[48.72px]
             "
@@ -278,13 +282,16 @@ export default function TrustDataRightsPrivacy() {
               mt-10
               grid
               grid-cols-1
-              gap-y-10
+              gap-y-8
               sm:grid-cols-2
-              sm:gap-x-10
+              sm:gap-x-8
               lg:mt-[45px]
-              lg:grid-cols-5
-              lg:gap-x-[21px]
-              lg:gap-y-0
+              lg:grid-cols-3
+              xl:grid-cols-5
+              lg:gap-x-6
+              lg:gap-y-6
+              xl:gap-x-[21px]
+              xl:gap-y-0
             "
           >
             {trustItems.map((item, index) => (

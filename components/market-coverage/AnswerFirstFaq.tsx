@@ -102,12 +102,15 @@ export default function AnswerFirstFaq() {
           mx-auto
           w-full
           max-w-[1440px]
-          px-6
-          py-20
-          sm:px-8
-          md:px-10
-          lg:px-20
-          lg:py-[95.62px]
+          px-4
+          sm:px-6
+          md:px-8
+          lg:px-8
+          xl:px-20
+          py-12
+          sm:py-16
+          lg:py-20
+          xl:py-[95.62px]
         "
       >
         {/* TOP CONTENT */}
@@ -156,12 +159,13 @@ export default function AnswerFirstFaq() {
               className="
                 m-0
                 font-['IBM_Plex_Sans']
-                text-[36px]
+                text-[30px]
                 font-bold
-                leading-[1.1]
+                leading-[38px]
                 tracking-[-0.8px]
                 text-slate-900
-                sm:text-[42px]
+                sm:text-[38px]
+                sm:leading-[44px]
                 lg:text-5xl
                 lg:leading-[48.3px]
               "
@@ -176,9 +180,11 @@ export default function AnswerFirstFaq() {
               mt-7
               grid
               grid-cols-1
-              gap-10
-              lg:grid-cols-[840px_389px]
-              lg:gap-[51px]
+              gap-8
+              lg:grid-cols-[minmax(0,1fr)_340px]
+              xl:grid-cols-[840px_389px]
+              lg:gap-8
+              xl:gap-[51px]
             "
           >
             {/* FAQ LIST */}
@@ -292,7 +298,9 @@ export default function AnswerFirstFaq() {
             <div
               data-reveal
               className="
-                h-[565px]
+                h-[320px]
+                sm:h-[420px]
+                lg:h-[565px]
                 w-full
                 overflow-hidden
                 rounded-2xl
@@ -302,7 +310,8 @@ export default function AnswerFirstFaq() {
                 transition-all
                 duration-1000
                 ease-out
-                lg:w-[389px]
+                lg:w-auto
+                xl:w-[389px]
               "
               style={{
                 transitionDelay: "280ms",

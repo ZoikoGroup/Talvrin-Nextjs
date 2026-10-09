@@ -222,12 +222,15 @@ export default function ArticleAnatomy() {
           relative
           mx-auto
           w-full
-          max-w-[1278px]
-          px-5
-          py-20
-          sm:px-8
-          lg:px-0
-          lg:py-[96px]
+          max-w-[1320px]
+          px-4
+          py-14
+          sm:px-6
+          sm:py-16
+          md:px-8
+          lg:px-12
+          lg:py-24
+          xl:px-16
         "
       >
         <motion.div style={{ y: contentY }}>
@@ -289,12 +292,13 @@ export default function ArticleAnatomy() {
               mt-5
               max-w-[800px]
               font-['IBM_Plex_Sans']
-              text-[36px]
+              text-[28px]
               font-bold
-              leading-[1.1]
+              leading-[1.12]
               tracking-[-0.025em]
               text-violet-50
-              sm:text-[42px]
+              sm:text-[36px]
+              md:text-[42px]
               lg:text-5xl
               lg:leading-[48.72px]
             "
@@ -346,10 +350,12 @@ export default function ArticleAnatomy() {
               mt-10
               grid
               grid-cols-1
-              gap-10
-              lg:grid-cols-[minmax(0,765px)_minmax(0,494px)]
+              gap-8
+              lg:grid-cols-[minmax(0,1.3fr)_minmax(300px,1fr)]
+              xl:grid-cols-[minmax(0,765px)_minmax(0,494px)]
               lg:items-start
-              lg:gap-[18px]
+              lg:gap-8
+              xl:gap-[18px]
             "
           >
             {/* ===================================================
@@ -363,7 +369,8 @@ export default function ArticleAnatomy() {
                 gap-y-8
                 sm:grid-cols-2
                 sm:gap-x-[21px]
-                lg:grid-cols-3
+                lg:grid-cols-2
+                xl:grid-cols-3
                 lg:gap-x-[21.2px]
                 lg:gap-y-8
               "

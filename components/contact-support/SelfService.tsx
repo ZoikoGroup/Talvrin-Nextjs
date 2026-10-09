@@ -76,11 +76,12 @@ export default function SelfService() {
           px-5
           py-16
 
-          sm:px-6
+          sm:px-8
           sm:py-20
 
-          lg:px-0
-          lg:py-[68.6px]
+          lg:px-8
+          lg:py-24
+          xl:px-0
         "
       >
         {/* =====================================================
@@ -124,7 +125,7 @@ export default function SelfService() {
           <h2
             className="
               font-['IBM_Plex_Sans']
-              text-[32px]
+              text-[28px]
               font-bold
               leading-9
               tracking-[-0.02em]
@@ -136,7 +137,7 @@ export default function SelfService() {
           >
             Most questions are answered faster outside
             <br className="hidden sm:block" />
-            a support queue.
+            {" "}a support queue.
           </h2>
         </div>
 
@@ -179,8 +180,8 @@ export default function SelfService() {
             gap-4
 
             sm:grid-cols-2
-
-            lg:grid-cols-5
+            md:grid-cols-3
+            xl:grid-cols-5
             lg:gap-5
           "
         >
@@ -189,6 +190,7 @@ export default function SelfService() {
               key={resource.title}
               className="
                 flex
+                h-full
                 min-h-[145px]
                 w-full
                 flex-col
@@ -288,7 +290,10 @@ export default function SelfService() {
             w-full
             overflow-hidden
             rounded-2xl
-            aspect-[1200/320]
+            h-[180px]
+            sm:h-[240px]
+            lg:h-[280px]
+            xl:h-[320px]
           "
         >
           <Image
