@@ -1,36 +1,43 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import { useEffect, useRef } from "react";
 
 const solutions = [
   {
     title: "Individual Investors",
+    href: "/solutions/individual-investors",
     description:
       "Personal evidence-led research for self-directed investors.",
   },
   {
     title: "Investment Professionals",
+    href: "/solutions/investment-professionals",
     description:
       "Individual professional research and monitoring workflows.",
   },
   {
     title: "Research Teams",
+    href: "/solutions/research-teams",
     description:
       "Team-level repeatable and shared research workflows.",
   },
   {
     title: "Wealth & Advisory Research",
+    href: "/solutions/wealth-advisory-research",
     description:
       "Professional research supporting client research processes.",
   },
   {
     title: "Financial Institutions",
+    href: "/solutions/financial-institutions",
     description:
       "Institution-specific governed research across professional workflows.",
   },
   {
     title: "Asset Managers",
+    href: "/asset-managers",
     description:
       "Asset-management research infrastructure across investment workflows.",
   },
@@ -197,7 +204,8 @@ export default function AdjacentSolutions() {
                   {solution.description}
                 </p>
 
-                <span
+                <Link
+                  href={solution.href}
                   className="
                     mt-auto
                     pt-3
@@ -206,10 +214,11 @@ export default function AdjacentSolutions() {
                     font-semibold
                     leading-[16px]
                     text-indigo-500
+                    hover:underline
                   "
                 >
                   Learn more →
-                </span>
+                </Link>
               </div>
             </article>
           ))}

@@ -1,0 +1,11 @@
+export { default as HeroSection } from "./HeroSection";
+export { default as PageNavSection } from "./PageNavSection";
+export { default as DestinationsSection } from "./DestinationsSection";
+export { default as QuickPathsSection } from "./QuickPathsSection";
+export { default as TopicsSection } from "./TopicsSection";
+export { default as NewToTalvrinSection } from "./NewToTalvrinSection";
+export { default as TroubleshootingSection } from "./TroubleshootingSection";
+export { default as EscalationSection } from "./EscalationSection";
+export { default as FaqSection } from "./FaqSection";
+export { default as ContinueLearningSection } from "./ContinueLearningSection";
+export { default as FinalCtaSection } from "./FinalCtaSection";

@@ -7,31 +7,31 @@ const links = [
     title: "Research",
     description:
       "Return to the Research hub for source-linked public-market intelligence.",
-    href: "/research",
+    href: "/research/research-library",
   },
   {
     title: "Evidence Standards",
     description:
       "How evidence is sourced, classified and presented, in full.",
-    href: "/research/evidence-standards",
+    href: "/trust/evidence-standards",
   },
   {
     title: "AI Principles",
     description:
       "AI boundaries, provenance and human-verification expectations.",
-    href: "/research/ai-principles",
+    href: "/trust/ai-principles",
   },
   {
     title: "Market Coverage",
     description:
       "Canonical released-coverage matrix and market status.",
-    href: "/research/market-coverage",
+    href: "/markets/market-coverage",
   },
   {
     title: "Policy & Regulation",
     description:
       "See the methodology applied to policy and regulatory evidence.",
-    href: "/research/policy-regulation",
+    href: "/research/policy-regulatory-intelligence",
   },
 ];
 

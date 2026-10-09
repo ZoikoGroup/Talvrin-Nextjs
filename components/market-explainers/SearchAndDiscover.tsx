@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import { motion } from "framer-motion";
 
 export default function SearchAndDiscover() {
@@ -295,8 +296,8 @@ export default function SearchAndDiscover() {
               |
             </span>
 
-            <button
-              type="button"
+            <Link
+              href="/research/market-intelligence"
               className="
                 font-['IBM_Plex_Sans']
                 text-sm
@@ -308,7 +309,7 @@ export default function SearchAndDiscover() {
               "
             >
               Explore Market Intelligence →
-            </button>
+            </Link>
           </div>
         </motion.div>
       </div>

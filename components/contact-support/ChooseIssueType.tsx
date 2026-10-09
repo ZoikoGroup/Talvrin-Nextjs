@@ -6,6 +6,7 @@ type IssueCard = {
   description: ReactNode;
   status: "Available" | "Not Yet Available";
   footer?: string;
+  href?: string;
   notice?: ReactNode;
 };
 
@@ -59,6 +60,7 @@ const issueCards: IssueCard[] = [
     ),
     status: "Available",
     footer: "Go There",
+    href: "/markets/market-coverage",
   },
   {
     title: "Bug or Error",
@@ -135,6 +137,7 @@ const issueCards: IssueCard[] = [
     ),
     status: "Available",
     footer: "Go There",
+    href: "/request-access",
   },
   {
     title: "Other",
@@ -189,6 +192,7 @@ function IssueCardComponent({
   description,
   status,
   footer,
+  href,
   notice,
 }: IssueCard) {
   const isUnavailable = status === "Not Yet Available";
@@ -282,11 +286,7 @@ function IssueCardComponent({
       {footer && (
         <div className="mt-auto flex w-full flex-col items-start">
           <a
-            href={
-              footer === "Go There"
-                ? "#"
-                : "#support-request"
-            }
+            href={href ?? "#support-request"}
             className="
               inline-flex
               items-center

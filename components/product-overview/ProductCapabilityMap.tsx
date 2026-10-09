@@ -18,7 +18,7 @@ const modules: ModuleCard[] = [
       "Organize a research question, evidence, context, notes, and a research view that can be revisited.",
     disclaimer:
       "Does not invent collaboration, export, or storage capabilities.",
-    href: "/research-workspace",
+    href: "/product/research-workspace",
     linkText: "Explore Research Workspace →",
   },
   {
@@ -27,7 +27,7 @@ const modules: ModuleCard[] = [
       "Keep important claims connected to named, contextualized, inspectable sources.",
     disclaimer:
       "Does not imply unrestricted access to licensed or restricted content.",
-    href: "/evidence",
+    href: "/product/evidence",
     linkText: "Explore Evidence →",
   },
   {
@@ -35,7 +35,7 @@ const modules: ModuleCard[] = [
     description:
       "Communicate approved monitored events through released notification rules.",
     disclaimer: "Does not invent triggers, channels, or delivery guarantees.",
-    href: "/alerts",
+    href: "/product/alerts",
     linkText: "Explore Alerts →",
   },
   {
@@ -44,7 +44,7 @@ const modules: ModuleCard[] = [
       "Help discover, organize, compare, summarize, and interrogate evidence while keeping sources separately inspectable.",
     disclaimer:
       "AI is not evidence, advice, or a substitute for human judgment.",
-    href: "/ai-assistance",
+    href: "/product/ai-assistance",
     linkText: "Explore AI Assistance →",
   },
 ];

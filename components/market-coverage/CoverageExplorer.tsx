@@ -232,8 +232,9 @@ export default function CoverageExplorer() {
 
   return (
     <section
+      id="coverage-explorer"
       ref={sectionRef}
-      className="w-full overflow-hidden bg-white"
+      className="w-full scroll-mt-20 overflow-hidden bg-white"
     >
       <div className="mx-auto w-full max-w-[1440px] px-4 py-12 sm:px-6 md:px-8 lg:px-8 xl:px-20 lg:py-16 xl:py-[96px]">
 

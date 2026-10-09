@@ -56,7 +56,7 @@ const adjacentSolutions = [
         research processes.
       </>
     ),
-    href: "/solutions/wealth-advisory",
+    href: "/solutions/wealth-advisory-research",
   },
 ];
 

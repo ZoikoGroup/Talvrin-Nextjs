@@ -101,7 +101,7 @@ export default function ModuleAiAssistanceSection() {
         {/* Link Footer */}
         <Reveal delay={0.3} className="mt-8">
           <Link
-            href="/ai-assistance"
+            href="/product/ai-assistance"
             className="inline-flex items-center text-sm font-semibold text-[#6C5CE7] transition-colors hover:text-ink"
           >
             Explore AI Assistance →

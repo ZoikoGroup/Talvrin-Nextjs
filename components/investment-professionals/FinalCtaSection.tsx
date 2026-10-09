@@ -18,7 +18,7 @@ export default function FinalCtaSection() {
             <LinkButton href="#professional-research" variant="primary">
               Explore Professional Research
             </LinkButton>
-            <LinkButton href="/product/how-it-works" variant="secondary">
+            <LinkButton href="/product/how-talvrin-works" variant="secondary">
               See How Talvrin Works
             </LinkButton>
           </div>

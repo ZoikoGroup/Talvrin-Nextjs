@@ -216,7 +216,7 @@ export default function TalvrinMethodologyHero() {
 
             {/* Secondary Button */}
             <a
-              href="#evidence-principles"
+              href="/trust/evidence-standards"
               className="
                 inline-flex
                 min-h-[56px]

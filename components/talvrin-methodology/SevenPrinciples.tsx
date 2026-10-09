@@ -62,8 +62,10 @@ const cardVariants = {
 export default function SevenPrinciples() {
   return (
     <section
+      id="method"
       className="
         relative
+        scroll-mt-20
         w-full
         overflow-hidden
         bg-[#F6F5FF]

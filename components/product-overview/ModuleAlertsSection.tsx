@@ -26,7 +26,7 @@ export default function ModuleAlertsSection() {
             </div>
             <div className="mt-8">
               <Link
-                href="/alerts"
+                href="/product/alerts"
                 className="inline-flex items-center text-sm font-semibold text-[#6C5CE7] transition-colors hover:text-ink"
               >
                 Explore Alerts →

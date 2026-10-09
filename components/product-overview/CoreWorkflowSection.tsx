@@ -41,7 +41,7 @@ const loopSteps = [
 
 export default function CoreWorkflowSection() {
   return (
-    <section className="relative overflow-hidden bg-[#F6F5FB] py-20 sm:py-28">
+    <section id="how-it-works" className="relative scroll-mt-20 overflow-hidden bg-[#F6F5FB] py-20 sm:py-28">
       <Container className="relative">
         {/* Header content */}
         <div className="max-w-4xl">

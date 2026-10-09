@@ -75,7 +75,7 @@ export default function MarketExplainersCta() {
         >
           {/* Primary */}
           <a
-            href="/markets"
+            href="/research/market-intelligence"
             className="
               inline-flex
               min-h-14
@@ -102,7 +102,7 @@ export default function MarketExplainersCta() {
 
           {/* Secondary */}
           <a
-            href="/research/market-explainers"
+            href="#browse-by-category"
             className="
               inline-flex
               min-h-14

@@ -1,0 +1,12 @@
+export { default as HeroSection } from "./HeroSection";
+export { default as PageNavSection } from "./PageNavSection";
+export { default as RegistryNoticeSection } from "./RegistryNoticeSection";
+export { default as LatestReleasesSection } from "./LatestReleasesSection";
+export { default as ChangeTypesSection } from "./ChangeTypesSection";
+export { default as ProductAreasSection } from "./ProductAreasSection";
+export { default as DocsOnboardingSection } from "./DocsOnboardingSection";
+export { default as DeprecationsSection } from "./DeprecationsSection";
+export { default as BoundariesSection } from "./BoundariesSection";
+export { default as StayInformedSection } from "./StayInformedSection";
+export { default as ContinueResourcesSection } from "./ContinueResourcesSection";
+export { default as FinalCtaSection } from "./FinalCtaSection";

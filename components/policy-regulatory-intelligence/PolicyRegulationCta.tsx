@@ -24,14 +24,14 @@ export default function PolicyRegulationCta() {
         {/* Buttons */}
         <div className="flex w-full flex-col items-center justify-center gap-3 pt-3.5 sm:w-auto sm:flex-row sm:gap-4">
           <a
-            href="/research/policy-regulation"
+            href="#coverage-browse"
             className="inline-flex min-h-14 w-full items-center justify-center rounded-lg bg-slate-900 px-7 py-4 font-['IBM_Plex_Sans'] text-base font-semibold text-violet-50 transition-colors duration-200 hover:bg-slate-800 sm:w-auto"
           >
             Explore Policy &amp; Regulation
           </a>
 
           <a
-            href="/methodology"
+            href="/research/talvrin-methodology"
             className="inline-flex min-h-14 w-full items-center justify-center rounded-lg border border-slate-900/25 px-7 py-4 font-['IBM_Plex_Sans'] text-base font-semibold text-slate-900 transition-colors duration-200 hover:bg-slate-900/[0.03] sm:w-auto"
           >
             See Talvrin Methodology

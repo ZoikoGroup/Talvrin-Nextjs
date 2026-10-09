@@ -128,7 +128,7 @@ export default function MarketIntelligenceHero() {
               </a>
 
               <a
-                href="#how-talvrin-works"
+                href="/product/how-talvrin-works"
                 className="inline-flex min-h-[56px] items-center justify-center rounded-lg border border-violet-50/30 px-7 py-4 text-center text-base font-semibold text-violet-50 transition-colors duration-200 hover:bg-violet-50/10"
               >
                 See How Talvrin Works →

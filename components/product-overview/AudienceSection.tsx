@@ -15,28 +15,28 @@ const audiences: AudienceCard[] = [
     title: "Self-directed investors",
     description:
       "A more disciplined way to investigate public markets around source-linked evidence and revisit the reasoning behind a view.",
-    href: "/research-workspace",
+    href: "/solutions/individual-investors",
     linkText: "Research Workspace / Evidence →",
   },
   {
     title: "Investment professionals",
     description:
       "Efficient access to source-linked evidence, context, and monitored research views.",
-    href: "/research-workspace",
+    href: "/solutions/investment-professionals",
     linkText: "Research Workspace / Monitoring →",
   },
   {
     title: "Financial Institutions",
     description:
       "Scalable, governed, reviewable research capabilities across teams and markets.",
-    href: "/enterprise",
+    href: "/solutions/enterprise",
     linkText: "Enterprise / Request Access →",
   },
   {
     title: "Asset managers",
     description:
       "Research infrastructure that emphasizes provenance, reviewability, and durability.",
-    href: "/solutions",
+    href: "/asset-managers",
     linkText: "Enterprise / Solutions →",
   },
 ];

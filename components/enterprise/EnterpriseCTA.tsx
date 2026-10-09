@@ -78,7 +78,7 @@ export default function EnterpriseCTA() {
               text-gray-600
             "
           >
-            Explore how Talvrin fits your organization's research process
+            Explore how Talvrin&apos;s fits your organization&apos;s research process
             across teams and markets.
           </p>
 
@@ -97,7 +97,7 @@ export default function EnterpriseCTA() {
           >
             {/* Request Access */}
             <a
-              href="#"
+              href="/request-access"
               className="
                 inline-flex
                 min-h-[52px]
@@ -124,7 +124,7 @@ export default function EnterpriseCTA() {
 
             {/* See How It Works */}
             <a
-              href="#"
+              href="#how-it-works"
               className="
                 inline-flex
                 min-h-[52px]

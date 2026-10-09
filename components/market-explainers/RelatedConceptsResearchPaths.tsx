@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import { motion } from "framer-motion";
 
 const researchPaths = [
@@ -231,6 +232,7 @@ export default function RelatedConceptsResearchPaths() {
           <ResearchCard
             index={0}
             title="Market Intelligence"
+            href="/research/market-intelligence"
             description="See the concept applied in current market context — only once the destination is live."
           />
 
@@ -241,6 +243,7 @@ export default function RelatedConceptsResearchPaths() {
           <ResearchCard
             index={1}
             title="Research Library"
+            href="/research/research-library"
             description="Durable evidence collections for concepts that warrant deeper retrieval."
           />
 
@@ -251,6 +254,7 @@ export default function RelatedConceptsResearchPaths() {
           <ResearchCard
             index={2}
             title="Policy & Regulation"
+            href="/research/policy-regulatory-intelligence"
             description="Regulatory process and effective-date concepts — never legal advice."
           />
 
@@ -261,6 +265,7 @@ export default function RelatedConceptsResearchPaths() {
           <ResearchCard
             index={3}
             title="Talvrin Methodology"
+            href="/research/talvrin-methodology"
             description="How sources, normalization, and interpretation are handled across Talvrin research."
           />
 
@@ -271,6 +276,7 @@ export default function RelatedConceptsResearchPaths() {
           <ResearchCard
             index={4}
             title="Central Banks"
+            href="/markets/central-banks"
             description="Policy tool, communication, and transmission concepts tied to a specific institution."
           />
 
@@ -281,6 +287,7 @@ export default function RelatedConceptsResearchPaths() {
           <ResearchCard
             index={5}
             title="Economic Calendar"
+            href="/research/economic-calendar"
             description="Explainers tied to a scheduled release or economic concept, where the relationship is real."
           />
         </div>
@@ -296,12 +303,14 @@ export default function RelatedConceptsResearchPaths() {
 type ResearchCardProps = {
   title: string;
   description: string;
+  href: string;
   index: number;
 };
 
 function ResearchCard({
   title,
   description,
+  href,
   index,
 }: ResearchCardProps) {
   return (
@@ -370,17 +379,19 @@ function ResearchCard({
 
       {/* Learn more */}
 
-      <span
+      <Link
+        href={href}
         className="
           mt-2
           font-['IBM_Plex_Sans']
           text-xs
           font-semibold
           text-indigo-300
+          hover:text-indigo-200
         "
       >
         Learn more →
-      </span>
+      </Link>
     </motion.article>
   );
 }

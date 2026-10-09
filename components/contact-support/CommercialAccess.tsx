@@ -116,7 +116,7 @@ export default function CommercialAccess() {
         >
           {/* Explore Enterprise */}
           <Link
-            href="/enterprise"
+            href="/solutions/enterprise"
             className="
               inline-flex
               min-h-[56px]

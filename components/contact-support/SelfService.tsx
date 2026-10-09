@@ -1,8 +1,10 @@
 import Image from "next/image";
+import Link from "next/link";
 
 const resources = [
   {
     title: "Help Center",
+    href: "/resources/help-center",
     description: (
       <>
         General product help and
@@ -13,6 +15,7 @@ const resources = [
   },
   {
     title: "Documentation",
+    href: "/resources/documentation",
     description: (
       <>
         Public product and
@@ -23,6 +26,7 @@ const resources = [
   },
   {
     title: "FAQs",
+    href: "/resources/faqs",
     description: (
       <>
         Direct answers to frequently
@@ -33,6 +37,7 @@ const resources = [
   },
   {
     title: "Getting Started",
+    href: "/resources/getting-started",
     description: (
       <>
         First-use guidance for new
@@ -43,6 +48,7 @@ const resources = [
   },
   {
     title: "Release Notes",
+    href: "/resources/release-notes",
     description: (
       <>
         Recent product changes
@@ -186,8 +192,9 @@ export default function SelfService() {
           "
         >
           {resources.map((resource) => (
-            <div
+            <Link
               key={resource.title}
+              href={resource.href}
               className="
                 flex
                 h-full
@@ -276,7 +283,7 @@ export default function SelfService() {
                   Not yet available on this build.
                 </p>
               </div>
-            </div>
+            </Link>
           ))}
         </div>
 

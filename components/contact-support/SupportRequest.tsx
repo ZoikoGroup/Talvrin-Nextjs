@@ -449,7 +449,7 @@ export default function SupportRequest() {
               >
                 I have read the{" "}
                 <Link
-                  href="/privacy-notice"
+                  href="/trust/privacy"
                   className="text-indigo-500 hover:underline"
                 >
                   Privacy Notice
@@ -507,7 +507,7 @@ export default function SupportRequest() {
               </button>
 
               <Link
-                href="/privacy-notice"
+                href="/trust/privacy"
                 className="
                   font-['IBM_Plex_Sans']
                   text-sm

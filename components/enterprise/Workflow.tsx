@@ -92,8 +92,9 @@ export default function Workflow() {
   return (
     <>
       <section
+        id="how-it-works"
         ref={sectionRef}
-        className="w-full overflow-hidden bg-slate-900 text-violet-50"
+        className="w-full scroll-mt-20 overflow-hidden bg-slate-900 text-violet-50"
       >
         <div className="mx-auto w-full max-w-[1440px] px-4 py-12 sm:px-6 md:px-8 lg:px-8 xl:px-20 lg:py-16 xl:py-[96px]">
           {/* =========================================

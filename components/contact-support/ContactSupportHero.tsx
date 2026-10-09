@@ -208,7 +208,7 @@ export default function ContactSupportHero() {
             >
               {/* Primary button */}
               <Link
-                href="/help-center"
+                href="/resources/help-center"
                 className="
                   inline-flex
                   min-h-[52px]

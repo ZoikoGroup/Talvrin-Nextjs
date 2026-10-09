@@ -11,14 +11,14 @@ import {
 import { useRef } from "react";
 
 const browseItems = [
-  "Market Structure",
-  "Fixed Income",
-  "Central Banks",
-  "Macro",
-  "Companies & Filings",
-  "Regulation & Policy",
-  "Methodology",
-  "Evidence & Data",
+  { label: "Market Structure", href: "/markets/global-markets" },
+  { label: "Fixed Income", href: "/markets/fixed-income" },
+  { label: "Central Banks", href: "/markets/central-banks" },
+  { label: "Macro", href: "/markets/macro-economics" },
+  { label: "Companies & Filings", href: "/markets/equities" },
+  { label: "Regulation & Policy", href: "/research/policy-regulatory-intelligence" },
+  { label: "Methodology", href: "/research/talvrin-methodology" },
+  { label: "Evidence & Data", href: "/trust/data-sources" },
 ];
 
 export default function MarketExplainersHero() {
@@ -399,8 +399,8 @@ export default function MarketExplainersHero() {
 
               {browseItems.map((item) => (
                 <Link
-                  key={item}
-                  href="#"
+                  key={item.label}
+                  href={item.href}
                   className="
                     text-indigo-300/90
                     transition-colors
@@ -408,7 +408,7 @@ export default function MarketExplainersHero() {
                     hover:text-indigo-200
                   "
                 >
-                  {item}
+                  {item.label}
                 </Link>
               ))}
             </motion.div>
