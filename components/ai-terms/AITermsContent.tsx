@@ -238,33 +238,35 @@ const sectionImages: Record<number, string> = {
 export default function AITermsContent() {
   return (
     <section className="w-full bg-violet-50 font-['IBM_Plex_Sans',sans-serif] text-slate-900">
-      <div className="mx-auto grid w-full max-w-[1440px] grid-cols-1 gap-8 px-5 py-10 sm:px-8 md:px-10 lg:grid-cols-[220px_minmax(0,1fr)] lg:gap-8 lg:px-10 lg:py-[73px] xl:grid-cols-[240px_minmax(0,1fr)] xl:gap-8 xl:px-20">
+      <div className="mx-auto grid w-full max-w-[1440px] grid-cols-1 gap-8 px-4 sm:px-6 md:px-8 lg:grid-cols-[220px_minmax(0,1fr)] lg:gap-8 lg:px-12 lg:py-14 xl:grid-cols-[240px_minmax(0,1fr)] xl:gap-8 xl:px-20 xl:py-[72px] py-8 sm:py-10">
         {/* Table of contents */}
         <nav
           aria-label="AI Terms table of contents"
-          className="min-w-0 lg:sticky lg:top-6 lg:max-h-[calc(100vh-3rem)] lg:self-start"
+          className="min-w-0 lg:sticky lg:top-6 lg:self-start"
         >
-          <p className="mb-4 text-xs font-bold tracking-wide text-gray-600">
-            ON THIS PAGE
-          </p>
+          <div className="max-h-[220px] sm:max-h-[280px] lg:max-h-[calc(100vh-4rem)] overflow-y-auto rounded-xl border border-slate-900/10 bg-white/70 p-4 lg:rounded-none lg:border-0 lg:bg-transparent lg:p-0">
+            <p className="sticky top-0 bg-white/70 lg:bg-transparent pb-1 text-xs font-bold tracking-wide text-gray-600">
+              ON THIS PAGE
+            </p>
 
-          <div className="flex gap-2 overflow-x-auto pb-3 lg:max-h-[calc(100vh-7rem)] lg:flex-col lg:overflow-y-auto lg:overflow-x-hidden lg:pb-0">
-            {sections.map((section, index) => (
-              <a
-                key={section.id}
-                href={`#${section.id}`}
-                className="flex shrink-0 items-start gap-2 rounded-md px-2.5 py-2 text-sm leading-5 text-slate-700 transition-colors hover:bg-white hover:text-indigo-600 lg:w-full"
-              >
-                <span className="shrink-0 text-gray-500">
-                  {index + 1}.
-                </span>
-                <span className="min-w-0">{section.title}</span>
-              </a>
-            ))}
+            <div className="mt-2 flex flex-col gap-1">
+              {sections.map((section, index) => (
+                <a
+                  key={section.id}
+                  href={`#${section.id}`}
+                  className="flex items-start gap-2 rounded-md px-2.5 py-1.5 sm:py-2 text-xs sm:text-sm leading-5 text-slate-700 transition-colors hover:bg-white hover:text-indigo-600 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-indigo-500"
+                >
+                  <span className="shrink-0 text-gray-500">
+                    {index + 1}.
+                  </span>
+                  <span className="min-w-0">{section.title}</span>
+                </a>
+              ))}
+            </div>
           </div>
         </nav>
 
-        {/* Legal sections with a consistently reserved image column */}
+        {/* Legal sections */}
         <div className="min-w-0">
           {sections.map((section, index) => {
             const sectionNumber = index + 1;
@@ -274,49 +276,55 @@ export default function AITermsContent() {
               <article
                 key={section.id}
                 id={section.id}
-                className="min-w-0 scroll-mt-8 border-b border-slate-900/10 py-8 first:pt-0 sm:py-10"
+                className="min-w-0 scroll-mt-8 border-b border-slate-900/10 py-6 sm:py-8 lg:py-10 first:pt-0"
               >
-                <div className="grid min-w-0 grid-cols-1 items-start gap-6 lg:grid-cols-[minmax(0,1fr)_180px] xl:grid-cols-[minmax(0,1fr)_266px]">
+                <div
+                  className={
+                    image
+                      ? "grid min-w-0 grid-cols-1 items-start gap-6 lg:grid-cols-[minmax(0,1fr)_180px] xl:grid-cols-[minmax(0,1fr)_266px]"
+                      : "min-w-0"
+                  }
+                >
                   {/* Section content */}
                   <div className="min-w-0">
                     <div className="mb-3 flex flex-wrap items-center gap-2">
-                      <span className="rounded-full bg-indigo-500/10 px-2.5 py-1 text-[10px] font-bold tracking-wide text-indigo-500 sm:text-xs">
+                      <span className="rounded-full bg-indigo-500/10 px-2.5 py-1 text-[10px] sm:text-xs font-bold tracking-wide text-indigo-500">
                         {section.category}
                       </span>
 
                       {section.warning && (
-                        <span className="rounded-full bg-yellow-600/10 px-2.5 py-1 text-[10px] font-bold tracking-wide text-yellow-800 sm:text-xs">
+                        <span className="rounded-full bg-yellow-600/10 px-2.5 py-1 text-[10px] sm:text-xs font-bold tracking-wide text-yellow-800">
                           NO APPROVED RULE PUBLISHED YET
                         </span>
                       )}
                     </div>
 
-                    <h2 className="text-lg font-bold leading-7 text-slate-900 sm:text-xl">
+                    <h2 className="text-lg sm:text-xl font-bold leading-7 text-slate-900">
                       {sectionNumber}. {section.title}
                     </h2>
 
-                    <p className="mt-3 break-words text-sm leading-6 text-slate-700 sm:text-base">
+                    <p className="mt-3 break-words text-sm sm:text-base leading-6 text-slate-700">
                       {section.text}
                     </p>
 
                     {section.notice && (
-                      <div className="mt-5 rounded-[10px] border border-yellow-600/25 bg-yellow-600/10 px-4 py-3.5">
-                        <p className="break-words text-sm leading-5 text-yellow-900">
+                      <div className="mt-4 sm:mt-5 rounded-[10px] border border-yellow-600/25 bg-yellow-600/10 px-4 py-3.5">
+                        <p className="break-words text-xs sm:text-sm leading-5 text-yellow-900">
                           {section.notice}
                         </p>
                       </div>
                     )}
 
                     {section.callout && (
-                      <div className="mt-5 rounded-[10px] bg-[#171335] px-4 py-4">
-                        <p className="break-words text-sm leading-5 text-violet-50/90">
+                      <div className="mt-4 sm:mt-5 rounded-[10px] bg-[#171335] px-4 py-4">
+                        <p className="break-words text-xs sm:text-sm leading-5 text-violet-50/90">
                           {section.callout}
                         </p>
                       </div>
                     )}
 
                     {section.examples && (
-                      <div className="mt-5 rounded-[10px] border border-slate-900/10 bg-white p-4 sm:p-5">
+                      <div className="mt-4 sm:mt-5 rounded-[10px] border border-slate-900/10 bg-white p-4 sm:p-5">
                         <p className="mb-3 text-xs font-bold tracking-wide text-gray-600">
                           ILLUSTRATIVE EXAMPLES — NON-EXHAUSTIVE
                         </p>
@@ -325,7 +333,7 @@ export default function AITermsContent() {
                           {section.examples.map((example) => (
                             <li
                               key={example}
-                              className="flex items-start gap-2.5 text-sm leading-5 text-gray-600"
+                              className="flex items-start gap-2.5 text-xs sm:text-sm leading-5 text-gray-600"
                             >
                               <span className="mt-2 h-[5px] w-[5px] shrink-0 rounded-full bg-yellow-600" />
                               <span className="min-w-0 break-words">
@@ -346,7 +354,7 @@ export default function AITermsContent() {
                         {section.related.map((item) => (
                           <span
                             key={item}
-                            className="text-sm font-semibold text-indigo-500"
+                            className="text-xs sm:text-sm font-semibold text-indigo-500"
                           >
                             {item} →
                           </span>
@@ -355,18 +363,18 @@ export default function AITermsContent() {
                     )}
                   </div>
 
-                  {/* Image column: intentionally remains empty when no image is assigned */}
-                  <div className="relative mx-auto aspect-[4/5] w-full max-w-[360px] overflow-hidden rounded-xl lg:mx-0 lg:max-w-none">
-                    {image && (
+                  {/* Image column: only rendered when image exists */}
+                  {image && (
+                    <div className="relative mx-auto aspect-[4/5] w-full max-w-[320px] overflow-hidden rounded-xl lg:mx-0 lg:max-w-none">
                       <Image
                         src={`/images/legal/ai-terms/${image}`}
                         alt={`Supporting illustration for ${section.title}`}
                         fill
-                        sizes="(max-width: 639px) calc(100vw - 40px), (max-width: 1023px) calc(100vw - 64px), (max-width: 1279px) 180px, 266px"
+                        sizes="(max-width: 639px) calc(100vw - 32px), (max-width: 1023px) min(100vw - 48px, 320px), (max-width: 1279px) 180px, 266px"
                         className="object-cover"
                       />
-                    )}
-                  </div>
+                    </div>
+                  )}
                 </div>
               </article>
             );

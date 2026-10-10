@@ -16,9 +16,9 @@ const legalDocuments = [
 export default function AccessibilityRelated() {
   return (
     <section className="w-full border-t border-slate-900/10 bg-white font-['IBM_Plex_Sans',sans-serif]">
-      <div className="mx-auto w-full max-w-[1440px] px-5 py-12 sm:px-8 sm:py-14 md:px-10 lg:px-20 lg:py-[72px]">
-        <div className="flex flex-col items-start gap-3">
-          <p className="text-xs font-bold tracking-wide text-yellow-600">
+      <div className="mx-auto w-full max-w-[1440px] px-4 sm:px-6 md:px-8 lg:px-12 xl:px-20 py-10 sm:py-12 lg:py-16 xl:py-[72px]">
+        <div className="flex flex-col items-start gap-2.5 sm:gap-3">
+          <p className="text-[11px] sm:text-xs font-bold tracking-wide text-yellow-600">
             26. RELATED LEGAL DOCUMENTS
           </p>
 
@@ -37,7 +37,7 @@ export default function AccessibilityRelated() {
           {legalDocuments.map((document, index) => (
             <div
               key={document.number}
-              className={`grid grid-cols-[32px_minmax(0,1fr)] items-center gap-x-3 gap-y-2 px-4 py-4 sm:grid-cols-[40px_minmax(0,1fr)_auto] sm:px-5 ${
+              className={`grid min-h-[52px] sm:min-h-[56px] grid-cols-[28px_minmax(0,1fr)_auto] sm:grid-cols-[40px_minmax(0,1fr)_auto] items-center gap-2.5 sm:gap-4 px-3 sm:px-5 py-3 sm:py-4 ${
                 index !== legalDocuments.length - 1
                   ? "border-b border-slate-900/10"
                   : ""
@@ -50,7 +50,7 @@ export default function AccessibilityRelated() {
               </span>
 
               <span
-                className={`min-w-0 break-words text-sm font-bold sm:text-base ${
+                className={`min-w-0 break-words text-xs sm:text-sm md:text-base font-bold leading-snug ${
                   document.type === "current"
                     ? "text-slate-900"
                     : "text-gray-600"
@@ -60,7 +60,7 @@ export default function AccessibilityRelated() {
               </span>
 
               <span
-                className={`col-start-2 inline-flex w-fit items-center rounded-full px-3 py-1 text-[10px] font-bold tracking-wide sm:col-start-3 sm:text-xs ${
+                className={`justify-self-end whitespace-nowrap rounded-full px-2.5 sm:px-3 py-1 text-[9px] sm:text-[10px] font-bold tracking-wide ${
                   document.type === "approved"
                     ? "bg-teal-800/10 text-teal-800"
                     : document.type === "current"

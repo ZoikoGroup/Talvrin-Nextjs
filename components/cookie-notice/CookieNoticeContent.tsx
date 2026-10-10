@@ -224,30 +224,32 @@ function NoticeBox({ children }: { children: React.ReactNode }) {
 export default function CookieNoticeContent() {
   return (
     <section className="w-full bg-violet-50 text-slate-900">
-      <div className="mx-auto grid w-full max-w-[1440px] grid-cols-1 items-start gap-8 px-5 py-12 sm:px-8 md:px-10 lg:grid-cols-[240px_minmax(0,1fr)] lg:gap-8 lg:px-12 lg:py-[74px] xl:grid-cols-[240px_minmax(0,1fr)_266px] xl:gap-2 xl:px-20">
+      <div className="mx-auto grid w-full max-w-[1440px] grid-cols-1 items-start gap-8 px-4 sm:px-6 md:px-8 lg:grid-cols-[240px_minmax(0,1fr)] lg:gap-8 lg:px-12 lg:py-14 xl:grid-cols-[240px_minmax(0,1fr)_266px] xl:gap-8 xl:px-20 xl:py-[74px] py-8 sm:py-10">
         {/* Table of contents */}
-        <aside className="lg:sticky lg:top-8 lg:max-h-[calc(100vh-64px)] lg:overflow-y-auto">
-          <h2 className="mb-3.5 text-xs font-bold tracking-wide text-gray-600">
-            ON THIS PAGE
-          </h2>
+        <aside className="w-full min-w-0 lg:sticky lg:top-6 lg:self-start">
+          <div className="rounded-xl border border-slate-900/10 bg-white/70 p-4 lg:border-0 lg:bg-transparent lg:p-0">
+            <h2 className="mb-3 text-xs font-bold tracking-wide text-gray-600">
+              ON THIS PAGE
+            </h2>
 
-          <nav aria-label="Cookie Notice contents">
-            <ol className="flex flex-col gap-0.5">
-              {sections.map((section, index) => (
-                <li key={section.id}>
-                  <a
-                    href={`#${section.id}`}
-                    className="flex items-start gap-2 rounded-md px-2.5 py-2 text-sm leading-5 text-slate-700 transition-colors hover:bg-indigo-500/10 hover:text-indigo-600"
-                  >
-                    <span className="shrink-0 text-gray-600">
-                      {index + 1}.
-                    </span>
-                    <span>{section.title}</span>
-                  </a>
-                </li>
-              ))}
-            </ol>
-          </nav>
+            <nav aria-label="Cookie Notice contents">
+              <ol className="flex max-h-[220px] sm:max-h-[260px] lg:max-h-[calc(100vh-5rem)] flex-col gap-0.5 overflow-y-auto">
+                {sections.map((section, index) => (
+                  <li key={section.id}>
+                    <a
+                      href={`#${section.id}`}
+                      className="flex items-start gap-2 rounded-md px-2.5 py-1.5 sm:py-2 text-xs sm:text-sm leading-5 text-slate-700 transition-colors hover:bg-indigo-500/10 hover:text-indigo-600"
+                    >
+                      <span className="shrink-0 text-gray-600">
+                        {index + 1}.
+                      </span>
+                      <span>{section.title}</span>
+                    </a>
+                  </li>
+                ))}
+              </ol>
+            </nav>
+          </div>
         </aside>
 
         {/* Policy sections */}

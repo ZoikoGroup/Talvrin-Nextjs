@@ -113,30 +113,32 @@ const sections = [
 export default function AccessibilityContent() {
   return (
     <section className="w-full overflow-hidden bg-violet-50 font-['IBM_Plex_Sans',sans-serif]">
-      <div className="mx-auto grid w-full max-w-[1440px] grid-cols-1 items-start gap-8 px-5 py-10 sm:px-8 md:px-10 lg:grid-cols-[224px_minmax(0,1fr)] lg:gap-8 lg:px-12 lg:py-[72px] xl:grid-cols-[224px_minmax(0,1fr)] xl:gap-8 xl:px-16">
+      <div className="mx-auto grid w-full max-w-[1440px] grid-cols-1 items-start gap-8 px-4 sm:px-6 md:px-8 lg:grid-cols-[224px_minmax(0,1fr)] lg:gap-8 lg:px-12 lg:py-14 xl:px-20 xl:py-[72px] py-8 sm:py-10">
         {/* Table of contents */}
         <aside className="w-full min-w-0 lg:sticky lg:top-6">
-          <p className="mb-3.5 text-xs font-bold tracking-wide text-gray-600">
-            ON THIS PAGE
-          </p>
+          <div className="rounded-xl border border-slate-900/10 bg-white/70 p-4 lg:border-0 lg:bg-transparent lg:p-0">
+            <p className="mb-3 text-xs font-bold tracking-wide text-gray-600">
+              ON THIS PAGE
+            </p>
 
-          <nav
-            aria-label="Accessibility statement sections"
-            className="grid grid-cols-1 gap-1 sm:grid-cols-2 lg:max-h-[calc(100vh-100px)] lg:grid-cols-1 lg:overflow-y-auto"
-          >
-            {sections.map((section, index) => (
-              <a
-                key={section.id}
-                href={`#${section.id}`}
-                className="flex min-w-0 items-start gap-2 rounded-md px-2.5 py-2 text-sm text-slate-700 transition-colors hover:bg-indigo-500/10 hover:text-indigo-600"
-              >
-                <span className="shrink-0 text-gray-600">
-                  {index + 1}.
-                </span>
-                <span>{section.title.replace(/^\d+\.\s*/, "")}</span>
-              </a>
-            ))}
-          </nav>
+            <nav
+              aria-label="Accessibility statement sections"
+              className="grid max-h-[220px] sm:max-h-[260px] lg:max-h-[calc(100vh-5rem)] grid-cols-1 gap-1 overflow-y-auto sm:grid-cols-2 lg:grid-cols-1"
+            >
+              {sections.map((section, index) => (
+                <a
+                  key={section.id}
+                  href={`#${section.id}`}
+                  className="flex min-w-0 items-start gap-2 rounded-md px-2.5 py-1.5 sm:py-2 text-xs sm:text-sm text-slate-700 transition-colors hover:bg-indigo-500/10 hover:text-indigo-600"
+                >
+                  <span className="shrink-0 text-gray-600">
+                    {index + 1}.
+                  </span>
+                  <span className="min-w-0 break-words">{section.title.replace(/^\d+\.\s*/, "")}</span>
+                </a>
+              ))}
+            </nav>
+          </div>
         </aside>
 
         {/* Accessibility statement sections */}
@@ -145,41 +147,41 @@ export default function AccessibilityContent() {
             <article
               key={section.id}
               id={section.id}
-              className="scroll-mt-8 border-b border-slate-900/10 py-7 first:pt-0 sm:py-9"
+              className="scroll-mt-8 border-b border-slate-900/10 py-6 sm:py-8 lg:py-9 first:pt-0"
             >
               <div
                 className={`grid min-w-0 grid-cols-1 items-start gap-5 ${
                   section.image
-                    ? "md:grid-cols-[minmax(0,1fr)_minmax(180px,288px)]"
+                    ? "md:grid-cols-[minmax(0,1fr)_minmax(180px,260px)] xl:grid-cols-[minmax(0,1fr)_288px]"
                     : ""
                 }`}
               >
                 <div className="min-w-0">
                   {section.category && (
                     <div className="mb-3 flex flex-wrap items-center gap-2">
-                      <span className="inline-flex rounded-full bg-indigo-500/10 px-2.5 py-1 text-xs font-bold tracking-wide text-indigo-500">
+                      <span className="inline-flex rounded-full bg-indigo-500/10 px-2.5 py-1 text-[11px] sm:text-xs font-bold tracking-wide text-indigo-500">
                         {section.category}
                       </span>
 
                       {section.warning && (
-                        <span className="inline-flex rounded-full bg-yellow-600/10 px-2.5 py-1 text-xs font-bold tracking-wide text-yellow-800">
+                        <span className="inline-flex rounded-full bg-yellow-600/10 px-2.5 py-1 text-[11px] sm:text-xs font-bold tracking-wide text-yellow-800">
                           NO APPROVED EVIDENCE PUBLISHED YET
                         </span>
                       )}
                     </div>
                   )}
 
-                  <h2 className="text-xl font-bold leading-7 text-slate-900">
+                  <h2 className="text-lg sm:text-xl font-bold leading-7 text-slate-900">
                     {section.title}
                   </h2>
 
-                  <p className="mt-3 text-base font-normal leading-6 text-slate-700">
+                  <p className="mt-3 text-sm sm:text-base font-normal leading-6 text-slate-700">
                     {section.text}
                   </p>
 
                   {section.notice && (
-                    <div className="mt-5 rounded-[10px] border border-yellow-600/25 bg-yellow-600/10 px-4 py-3.5">
-                      <p className="text-sm leading-5 text-yellow-900">
+                    <div className="mt-4 sm:mt-5 rounded-[10px] border border-yellow-600/25 bg-yellow-600/10 px-4 py-3.5">
+                      <p className="text-xs sm:text-sm leading-5 text-yellow-900">
                         {section.notice}
                       </p>
                     </div>
@@ -187,12 +189,12 @@ export default function AccessibilityContent() {
                 </div>
 
                 {section.image && (
-                  <div className="relative mx-auto aspect-[4/3] w-full max-w-[288px] overflow-hidden rounded-2xl bg-pink-800 md:mt-0">
+                  <div className="relative mx-auto aspect-[4/3] w-full max-w-[288px] overflow-hidden rounded-2xl bg-violet-100/50 md:mt-0">
                     <Image
                       src={`/images/legal/accessibility/${section.image}`}
                       alt={`Accessibility statement illustration for ${section.title.replace(/^\d+\.\s*/, "").toLowerCase()}`}
                       fill
-                      sizes="(max-width: 767px) 100vw, (max-width: 1023px) 40vw, 288px"
+                      sizes="(max-width: 767px) min(100vw - 32px, 288px), (max-width: 1023px) 35vw, 288px"
                       className="object-cover"
                     />
                   </div>

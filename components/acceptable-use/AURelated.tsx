@@ -13,17 +13,17 @@ const legalDocuments = [
 export default function AURelated() {
   return (
     <section className="w-full border-t border-slate-900/10 bg-white font-['IBM_Plex_Sans']">
-      <div className="mx-auto w-full max-w-[1440px] px-5 py-12 sm:px-8 sm:py-16 lg:px-12 lg:py-[72px] xl:px-20">
-        <div className="mb-7">
-          <p className="text-xs font-bold tracking-wide text-yellow-600">
+      <div className="mx-auto w-full max-w-[1440px] px-4 sm:px-6 md:px-8 lg:px-12 xl:px-20 py-10 sm:py-12 lg:py-16 xl:py-[72px]">
+        <div className="mb-6 sm:mb-8">
+          <p className="text-[11px] sm:text-xs font-bold tracking-wide text-yellow-600">
             26. RELATED LEGAL DOCUMENTS
           </p>
 
-          <h2 className="mt-3 max-w-[800px] text-[28px] font-bold leading-9 text-slate-900 sm:text-3xl sm:leading-10 lg:text-4xl">
+          <h2 className="mt-2.5 sm:mt-3 max-w-[800px] text-2xl font-bold leading-tight text-slate-900 sm:text-3xl sm:leading-10 lg:text-4xl">
             Acceptable Use is item four of nine in the Talvrin Legal sequence.
           </h2>
 
-          <p className="mt-3 max-w-[780px] text-sm leading-6 text-gray-600 sm:text-base">
+          <p className="mt-2.5 sm:mt-3 max-w-[780px] text-sm leading-6 text-gray-600 sm:text-base">
             Each Legal destination is approved individually and in order.
             Later destinations stay blocked until their own review and approval.
           </p>
@@ -33,18 +33,18 @@ export default function AURelated() {
           {legalDocuments.map((document, index) => (
             <div
               key={document.number}
-              className={`flex min-h-[60px] items-center gap-3 px-3 py-4 sm:gap-4 sm:px-5 ${
+              className={`grid min-h-[52px] sm:min-h-[58px] grid-cols-[28px_minmax(0,1fr)_auto] sm:grid-cols-[40px_minmax(0,1fr)_auto] items-center gap-2.5 sm:gap-4 px-3 sm:px-5 py-3 sm:py-4 ${
                 index !== legalDocuments.length - 1
                   ? "border-b border-slate-900/10"
                   : ""
               }`}
             >
-              <span className="w-7 shrink-0 text-xs font-bold text-gray-600 sm:w-10">
+              <span className="w-6 sm:w-10 shrink-0 text-xs font-bold text-gray-600">
                 {document.number}
               </span>
 
               <span
-                className={`min-w-0 flex-1 text-sm font-bold leading-5 sm:text-base ${
+                className={`min-w-0 break-words text-xs sm:text-sm md:text-base font-bold leading-snug ${
                   document.status === "CURRENT"
                     ? "text-slate-900"
                     : "text-gray-600"
@@ -54,7 +54,7 @@ export default function AURelated() {
               </span>
 
               <span
-                className={`shrink-0 rounded-full px-2 py-1 text-[9px] font-bold tracking-wide sm:px-3 sm:text-[10px] ${
+                className={`shrink-0 whitespace-nowrap rounded-full px-2 sm:px-3 py-1 text-[9px] sm:text-[10px] font-bold tracking-wide ${
                   document.status === "APPROVED & LOCKED"
                     ? "bg-teal-800/10 text-teal-800"
                     : document.status === "CURRENT"

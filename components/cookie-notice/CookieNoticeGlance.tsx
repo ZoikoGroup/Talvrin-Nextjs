@@ -53,17 +53,17 @@ function CategoryCard({
   return (
     <a
       href={href}
-      className="group flex min-h-[160px] flex-col items-start gap-2 rounded-2xl border border-slate-900/10 bg-violet-50 p-4 transition-colors hover:bg-white sm:min-h-[180px] sm:p-5"
+      className="group flex min-h-[140px] sm:min-h-[150px] h-full flex-col items-start gap-2 rounded-2xl border border-slate-900/10 bg-violet-50 p-4 sm:p-5 transition-colors hover:border-indigo-300 hover:bg-white"
     >
-      <h3 className="text-sm font-bold leading-5 text-slate-900 sm:text-base">
+      <h3 className="text-sm sm:text-base font-bold leading-5 text-slate-900">
         {title}
       </h3>
 
-      <p className="text-xs leading-5 text-gray-600 sm:text-sm">
+      <p className="text-xs sm:text-sm leading-5 text-gray-600">
         {description}
       </p>
 
-      <span className="mt-auto pt-1 text-xs font-semibold text-indigo-500 group-hover:text-indigo-700">
+      <span className="mt-auto pt-2 text-xs font-semibold text-indigo-500 group-hover:text-indigo-700">
         Jump to section →
       </span>
     </a>
@@ -76,21 +76,21 @@ export default function CookieNoticeGlance() {
       aria-labelledby="cookie-glance-title"
       className="w-full border-b border-slate-900/10 bg-white"
     >
-      <div className="mx-auto w-full max-w-[1440px] px-5 py-12 sm:px-8 sm:py-14 md:px-10 lg:px-20 lg:py-[72px]">
+      <div className="mx-auto w-full max-w-[1440px] px-4 sm:px-6 md:px-8 lg:px-12 xl:px-20 py-10 sm:py-12 lg:py-16 xl:py-[72px]">
         {/* Section heading */}
         <div className="flex flex-col items-start">
-          <p className="text-xs font-bold tracking-wide text-indigo-500">
+          <p className="text-[11px] sm:text-xs font-bold tracking-wide text-indigo-500">
             COOKIES AT A GLANCE — CONVENIENCE SUMMARY ONLY
           </p>
 
           <h2
             id="cookie-glance-title"
-            className="mt-3 max-w-[820px] text-2xl font-bold leading-tight text-slate-900 sm:text-3xl sm:leading-10 lg:text-4xl"
+            className="mt-2.5 sm:mt-3 max-w-[820px] text-2xl sm:text-3xl lg:text-4xl font-bold leading-tight sm:leading-10 text-slate-900"
           >
             Five categories. The numbered sections below remain controlling.
           </h2>
 
-          <p className="mt-4 max-w-[780px] text-sm leading-6 text-gray-600 sm:text-base">
+          <p className="mt-3 sm:mt-4 max-w-[780px] text-sm leading-6 text-gray-600 sm:text-base">
             This summary is a convenience orientation, not an exhaustive or
             binding list. Where the full sections below are broader or more
             specific, they govern.
@@ -98,11 +98,11 @@ export default function CookieNoticeGlance() {
         </div>
 
         {/* Summary points */}
-        <ul className="mt-6 flex max-w-[780px] flex-col gap-3">
+        <ul className="mt-6 flex max-w-[780px] flex-col gap-2.5 sm:gap-3">
           {summaryPoints.map((point) => (
             <li
               key={point}
-              className="flex items-start gap-3 text-sm leading-6 text-slate-700 sm:text-base"
+              className="flex items-start gap-2.5 sm:gap-3 text-xs sm:text-sm md:text-base leading-6 text-slate-700"
             >
               <span
                 aria-hidden="true"
@@ -113,29 +113,21 @@ export default function CookieNoticeGlance() {
           ))}
         </ul>
 
-        {/* Category cards and central image */}
-        <div className="mt-7 grid grid-cols-1 items-stretch gap-4 sm:grid-cols-2 lg:grid-cols-[minmax(0,1fr)_minmax(0,3.1fr)_minmax(0,1fr)] lg:gap-2">
-          {/* Left category cards */}
-          <div className="grid grid-cols-1 gap-3 sm:col-span-2 sm:grid-cols-2 lg:col-span-1 lg:grid-cols-1">
-            <CategoryCard {...categories[0]} />
-            <CategoryCard {...categories[1]} />
-          </div>
+        {/* Category cards and image grid */}
+        <div className="mt-6 sm:mt-8 grid grid-cols-1 items-stretch gap-3.5 sm:gap-4 sm:grid-cols-2 lg:grid-cols-3">
+          {categories.map((category) => (
+            <CategoryCard key={category.title} {...category} />
+          ))}
 
-          {/* Center image */}
-          <div className="relative min-h-[240px] overflow-hidden rounded-2xl sm:col-span-2 sm:min-h-[320px] lg:col-span-1 lg:min-h-0">
+          {/* Supporting image */}
+          <div className="relative min-h-[200px] sm:min-h-[220px] lg:min-h-full w-full overflow-hidden rounded-2xl border border-slate-900/10">
             <Image
               src="/images/legal/cookie-notice/image.png"
               alt="Professionals discussing privacy and technology in a workplace"
               fill
-              sizes="(max-width: 639px) calc(100vw - 40px), (max-width: 1023px) calc(100vw - 64px), 52vw"
+              sizes="(max-width: 639px) calc(100vw - 32px), (max-width: 1023px) calc(50vw - 32px), 32vw"
               className="object-cover"
             />
-          </div>
-
-          {/* Right category cards */}
-          <div className="grid grid-cols-1 gap-3 sm:col-span-2 sm:grid-cols-2 lg:col-span-1 lg:grid-cols-1">
-            <CategoryCard {...categories[2]} />
-            <CategoryCard {...categories[3]} />
           </div>
         </div>
       </div>

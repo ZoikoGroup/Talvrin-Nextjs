@@ -90,11 +90,11 @@ function StatusBadge({ status }: { status: string }) {
 
 export default function CookieNoticeRelated() {
   return (
-    <section className="w-full border-t border-slate-900/10 bg-white">
-      <div className="mx-auto w-full max-w-[1440px] px-5 py-12 sm:px-8 sm:py-14 md:px-10 lg:px-20 lg:py-[72px]">
+    <section className="w-full border-t border-slate-900/10 bg-white font-['IBM_Plex_Sans',sans-serif]">
+      <div className="mx-auto w-full max-w-[1440px] px-4 sm:px-6 md:px-8 lg:px-12 xl:px-20 py-10 sm:py-12 lg:py-16 xl:py-[72px]">
         {/* Heading */}
-        <div className="flex flex-col items-start gap-3">
-          <p className="text-xs font-bold tracking-wide text-yellow-600">
+        <div className="flex flex-col items-start gap-2.5 sm:gap-3">
+          <p className="text-[11px] sm:text-xs font-bold tracking-wide text-yellow-600">
             RELATED LEGAL DOCUMENTS
           </p>
 
@@ -102,7 +102,7 @@ export default function CookieNoticeRelated() {
             Cookie Notice is item three of nine in the Talvrin Legal sequence.
           </h2>
 
-          <p className="max-w-[780px] pt-1 text-sm leading-6 text-gray-600 sm:text-base">
+          <p className="max-w-[780px] pt-1 text-sm font-normal leading-6 text-gray-600 sm:text-base">
             Each Legal destination is approved individually. This notice works
             alongside the Privacy Notice, Terms of Service and other Legal
             destinations rather than duplicating them.
@@ -118,18 +118,18 @@ export default function CookieNoticeRelated() {
               aria-current={
                 document.type === "current" ? "page" : undefined
               }
-              className={`flex min-h-[52px] items-center gap-3 px-3 py-3 transition-colors hover:bg-indigo-500/5 sm:gap-4 sm:px-5 ${
+              className={`grid min-h-[52px] sm:min-h-[56px] grid-cols-[28px_minmax(0,1fr)_auto] sm:grid-cols-[40px_minmax(0,1fr)_auto] items-center gap-2.5 sm:gap-4 px-3 sm:px-5 py-3 sm:py-4 transition-colors hover:bg-indigo-500/5 ${
                 index !== legalDocuments.length - 1
                   ? "border-b border-slate-900/10"
                   : ""
               }`}
             >
-              <span className="w-6 shrink-0 text-[10px] font-bold text-gray-600 sm:w-10 sm:text-xs">
+              <span className="w-6 sm:w-10 shrink-0 text-xs font-bold text-gray-600">
                 {document.number}
               </span>
 
               <span
-                className={`min-w-0 flex-1 text-xs font-bold sm:text-sm ${
+                className={`min-w-0 break-words text-xs sm:text-sm md:text-base font-bold leading-snug ${
                   document.type === "current"
                     ? "text-slate-900"
                     : "text-gray-600"

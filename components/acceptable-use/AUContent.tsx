@@ -193,26 +193,28 @@ function makeId(title: string) {
 export default function AUContent() {
   return (
     <section className="w-full bg-violet-50 font-['IBM_Plex_Sans']">
-      <div className="mx-auto grid max-w-[1440px] grid-cols-1 gap-8 px-5 py-10 sm:px-8 lg:px-12 lg:py-[72px] xl:grid-cols-[264px_minmax(0,1fr)] xl:gap-[34px] xl:px-20">
+      <div className="mx-auto grid max-w-[1440px] grid-cols-1 gap-8 px-4 sm:px-6 md:px-8 lg:px-12 lg:py-14 xl:grid-cols-[264px_minmax(0,1fr)] xl:gap-[34px] xl:px-20 xl:py-[72px]">
         <aside className="self-start xl:sticky xl:top-8">
-          <p className="mb-4 text-xs font-bold tracking-wide text-gray-600">
-            ON THIS PAGE
-          </p>
+          <div className="rounded-xl border border-slate-900/10 bg-white/70 p-4 xl:border-0 xl:bg-transparent xl:p-0">
+            <p className="mb-3 text-xs font-bold tracking-wide text-gray-600">
+              ON THIS PAGE
+            </p>
 
-          <nav className="flex max-h-[320px] flex-col gap-0.5 overflow-y-auto xl:max-h-[calc(100vh-100px)]">
-            {sections.map((section, index) => (
-              <a
-                key={section.title}
-                href={`#${makeId(section.title)}`}
-                className="flex items-start gap-2 rounded-md px-2.5 py-2 text-sm leading-5 text-slate-700 transition-colors hover:bg-white hover:text-indigo-500"
-              >
-                <span className="shrink-0 text-gray-500">
-                  {index + 1}.
-                </span>
-                <span>{section.title}</span>
-              </a>
-            ))}
-          </nav>
+            <nav className="flex max-h-[220px] sm:max-h-[280px] xl:max-h-[calc(100vh-6rem)] flex-col gap-0.5 overflow-y-auto">
+              {sections.map((section, index) => (
+                <a
+                  key={section.title}
+                  href={`#${makeId(section.title)}`}
+                  className="flex items-start gap-2 rounded-md px-2.5 py-1.5 sm:py-2 text-xs sm:text-sm leading-5 text-slate-700 transition-colors hover:bg-white hover:text-indigo-500"
+                >
+                  <span className="shrink-0 text-gray-500">
+                    {index + 1}.
+                  </span>
+                  <span>{section.title}</span>
+                </a>
+              ))}
+            </nav>
+          </div>
         </aside>
 
         <div className="min-w-0">
@@ -224,7 +226,7 @@ export default function AUContent() {
               <article
                 key={section.title}
                 id={makeId(section.title)}
-                className="scroll-mt-8 border-b border-slate-900/10 py-8 first:pt-0 sm:py-10"
+                className="scroll-mt-8 border-b border-slate-900/10 py-6 sm:py-8 lg:py-10 first:pt-0"
               >
                 <div
                   className={`grid min-w-0 grid-cols-1 gap-6 ${

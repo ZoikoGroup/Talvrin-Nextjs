@@ -44,19 +44,19 @@ const clauseFamilies = [
 export default function DataMarketInformationAtGlance() {
   return (
     <section className="w-full border-b border-slate-900/10 bg-white font-['IBM_Plex_Sans',sans-serif]">
-      <div className="mx-auto w-full max-w-[1440px] px-5 py-12 sm:px-8 sm:py-14 md:px-10 lg:px-12 lg:py-[72px] xl:px-16 2xl:px-20">
+      <div className="mx-auto w-full max-w-[1440px] px-4 sm:px-6 md:px-8 lg:px-12 xl:px-20 py-10 sm:py-14 lg:py-16 xl:py-20">
         {/* SECTION LABEL */}
         <p className="text-xs font-bold leading-5 tracking-wide text-indigo-500">
           DATA &amp; MARKET INFORMATION AT A GLANCE — CONVENIENCE SUMMARY ONLY
         </p>
 
         {/* HEADING */}
-        <h2 className="mt-3 max-w-[820px] text-4xl font-bold leading-10 text-slate-900 max-sm:text-3xl max-sm:leading-tight">
+        <h2 className="mt-3 max-w-[820px] text-2xl sm:text-3xl lg:text-4xl font-bold leading-tight text-slate-900 sm:leading-10">
           Six clause families. The sections below remain controlling.
         </h2>
 
         {/* DESCRIPTION */}
-        <p className="mt-5 max-w-[780px] text-base font-normal leading-6 text-gray-600">
+        <p className="mt-4 sm:mt-5 max-w-[780px] text-sm sm:text-base font-normal leading-relaxed sm:leading-6 text-gray-600">
           Rights vary by source, entitlement, action, region and provider terms.
           Visibility of market information is not, by itself, permission to
           copy, export, share or redistribute it, and AI-assisted processing
@@ -66,18 +66,18 @@ export default function DataMarketInformationAtGlance() {
         </p>
 
         {/* CARDS AND IMAGE */}
-        <div className="mt-7 grid grid-cols-1 items-stretch gap-5 sm:grid-cols-2 lg:grid-cols-3 lg:gap-5 xl:grid-cols-[minmax(0,1fr)_minmax(0,1fr)_minmax(0,1fr)_minmax(280px,2.1fr)] xl:gap-[10px]">
+        <div className="mt-6 sm:mt-7 grid grid-cols-1 items-stretch gap-4 sm:grid-cols-2 sm:gap-4.5 lg:grid-cols-3 xl:grid-cols-[repeat(3,minmax(0,1fr))_minmax(280px,1.2fr)] xl:gap-4.5">
           {clauseFamilies.map((item) => (
             <a
               key={item.title}
               href={item.href}
-              className="group flex min-h-[160px] min-w-0 flex-col items-start rounded-2xl border border-slate-900/10 bg-violet-50 p-5 transition-colors duration-200 hover:border-indigo-500/30 hover:bg-violet-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-indigo-500 focus-visible:ring-offset-2"
+              className="group flex h-full min-h-[140px] sm:min-h-[150px] min-w-0 flex-col items-start rounded-2xl border border-slate-900/10 bg-violet-50 p-4 sm:p-5 transition-colors duration-200 hover:border-indigo-500/30 hover:bg-violet-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-indigo-500 focus-visible:ring-offset-2"
             >
-              <h3 className="text-base font-bold leading-5 text-slate-900">
+              <h3 className="text-base font-bold leading-snug text-slate-900">
                 {item.title}
               </h3>
 
-              <p className="mt-2 text-sm font-normal leading-5 text-gray-600">
+              <p className="mt-2 text-sm font-normal leading-relaxed text-gray-600">
                 {item.description}
               </p>
 
@@ -88,13 +88,13 @@ export default function DataMarketInformationAtGlance() {
           ))}
 
           {/* IMAGE */}
-          <div className="relative min-h-[280px] min-w-0 overflow-hidden rounded-xl border border-slate-900/10 bg-violet-50 sm:col-span-2 lg:col-span-2 xl:col-span-1 xl:col-start-4 xl:row-span-2 xl:row-start-1 xl:min-h-0">
+          <div className="relative min-h-[240px] sm:min-h-[280px] lg:min-h-[320px] min-w-0 overflow-hidden rounded-xl border border-slate-900/10 bg-violet-50 sm:col-span-2 lg:col-span-3 xl:col-span-1 xl:col-start-4 xl:row-span-2 xl:row-start-1 xl:min-h-0">
             <Image
               src="/images/legal/data-market-information-terms/image.png"
               alt="Colleagues discussing data and market information"
               fill
               priority
-              sizes="(max-width: 639px) calc(100vw - 40px), (max-width: 1023px) calc(100vw - 64px), (max-width: 1279px) 60vw, 35vw"
+              sizes="(max-width: 639px) calc(100vw - 32px), (max-width: 1023px) calc(100vw - 48px), (max-width: 1279px) calc(100vw - 96px), 30vw"
               className="object-cover"
             />
           </div>

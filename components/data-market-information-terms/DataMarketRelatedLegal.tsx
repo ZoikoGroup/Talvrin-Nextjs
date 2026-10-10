@@ -22,7 +22,7 @@ const relatedLinks = [
 export default function DataMarketRelatedLegal() {
   return (
     <section className="w-full border-t border-slate-900/10 bg-white font-['IBM_Plex_Sans',sans-serif]">
-      <div className="mx-auto w-full max-w-[1440px] px-5 py-12 sm:px-8 sm:py-14 md:px-10 lg:px-12 lg:py-[72px] xl:px-16 2xl:px-20">
+      <div className="mx-auto w-full max-w-[1440px] px-4 sm:px-6 md:px-8 lg:px-12 xl:px-20 py-10 sm:py-14 lg:py-16 xl:py-20">
         <div className="flex w-full flex-col items-start gap-3">
           {/* SECTION LABEL */}
           <p className="text-xs font-bold leading-5 tracking-wide text-yellow-600">
@@ -30,37 +30,37 @@ export default function DataMarketRelatedLegal() {
           </p>
 
           {/* HEADING */}
-          <h2 className="max-w-[800px] text-3xl font-bold leading-9 text-slate-900 sm:text-4xl sm:leading-10">
+          <h2 className="max-w-[800px] text-2xl sm:text-3xl lg:text-4xl font-bold leading-tight text-slate-900 sm:leading-10">
             Data &amp; Market Information Terms is item eight of nine in the
             Talvrin Legal sequence.
           </h2>
 
           {/* DESCRIPTION */}
-          <p className="max-w-[780px] pt-1 text-base font-normal leading-6 text-gray-600">
+          <p className="max-w-[780px] pt-1 text-sm sm:text-base font-normal leading-relaxed text-gray-600">
             Each Legal destination is approved individually and in order.
             Legal Notices remains blocked until Data &amp; Market Information
             Terms is approved.
           </p>
 
           {/* LEGAL STATUS LIST */}
-          <div className="mt-2 w-full overflow-hidden rounded-2xl border border-slate-900/10 bg-violet-50">
+          <div className="mt-3 w-full overflow-hidden rounded-2xl border border-slate-900/10 bg-violet-50">
             {legalItems.map((item, index) => (
               <div
                 key={item.number}
-                className={`grid grid-cols-[32px_minmax(0,1fr)] items-center gap-x-3 gap-y-2 px-4 py-4 sm:grid-cols-[40px_minmax(0,1fr)_auto] sm:px-5 ${
+                className={`grid grid-cols-[28px_minmax(0,1fr)_auto] sm:grid-cols-[40px_minmax(0,1fr)_auto] items-center gap-x-2 sm:gap-x-4 px-3.5 py-3 sm:px-5 sm:py-3.5 ${
                   index !== legalItems.length - 1
                     ? "border-b border-slate-900/10"
                     : ""
                 }`}
               >
                 {/* NUMBER */}
-                <span className="text-xs font-bold text-gray-600">
+                <span className="text-xs font-bold text-gray-500">
                   {item.number}
                 </span>
 
                 {/* DOCUMENT NAME */}
                 <span
-                  className={`min-w-0 break-words text-sm font-bold sm:text-base ${
+                  className={`min-w-0 break-words text-xs sm:text-sm md:text-base font-bold ${
                     item.type === "current"
                       ? "text-slate-900"
                       : "text-gray-600"
@@ -71,7 +71,7 @@ export default function DataMarketRelatedLegal() {
 
                 {/* STATUS BADGE */}
                 <span
-                  className={`col-start-2 inline-flex w-fit items-center justify-center rounded-full px-3 py-1 text-[10px] font-bold leading-3 tracking-wide sm:col-start-auto sm:text-xs ${
+                  className={`inline-flex shrink-0 items-center justify-center rounded-full px-2.5 sm:px-3 py-1 text-[10px] sm:text-xs font-bold tracking-wide whitespace-nowrap ${
                     item.type === "approved"
                       ? "bg-teal-800/10 text-teal-800"
                       : item.type === "current"
@@ -88,7 +88,7 @@ export default function DataMarketRelatedLegal() {
           {/* RELATED LINKS */}
           <nav
             aria-label="Related legal and trust resources"
-            className="flex w-full flex-wrap items-center gap-x-7 gap-y-3 pt-4"
+            className="flex w-full flex-wrap items-center gap-x-6 sm:gap-x-7 gap-y-2.5 sm:gap-y-3 pt-3 sm:pt-4"
           >
             {relatedLinks.map((link) => (
               <a

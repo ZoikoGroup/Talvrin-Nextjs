@@ -270,12 +270,12 @@ function ClauseSection({ clause }: { clause: Clause }) {
   return (
     <article
       id={clause.id}
-      className="scroll-mt-24 border-b border-slate-900/10 py-9 first:pt-0 sm:py-10"
+      className="scroll-mt-24 border-b border-slate-900/10 py-8 first:pt-0 sm:py-10"
     >
       <div
         className={
           clause.image
-            ? "grid grid-cols-1 items-start gap-6 xl:grid-cols-[minmax(0,1fr)_208px] xl:gap-6"
+            ? "grid grid-cols-1 items-start gap-6 md:grid-cols-[minmax(0,1fr)_minmax(180px,240px)] xl:grid-cols-[minmax(0,1fr)_208px] xl:gap-6"
             : "grid grid-cols-1"
         }
       >
@@ -290,11 +290,11 @@ function ClauseSection({ clause }: { clause: Clause }) {
             )}
           </div>
 
-          <h2 className="text-xl font-bold leading-7 text-slate-900">
+          <h2 className="text-lg sm:text-xl font-bold leading-7 text-slate-900">
             {clause.title}
           </h2>
 
-          <p className="w-full text-base font-normal leading-6 text-slate-700">
+          <p className="w-full text-sm sm:text-base font-normal leading-relaxed text-slate-700">
             {clause.description}
           </p>
 
@@ -309,7 +309,7 @@ function ClauseSection({ clause }: { clause: Clause }) {
 
           {clause.darkNote && (
             <div className="w-full rounded-[10px] bg-[#17122F] px-4 py-4">
-              <p className="text-sm font-normal leading-5 text-violet-50/90">
+              <p className="text-xs sm:text-sm font-normal leading-relaxed sm:leading-5 text-violet-50/90">
                 {clause.darkNote}
               </p>
             </div>
@@ -319,12 +319,12 @@ function ClauseSection({ clause }: { clause: Clause }) {
         </div>
 
         {clause.image && (
-          <div className="relative aspect-[4/5] w-full max-w-[320px] overflow-hidden rounded-xl bg-violet-100 xl:mt-0 xl:aspect-[3/4] xl:max-w-none">
+          <div className="relative aspect-[4/5] w-full max-w-[280px] sm:max-w-[320px] overflow-hidden rounded-xl bg-violet-100 md:max-w-none xl:mt-0 xl:aspect-[3/4]">
             <Image
               src={clause.image}
               alt={clause.imageAlt ?? ""}
               fill
-              sizes="(max-width: 1279px) min(100%, 320px), 208px"
+              sizes="(max-width: 767px) min(100%, 320px), (max-width: 1279px) 240px, 208px"
               className="object-cover"
             />
           </div>
@@ -340,11 +340,11 @@ export default function DataMarketInformationTermsContent() {
       id="terms-content"
       className="w-full bg-violet-50 font-['IBM_Plex_Sans',sans-serif] text-slate-900"
     >
-      <div className="mx-auto grid w-full max-w-[1440px] grid-cols-1 gap-8 px-5 py-10 sm:px-8 sm:py-12 md:px-10 lg:grid-cols-[200px_minmax(0,1fr)] lg:gap-8 lg:px-12 lg:py-[72px] xl:grid-cols-[240px_minmax(0,1fr)] xl:gap-[42px] xl:px-16 2xl:px-20">
+      <div className="mx-auto grid w-full max-w-[1440px] grid-cols-1 gap-8 px-4 sm:px-6 md:px-8 lg:grid-cols-[200px_minmax(0,1fr)] lg:gap-8 lg:px-12 lg:py-16 xl:grid-cols-[240px_minmax(0,1fr)] xl:gap-10 xl:px-20 py-8 sm:py-10 md:py-12">
         {/* ALWAYS-VISIBLE CONTENTS NAVIGATION */}
         <aside className="min-w-0 lg:sticky lg:top-6 lg:self-start">
-          <div className="rounded-xl border border-slate-900/10 bg-white p-4 lg:rounded-none lg:border-0 lg:bg-transparent lg:p-0">
-            <p className="text-xs font-bold tracking-wide text-gray-600">
+          <div className="max-h-[240px] sm:max-h-[280px] lg:max-h-[calc(100vh-4rem)] overflow-y-auto rounded-xl border border-slate-900/10 bg-white p-4 lg:rounded-none lg:border-0 lg:bg-transparent lg:p-0">
+            <p className="sticky top-0 bg-white lg:bg-transparent pb-1 text-xs font-bold tracking-wide text-gray-600">
               ON THIS PAGE
             </p>
 
@@ -370,11 +370,11 @@ export default function DataMarketInformationTermsContent() {
         </aside>
 
         {/* ALL 13 LEGAL CLAUSES */}
-        <main className="min-w-0">
+        <div className="min-w-0">
           {clauses.map((clause) => (
             <ClauseSection key={clause.id} clause={clause} />
           ))}
-        </main>
+        </div>
       </div>
     </section>
   );
