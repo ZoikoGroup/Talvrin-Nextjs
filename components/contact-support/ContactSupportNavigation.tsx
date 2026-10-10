@@ -49,7 +49,8 @@ export default function ContactSupportNavigation() {
           gap-1
           px-4
           sm:px-6
-          lg:px-14
+          lg:px-8
+          xl:px-14
         "
       >
         {supportNavigation.map((item) => (

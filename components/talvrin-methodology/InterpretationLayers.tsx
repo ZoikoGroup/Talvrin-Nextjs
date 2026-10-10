@@ -69,14 +69,13 @@ export default function InterpretationLayers() {
           mx-auto
           w-full
           max-w-[1439.8px]
-          px-6
+          px-5
           py-16
-
           sm:px-8
           sm:py-20
-
-          lg:px-20
+          lg:px-8
           lg:py-[96px]
+          xl:px-20
         "
       >
         <div className="mx-auto w-full max-w-[1280px]">
@@ -170,12 +169,11 @@ export default function InterpretationLayers() {
               grid
               grid-cols-1
               gap-4
-
               sm:grid-cols-2
-
               lg:mt-[76px]
-              lg:grid-cols-5
-              lg:gap-[16px]
+              lg:grid-cols-3
+              xl:grid-cols-5
+              xl:gap-[16px]
             "
           >
             {/* Four interpretation cards */}
@@ -215,17 +213,18 @@ export default function InterpretationLayers() {
               }}
               className="
                 relative
+                h-full
                 min-h-[246px]
+                w-full
                 overflow-hidden
                 rounded-2xl
                 border
                 border-slate-900/10
                 bg-violet-50
-
                 sm:min-h-[246px]
-
-                lg:h-[246px]
-                lg:min-h-0
+                lg:h-full
+                lg:min-h-[246px]
+                xl:h-[246px]
               "
             >
               <Image
@@ -282,6 +281,7 @@ function InterpretationCard({
       }}
       className="
         flex
+        h-full
         min-h-[246px]
         w-full
         flex-col

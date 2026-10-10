@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import { motion, type Variants } from "framer-motion";
+import type { ReactNode } from "react";
 
 /* =========================================================
    ANIMATION
@@ -19,7 +20,6 @@ const fadeUp: Variants = {
     opacity: 0,
     y: 24,
   },
-
   visible: {
     opacity: 1,
     y: 0,
@@ -34,87 +34,41 @@ const fadeUp: Variants = {
    DATA
 ========================================================= */
 
-const reviewabilityCards = [
+type ReviewabilityCardData = {
+  title: string;
+  positive: ReactNode;
+  negative: ReactNode;
+};
+
+const reviewabilityCards: ReviewabilityCardData[] = [
   {
     title: "Source verification",
-
-    positive: (
-      <>
-        Reviewer can follow the conclusion
-        <br />
-        back to evidence.
-      </>
-    ),
-
-    negative: (
-      <>
-        No claim of formal sign-off or
-        <br />
-        attestation.
-      </>
-    ),
+    positive: <>Reviewer can follow the conclusion back to evidence.</>,
+    negative: <>No claim of formal sign-off or attestation.</>,
   },
-
   {
     title: "Version awareness",
-
-    positive: (
-      <>
-        Reviewer can see revised or
-        <br />
-        superseded source context.
-      </>
-    ),
-
-    negative: (
-      <>
-        No regulatory audit-trail claim unless
-        <br />
-        approved.
-      </>
-    ),
+    positive: <>Reviewer can see revised or superseded source context.</>,
+    negative: <>No regulatory audit-trail claim unless approved.</>,
   },
-
   {
     title: "Reproducibility",
-
     positive: (
       <>
-        The research object preserves
-        <br />
-        enough context to understand prior
-        <br />
+        The research object preserves enough context to understand prior
         reasoning.
       </>
     ),
-
-    negative: (
-      <>
-        No guarantee of exact historical
-        <br />
-        reconstruction.
-      </>
-    ),
+    negative: <>No guarantee of exact historical reconstruction.</>,
   },
-
   {
     title: "Interpretation clarity",
-
     positive: (
       <>
-        Reviewer can distinguish evidence
-        <br />
-        from analysis, AI, and user content.
+        Reviewer can distinguish evidence from analysis, AI, and user content.
       </>
     ),
-
-    negative: (
-      <>
-        No approval hierarchy or reviewer
-        <br />
-        role model implied.
-      </>
-    ),
+    negative: <>No approval hierarchy or reviewer role model implied.</>,
   },
 ];
 
@@ -123,198 +77,126 @@ const reviewabilityCards = [
 ========================================================= */
 
 type ReviewabilityCardProps = {
-  title: string;
-  positive: React.ReactNode;
-  negative: React.ReactNode;
+  card: ReviewabilityCardData;
   index: number;
 };
 
 function ReviewabilityCard({
-  title,
-  positive,
-  negative,
+  card,
   index,
 }: ReviewabilityCardProps) {
   return (
     <motion.div
-      variants={fadeUp}
       initial="hidden"
       whileInView="visible"
       viewport={{
         once: true,
         amount: 0.2,
       }}
+      variants={fadeUp}
       transition={{
         delay: index * 0.08,
       }}
       className="
-        w-full
+        flex
         min-h-[192px]
-        lg:h-[192px]
-        p-6
-        bg-white
+        w-full
+        min-w-0
+        flex-col
+        items-start
+        justify-start
+        gap-3
         rounded-2xl
+        bg-white
+        p-5
         outline
         outline-1
         outline-offset-[-1px]
         outline-slate-900/10
-        flex
-        flex-col
-        justify-start
-        items-start
-        gap-3
+        sm:p-6
+        lg:h-[192px]
+        lg:p-5
+        xl:p-6
       "
     >
-      {/* ===================================================
-          TITLE
-      =================================================== */}
+      {/* TITLE */}
 
-      <div
+      <h3
         className="
           w-full
-          flex
-          flex-col
-          justify-start
-          items-start
+          break-words
+          font-['IBM_Plex_Sans']
+          text-base
+          font-bold
+          leading-6
+          text-slate-900
         "
       >
-        <h3
+        {card.title}
+      </h3>
+
+      {/* POSITIVE */}
+
+      <div className="flex w-full min-w-0 items-start gap-2.5">
+        <span
+          aria-hidden="true"
           className="
-            w-full
-            text-slate-900
-            text-base
-            font-bold
+            shrink-0
+            pt-px
+            font-['Segoe_UI_Symbol']
+            text-sm
+            text-indigo-500
+          "
+        >
+          ✓
+        </span>
+
+        <p
+          className="
+            min-w-0
+            flex-1
+            break-words
             font-['IBM_Plex_Sans']
-            leading-6
+            text-sm
+            font-normal
+            leading-5
+            text-slate-700
           "
         >
-          {title}
-        </h3>
+          {card.positive}
+        </p>
       </div>
 
-      {/* ===================================================
-          POSITIVE
-      =================================================== */}
+      {/* NEGATIVE */}
 
-      <div
-        className="
-          w-full
-          pt-0.5
-          flex
-          justify-start
-          items-start
-          gap-2.5
-        "
-      >
-        {/* CHECK */}
-
-        <div
+      <div className="flex w-full min-w-0 items-start gap-2.5">
+        <span
+          aria-hidden="true"
           className="
             shrink-0
-            pt-[2.8px]
-            flex
-            flex-col
-            justify-start
-            items-start
+            pt-px
+            font-['Segoe_UI_Symbol']
+            text-sm
+            text-pink-800
           "
         >
-          <span
-            className="
-              text-indigo-500
-              text-sm
-              font-normal
-              font-['Segoe_UI_Symbol']
-            "
-          >
-            ✓
-          </span>
-        </div>
+          ✕
+        </span>
 
-        {/* TEXT */}
-
-        <div
+        <p
           className="
             min-w-0
-            flex
-            flex-col
-            justify-start
-            items-start
+            flex-1
+            break-words
+            font-['IBM_Plex_Sans']
+            text-sm
+            font-normal
+            leading-5
+            text-gray-600
           "
         >
-          <p
-            className="
-              text-slate-700
-              text-sm
-              font-normal
-              font-['IBM_Plex_Sans']
-              leading-5
-            "
-          >
-            {positive}
-          </p>
-        </div>
-      </div>
-
-      {/* ===================================================
-          NEGATIVE
-      =================================================== */}
-
-      <div
-        className="
-          w-full
-          flex
-          justify-start
-          items-start
-          gap-2.5
-        "
-      >
-        {/* CROSS */}
-
-        <div
-          className="
-            shrink-0
-            pt-[2.8px]
-            flex
-            flex-col
-            justify-start
-            items-start
-          "
-        >
-          <span
-            className="
-              text-pink-800
-              text-sm
-              font-normal
-              font-['Segoe_UI_Symbol']
-            "
-          >
-            ✕
-          </span>
-        </div>
-
-        {/* TEXT */}
-
-        <div
-          className="
-            min-w-0
-            flex
-            flex-col
-            justify-start
-            items-start
-          "
-        >
-          <p
-            className="
-              text-gray-600
-              text-sm
-              font-normal
-              font-['IBM_Plex_Sans']
-              leading-5
-            "
-          >
-            {negative}
-          </p>
-        </div>
+          {card.negative}
+        </p>
       </div>
     </motion.div>
   );
@@ -326,51 +208,29 @@ function ReviewabilityCard({
 
 export default function Reviewability() {
   return (
-    <section
-      className="
-        relative
-        w-full
-        bg-violet-50
-        overflow-hidden
-        lg:mb-[80px]
-      "
-    >
-      {/* ===================================================
-          DESKTOP / MAIN CONTAINER
-      =================================================== */}
+    <section className="relative mb-0 w-full overflow-hidden bg-violet-50">
+      {/* MAIN CONTAINER */}
 
       <div
         className="
+          mx-auto
           w-full
           max-w-[1440px]
-          min-h-[1040.9px]
-          mx-auto
-          relative
-          px-6
-          sm:px-8
-          lg:px-0
-          py-20
-          lg:py-0
+          px-4
+          py-12
+          min-[480px]:px-5
+          sm:py-16
+          md:px-8
+          lg:px-12
+          lg:py-20
+          xl:px-20
+          xl:py-[96px]
         "
       >
-        {/* =================================================
-            CONTENT WRAPPER
-        ================================================= */}
+        <div className="w-full">
+          {/* EYEBROW */}
 
-        <div
-          className="
-            w-full
-            lg:w-[1280px]
-            lg:left-[80px]
-            lg:top-[96px]
-            lg:absolute
-          "
-        >
-          {/* =================================================
-              EYEBROW
-          ================================================= */}
-
-          <motion.div
+          <motion.p
             initial="hidden"
             whileInView="visible"
             viewport={{
@@ -380,22 +240,20 @@ export default function Reviewability() {
             variants={fadeUp}
             className="
               w-full
-              lg:w-[1280px]
-              text-yellow-600
+              font-['IBM_Plex_Sans']
               text-xs
               font-bold
-              font-['IBM_Plex_Sans']
               tracking-wide
+              text-yellow-600
+              sm:text-sm
             "
           >
             REVIEWABILITY
-          </motion.div>
+          </motion.p>
 
-          {/* =================================================
-              HEADING
-          ================================================= */}
+          {/* HEADING */}
 
-          <motion.div
+          <motion.h2
             initial="hidden"
             whileInView="visible"
             viewport={{
@@ -404,37 +262,26 @@ export default function Reviewability() {
             }}
             variants={fadeUp}
             className="
+              mt-5
               w-full
               max-w-[1000px]
-              mt-7
-              lg:mt-[16.2px]
+              font-['IBM_Plex_Sans']
+              text-[clamp(1.8rem,3.5vw,3rem)]
+              font-bold
+              leading-[1.1]
+              tracking-[-0.02em]
+              text-slate-900
+              sm:mt-6
+              lg:mt-[16px]
             "
           >
-            <h2
-              className="
-                text-slate-900
-                text-[32px]
-                sm:text-[40px]
-                lg:text-5xl
-                font-bold
-                font-['IBM_Plex_Sans']
-                leading-[1.08]
-                lg:leading-[48.72px]
-              "
-            >
-              A colleague can understand why the
-              <br className="hidden lg:block" />
-              view exists — without an invented
-              <br className="hidden lg:block" />
-              approval workflow.
-            </h2>
-          </motion.div>
+            A colleague can understand why the view exists — without an
+            invented approval workflow.
+          </motion.h2>
 
-          {/* =================================================
-              DESCRIPTION
-          ================================================= */}
+          {/* DESCRIPTION */}
 
-          <motion.div
+          <motion.p
             initial="hidden"
             whileInView="visible"
             viewport={{
@@ -443,72 +290,65 @@ export default function Reviewability() {
             }}
             variants={fadeUp}
             className="
+              mt-4
               w-full
               max-w-[780px]
-              mt-5
-              lg:mt-[25.2px]
-              lg:pt-2
+              font-['IBM_Plex_Sans']
+              text-sm
+              font-normal
+              leading-6
+              text-gray-600
+              sm:mt-5
+              sm:text-base
+              sm:leading-7
+              lg:mt-[25px]
             "
           >
-            <p
-              className="
-                text-gray-600
-                text-sm
-                sm:text-base
-                font-normal
-                font-['IBM_Plex_Sans']
-                leading-6
-                lg:leading-7
-              "
-            >
-              Reviewers can follow a conclusion back to its evidence. That is
-              not the same as sign-off, attestation, or
-              <br className="hidden lg:block" />
-              a formal compliance workflow.
-            </p>
-          </motion.div>
+            Reviewers can follow a conclusion back to its evidence. That is
+            not the same as sign-off, attestation, or a formal compliance
+            workflow.
+          </motion.p>
 
-          {/* =================================================
-              MAIN CONTENT
-          ================================================= */}
+          {/* MAIN CONTENT */}
 
           <div
             className="
-              mt-10
-              lg:mt-[89.8px]
+              mt-8
               grid
+              w-full
               grid-cols-1
-              lg:grid-cols-[630px_630px]
+              items-start
               gap-5
+              sm:mt-10
+              lg:mt-[89px]
+              lg:grid-cols-2
+              lg:gap-5
+              xl:gap-6
             "
           >
-            {/* ===============================================
-                LEFT — 4 CARDS
-            =============================================== */}
+            {/* LEFT — CARDS */}
 
             <div
               className="
                 grid
+                w-full
+                min-w-0
                 grid-cols-1
-                sm:grid-cols-2
                 gap-4
-                lg:gap-[16px]
+                min-[480px]:grid-cols-2
+                lg:grid-cols-2
               "
             >
               {reviewabilityCards.map((card, index) => (
                 <ReviewabilityCard
                   key={card.title}
-                  title={card.title}
-                  positive={card.positive}
-                  negative={card.negative}
+                  card={card}
                   index={index}
                 />
               ))}
             </div>
 
-            {/* ===============================================
-                RIGHT — IMAGE
-            =============================================== */}
+            {/* RIGHT — IMAGE */}
 
             <motion.div
               initial={{
@@ -529,16 +369,19 @@ export default function Reviewability() {
               }}
               className="
                 relative
+                aspect-[4/3]
                 w-full
-                h-[384px]
-                lg:h-[384px]
-                bg-white
+                min-w-0
+                overflow-hidden
                 rounded-2xl
+                bg-white
                 outline
                 outline-1
                 outline-offset-[-1px]
                 outline-slate-900/10
-                overflow-hidden
+                sm:aspect-[5/3]
+                lg:aspect-auto
+                lg:h-[384px]
               "
             >
               <Image
@@ -546,18 +389,13 @@ export default function Reviewability() {
                 alt="Research team reviewability"
                 fill
                 priority
-                sizes="630px"
-                className="
-                  object-cover
-                  object-center
-                "
+                sizes="(max-width: 639px) calc(100vw - 32px), (max-width: 1023px) calc(100vw - 64px), (max-width: 1279px) 50vw, 600px"
+                className="object-cover object-center"
               />
             </motion.div>
           </div>
 
-          {/* =================================================
-              NO APPROVAL-SYSTEM INVENTION
-          ================================================= */}
+          {/* CTA */}
 
           <motion.div
             initial="hidden"
@@ -568,75 +406,58 @@ export default function Reviewability() {
             }}
             variants={fadeUp}
             className="
-              w-full
-              lg:w-[1280px]
               mt-5
-              lg:mt-[61.7px]
-              px-6
-              py-5
-              bg-slate-900
-              rounded-2xl
               flex
+              w-full
               flex-col
-              justify-start
               items-start
+              justify-start
               gap-2
+              rounded-2xl
+              bg-slate-900
+              px-5
+              py-5
+              sm:px-6
+              sm:py-6
+              lg:mt-6
             "
           >
-            {/* LABEL */}
+            {/* CTA LABEL */}
 
-            <div
+            <p
               className="
                 w-full
-                flex
-                flex-col
-                justify-start
-                items-start
+                font-['IBM_Plex_Sans']
+                text-xs
+                font-bold
+                tracking-wide
+                text-yellow-600
+                sm:text-sm
               "
             >
-              <div
-                className="
-                  w-full
-                  text-yellow-600
-                  text-xs
-                  font-bold
-                  font-['IBM_Plex_Sans']
-                  tracking-wide
-                "
-              >
-                NO APPROVAL-SYSTEM INVENTION
-              </div>
-            </div>
+              NO APPROVAL-SYSTEM INVENTION
+            </p>
 
-            {/* DESCRIPTION */}
+            {/* CTA DESCRIPTION */}
 
-            <div
+            <p
               className="
                 w-full
-                flex
-                flex-col
-                justify-start
-                items-start
+                break-words
+                font-['IBM_Plex_Sans']
+                text-sm
+                font-normal
+                leading-6
+                text-violet-50/80
+                sm:text-base
+                sm:leading-7
               "
             >
-              <p
-                className="
-                  w-full
-                  text-violet-50/80
-                  text-sm
-                  font-normal
-                  font-['IBM_Plex_Sans']
-                  leading-6
-                "
-              >
-                Talvrin does not label UI as Approve, Reject, Assigned
-                reviewer, Compliance sign-off, Investment Committee approved,
-                Four-eyes check, or Attested unless that workflow is
-                separately approved and
-                <br className="hidden lg:block" />
-                released.
-              </p>
-            </div>
+              Talvrin does not label UI as Approve, Reject, Assigned reviewer,
+              Compliance sign-off, Investment Committee approved, Four-eyes
+              check, or Attested unless that workflow is separately approved
+              and released.
+            </p>
           </motion.div>
         </div>
       </div>

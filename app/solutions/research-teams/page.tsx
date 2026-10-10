@@ -18,7 +18,7 @@ import {
 
 export default function ResearchTeamsPage() {
   return (
-    <main className="w-full">
+    <div className="w-full overflow-x-hidden">
       <ResearchTeamsHero />
 
       <ResearchTeamsPrinciples />
@@ -48,6 +48,6 @@ export default function ResearchTeamsPage() {
       <AnswerFirstFaq />
 
       <ResearchTeamsCTA />
-    </main>
+    </div>
   );
 }

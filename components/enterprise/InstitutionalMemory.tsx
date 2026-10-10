@@ -67,7 +67,7 @@ export default function InstitutionalMemory() {
         ref={sectionRef}
         className="w-full overflow-hidden bg-violet-50 text-slate-900"
       >
-        <div className="mx-auto flex w-full max-w-[1320px] flex-col items-start px-6 py-20 sm:px-8 md:px-10 lg:px-20 lg:py-[96px]">
+        <div className="mx-auto flex w-full max-w-[1320px] flex-col items-start px-4 py-12 sm:px-6 md:px-8 lg:px-8 xl:px-20 lg:py-16 xl:py-[96px]">
           {/* Header */}
           <div className="flex w-full flex-col items-start">
             <p
@@ -81,20 +81,20 @@ export default function InstitutionalMemory() {
               data-reveal
               className="reveal-element reveal-delay-1 w-full max-w-[760px] pt-3"
             >
-              <h2 className="m-0 font-['IBM_Plex_Sans'] text-[36px] font-bold leading-[1.1] tracking-[-1px] text-slate-900 sm:text-[42px] lg:text-5xl lg:leading-[48.72px]">
-                Preserve reasoning beyond
-                <br className="hidden lg:block" />
-                individuals, files, and personnel
-                <br className="hidden lg:block" />
+              <h2 className="m-0 font-['IBM_Plex_Sans'] text-[30px] font-bold leading-[1.12] tracking-[-1px] text-slate-900 sm:text-[38px] md:text-[42px] lg:text-5xl lg:leading-[48.72px]">
+                Preserve reasoning beyond{" "}
+                <br className="hidden xl:block" />
+                individuals, files, and personnel{" "}
+                <br className="hidden xl:block" />
                 changes.
               </h2>
             </div>
 
             <div
               data-reveal
-              className="reveal-element reveal-delay-2 w-full max-w-[780px] pt-5 pb-10"
+              className="reveal-element reveal-delay-2 w-full max-w-[780px] pt-4 pb-8 sm:pb-10"
             >
-              <p className="m-0 font-['IBM_Plex_Sans'] text-base font-normal leading-7 text-gray-600">
+              <p className="m-0 font-['IBM_Plex_Sans'] text-sm sm:text-base font-normal leading-6 sm:leading-7 text-gray-600">
                 Research continuity across an organization — never a
                 regulated-recordkeeping or indefinite-retention claim.
               </p>
@@ -107,14 +107,14 @@ export default function InstitutionalMemory() {
               <div
                 key={row.title}
                 data-reveal
-                className="reveal-element flex w-full flex-col gap-4 border-b-[0.8px] border-slate-900/10 py-5 md:grid md:grid-cols-[224px_minmax(0,1fr)_minmax(0,1fr)] md:items-start"
+                className="reveal-element flex w-full flex-col gap-3 sm:gap-4 border-b-[0.8px] border-slate-900/10 py-4 sm:py-5 md:grid md:grid-cols-[180px_minmax(0,1fr)_minmax(0,1fr)] xl:grid-cols-[224px_minmax(0,1fr)_minmax(0,1fr)] md:items-start"
                 style={{
                   transitionDelay: `${index * 80 + 150}ms`,
                 }}
               >
                 {/* Label */}
                 <div className="flex min-w-0 md:pr-0">
-                  <div className="inline-flex min-h-[32px] items-center justify-center rounded-md bg-white px-8 py-1.5 outline outline-1 outline-offset-[-1px] outline-slate-900/20 md:min-w-56">
+                  <div className="inline-flex min-h-[32px] w-fit max-w-full items-center justify-center rounded-md bg-white px-5 sm:px-8 py-1.5 outline outline-1 outline-offset-[-1px] outline-slate-900/20 md:min-w-44 xl:min-w-56">
                     <span className="text-center font-['IBM_Plex_Sans'] text-xs font-bold text-slate-900">
                       {row.title}
                     </span>

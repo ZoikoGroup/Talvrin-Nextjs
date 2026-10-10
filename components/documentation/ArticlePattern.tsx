@@ -14,8 +14,10 @@ function ArticleCard({
   return (
     <article
       className="
+        flex
+        h-full
         w-full
-        self-start
+        flex-col
         rounded-2xl
         bg-indigo-950
         p-6
@@ -75,14 +77,17 @@ export default function ArticlePattern() {
           min-h-[773.6px]
           w-full
           max-w-[1440px]
-          lg:block
+          xl:block
         "
       >
         <div
           className="
             mx-auto
-            w-[1200px]
+            w-full
+            max-w-[1200px]
+            px-5
             pt-[96px]
+            xl:px-0
           "
         >
           {/* =================================================
@@ -111,7 +116,7 @@ export default function ArticlePattern() {
             className="
               m-0
               mt-[17px]
-              w-[800px]
+              w-full
               max-w-[800px]
               text-4xl
               font-bold
@@ -133,7 +138,7 @@ export default function ArticlePattern() {
             className="
               m-0
               mt-[15px]
-              w-[760px]
+              w-full
               max-w-[760px]
               text-base
               font-normal
@@ -166,9 +171,9 @@ export default function ArticlePattern() {
             className="
               mt-[48px]
               grid
-              w-[1200px]
+              w-full
               grid-cols-[288px_288px_288px_288px]
-              grid-rows-[176px_176px]
+              grid-rows-[minmax(176px,auto)_minmax(176px,auto)]
               gap-x-[18px]
               gap-y-[24.6px]
             "
@@ -302,15 +307,18 @@ export default function ArticlePattern() {
         className="
           block
           w-full
-          px-6
-          py-20
+          px-5
+          py-16
 
           sm:px-8
-          sm:py-24
+          sm:py-20
 
           md:px-10
 
-          lg:hidden
+          lg:px-8
+          lg:py-24
+
+          xl:hidden
         "
       >
         <div

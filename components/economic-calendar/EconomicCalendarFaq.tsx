@@ -55,7 +55,7 @@ export default function EconomicCalendarFaq() {
 
   return (
     <section className="relative overflow-hidden bg-violet-50">
-      <div className="mx-auto w-full max-w-[1320px] px-6 py-20 sm:px-8 lg:px-10 lg:py-24">
+      <div className="mx-auto w-full max-w-[1320px] px-4 py-14 sm:px-6 sm:py-16 md:px-8 lg:px-12 lg:py-24 xl:px-16">
         {/* =====================================================
             HEADER
         ===================================================== */}
@@ -75,7 +75,7 @@ export default function EconomicCalendarFaq() {
           </div>
 
           {/* Heading */}
-          <h2 className="max-w-[760px] pt-3 font-['IBM_Plex_Sans'] text-[36px] font-bold leading-[1.08] tracking-[-0.02em] text-slate-900 sm:text-[42px] lg:text-5xl lg:leading-[48.3px]">
+          <h2 className="max-w-[760px] pt-3 font-['IBM_Plex_Sans'] text-[28px] font-bold leading-[1.12] tracking-[-0.02em] text-slate-900 sm:text-[36px] md:text-[42px] lg:text-5xl lg:leading-[48.3px]">
             Economic Calendar questions,
             <br className="hidden sm:block" />
             answered directly.
@@ -85,7 +85,7 @@ export default function EconomicCalendarFaq() {
         {/* =====================================================
             FAQ + IMAGE
         ===================================================== */}
-        <div className="mt-12 grid grid-cols-1 gap-10 lg:grid-cols-[minmax(0,840px)_minmax(320px,384px)] lg:items-start lg:gap-8">
+        <div className="mt-10 sm:mt-12 grid grid-cols-1 gap-10 lg:grid-cols-[minmax(0,1fr)_340px] xl:grid-cols-[minmax(0,840px)_384px] lg:items-start lg:gap-8 xl:gap-10">
           {/* ===================================================
               FAQ LIST
           =================================================== */}
@@ -173,7 +173,7 @@ export default function EconomicCalendarFaq() {
               delay: 0.12,
               ease: "easeOut",
             }}
-            className="relative mx-auto aspect-square w-full max-w-[384px] overflow-hidden rounded-2xl bg-red-600 lg:mt-[48px]"
+            className="relative mx-auto aspect-square w-full max-w-[340px] xl:max-w-[384px] overflow-hidden rounded-2xl bg-violet-100 lg:mt-6 xl:mt-[48px]"
           >
             <Image
               src={FAQ_IMAGE}

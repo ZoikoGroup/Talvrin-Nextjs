@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import { motion, type Variants } from "framer-motion";
+import type { ReactNode } from "react";
 
 /* =========================================================
    ANIMATION
@@ -19,7 +20,6 @@ const fadeUp: Variants = {
     opacity: 0,
     y: 24,
   },
-
   visible: {
     opacity: 1,
     y: 0,
@@ -37,39 +37,18 @@ const fadeUp: Variants = {
 const solutions = [
   {
     title: "Investment Professionals",
-    description: (
-      <>
-        Source-linked research and
-        <br className="hidden lg:block" />
-        monitoring built for individual
-        <br className="hidden lg:block" />
-        professional workflows.
-      </>
-    ),
+    description:
+      "Source-linked research and monitoring built for individual professional workflows.",
   },
-
   {
     title: "Asset Managers",
-    description: (
-      <>
-        Research infrastructure across
-        <br className="hidden lg:block" />
-        asset-management investment
-        <br className="hidden lg:block" />
-        workflows.
-      </>
-    ),
+    description:
+      "Research infrastructure across asset-management investment workflows.",
   },
-
   {
     title: "Financial Institutions",
-    description: (
-      <>
-        Governed evidence and research
-        <br className="hidden lg:block" />
-        capabilities for institutions.
-      </>
-    ),
+    description:
+      "Governed evidence and research capabilities for institutions.",
   },
 ];
 
@@ -79,7 +58,7 @@ const solutions = [
 
 type SolutionCardProps = {
   title: string;
-  description: React.ReactNode;
+  description: ReactNode;
   index: number;
 };
 
@@ -94,111 +73,30 @@ function SolutionCard({
       whileInView="visible"
       viewport={{
         once: true,
-        amount: 0.2,
+        amount: 0.15,
       }}
       variants={fadeUp}
       transition={{
         delay: index * 0.08,
       }}
-      className="
-        w-full
-        lg:w-[302px]
-        min-h-[192px]
-        lg:h-[192px]
-
-        px-7
-        py-7
-
-        bg-white
-        rounded-2xl
-
-        outline
-        outline-1
-        outline-offset-[-1px]
-        outline-slate-900/10
-
-        flex
-        flex-col
-        justify-start
-        items-start
-
-        gap-2.5
-      "
+      className="flex h-full min-w-0 flex-col items-start rounded-2xl border border-slate-900/10 bg-white p-5 sm:p-6 lg:p-5 xl:p-6"
     >
-      {/* ===================================================
-          TITLE
-      =================================================== */}
+      <h3 className="w-full break-words font-['IBM_Plex_Sans'] text-base font-bold leading-6 text-slate-900 sm:text-lg">
+        {title}
+      </h3>
 
-      <div
-        className="
-          self-stretch
-          flex
-          flex-col
-          justify-start
-          items-start
-        "
-      >
-        <h3
-          className="
-            self-stretch
-            text-slate-900
-            text-lg
-            font-bold
-            font-['IBM_Plex_Sans']
-            leading-6
-          "
-        >
-          {title}
-        </h3>
-      </div>
-
-      {/* ===================================================
-          DESCRIPTION
-      =================================================== */}
-
-      <div
-        className="
-          self-stretch
-          pb-2
-          flex
-          flex-col
-          justify-start
-          items-start
-        "
-      >
-        <p
-          className="
-            self-stretch
-            text-gray-600
-            text-base
-            font-normal
-            font-['IBM_Plex_Sans']
-            leading-6
-          "
-        >
-          {description}
-        </p>
-      </div>
-
-      {/* ===================================================
-          LINK
-      =================================================== */}
+      <p className="mt-2 w-full break-words font-['IBM_Plex_Sans'] text-sm font-normal leading-6 text-gray-600 sm:text-base">
+        {description}
+      </p>
 
       <a
         href="#"
-        className="
-          text-indigo-500
-          text-sm
-          font-semibold
-          font-['IBM_Plex_Sans']
-          leading-5
-
-          transition-opacity
-          duration-200
-          hover:opacity-70
-        "
+        className="mt-5 inline-flex items-center font-['IBM_Plex_Sans'] text-sm font-semibold leading-5 text-indigo-500 transition-opacity duration-200 hover:opacity-70 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-indigo-500"
       >
-        Learn more →
+        Learn more{" "}
+        <span className="ml-1" aria-hidden="true">
+          →
+        </span>
       </a>
     </motion.div>
   );
@@ -210,135 +108,43 @@ function SolutionCard({
 
 export default function AdjacentSolutions() {
   return (
-    <section
-      className="
-        relative
-        w-full
-        bg-violet-50
-        overflow-hidden
-      "
-    >
-      {/* ===================================================
-          SECTION CONTAINER
-      =================================================== */}
+    <section className="relative w-full overflow-hidden bg-violet-50">
+      <div className="mx-auto w-full max-w-[1440px] px-4 py-14 min-[480px]:px-5 sm:px-8 sm:py-16 lg:px-12 lg:py-20 xl:px-20">
+        <div className="w-full max-w-[1280px]">
+          {/* EYEBROW */}
 
-      <div
-        className="
-          relative
-          w-full
-          max-w-[1440px]
-          min-h-[515.75px]
-          mx-auto
-
-          px-6
-          sm:px-8
-          lg:px-0
-
-          py-20
-          lg:py-0
-        "
-      >
-        {/* =================================================
-            DESKTOP CONTENT
-        ================================================= */}
-
-        <div
-          className="
-            w-full
-            lg:w-[1280px]
-
-            lg:left-[80px]
-            lg:top-[95.78px]
-
-            lg:absolute
-
-            flex
-            flex-col
-            justify-start
-            items-start
-          "
-        >
-          {/* =================================================
-              EYEBROW
-          ================================================= */}
-
-          <motion.div
+          <motion.p
             initial="hidden"
             whileInView="visible"
             viewport={{
               once: true,
-              amount: 0.25,
+              amount: 0.2,
             }}
             variants={fadeUp}
-            className="
-              w-full
-              text-indigo-500
-              text-xs
-              font-bold
-              font-['IBM_Plex_Sans']
-              tracking-wide
-            "
+            className="font-['IBM_Plex_Sans'] text-xs font-bold tracking-wide text-indigo-500 sm:text-sm"
           >
             ADJACENT SOLUTIONS
-          </motion.div>
+          </motion.p>
 
-          {/* =================================================
-              HEADING
-          ================================================= */}
+          {/* HEADING */}
 
-          <motion.div
+          <motion.h2
             initial="hidden"
             whileInView="visible"
             viewport={{
               once: true,
-              amount: 0.25,
+              amount: 0.2,
             }}
             variants={fadeUp}
-            className="
-              w-full
-              mt-[17px]
-            "
+            className="mt-4 w-full max-w-[1000px] break-words font-['IBM_Plex_Sans'] text-[clamp(1.75rem,3.5vw,3rem)] font-bold leading-[1.1] tracking-[-0.02em] text-slate-900"
           >
-            <h2
-              className="
-                w-full
-                text-slate-900
-                text-[32px]
-                sm:text-[40px]
-                lg:text-5xl
-                font-bold
-                font-['IBM_Plex_Sans']
-                leading-[1.08]
-                lg:leading-[48.30px]
-              "
-            >
-              Need organization or institution scale? Find the right fit.
-            </h2>
-          </motion.div>
+            Need organization or institution scale? Find the right fit.
+          </motion.h2>
 
-          {/* =================================================
-              SOLUTIONS GRID
-          ================================================= */}
+          {/* SOLUTIONS GRID */}
 
-          <div
-            className="
-              w-full
-
-              mt-[35px]
-
-              grid
-              grid-cols-1
-              sm:grid-cols-2
-
-              lg:grid-cols-[302px_302px_302px_302px]
-
-              gap-4
-              lg:gap-4
-            "
-          >
-            {/* =================================================
-                INVESTMENT PROFESSIONALS
-            ================================================= */}
+          <div className="mt-8 grid w-full grid-cols-1 gap-4 min-[520px]:grid-cols-2 lg:grid-cols-4 lg:gap-4 xl:mt-[35px]">
+            {/* INVESTMENT PROFESSIONALS */}
 
             <SolutionCard
               title={solutions[0].title}
@@ -346,9 +152,7 @@ export default function AdjacentSolutions() {
               index={0}
             />
 
-            {/* =================================================
-                ASSET MANAGERS
-            ================================================= */}
+            {/* ASSET MANAGERS */}
 
             <SolutionCard
               title={solutions[1].title}
@@ -356,9 +160,7 @@ export default function AdjacentSolutions() {
               index={1}
             />
 
-            {/* =================================================
-                FINANCIAL INSTITUTIONS
-            ================================================= */}
+            {/* FINANCIAL INSTITUTIONS */}
 
             <SolutionCard
               title={solutions[2].title}
@@ -366,9 +168,7 @@ export default function AdjacentSolutions() {
               index={2}
             />
 
-            {/* =================================================
-                IMAGE
-            ================================================= */}
+            {/* IMAGE */}
 
             <motion.div
               initial={{
@@ -381,42 +181,21 @@ export default function AdjacentSolutions() {
               }}
               viewport={{
                 once: true,
-                amount: 0.2,
+                amount: 0.15,
               }}
               transition={{
                 duration: 0.8,
                 ease: smoothEase,
               }}
-              className="
-                relative
-
-                w-full
-                h-[192px]
-
-                lg:w-[302px]
-                lg:h-[192px]
-
-                bg-white
-                rounded-2xl
-
-                outline
-                outline-1
-                outline-offset-[-1px]
-                outline-slate-900/10
-
-                overflow-hidden
-              "
+              className="relative aspect-[5/3] w-full min-w-0 overflow-hidden rounded-2xl border border-slate-900/10 bg-white min-[520px]:aspect-[4/3] lg:aspect-auto lg:min-h-[192px] lg:h-full lg:self-stretch"
             >
               <Image
                 src="/images/solutions/research-teams/image7.png"
                 alt="Research professionals collaborating"
                 fill
                 priority
-                sizes="302px"
-                className="
-                  object-cover
-                  object-center
-                "
+                sizes="(max-width: 519px) calc(100vw - 32px), (max-width: 1023px) calc((100vw - 64px) / 2), (max-width: 1279px) calc((100vw - 112px) / 4), (max-width: 1439px) calc((100vw - 160px) / 4), 302px"
+                className="object-cover object-center"
               />
             </motion.div>
           </div>

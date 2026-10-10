@@ -62,14 +62,13 @@ export default function HowExplainerIsStructured() {
           mx-auto
           w-full
           max-w-[1280px]
-          px-6
-          py-20
-
+          px-5
+          py-16
           sm:px-8
-          sm:py-24
-
-          lg:px-0
+          sm:py-20
+          lg:px-8
           lg:py-[95.65px]
+          xl:px-0
         "
       >
         {/* =====================================================
@@ -163,9 +162,10 @@ export default function HowExplainerIsStructured() {
             grid-cols-1
             items-start
             gap-8
-
-            lg:grid-cols-[minmax(0,460px)_minmax(0,761px)]
-            lg:gap-[59px]
+            lg:grid-cols-[minmax(0,360px)_minmax(0,1fr)]
+            lg:gap-8
+            xl:grid-cols-[minmax(0,460px)_minmax(0,761px)]
+            xl:gap-[59px]
           "
         >
           {/* =================================================
@@ -193,16 +193,15 @@ export default function HowExplainerIsStructured() {
             }}
             className="
               relative
-              h-[360px]
+              h-[320px]
               w-full
               overflow-hidden
               rounded-2xl
               bg-slate-900
-
-              sm:h-[420px]
-
+              sm:h-[400px]
               lg:h-[384px]
-              lg:w-[460px]
+              lg:w-full
+              xl:w-[460px]
             "
           >
             <Image

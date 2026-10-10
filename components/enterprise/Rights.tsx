@@ -72,7 +72,7 @@ export default function Rights() {
         ref={sectionRef}
         className="w-full overflow-hidden bg-white"
       >
-        <div className="mx-auto w-full max-w-[1440px] px-6 py-20 sm:px-8 md:px-10 lg:px-[82px] lg:py-[96px]">
+        <div className="mx-auto w-full max-w-[1440px] px-4 py-12 sm:px-6 md:px-8 lg:px-8 xl:px-20 lg:py-16 xl:py-[96px]">
           {/* Eyebrow */}
           <p
             data-reveal
@@ -86,15 +86,15 @@ export default function Rights() {
             data-reveal
             className="reveal reveal-1 w-full max-w-[1000px] pt-3"
           >
-            <h2 className="m-0 font-['IBM_Plex_Sans'] text-[36px] font-bold leading-[1.1] tracking-[-1px] text-slate-900 sm:text-[42px] lg:text-5xl lg:leading-[48.72px]">
-              Access is not redistribution, export, or
-              <br className="hidden lg:block" />
+            <h2 className="m-0 font-['IBM_Plex_Sans'] text-[30px] font-bold leading-[1.12] tracking-[-1px] text-slate-900 sm:text-[38px] md:text-[42px] lg:text-5xl lg:leading-[48.72px]">
+              Access is not redistribution, export, or{" "}
+              <br className="hidden xl:block" />
               AI use.
             </h2>
           </div>
 
           {/* Content */}
-          <div className="mt-10 grid w-full grid-cols-1 gap-4 lg:grid-cols-[240px_240px_240px_minmax(0,499px)] lg:gap-x-[19.6px] lg:gap-y-4">
+          <div className="mt-8 sm:mt-10 grid w-full grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4 xl:grid-cols-[240px_240px_240px_minmax(0,499px)] lg:gap-4 xl:gap-x-[19.6px] xl:gap-y-4">
             {/* Access */}
             <RightsCard card={rightsCards[0]} index={0} />
 
@@ -107,13 +107,13 @@ export default function Rights() {
             {/* Image */}
             <div
               data-reveal
-              className="reveal reveal-image relative order-first h-[320px] w-full overflow-hidden rounded-2xl bg-violet-50 outline outline-1 outline-offset-[-1px] outline-slate-900/10 lg:order-none lg:col-start-4 lg:row-start-1 lg:row-span-2"
+              className="reveal reveal-image relative order-first min-h-[260px] sm:min-h-[300px] h-auto w-full overflow-hidden rounded-2xl bg-violet-50 outline outline-1 outline-offset-[-1px] outline-slate-900/10 sm:col-span-2 lg:col-span-1 lg:order-none lg:col-start-4 lg:row-start-1 lg:row-span-2"
             >
               <Image
                 src="/images/solutions/enterprise/image5.png"
                 alt="Rights and data use"
                 fill
-                sizes="(max-width: 1023px) 100vw, 499px"
+                sizes="(max-width: 1023px) 100vw, (max-width: 1279px) 25vw, 499px"
                 className="object-cover"
               />
             </div>

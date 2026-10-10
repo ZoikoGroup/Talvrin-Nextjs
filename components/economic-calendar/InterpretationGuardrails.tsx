@@ -76,7 +76,7 @@ const guardrails = [
 export default function InterpretationGuardrails() {
   return (
     <section className="relative overflow-hidden bg-white">
-      <div className="mx-auto w-full max-w-[1320px] px-6 py-20 sm:px-8 lg:px-10 lg:py-24">
+      <div className="mx-auto w-full max-w-[1320px] px-4 py-14 sm:px-6 sm:py-16 md:px-8 lg:px-12 lg:py-24 xl:px-16">
         {/* =====================================================
             HEADER
         ===================================================== */}
@@ -96,14 +96,14 @@ export default function InterpretationGuardrails() {
           </div>
 
           {/* Heading */}
-          <h2 className="max-w-[760px] font-['IBM_Plex_Sans'] text-[36px] font-bold leading-[1.08] tracking-[-0.02em] text-slate-900 sm:text-[42px] lg:text-5xl lg:leading-[48.72px]">
+          <h2 className="max-w-[760px] font-['IBM_Plex_Sans'] text-[28px] font-bold leading-[1.12] tracking-[-0.02em] text-slate-900 sm:text-[36px] md:text-[42px] lg:text-5xl lg:leading-[48.72px]">
             A release is data, not a trading
             <br className="hidden sm:block" />
             instruction.
           </h2>
 
           {/* Description */}
-          <p className="max-w-[780px] pt-2 pb-4 font-['IBM_Plex_Sans'] text-base font-normal leading-7 text-gray-600 sm:pb-7">
+          <p className="max-w-[780px] pt-2 pb-4 font-['IBM_Plex_Sans'] text-sm sm:text-base font-normal leading-relaxed text-gray-600 sm:pb-7">
             The page may explain what an event measures and whether a release
             was revised. It must not convert a release into a buy/sell
             instruction or claim a specific result will cause a specific
@@ -131,8 +131,10 @@ export default function InterpretationGuardrails() {
               grid-cols-1
               gap-8
               sm:grid-cols-2
-              lg:grid-cols-5
-              lg:gap-7
+              lg:grid-cols-3
+              xl:grid-cols-5
+              lg:gap-6
+              xl:gap-7
             "
           >
             {guardrails.map((item, index) => (
@@ -151,9 +153,9 @@ export default function InterpretationGuardrails() {
                   flex-col
                   items-start
                   gap-[5px]
-                  pb-5
+                  pb-2
                   sm:pb-2
-                  lg:pb-5
+                  lg:pb-3
                 "
               >
                 {/* Title */}
