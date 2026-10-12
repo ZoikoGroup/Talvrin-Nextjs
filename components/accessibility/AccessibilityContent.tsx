@@ -112,7 +112,7 @@ const sections = [
 
 export default function AccessibilityContent() {
   return (
-    <section className="w-full overflow-hidden bg-violet-50 font-['IBM_Plex_Sans',sans-serif]">
+    <section id="contents" className="w-full scroll-mt-20 overflow-hidden bg-violet-50 font-['IBM_Plex_Sans',sans-serif]">
       <div className="mx-auto grid w-full max-w-[1440px] grid-cols-1 items-start gap-8 px-4 sm:px-6 md:px-8 lg:grid-cols-[224px_minmax(0,1fr)] lg:gap-8 lg:px-12 lg:py-14 xl:px-20 xl:py-[72px] py-8 sm:py-10">
         {/* Table of contents */}
         <aside className="w-full min-w-0 lg:sticky lg:top-6">

@@ -58,7 +58,7 @@ export const primaryNav: NavGroup[] = [
       { label: "Research Library", href: "/research/research-library" },
       { label: "Economic Calendar", href: "/research/economic-calendar" },
       { label: "Central Banks", href: "/research/central-banks" },
-      { label: "Policy & Regulation", href: "/research/policy-regulation" },
+      { label: "Policy & Regulation", href: "/research/policy-regulatory-intelligence" },
       { label: "Market Explainers", href: "/research/market-explainers" },
       { label: "Talvrin Methodology", href: "/research/talvrin-methodology" },
     ],

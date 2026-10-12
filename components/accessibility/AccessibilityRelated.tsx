@@ -2,15 +2,15 @@
 "use client";
 
 const legalDocuments = [
-  { number: "01", title: "Terms of Service", status: "APPROVED & LOCKED", type: "approved" },
-  { number: "02", title: "Privacy Notice", status: "APPROVED & LOCKED", type: "approved" },
-  { number: "03", title: "Cookie Notice", status: "APPROVED & LOCKED", type: "approved" },
-  { number: "04", title: "Acceptable Use", status: "APPROVED & LOCKED", type: "approved" },
-  { number: "05", title: "Accessibility", status: "CURRENT", type: "current" },
-  { number: "06", title: "Data Processing Addendum", status: "BLOCKED", type: "blocked" },
-  { number: "07", title: "AI Terms", status: "BLOCKED", type: "blocked" },
-  { number: "08", title: "Data & Market Information Terms", status: "BLOCKED", type: "blocked" },
-  { number: "09", title: "Legal Notices", status: "BLOCKED", type: "blocked" },
+  { number: "01", title: "Terms of Service", href: "/legal/terms-of-service", status: "APPROVED & LOCKED", type: "approved" },
+  { number: "02", title: "Privacy Notice", href: "/legal/privacy-notice", status: "APPROVED & LOCKED", type: "approved" },
+  { number: "03", title: "Cookie Notice", href: "/legal/cookie-notice", status: "APPROVED & LOCKED", type: "approved" },
+  { number: "04", title: "Acceptable Use", href: "/legal/acceptable-use", status: "APPROVED & LOCKED", type: "approved" },
+  { number: "05", title: "Accessibility", href: "/legal/accessibility", status: "CURRENT", type: "current" },
+  { number: "06", title: "Data Processing Addendum", href: "/legal/data-processing-addendum", status: "BLOCKED", type: "blocked" },
+  { number: "07", title: "AI Terms", href: "/legal/ai-terms", status: "BLOCKED", type: "blocked" },
+  { number: "08", title: "Data & Market Information Terms", href: "/legal/data-market-information-terms", status: "BLOCKED", type: "blocked" },
+  { number: "09", title: "Legal Notices", href: "/legal/legal-notices", status: "BLOCKED", type: "blocked" },
 ];
 
 export default function AccessibilityRelated() {
@@ -35,9 +35,11 @@ export default function AccessibilityRelated() {
 
         <div className="mt-6 w-full overflow-hidden rounded-2xl border border-slate-900/10 bg-violet-50">
           {legalDocuments.map((document, index) => (
-            <div
+            <a
               key={document.number}
-              className={`grid min-h-[52px] sm:min-h-[56px] grid-cols-[28px_minmax(0,1fr)_auto] sm:grid-cols-[40px_minmax(0,1fr)_auto] items-center gap-2.5 sm:gap-4 px-3 sm:px-5 py-3 sm:py-4 ${
+              href={document.href}
+              aria-current={document.type === "current" ? "page" : undefined}
+              className={`grid min-h-[52px] sm:min-h-[56px] grid-cols-[28px_minmax(0,1fr)_auto] sm:grid-cols-[40px_minmax(0,1fr)_auto] items-center gap-2.5 sm:gap-4 px-3 sm:px-5 py-3 sm:py-4 transition-colors hover:bg-indigo-500/5 ${
                 index !== legalDocuments.length - 1
                   ? "border-b border-slate-900/10"
                   : ""
@@ -70,7 +72,7 @@ export default function AccessibilityRelated() {
               >
                 {document.status}
               </span>
-            </div>
+            </a>
           ))}
         </div>
       </div>

@@ -18,7 +18,7 @@ export default function FinalCtaSection() {
             <LinkButton href="/request-access" variant="primary">
               Request Access
             </LinkButton>
-            <LinkButton href="#coverage-truth" variant="secondary">
+            <LinkButton href="/markets/market-coverage" variant="secondary">
               View Market Coverage
             </LinkButton>
           </div>

@@ -13,31 +13,31 @@ const clauseFamilies = [
     title: "Source Classes & Rights States",
     description:
       "How source class, timeliness and rights/access states are classified and shown.",
-    href: "#source-classes-rights-states",
+    href: "#source-classes-provenance",
   },
   {
     title: "Access, Export & Sharing",
     description:
       "Copying, download, export, API, sharing and derived-data rights, gated by source and entitlement.",
-    href: "#access-export-sharing",
+    href: "#export-api-automation",
   },
   {
     title: "Governance & Changes",
     description:
       "Provider terms, entitlement changes, prohibited use and how these terms are updated.",
-    href: "#governance-changes",
+    href: "#rights-access-states",
   },
   {
     title: "Permitted Use & Attribution",
     description:
       "What internal research use is allowed, and when source attribution must stay visible.",
-    href: "#permitted-use-attribution",
+    href: "#permitted-research-use",
   },
   {
     title: "AI, Caching & History",
     description:
       "AI-assisted use, caching/retention and how historical revisions are handled.",
-    href: "#ai-caching-history",
+    href: "#ai-assisted-use",
   },
 ];
 

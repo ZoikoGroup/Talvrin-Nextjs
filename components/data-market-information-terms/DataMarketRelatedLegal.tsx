@@ -1,22 +1,22 @@
 "use client";
 
 const legalItems = [
-  { number: "01", title: "Terms of Service", status: "APPROVED & LOCKED", type: "approved" },
-  { number: "02", title: "Privacy Notice", status: "APPROVED & LOCKED", type: "approved" },
-  { number: "03", title: "Cookie Notice", status: "APPROVED & LOCKED", type: "approved" },
-  { number: "04", title: "Acceptable Use", status: "APPROVED & LOCKED", type: "approved" },
-  { number: "05", title: "Accessibility", status: "APPROVED & LOCKED", type: "approved" },
-  { number: "06", title: "Data Processing Addendum", status: "APPROVED & LOCKED", type: "approved" },
-  { number: "07", title: "AI Terms", status: "APPROVED & LOCKED", type: "approved" },
-  { number: "08", title: "Data & Market Information Terms", status: "CURRENT", type: "current" },
-  { number: "09", title: "Legal Notices", status: "BLOCKED", type: "blocked" },
+  { number: "01", title: "Terms of Service", href: "/legal/terms-of-service", status: "APPROVED & LOCKED", type: "approved" },
+  { number: "02", title: "Privacy Notice", href: "/legal/privacy-notice", status: "APPROVED & LOCKED", type: "approved" },
+  { number: "03", title: "Cookie Notice", href: "/legal/cookie-notice", status: "APPROVED & LOCKED", type: "approved" },
+  { number: "04", title: "Acceptable Use", href: "/legal/acceptable-use", status: "APPROVED & LOCKED", type: "approved" },
+  { number: "05", title: "Accessibility", href: "/legal/accessibility", status: "APPROVED & LOCKED", type: "approved" },
+  { number: "06", title: "Data Processing Addendum", href: "/legal/data-processing-addendum", status: "APPROVED & LOCKED", type: "approved" },
+  { number: "07", title: "AI Terms", href: "/legal/ai-terms", status: "APPROVED & LOCKED", type: "approved" },
+  { number: "08", title: "Data & Market Information Terms", href: "/legal/data-market-information-terms", status: "CURRENT", type: "current" },
+  { number: "09", title: "Legal Notices", href: "/legal/legal-notices", status: "BLOCKED", type: "blocked" },
 ];
 
 const relatedLinks = [
-  { label: "Data Sources", href: "/data-sources" },
-  { label: "Evidence Standards", href: "/evidence-standards" },
-  { label: "Methodology", href: "/methodology" },
-  { label: "Trust Center", href: "/trust-center" },
+  { label: "Data Sources", href: "/trust/data-sources" },
+  { label: "Evidence Standards", href: "/trust/evidence-standards" },
+  { label: "Methodology", href: "/research/talvrin-methodology" },
+  { label: "Trust Center", href: "/trust/trust-center" },
 ];
 
 export default function DataMarketRelatedLegal() {
@@ -45,9 +45,11 @@ export default function DataMarketRelatedLegal() {
           {/* LEGAL STATUS LIST */}
           <div className="mt-3 w-full overflow-hidden rounded-2xl border border-slate-900/10 bg-violet-50">
             {legalItems.map((item, index) => (
-              <div
+              <a
                 key={item.number}
-                className={`grid grid-cols-[28px_minmax(0,1fr)_auto] sm:grid-cols-[40px_minmax(0,1fr)_auto] items-center gap-x-2 sm:gap-x-4 px-3.5 py-3 sm:px-5 sm:py-3.5 ${
+                href={item.href}
+                aria-current={item.type === "current" ? "page" : undefined}
+                className={`grid grid-cols-[28px_minmax(0,1fr)_auto] sm:grid-cols-[40px_minmax(0,1fr)_auto] items-center gap-x-2 sm:gap-x-4 px-3.5 py-3 sm:px-5 sm:py-3.5 transition-colors hover:bg-indigo-500/5 ${
                   index !== legalItems.length - 1
                     ? "border-b border-slate-900/10"
                     : ""
@@ -81,7 +83,7 @@ export default function DataMarketRelatedLegal() {
                 >
                   {item.status}
                 </span>
-              </div>
+              </a>
             ))}
           </div>
 

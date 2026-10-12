@@ -13,7 +13,7 @@ const audiences = [
   {
     title: "Research Teams / Institutions",
     body: "Apply consistent coverage and capability truth across every released asset category.",
-    href: "/solutions/financial-institutions",
+    href: "/solutions/research-teams",
   },
 ];
 

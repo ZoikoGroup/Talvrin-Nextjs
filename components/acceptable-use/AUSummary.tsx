@@ -5,37 +5,37 @@ const rules = [
     title: "Account Integrity",
     description:
       "Keep credentials and access scoped to what your account or workspace entitlement authorizes.",
-    href: "#account-integrity",
+    href: "#accounts-credentials-and-authorized-access",
   },
   {
     title: "Security",
     description:
       "No attacks, probing, bypass or interference with the systems that protect Talvrin and its users.",
-    href: "#security",
+    href: "#security-abuse-and-interference",
   },
   {
     title: "Data & Rights",
     description:
       "Viewing evidence does not grant rights to copy, extract, redistribute or relicense source or market data.",
-    href: "#data-rights",
+    href: "#data-source-rights-and-access-entitlements",
   },
   {
     title: "Lawful & Responsible Use",
     description:
       "Use Talvrin lawfully and consistently with its role as a research and intelligence platform.",
-    href: "#lawful-use",
+    href: "#general-responsible-use-rule",
   },
   {
     title: "Automation",
     description:
       "Automated access, scraping and integrations are permitted only within your approved API agreement.",
-    href: "#automation",
+    href: "#automation-scraping-and-circumvention",
   },
   {
     title: "AI",
     description:
       "AI assistance is a research aid, not authoritative evidence, and stays distinguishable from source material.",
-    href: "#ai",
+    href: "#ai-assisted-features-and-misuse",
   },
 ];
 

@@ -155,8 +155,8 @@ const sections = [
       "Questions about this Cookie Notice, or requests to exercise an applicable choice, route to TALVRIN’s privacy/legal contact channel below.",
     ],
     links: [
-      { label: "Contact Support", href: "/contact-support" },
-      { label: "Privacy", href: "/privacy" },
+      { label: "Contact Support", href: "/resources/contact-support" },
+      { label: "Privacy", href: "/trust/privacy" },
     ],
   },
   {
@@ -223,7 +223,7 @@ function NoticeBox({ children }: { children: React.ReactNode }) {
 
 export default function CookieNoticeContent() {
   return (
-    <section className="w-full bg-violet-50 text-slate-900">
+    <section id="contents" className="w-full scroll-mt-20 bg-violet-50 text-slate-900">
       <div className="mx-auto grid w-full max-w-[1440px] grid-cols-1 items-start gap-8 px-4 sm:px-6 md:px-8 lg:grid-cols-[240px_minmax(0,1fr)] lg:gap-8 lg:px-12 lg:py-14 xl:grid-cols-[240px_minmax(0,1fr)_266px] xl:gap-8 xl:px-20 xl:py-[74px] py-8 sm:py-10">
         {/* Table of contents */}
         <aside className="w-full min-w-0 lg:sticky lg:top-6 lg:self-start">

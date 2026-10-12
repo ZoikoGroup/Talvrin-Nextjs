@@ -47,7 +47,7 @@ export default function AIHero() {
             </a>
 
             <a
-              href="/ai-principles"
+              href="/trust/ai-principles"
               className="inline-flex min-h-11 sm:min-h-12 w-full sm:w-auto items-center justify-center rounded-lg border border-violet-50/30 px-5 py-3 text-center text-sm font-semibold text-violet-50 transition-colors hover:bg-violet-50/10 sm:text-base"
             >
               Explore AI Principles →
