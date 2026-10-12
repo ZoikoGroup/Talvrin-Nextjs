@@ -39,7 +39,7 @@ const comparisonRows = [
 export default function VersionChangeComparison() {
   return (
     <section className="w-full bg-violet-50">
-      <div className="mx-auto w-full max-w-[1280px] px-6 py-20 sm:px-8 lg:px-10 lg:py-24">
+      <div className="mx-auto w-full max-w-[1280px] px-5 py-16 sm:px-8 sm:py-20 lg:px-8 lg:py-24 xl:px-0">
         {/* Header */}
         <div className="w-full">
           <p className="font-['IBM_Plex_Sans'] text-xs font-bold tracking-wide text-indigo-500">
@@ -47,7 +47,7 @@ export default function VersionChangeComparison() {
           </p>
 
           <div className="w-full max-w-[760px] pt-3">
-            <h2 className="font-['IBM_Plex_Sans'] text-[40px] font-bold leading-[1.08] tracking-[-0.02em] text-slate-900 sm:text-5xl sm:leading-[48.72px]">
+            <h2 className="font-['IBM_Plex_Sans'] text-[36px] font-bold leading-[1.08] tracking-[-0.02em] text-slate-900 sm:text-5xl sm:leading-[48.72px]">
               Know what changed — and what
               <br className="hidden sm:block" />
               remains unresolved.

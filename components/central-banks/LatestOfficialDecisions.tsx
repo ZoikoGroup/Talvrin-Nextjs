@@ -67,17 +67,20 @@ export default function LatestOfficialDecisions() {
           mx-auto
           w-full
           max-w-[1440px]
-          px-6
-          sm:px-8
-          lg:px-[80px]
+          px-4
+          sm:px-6
+          md:px-8
+          lg:px-12
+          xl:px-[80px]
         "
       >
         <div
           className="
             w-full
             max-w-[1280px]
-            py-[96px]
-            lg:min-h-[1150px]
+            py-14
+            sm:py-16
+            lg:py-[96px]
           "
         >
           {/* =================================================
@@ -122,12 +125,13 @@ export default function LatestOfficialDecisions() {
               w-full
               max-w-[740px]
               font-['IBM_Plex_Sans']
-              text-[38px]
+              text-[30px]
               font-bold
-              leading-[1.08]
+              leading-[1.1]
               tracking-[-0.02em]
               text-slate-900
-              sm:text-[44px]
+              sm:text-[38px]
+              md:text-[44px]
               lg:text-5xl
               lg:leading-[48.72px]
             "
@@ -182,7 +186,8 @@ export default function LatestOfficialDecisions() {
               grid-cols-1
               gap-4
               pb-3
-              lg:grid-cols-[208px_minmax(0,1fr)]
+              lg:grid-cols-[180px_minmax(0,1fr)]
+              xl:grid-cols-[208px_minmax(0,1fr)]
             "
           >
             <div className="hidden lg:block" />
@@ -247,7 +252,8 @@ export default function LatestOfficialDecisions() {
                   border-b-[0.8px]
                   border-slate-900/10
                   py-4
-                  lg:grid-cols-[208px_minmax(0,1fr)]
+                  lg:grid-cols-[180px_minmax(0,1fr)]
+                  xl:grid-cols-[208px_minmax(0,1fr)]
                 "
               >
                 {/* Label */}
@@ -267,7 +273,8 @@ export default function LatestOfficialDecisions() {
                     outline-1
                     outline-offset-[-1px]
                     outline-slate-900/10
-                    lg:min-w-[208px]
+                    lg:min-w-[180px]
+                    xl:min-w-[208px]
                   "
                 >
                   <span

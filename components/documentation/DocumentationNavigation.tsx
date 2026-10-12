@@ -34,10 +34,9 @@ export default function DocumentationNavigation() {
           items-stretch
           gap-1
           px-4
-
-          sm:px-8
-
-          lg:px-14
+          sm:px-6
+          lg:px-8
+          xl:px-14
         "
       >
         {navigationItems.map((item) => (

@@ -159,12 +159,15 @@ export default function ResearchCategories() {
           relative
           mx-auto
           w-full
-          max-w-[1278px]
-          px-5
-          py-20
-          sm:px-8
-          lg:px-0
-          lg:py-[96px]
+          max-w-[1320px]
+          px-4
+          py-14
+          sm:px-6
+          sm:py-16
+          md:px-8
+          lg:px-12
+          lg:py-24
+          xl:px-16
         "
       >
         {/* =====================================================
@@ -202,12 +205,13 @@ export default function ResearchCategories() {
               mt-5
               max-w-[780px]
               font-['IBM_Plex_Sans']
-              text-[36px]
+              text-[28px]
               font-bold
-              leading-[1.08]
+              leading-[1.12]
               tracking-[-0.025em]
               text-slate-900
-              sm:text-[42px]
+              sm:text-[36px]
+              md:text-[42px]
               lg:text-5xl
               lg:leading-[48.72px]
             "
@@ -254,6 +258,7 @@ export default function ResearchCategories() {
             grid-cols-1
             gap-4
             md:grid-cols-2
+            lg:grid-cols-3
             xl:grid-cols-[repeat(4,minmax(0,240px))_240px]
             xl:grid-rows-[247px_247px]
             xl:gap-x-[19.6px]
@@ -312,13 +317,16 @@ export default function ResearchCategories() {
             }}
             className="
               relative
-              min-h-[474px]
+              min-h-[300px]
+              sm:min-h-[400px]
+              xl:min-h-[474px]
               overflow-hidden
               rounded-2xl
               border
               border-slate-900/10
               bg-violet-50
               md:col-span-2
+              lg:col-span-1
               xl:col-start-5
               xl:row-start-1
               xl:row-span-2

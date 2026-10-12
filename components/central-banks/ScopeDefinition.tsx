@@ -129,11 +129,14 @@ export default function ScopeDefinition() {
           mx-auto
           w-full
           max-w-[1440px]
-          px-6
-          py-20
-          sm:px-8
-          lg:px-[80px]
+          px-4
+          py-14
+          sm:px-6
+          sm:py-16
+          md:px-8
+          lg:px-12
           lg:py-[95.6px]
+          xl:px-[80px]
         "
       >
         <motion.div
@@ -178,12 +181,13 @@ export default function ScopeDefinition() {
               mt-3
               max-w-[1000px]
               font-['IBM_Plex_Sans']
-              text-[36px]
+              text-[28px]
               font-bold
-              leading-[1.08]
+              leading-[1.1]
               tracking-[-0.02em]
               text-slate-900
-              sm:text-[42px]
+              sm:text-[38px]
+              md:text-[42px]
               lg:text-5xl
               lg:leading-[48.72px]
             "
@@ -223,10 +227,11 @@ export default function ScopeDefinition() {
             className="
               mt-10
               hidden
-              grid-cols-[208px_minmax(224px,1fr)_minmax(224px,1fr)]
+              grid-cols-[180px_minmax(0,1fr)_minmax(0,1fr)]
               gap-4
               pb-3
               lg:grid
+              xl:grid-cols-[208px_minmax(224px,1fr)_minmax(224px,1fr)]
             "
           >
             {/* Empty label column */}
@@ -323,9 +328,10 @@ export default function ScopeDefinition() {
                   border-b-[0.8px]
                   border-slate-900/10
                   py-5
-                  lg:grid-cols-[208px_minmax(224px,1fr)_minmax(224px,1fr)]
+                  lg:grid-cols-[180px_minmax(0,1fr)_minmax(0,1fr)]
                   lg:items-start
                   lg:gap-4
+                  xl:grid-cols-[208px_minmax(224px,1fr)_minmax(224px,1fr)]
                 "
               >
                 {/* =================================================
@@ -337,7 +343,8 @@ export default function ScopeDefinition() {
                     flex
                     min-w-0
                     items-start
-                    lg:min-w-[208px]
+                    lg:min-w-[180px]
+                    xl:min-w-[208px]
                   "
                 >
                   <div

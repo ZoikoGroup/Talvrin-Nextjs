@@ -36,7 +36,7 @@ const contextItems = [
 export default function ResearchContextNotLegalApplicability() {
   return (
     <section className="w-full bg-slate-900">
-      <div className="mx-auto w-full max-w-[1280px] px-6 py-20 sm:px-8 lg:px-10 lg:py-24">
+      <div className="mx-auto w-full max-w-[1280px] px-5 py-16 sm:px-8 sm:py-20 lg:px-8 lg:py-24 xl:px-0">
         {/* Eyebrow */}
         <div className="w-full">
           <p className="font-['IBM_Plex_Sans'] text-xs font-bold tracking-wide text-yellow-600">
@@ -46,7 +46,7 @@ export default function ResearchContextNotLegalApplicability() {
 
         {/* Heading */}
         <div className="w-full max-w-[780px] pt-3">
-          <h2 className="font-['IBM_Plex_Sans'] text-[40px] font-bold leading-[1.08] tracking-[-0.02em] text-violet-50 sm:text-5xl sm:leading-[48.72px]">
+          <h2 className="font-['IBM_Plex_Sans'] text-[36px] font-bold leading-[1.08] tracking-[-0.02em] text-violet-50 sm:text-5xl sm:leading-[48.72px]">
             Evidence relationships, never an
             <br className="hidden sm:block" />
             applicability ruling.
@@ -65,13 +65,13 @@ export default function ResearchContextNotLegalApplicability() {
         </div>
 
         {/* Content */}
-        <div className="mt-10 flex w-full flex-col gap-8 lg:grid lg:grid-cols-[minmax(0,760px)_500px] lg:items-start lg:gap-5">
+        <div className="mt-10 flex w-full flex-col gap-8 xl:grid xl:grid-cols-[minmax(0,760px)_500px] xl:items-start xl:gap-5">
           {/* Context Cards */}
           <div className="grid w-full grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-3">
             {contextItems.map((item) => (
               <div
                 key={item.title}
-                className="flex min-h-[160px] w-full flex-col rounded-2xl border border-violet-50/10 bg-violet-50/5 p-5"
+                className="flex h-full min-h-[160px] w-full flex-col rounded-2xl border border-violet-50/10 bg-violet-50/5 p-5"
               >
                 <h3 className="font-['IBM_Plex_Sans'] text-base font-bold leading-6 text-violet-50">
                   {item.title}
@@ -85,13 +85,13 @@ export default function ResearchContextNotLegalApplicability() {
           </div>
 
           {/* Image */}
-          <div className="relative w-full overflow-hidden rounded-2xl border border-violet-50/10 bg-violet-50/5">
+          <div className="relative mx-auto w-full max-w-[600px] overflow-hidden rounded-2xl border border-violet-50/10 bg-violet-50/5 xl:mx-0 xl:max-w-none">
             <div className="relative aspect-[500/320] w-full">
               <Image
                 src="/images/research/policy-regulatory-intelligence/image5.png"
                 alt="Research context and evidence relationships"
                 fill
-                sizes="(max-width: 639px) 100vw, (max-width: 1023px) 90vw, 500px"
+                sizes="(max-width: 639px) 100vw, (max-width: 1279px) 600px, 500px"
                 className="object-cover"
               />
             </div>

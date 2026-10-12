@@ -2,7 +2,6 @@
 
 import Image from "next/image";
 import { motion, type Variants } from "framer-motion";
-import type { ReactNode } from "react";
 
 /* =========================================================
    ANIMATION
@@ -20,7 +19,6 @@ const fadeUp: Variants = {
     opacity: 0,
     y: 24,
   },
-
   visible: {
     opacity: 1,
     y: 0,
@@ -32,236 +30,91 @@ const fadeUp: Variants = {
 };
 
 /* =========================================================
-   ARCHITECTURE LAYERS
+   ARCHITECTURE DATA
 ========================================================= */
 
 const architectureLayers = [
   {
-    title: (
-      <>
-        Authoritative / primary
-        <br />
-        source
-      </>
-    ),
-
-    description: (
-      <>
-        Common factual reference
-        <br />
-        point for the team.
-      </>
-    ),
-
-    badge: (
-      <>
-        Rights and version state
-        <br />
-        visible
-      </>
-    ),
+    title: "Authoritative / primary source",
+    description: "Common factual reference point for the team.",
+    badge: "Rights and version state visible",
   },
-
   {
     title: "Talvrin normalization",
-
-    description: (
-      <>
-        Consistent structure applied for
-        <br />
-        research.
-      </>
-    ),
-
-    badge: (
-      <>
-        Always distinguished from
-        <br />
-        source material
-      </>
-    ),
+    description: "Consistent structure applied for research.",
+    badge: "Always distinguished from source material",
   },
-
   {
-    title: (
-      <>
-        Human analysis / research
-        <br />
-        view
-      </>
-    ),
-
+    title: "Human analysis / research view",
     description: "Preserved team reasoning.",
-
-    badge: (
-      <>
-        Attribution shown only if
-        <br />
-        capability exists
-      </>
-    ),
+    badge: "Attribution shown only if capability exists",
   },
-
   {
     title: "AI-assisted interpretation",
-
-    description: (
-      <>
-        Accelerates comparison,
-        <br />
-        summarization, and change
-        <br />
-        identification.
-      </>
-    ),
-
-    badge: (
-      <>
-        Never authoritative; source
-        <br />
-        independently inspectable
-      </>
-    ),
+    description:
+      "Accelerates comparison, summarization, and change identification.",
+    badge: "Never authoritative; source independently inspectable",
   },
-
   {
     title: "User / team notes",
-
-    description: (
-      <>
-        Context and reasoning created
-        <br />
-        by users.
-      </>
-    ),
-
-    badge: (
-      <>
-        Sharing / ownership
-        <br />
-        mechanics not invented
-      </>
-    ),
+    description: "Context and reasoning created by users.",
+    badge: "Sharing / ownership mechanics not invented",
   },
 ];
 
 /* =========================================================
-   EVIDENCE DETAILS
+   EVIDENCE DATA
 ========================================================= */
 
 const evidenceDetails = [
   {
     title: "Source identity",
-
-    description: (
-      <>
-        Named organization, publisher, issuer, regulator, or
-        <br className="hidden xl:block" />
-        exchange; never a generic &quot;web source.&quot;
-      </>
-    ),
+    description:
+      'Named organization, publisher, issuer, regulator, or exchange; never a generic "web source."',
   },
-
   {
     title: "Source class",
-
-    description: (
-      <>
-        Primary / official / licensed / institutional / other
-        <br className="hidden xl:block" />
-        governed classification only.
-      </>
-    ),
+    description:
+      "Primary / official / licensed / institutional / other governed classification only.",
   },
-
   {
     title: "Original title",
-
-    description: (
-      <>
-        Human-readable source title or document/event
-        <br className="hidden xl:block" />
-        name preserved.
-      </>
-    ),
+    description:
+      "Human-readable source title or document/event name preserved.",
   },
-
   {
     title: "Publication time",
-
     description: "Displayed with timezone where material.",
   },
-
   {
     title: "Effective / reference period",
-
-    description: (
-      <>
-        Separate from publication time when the fact
-        <br className="hidden xl:block" />
-        applies to a different period.
-      </>
-    ),
+    description:
+      "Separate from publication time when the fact applies to a different period.",
   },
-
   {
     title: "Jurisdiction",
-
-    description: (
-      <>
-        Explicit when legally, economically, or market-
-        <br className="hidden xl:block" />
-        structurally relevant.
-      </>
-    ),
+    description:
+      "Explicit when legally, economically, or market-structurally relevant.",
   },
-
   {
     title: "Version / supersession",
-
-    description: (
-      <>
-        Revision, replacement, or supersession identified
-        <br className="hidden xl:block" />
-        where supported.
-      </>
-    ),
+    description:
+      "Revision, replacement, or supersession identified where supported.",
   },
-
   {
     title: "Rights / access state",
-
-    description: (
-      <>
-        Respects licensing, entitlement, and permitted-use
-        <br className="hidden xl:block" />
-        rules — never exposes restricted content.
-      </>
-    ),
+    description:
+      "Respects licensing, entitlement, and permitted-use rules — never exposes restricted content.",
   },
-
   {
     title: "Evidence relationship",
-
-    description: (
-      <>
-        Explains whether the evidence supports,
-        <br className="hidden xl:block" />
-        contradicts, updates, or contextualizes the object.
-      </>
-    ),
+    description:
+      "Explains whether the evidence supports, contradicts, updates, or contextualizes the object.",
   },
-
   {
     title: "Open source action",
-
-    description: (
-      <>
-        Deep link or governed viewer route where
-        <br className="hidden xl:block" />
-        permitted; never a fabricated endpoint.
-      </>
-    ),
+    description:
+      "Deep link or governed viewer route where permitted; never a fabricated endpoint.",
   },
 ];
 
@@ -270,9 +123,9 @@ const evidenceDetails = [
 ========================================================= */
 
 type ArchitectureCardProps = {
-  title: ReactNode;
-  description: ReactNode;
-  badge: ReactNode;
+  title: string;
+  description: string;
+  badge: string;
   index: number;
 };
 
@@ -284,88 +137,90 @@ function ArchitectureCard({
 }: ArchitectureCardProps) {
   return (
     <motion.div
-      variants={fadeUp}
       initial="hidden"
       whileInView="visible"
       viewport={{
         once: true,
-        amount: 0.15,
+        amount: 0.1,
       }}
+      variants={fadeUp}
       transition={{
         delay: index * 0.06,
       }}
       className="
-        w-full
-        h-[214px]
-        p-5
-        bg-white
+        flex
+        h-full
+        min-h-[190px]
+        min-w-0
+        flex-col
+        items-start
         rounded-2xl
         border
         border-slate-900/10
-        flex
-        flex-col
-        items-start
+        bg-white
+        p-4
+        sm:min-h-[200px]
+        sm:p-5
+        lg:min-h-[220px]
+        2xl:min-h-[230px]
       "
     >
-      {/* TITLE */}
-
-      <div
+      <h3
         className="
           w-full
-          text-slate-900
-          text-base
-          font-bold
+          break-words
           font-['IBM_Plex_Sans']
+          text-sm
+          font-bold
           leading-5
+          text-slate-900
+          sm:text-base
         "
       >
         {title}
-      </div>
+      </h3>
 
-      {/* DESCRIPTION */}
-
-      <div
+      <p
         className="
-          w-full
           mt-2.5
-          text-gray-600
-          text-sm
-          font-normal
+          w-full
+          break-words
           font-['IBM_Plex_Sans']
+          text-sm
           leading-5
+          text-gray-600
         "
       >
         {description}
-      </div>
+      </p>
 
-      {/* BADGE */}
-
-      <div
-        className="
-          mt-auto
-          max-w-full
-          pl-2.5
-          pr-5
-          pt-1.5
-          pb-1
-          bg-indigo-500/10
-          rounded-[999px]
-          inline-flex
-          items-start
-        "
-      >
-        <div
+      <div className="mt-auto max-w-full pt-5">
+        <span
           className="
-            text-indigo-500
-            text-xs
-            font-bold
-            font-['IBM_Plex_Sans']
-            tracking-tight
-            leading-4
+            inline-flex
+            max-w-full
+            items-start
+            rounded-xl
+            bg-indigo-500/10
+            px-2.5
+            py-2
+            sm:rounded-full
           "
         >
-          {badge}
-        </div>
+          <span
+            className="
+              break-words
+              font-['IBM_Plex_Sans']
+              text-xs
+              font-bold
+              leading-4
+              tracking-tight
+              text-indigo-500
+            "
+          >
+            {badge}
+          </span>
+        </span>
       </div>
     </motion.div>
   );
@@ -377,7 +232,7 @@ function ArchitectureCard({
 
 type EvidenceItemProps = {
   title: string;
-  description: ReactNode;
+  description: string;
   index: number;
 };
 
@@ -388,57 +243,56 @@ function EvidenceItem({
 }: EvidenceItemProps) {
   return (
     <motion.div
-      variants={fadeUp}
       initial="hidden"
       whileInView="visible"
       viewport={{
         once: true,
-        amount: 0.15,
+        amount: 0.1,
       }}
+      variants={fadeUp}
       transition={{
         delay: index * 0.045,
       }}
       className="
-        w-full
-        min-w-0
-        py-3.5
-        border-b-[0.8px]
-        border-slate-900/10
         flex
+        min-w-0
         flex-col
         items-start
-        gap-[3.45px]
+        gap-1
+        border-b
+        border-slate-900/10
+        py-4
+        sm:py-5
       "
     >
-      {/* TITLE */}
-
-      <div
+      <h3
         className="
           w-full
-          text-slate-900
-          text-base
-          font-semibold
+          break-words
           font-['IBM_Plex_Sans']
+          text-sm
+          font-semibold
           leading-5
+          text-slate-900
+          sm:text-base
         "
       >
         {title}
-      </div>
+      </h3>
 
-      {/* DESCRIPTION */}
-
-      <div
+      <p
         className="
           w-full
-          text-gray-600
-          text-xs
-          font-normal
+          break-words
           font-['IBM_Plex_Sans']
+          text-xs
           leading-5
+          text-gray-600
+          sm:text-sm
         "
       >
         {description}
-      </div>
+      </p>
     </motion.div>
   );
 }
@@ -449,35 +303,26 @@ function EvidenceItem({
 
 export default function SharedEvidenceArchitecture() {
   return (
-    <section
-      className="
-        relative
-        w-full
-        bg-violet-50
-        overflow-hidden
-      "
-    >
-      {/* =====================================================
-          MAIN 1440PX SECTION
-      ===================================================== */}
+    <section className="relative w-full overflow-hidden bg-violet-50">
+      {/* MAIN CONTAINER */}
 
       <div
         className="
+          mx-auto
           w-full
           max-w-[1440px]
-          mx-auto
-          px-6
-          sm:px-8
-          lg:px-[80px]
-          pt-[72px]
-          pb-[72px]
-          lg:pt-[96.3px]
-          lg:pb-[96px]
+          px-4
+          py-12
+          min-[480px]:px-5
+          sm:py-16
+          md:px-8
+          md:py-20
+          lg:px-12
+          xl:px-20
+          xl:py-24
         "
       >
-        {/* ===================================================
-            HEADER
-        =================================================== */}
+        {/* HEADER */}
 
         <motion.div
           initial="hidden"
@@ -488,56 +333,47 @@ export default function SharedEvidenceArchitecture() {
           }}
           variants={{
             hidden: {},
-
             visible: {
               transition: {
                 staggerChildren: 0.12,
               },
             },
           }}
-          className="
-            w-full
-            max-w-[1280px]
-          "
+          className="w-full max-w-[1280px]"
         >
           {/* EYEBROW */}
 
-          <motion.div
+          <motion.p
             variants={fadeUp}
             className="
-              w-full
-              text-yellow-600
+              font-['IBM_Plex_Sans']
               text-xs
               font-bold
-              font-['IBM_Plex_Sans']
               tracking-wide
+              text-yellow-600
+              sm:text-sm
             "
           >
             SHARED EVIDENCE ARCHITECTURE
-          </motion.div>
+          </motion.p>
 
           {/* HEADING */}
 
           <motion.h2
             variants={fadeUp}
             className="
+              mt-3
               w-full
               max-w-[780px]
-              pt-3
-              text-slate-900
-              text-[32px]
-              sm:text-[40px]
-              lg:text-5xl
-              font-bold
               font-['IBM_Plex_Sans']
-              leading-[1.08]
-              lg:leading-[48.72px]
+              text-[clamp(1.8rem,4.2vw,3rem)]
+              font-bold
+              leading-[1.1]
               tracking-[-0.02em]
+              text-slate-900
             "
           >
-            One governed evidence base, not
-            <br />
-            parallel tabs and files.
+            One governed evidence base, not parallel tabs and files.
           </motion.h2>
 
           {/* DESCRIPTION */}
@@ -545,51 +381,45 @@ export default function SharedEvidenceArchitecture() {
           <motion.p
             variants={fadeUp}
             className="
+              mt-3
               w-full
               max-w-[800px]
-              pt-2
-              text-gray-600
-              text-sm
-              sm:text-base
-              font-normal
               font-['IBM_Plex_Sans']
+              text-sm
+              font-normal
               leading-6
-              lg:leading-7
+              text-gray-600
+              sm:text-base
+              sm:leading-7
             "
           >
             The public page describes &quot;shared evidence&quot; as an
-            outcome, not database synchronization or real-time
-            <br className="hidden lg:block" />
-            collaboration. Every layer keeps its own ownership and guardrail.
+            outcome, not database synchronization or real-time collaboration.
+            Every layer keeps its own ownership and guardrail.
           </motion.p>
         </motion.div>
 
-        {/* ===================================================
-            FIVE ARCHITECTURE CARDS
-
-            DESKTOP:
-            240px × 5
-            20px gaps
-
-            240 + 20 + 240 + 20 + 240 + 20 + 240 + 20 + 240
-            = 1280px
-        =================================================== */}
+        {/* ARCHITECTURE CARDS */}
 
         <div
           className="
+            mt-8
+            grid
             w-full
             max-w-[1280px]
-            mt-7
-            grid
             grid-cols-1
-            sm:grid-cols-2
-            lg:grid-cols-5
-            gap-5
+            items-stretch
+            gap-4
+            min-[480px]:grid-cols-2
+            sm:mt-10
+            lg:grid-cols-3
+            lg:gap-5
+            2xl:grid-cols-5
           "
         >
           {architectureLayers.map((layer, index) => (
             <ArchitectureCard
-              key={index}
+              key={layer.title}
               title={layer.title}
               description={layer.description}
               badge={layer.badge}
@@ -598,32 +428,27 @@ export default function SharedEvidenceArchitecture() {
           ))}
         </div>
 
-        {/* ===================================================
-            LOWER SECTION
-
-            DESKTOP:
-            IMAGE: 384px
-            GAP: 113px
-            CONTENT: 783px
-
-            384 + 113 + 783 = 1280px
-        =================================================== */}
+        {/* EVIDENCE DETAILS SECTION */}
 
         <div
           className="
+            mt-10
+            grid
             w-full
             max-w-[1280px]
-            mt-[79px]
-            grid
             grid-cols-1
-            lg:grid-cols-[384px_minmax(0,1fr)]
-            lg:gap-[113px]
             items-start
+            gap-7
+            sm:mt-14
+            sm:gap-9
+            lg:mt-16
+            xl:grid-cols-[minmax(0,384px)_minmax(0,1fr)]
+            xl:gap-12
+            2xl:mt-[79px]
+            2xl:gap-[72px]
           "
         >
-          {/* =================================================
-              IMAGE
-          ================================================= */}
+          {/* LEFT — IMAGE */}
 
           <motion.div
             initial={{
@@ -638,7 +463,7 @@ export default function SharedEvidenceArchitecture() {
             }}
             viewport={{
               once: true,
-              amount: 0.2,
+              amount: 0.15,
             }}
             transition={{
               duration: 0.8,
@@ -646,11 +471,14 @@ export default function SharedEvidenceArchitecture() {
             }}
             className="
               relative
+              aspect-[4/3]
               w-full
-              h-[480px]
-              bg-slate-900
-              rounded-2xl
+              min-w-0
               overflow-hidden
+              rounded-2xl
+              bg-slate-900
+              sm:aspect-[5/3]
+              xl:aspect-[4/5]
             "
           >
             <Image
@@ -658,30 +486,22 @@ export default function SharedEvidenceArchitecture() {
               alt="Shared evidence architecture"
               fill
               priority
-              sizes="(max-width: 1024px) 100vw, 384px"
-              className="
-                object-cover
-                object-center
-              "
+              sizes="(max-width: 639px) calc(100vw - 32px), (max-width: 1023px) calc(100vw - 64px), (max-width: 1279px) calc(100vw - 96px), 384px"
+              className="object-cover object-center"
             />
           </motion.div>
 
-          {/* =================================================
-              RIGHT EVIDENCE AREA
-
-              2 COLUMNS × 5 ROWS
-          ================================================= */}
+          {/* RIGHT — EVIDENCE DETAILS */}
 
           <div
             className="
+              grid
               w-full
               min-w-0
-              mt-8
-              lg:mt-0
-              grid
               grid-cols-1
+              gap-x-6
               sm:grid-cols-2
-              sm:gap-x-10
+              sm:gap-x-8
               lg:gap-x-10
             "
           >

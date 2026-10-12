@@ -38,7 +38,7 @@ const links = [
 export default function RelatedResearchTrust() {
   return (
     <section className="w-full overflow-hidden bg-violet-50">
-      <div className="mx-auto w-full max-w-[1440px] px-5 py-16 sm:px-8 sm:py-20 lg:px-20 lg:py-[96px]">
+      <div className="mx-auto w-full max-w-[1440px] px-5 py-16 sm:px-8 sm:py-20 lg:px-8 lg:py-[96px] xl:px-20">
         {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 24 }}
@@ -54,7 +54,7 @@ export default function RelatedResearchTrust() {
             RELATED RESEARCH &amp; TRUST
           </div>
 
-          <h2 className="pt-3 text-[36px] font-bold leading-[1.08] tracking-[-0.02em] text-slate-900 sm:text-[44px] lg:text-5xl lg:leading-[48.72px] [font-family:'IBM_Plex_Sans']">
+          <h2 className="pt-3 text-[32px] font-bold leading-[1.08] tracking-[-0.02em] text-slate-900 sm:text-[40px] lg:text-[44px] xl:text-5xl lg:leading-[48.72px] [font-family:'IBM_Plex_Sans']">
             Continue into evidence, trust
             <br className="hidden sm:block" /> and coverage.
           </h2>
@@ -66,7 +66,7 @@ export default function RelatedResearchTrust() {
         </motion.div>
 
         {/* Related links */}
-        <div className="mt-7 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-5">
+        <div className="mt-7 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5">
           {links.map((link, index) => (
             <motion.a
               key={link.title}
@@ -80,7 +80,7 @@ export default function RelatedResearchTrust() {
                 ease: [0.22, 1, 0.36, 1],
               }}
               whileHover={{ y: -4 }}
-              className="group flex min-h-[150px] flex-col rounded-2xl border border-slate-900/10 bg-white p-5 transition-shadow duration-300 hover:shadow-sm"
+              className="group flex h-full min-h-[150px] flex-col rounded-2xl border border-slate-900/10 bg-white p-5 transition-shadow duration-300 hover:shadow-sm"
             >
               <div className="flex items-start justify-between">
                 <h3 className="text-base font-bold leading-6 text-slate-900 [font-family:'IBM_Plex_Sans']">

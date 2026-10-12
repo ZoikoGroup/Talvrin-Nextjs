@@ -43,7 +43,7 @@ const coverageItems = [
 export default function CoverageTransparency() {
   return (
     <section className="relative overflow-hidden bg-white">
-      <div className="mx-auto w-full max-w-[1320px] px-6 py-20 sm:px-8 lg:px-10 lg:py-24">
+      <div className="mx-auto w-full max-w-[1320px] px-4 py-14 sm:px-6 sm:py-16 md:px-8 lg:px-12 lg:py-24 xl:px-16">
         {/* =====================================================
             HEADER
         ===================================================== */}
@@ -62,14 +62,14 @@ export default function CoverageTransparency() {
           </div>
 
           {/* Heading */}
-          <h2 className="max-w-[760px] pt-3 font-['IBM_Plex_Sans'] text-[36px] font-bold leading-[1.08] tracking-[-0.02em] text-slate-900 sm:text-[42px] lg:text-5xl lg:leading-[48.72px]">
+          <h2 className="max-w-[760px] pt-3 font-['IBM_Plex_Sans'] text-[28px] font-bold leading-[1.12] tracking-[-0.02em] text-slate-900 sm:text-[36px] md:text-[42px] lg:text-5xl lg:leading-[48.72px]">
             Global by architecture. Coverage
             <br className="hidden sm:block" />
             shown as released.
           </h2>
 
           {/* Description */}
-          <p className="max-w-[780px] pt-5 pb-8 font-['IBM_Plex_Sans'] text-base font-normal leading-7 text-gray-600 lg:pb-10">
+          <p className="max-w-[780px] pt-4 pb-8 font-['IBM_Plex_Sans'] text-sm sm:text-base font-normal leading-relaxed text-gray-600 lg:pb-10">
             Global architecture is not the same as live jurisdiction coverage.
             Every claim below traces back to a governed registry.
           </p>

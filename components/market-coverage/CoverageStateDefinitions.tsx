@@ -58,12 +58,14 @@ export default function CoverageStateDefinitions() {
           mx-auto
           w-full
           max-w-[1440px]
-          px-6
-          py-20
-          sm:px-8
-          md:px-10
-          lg:px-20
-          lg:py-[95px]
+          px-4
+          py-12
+          sm:px-6
+          md:px-8
+          lg:px-8
+          xl:px-20
+          lg:py-16
+          xl:py-[95px]
         "
       >
         {/* Header */}
@@ -90,13 +92,13 @@ export default function CoverageStateDefinitions() {
               max-w-[780px]
               pt-3
               font-['IBM_Plex_Sans']
-              text-[36px]
+              text-[30px]
               font-bold
-              leading-[43px]
+              leading-[38px]
               tracking-[-0.8px]
               text-slate-900
-              sm:text-[42px]
-              sm:leading-[46px]
+              sm:text-[38px]
+              sm:leading-[44px]
               lg:text-[48px]
               lg:leading-[48.72px]
             "
@@ -111,12 +113,13 @@ export default function CoverageStateDefinitions() {
             className="
               m-0
               max-w-[800px]
-              pt-5
-              pb-10
+              pt-4
+              pb-8
+              sm:pb-10
               font-['IBM_Plex_Sans']
-              text-[15px]
+              text-[14px]
               font-normal
-              leading-7
+              leading-6
               text-gray-600
               sm:text-base
             "
@@ -135,11 +138,14 @@ export default function CoverageStateDefinitions() {
               className="
                 grid
                 w-full
-                gap-4
+                gap-3
+                sm:gap-4
                 border-b-[0.8px]
                 border-slate-900/10
-                py-5
-                lg:grid-cols-[192px_minmax(0,1fr)_minmax(0,1fr)]
+                py-4
+                sm:py-5
+                lg:grid-cols-[170px_minmax(0,1fr)_minmax(0,1fr)]
+                xl:grid-cols-[192px_minmax(0,1fr)_minmax(0,1fr)]
               "
             >
               {/* Status */}

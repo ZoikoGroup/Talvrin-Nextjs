@@ -32,14 +32,18 @@ export default function SupportRequest() {
           px-5
           py-16
 
-          sm:px-6
+          sm:px-8
           sm:py-20
 
-          lg:grid-cols-[760px_320px]
+          lg:grid-cols-[minmax(0,1fr)_300px]
           lg:items-start
-          lg:gap-[22px]
-          lg:px-0
-          lg:py-[96px]
+          lg:gap-8
+          lg:px-8
+          lg:py-24
+
+          xl:grid-cols-[760px_320px]
+          xl:gap-[22px]
+          xl:px-0
         "
       >
         {/* =====================================================
@@ -534,7 +538,8 @@ export default function SupportRequest() {
             lg:order-none
             lg:mt-[89.4px]
             lg:h-[461px]
-            lg:w-[320px]
+            lg:w-[300px]
+            xl:w-[320px]
           "
         >
           {/* 

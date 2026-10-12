@@ -199,12 +199,15 @@ export default function EvidenceSourceArchitecture() {
           relative
           mx-auto
           w-full
-          max-w-[1273px]
-          px-5
-          py-20
-          sm:px-8
-          lg:px-0
-          lg:py-[95px]
+          max-w-[1320px]
+          px-4
+          py-14
+          sm:px-6
+          sm:py-16
+          md:px-8
+          lg:px-12
+          lg:py-24
+          xl:px-16
         "
       >
         <motion.div style={{ y: contentY }}>
@@ -266,12 +269,13 @@ export default function EvidenceSourceArchitecture() {
               mt-5
               max-w-[1000px]
               font-['IBM_Plex_Sans']
-              text-[36px]
+              text-[28px]
               font-bold
-              leading-[1.08]
+              leading-[1.12]
               tracking-[-0.025em]
               text-slate-900
-              sm:text-[42px]
+              sm:text-[36px]
+              md:text-[42px]
               lg:text-5xl
               lg:leading-[48.72px]
             "
@@ -330,8 +334,10 @@ export default function EvidenceSourceArchitecture() {
               grid
               grid-cols-1
               gap-8
-              lg:grid-cols-[384px_minmax(0,1fr)]
-              lg:gap-[98px]
+              lg:grid-cols-[minmax(300px,360px)_minmax(0,1fr)]
+              xl:grid-cols-[384px_minmax(0,1fr)]
+              lg:gap-8
+              xl:gap-[98px]
             "
           >
             {/* ===================================================

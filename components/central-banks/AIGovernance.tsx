@@ -59,58 +59,62 @@ export default function AIGovernance() {
         className="
           mx-auto
           w-full
-          max-w-[1280px]
-          px-6
-          py-20
-          sm:px-8
-          sm:py-24
-          lg:px-0
+          max-w-[1440px]
+          px-4
+          py-14
+          sm:px-6
+          sm:py-16
+          md:px-8
+          lg:px-12
           lg:py-[96px]
+          xl:px-[80px]
         "
       >
-        {/* Header */}
-        <motion.div
-          style={{
-            opacity: contentOpacity,
-            y: contentY,
-          }}
-        >
-          {/* Eyebrow */}
-          <div
-            className="
-              font-['IBM_Plex_Sans']
-              text-xs
-              font-bold
-              tracking-wide
-              text-yellow-600
-            "
+        <div className="mx-auto w-full max-w-[1280px]">
+          {/* Header */}
+          <motion.div
+            style={{
+              opacity: contentOpacity,
+              y: contentY,
+            }}
           >
-            AI GOVERNANCE
-          </div>
+            {/* Eyebrow */}
+            <div
+              className="
+                font-['IBM_Plex_Sans']
+                text-xs
+                font-bold
+                tracking-wide
+                text-yellow-600
+              "
+            >
+              AI GOVERNANCE
+            </div>
 
-          {/* Heading */}
-          <h2
-            className="
-              mt-4
-              max-w-[900px]
-              font-['IBM_Plex_Sans']
-              text-[38px]
-              font-bold
-              leading-[42px]
-              text-slate-900
-              sm:text-[44px]
-              sm:leading-[46px]
-              lg:text-5xl
-              lg:leading-[48.72px]
-            "
-          >
-            AI may help organize and explain
-            <br className="hidden sm:block" />
-            the evidence. It does not become
-            <br className="hidden sm:block" />
-            the evidence.
-          </h2>
-        </motion.div>
+            {/* Heading */}
+            <h2
+              className="
+                mt-4
+                max-w-[900px]
+                font-['IBM_Plex_Sans']
+                text-[30px]
+                font-bold
+                leading-[1.1]
+                text-slate-900
+                sm:text-[38px]
+                sm:leading-[44px]
+                md:text-[44px]
+                lg:text-5xl
+                lg:leading-[48.72px]
+              "
+            >
+              AI may help organize and explain
+              <br className="hidden sm:block" />
+              the evidence. It does not become
+              <br className="hidden sm:block" />
+              the evidence.
+            </h2>
+          </motion.div>
 
         {/* Content */}
         <div
@@ -261,6 +265,7 @@ export default function AIGovernance() {
               />
             </motion.div>
           </motion.div>
+        </div>
         </div>
       </div>
     </section>

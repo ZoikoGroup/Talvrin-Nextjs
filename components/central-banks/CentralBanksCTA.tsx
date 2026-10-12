@@ -48,13 +48,15 @@ export default function CentralBanksCTA() {
           flex-col
           items-center
           gap-4
-          px-6
-          py-20
+          px-4
+          py-14
           text-center
-          sm:px-8
-          sm:py-24
-          lg:px-0
+          sm:px-6
+          sm:py-16
+          md:px-8
+          lg:px-12
           lg:py-[88.8px]
+          xl:px-[80px]
         "
       >
         {/* Heading */}
@@ -62,12 +64,13 @@ export default function CentralBanksCTA() {
           className="
             w-full
             font-['IBM_Plex_Sans']
-            text-[38px]
+            text-[30px]
             font-bold
-            leading-[42px]
+            leading-[1.1]
             text-slate-900
-            sm:text-[44px]
-            sm:leading-[46px]
+            sm:text-[38px]
+            sm:leading-[44px]
+            md:text-[44px]
             lg:text-5xl
             lg:leading-[48.3px]
           "

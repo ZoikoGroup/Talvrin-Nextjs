@@ -21,16 +21,21 @@ export default function Coverage() {
           relative
           mx-auto
           flex
-          min-h-[909px]
+          min-h-[auto]
+          lg:min-h-[640px]
+          xl:min-h-[780px]
+          2xl:min-h-[909px]
           w-full
           max-w-[1440px]
           items-center
-          px-6
-          py-20
-          sm:px-8
-          md:px-10
-          lg:px-20
-          lg:py-[80px]
+          px-4
+          py-12
+          sm:px-6
+          md:px-8
+          lg:px-8
+          xl:px-20
+          lg:py-16
+          xl:py-[80px]
         "
       >
         <div
@@ -39,9 +44,11 @@ export default function Coverage() {
             w-full
             grid-cols-1
             items-center
-            gap-12
-            lg:grid-cols-[minmax(0,1fr)_577px]
-            lg:gap-[70px]
+            gap-10
+            lg:grid-cols-2
+            xl:grid-cols-[minmax(0,1fr)_577px]
+            lg:gap-10
+            xl:gap-[70px]
           "
         >
           {/* LEFT CONTENT */}
@@ -78,23 +85,25 @@ export default function Coverage() {
                 className="
                   m-0
                   font-['IBM_Plex_Sans']
-                  text-[42px]
+                  text-[32px]
                   font-bold
-                  leading-[48px]
+                  leading-[1.12]
                   tracking-[-1px]
                   text-violet-50
-                  sm:text-[52px]
-                  sm:leading-[57px]
-                  lg:text-[60px]
-                  lg:leading-[63.8px]
+                  sm:text-[42px]
+                  md:text-[50px]
+                  lg:text-[46px]
+                  xl:text-[58px]
+                  2xl:text-[60px]
+                  xl:leading-[63.8px]
                 "
               >
-                Global by
-                <br />
-                architecture. Precise
-                <br />
-                about what is
-                <br />
+                Global by{" "}
+                <br className="hidden xl:block" />
+                architecture. Precise{" "}
+                <br className="hidden xl:block" />
+                about what is{" "}
+                <br className="hidden xl:block" />
                 supported.
               </h1>
             </div>
@@ -105,12 +114,14 @@ export default function Coverage() {
                 className="
                   m-0
                   font-['IBM_Plex_Sans']
-                  text-[16px]
+                  text-[15px]
                   font-normal
-                  leading-7
+                  leading-6
                   text-violet-50/70
-                  sm:text-[18px]
-                  sm:leading-8
+                  sm:text-[17px]
+                  sm:leading-7
+                  lg:text-[18px]
+                  lg:leading-8
                 "
               >
                 Explore Talvrin&apos;s current market and domain coverage by
@@ -145,26 +156,30 @@ export default function Coverage() {
                 flex
                 w-full
                 flex-col
-                items-start
-                gap-4
-                pt-4
+                items-stretch
+                gap-3
+                pt-3
                 sm:w-auto
+                sm:flex-row
+                sm:items-center
+                sm:gap-4
               "
             >
               {/* Primary CTA */}
               <a
-                href="#coverage-explorer"
+                href="#coverage"
                 className="
                   inline-flex
-                  min-h-[52px]
+                  min-h-[48px]
                   items-center
                   justify-center
                   rounded-lg
                   bg-violet-50
-                  px-7
-                  py-4
+                  px-6
+                  py-3.5
                   font-['IBM_Plex_Sans']
-                  text-base
+                  text-sm
+                  sm:text-base
                   font-semibold
                   leading-5
                   text-slate-900
@@ -172,34 +187,44 @@ export default function Coverage() {
                   duration-200
                   hover:bg-white
                   hover:shadow-sm
+                  sm:min-h-[52px]
+                  sm:px-7
+                  sm:py-4
                 "
               >
                 Explore Coverage
               </a>
 
-              {/* Secondary CTA — Supported Jurisdictions page not published yet */}
-              <span
-                aria-disabled="true"
+              {/* Secondary CTA */}
+              <a
+                href="#supported-jurisdictions"
                 className="
                   inline-flex
-                  cursor-not-allowed
-                  h-14
+                  min-h-[48px]
                   items-center
                   justify-center
                   rounded-lg
                   border
                   border-violet-50/20
-                  px-7
-                  py-4
+                  px-6
+                  py-3.5
                   font-['IBM_Plex_Sans']
-                  text-base
+                  text-sm
+                  sm:text-base
                   font-semibold
                   leading-5
                   text-violet-50/60
+                  transition-all
+                  duration-200
+                  hover:border-violet-50/40
+                  hover:text-violet-50/80
+                  sm:min-h-[56px]
+                  sm:px-7
+                  sm:py-4
                 "
               >
                 Supported Jurisdictions — publishing next
-              </span>
+              </a>
             </div>
 
             {/* Bottom disclaimer */}
@@ -227,21 +252,23 @@ export default function Coverage() {
               relative
               mx-auto
               w-full
-              max-w-[577px]
+              max-w-[460px]
               overflow-hidden
               border
               border-cyan-400
-              lg:h-[521px]
-              lg:max-w-[577px]
+              lg:mx-0
+              lg:ml-auto
+              lg:max-w-none
+              xl:max-w-[577px]
             "
           >
-            <div className="relative h-[480px] w-full sm:h-[560px] lg:h-[521px]">
+            <div className="relative h-[300px] w-full sm:h-[420px] md:h-[480px] lg:h-[460px] xl:h-[521px]">
               <Image
                 src="/images/markets/market-coverage/hero.png"
                 alt="Talvrin market coverage"
                 fill
                 priority
-                sizes="(max-width: 1023px) 100vw, 577px"
+                sizes="(max-width: 1023px) 100vw, (max-width: 1279px) 50vw, 577px"
                 className="object-cover"
               />
             </div>

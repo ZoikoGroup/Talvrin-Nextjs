@@ -57,8 +57,8 @@ export default function EnterpriseFaq() {
 
   return (
     <section className="w-full bg-white">
-      <div className="mx-auto w-full max-w-[1440px] px-6 py-20 sm:px-8 md:px-10 lg:px-20 lg:py-[96px]">
-        <div className="grid w-full grid-cols-1 gap-10 lg:grid-cols-[minmax(0,840px)_384px] lg:items-start lg:gap-[27px]">
+      <div className="mx-auto w-full max-w-[1440px] px-4 py-12 sm:px-6 md:px-8 lg:px-8 xl:px-20 lg:py-16 xl:py-[96px]">
+        <div className="grid w-full grid-cols-1 gap-8 lg:grid-cols-[minmax(0,1fr)_340px] xl:grid-cols-[minmax(0,840px)_384px] lg:items-start lg:gap-8 xl:gap-[27px]">
           {/* LEFT - FAQ */}
           <div className="w-full">
             {/* Eyebrow */}
@@ -67,12 +67,12 @@ export default function EnterpriseFaq() {
             </div>
 
             {/* Heading */}
-            <h2 className="m-0 mt-[13px] max-w-[760px] font-['IBM_Plex_Sans'] text-[36px] font-bold leading-[43px] tracking-[-0.8px] text-slate-900 sm:text-[42px] sm:leading-[46px] lg:text-[48px] lg:leading-[48.3px]">
+            <h2 className="m-0 mt-3 sm:mt-[13px] max-w-[760px] font-['IBM_Plex_Sans'] text-[30px] font-bold leading-[38px] tracking-[-0.8px] text-slate-900 sm:text-[38px] sm:leading-[44px] lg:text-[48px] lg:leading-[48.3px]">
               Frequently asked, answered first.
             </h2>
 
             {/* FAQ List */}
-            <div className="mt-7 w-full">
+            <div className="mt-6 sm:mt-7 w-full">
               {faqs.map((faq, index) => {
                 const isOpen = openIndex === index;
 
@@ -86,9 +86,9 @@ export default function EnterpriseFaq() {
                       type="button"
                       onClick={() => toggleFaq(index)}
                       aria-expanded={isOpen}
-                      className="flex w-full items-center justify-between gap-6 py-5 text-left font-['IBM_Plex_Sans'] outline-none"
+                      className="flex w-full items-center justify-between gap-4 sm:gap-6 py-4 sm:py-5 text-left font-['IBM_Plex_Sans'] outline-none"
                     >
-                      <span className="min-w-0 flex-1 text-[16px] font-semibold leading-6 text-slate-900">
+                      <span className="min-w-0 flex-1 text-[15px] sm:text-[16px] font-semibold leading-6 text-slate-900">
                         {faq.question}
                       </span>
 
@@ -106,7 +106,7 @@ export default function EnterpriseFaq() {
                       }`}
                     >
                       <div className="min-h-0 overflow-hidden">
-                        <div className="max-w-[720px] pb-5 font-['IBM_Plex_Sans'] text-[16px] font-normal leading-6 text-gray-600">
+                        <div className="max-w-[720px] pb-4 sm:pb-5 font-['IBM_Plex_Sans'] text-[14px] sm:text-[16px] font-normal leading-6 text-gray-600">
                           {faq.answer}
                         </div>
                       </div>
@@ -118,13 +118,13 @@ export default function EnterpriseFaq() {
           </div>
 
           {/* RIGHT - IMAGE */}
-          <div className="relative h-[608px] w-full overflow-hidden rounded-2xl lg:mt-[137px]">
+          <div className="relative h-[320px] sm:h-[420px] lg:h-[520px] xl:h-[608px] w-full overflow-hidden rounded-2xl lg:mt-10 xl:mt-[137px]">
             <Image
               src="/images/solutions/enterprise/image8.png"
               alt="Talvrin Enterprise team"
               fill
               priority
-              sizes="(max-width: 1023px) 100vw, 384px"
+              sizes="(max-width: 1023px) 100vw, (max-width: 1279px) 340px, 384px"
               className="object-cover"
             />
           </div>

@@ -38,7 +38,7 @@ const coverageRows = [
 export default function CoverageTruth() {
   return (
     <section className="w-full overflow-hidden bg-violet-50">
-      <div className="mx-auto w-full max-w-[1440px] px-5 py-16 sm:px-8 sm:py-20 lg:px-20 lg:py-[96px]">
+      <div className="mx-auto w-full max-w-[1440px] px-5 py-16 sm:px-8 sm:py-20 lg:px-8 lg:py-[96px] xl:px-20">
         {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 24 }}

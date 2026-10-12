@@ -51,23 +51,20 @@ export default function TalvrinMethodologyHero() {
       <div
         className="
           mx-auto
-          flex
           w-full
           max-w-[1296px]
-          flex-col
-          items-center
-          px-6
-          py-16
-
+          px-5
+          py-14
           sm:px-8
           sm:py-20
-
-          lg:flex-row
+          lg:grid
+          lg:grid-cols-2
           lg:items-center
-          lg:justify-between
-          lg:px-7
-          lg:py-[74px]
-
+          lg:gap-8
+          lg:px-8
+          lg:py-16
+          xl:grid-cols-[minmax(0,578px)_minmax(0,636px)]
+          xl:gap-12
           xl:py-[74px]
         "
       >
@@ -83,7 +80,7 @@ export default function TalvrinMethodologyHero() {
           className="
             flex
             w-full
-            max-w-[577.9px]
+            max-w-[578px]
             flex-col
             items-start
             gap-4
@@ -109,24 +106,24 @@ export default function TalvrinMethodologyHero() {
             <h1
               className="
                 w-full
-                text-[42px]
+                text-[34px]
                 font-bold
                 leading-[1.12]
                 tracking-[-0.025em]
                 text-[#F6F5FB]
-
-                sm:text-[48px]
+                sm:text-[44px]
                 sm:leading-[1.12]
-
-                lg:text-[60px]
-                lg:leading-[63.8px]
+                lg:text-[44px]
+                lg:leading-[1.12]
+                xl:text-[60px]
+                xl:leading-[63.8px]
               "
             >
               How Talvrin keeps
-              <br />
-              research connected
-              <br />
-              to the evidence.
+              <br className="hidden sm:block lg:hidden xl:block" />
+              {" "}research connected
+              <br className="hidden sm:block lg:hidden xl:block" />
+              {" "}to the evidence.
             </h1>
           </div>
 
@@ -280,17 +277,17 @@ export default function TalvrinMethodologyHero() {
           }}
           className="
             relative
-            mt-12
+            mx-auto
+            mt-10
             w-full
-            max-w-[636px]
-            shrink-0
+            max-w-[500px]
             overflow-hidden
             rounded-[16px]
-
-            sm:mt-14
-
+            sm:mt-12
+            lg:mx-0
             lg:mt-0
-            lg:w-[636px]
+            lg:max-w-none
+            xl:max-w-[636px]
           "
         >
           <div className="relative aspect-square w-full">

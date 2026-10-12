@@ -78,6 +78,7 @@ function TrustCard({
     <div
       className="
         flex
+        h-full
         min-h-[151px]
         w-full
         flex-col
@@ -224,11 +225,12 @@ export default function TrustAndEscalation() {
           px-5
           py-16
 
-          sm:px-6
+          sm:px-8
           sm:py-20
 
-          lg:px-0
-          lg:py-[96px]
+          lg:px-8
+          lg:py-24
+          xl:px-0
         "
       >
         {/* =====================================================
@@ -272,7 +274,7 @@ export default function TrustAndEscalation() {
           <h2
             className="
               font-['IBM_Plex_Sans']
-              text-[32px]
+              text-[28px]
               font-bold
               leading-10
               tracking-[-0.02em]
@@ -284,7 +286,7 @@ export default function TrustAndEscalation() {
           >
             Security, privacy and governance questions
             <br className="hidden sm:block" />
-            use a dedicated route.
+            {" "}use a dedicated route.
           </h2>
         </div>
 
@@ -320,16 +322,18 @@ export default function TrustAndEscalation() {
         ====================================================== */}
         <div
           className="
-            mt-[69px]
+            mt-10
             grid
             w-full
             grid-cols-1
             gap-5
 
             sm:grid-cols-2
+            lg:grid-cols-[repeat(3,minmax(0,1fr))_240px]
+            lg:gap-5
 
-            lg:grid-cols-[256px_256px_256px_256px]
-            lg:gap-[23px]
+            xl:grid-cols-[256px_256px_256px_256px]
+            xl:gap-[23px]
           "
         >
           {/* =================================================

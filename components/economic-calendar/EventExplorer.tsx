@@ -53,34 +53,35 @@ export default function EventExplorer() {
 
   return (
     <section className="relative overflow-hidden bg-white">
-      <div className="mx-auto w-full max-w-[1320px] px-6 py-20 sm:px-8 lg:px-10 lg:py-24">
-        {/* =========================================================
-            SECTION HEADER
-        ========================================================= */}
-        <motion.div
-          initial={{ opacity: 0, y: 28 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.2 }}
-          transition={{ duration: 0.65, ease: "easeOut" }}
-        >
-          {/* Eyebrow */}
-          <div className="font-['IBM_Plex_Sans'] text-xs font-bold tracking-wide text-indigo-500">
-            UPCOMING AND RECENT ECONOMIC EVENTS
-          </div>
+      <div className="mx-auto w-full max-w-[1440px] px-4 py-14 sm:px-6 sm:py-16 md:px-8 lg:px-12 lg:py-24 xl:px-16">
+        <div className="w-full max-w-[1320px]">
+          {/* =========================================================
+              SECTION HEADER
+          ========================================================= */}
+          <motion.div
+            initial={{ opacity: 0, y: 28 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.2 }}
+            transition={{ duration: 0.65, ease: "easeOut" }}
+          >
+            {/* Eyebrow */}
+            <div className="font-['IBM_Plex_Sans'] text-xs font-bold tracking-wide text-indigo-500">
+              UPCOMING AND RECENT ECONOMIC EVENTS
+            </div>
 
-          {/* Heading */}
-          <h2 className="max-w-[780px] pt-3 font-['IBM_Plex_Sans'] text-[36px] font-bold leading-[1.08] tracking-[-0.02em] text-slate-900 sm:text-[42px] lg:text-5xl lg:leading-[48.72px]">
-            Set the date and time zone before
-            <br className="hidden sm:block" />
-            scanning events.
-          </h2>
+            {/* Heading */}
+            <h2 className="max-w-[780px] pt-3 font-['IBM_Plex_Sans'] text-[30px] font-bold leading-[1.1] tracking-[-0.02em] text-slate-900 sm:text-[38px] md:text-[44px] lg:text-5xl lg:leading-[48.72px]">
+              Set the date and time zone before
+              <br className="hidden sm:block" />
+              scanning events.
+            </h2>
 
-          {/* Description */}
-          <p className="max-w-[800px] pt-5 font-['IBM_Plex_Sans'] text-base font-normal leading-7 text-gray-600">
-            Every scheduled time makes its zone explicit. List view is the
-            accessible baseline; a calendar grid is never the only way in.
-          </p>
-        </motion.div>
+            {/* Description */}
+            <p className="max-w-[800px] pt-5 font-['IBM_Plex_Sans'] text-base font-normal leading-7 text-gray-600">
+              Every scheduled time makes its zone explicit. List view is the
+              accessible baseline; a calendar grid is never the only way in.
+            </p>
+          </motion.div>
 
         {/* =========================================================
             FILTER / CALENDAR CONTROLS
@@ -316,7 +317,7 @@ export default function EventExplorer() {
             duration: 0.7,
             ease: "easeOut",
           }}
-          className="relative mt-12 h-[280px] overflow-hidden rounded-2xl bg-violet-50 sm:h-[340px] lg:h-[384px]"
+          className="relative mt-12 h-[200px] overflow-hidden rounded-2xl bg-violet-50 sm:h-[280px] md:h-[340px] lg:h-[384px]"
         >
           <Image
             src="/images/research/economic-calendar/image.png"
@@ -326,6 +327,7 @@ export default function EventExplorer() {
             sizes="(max-width: 640px) 100vw, (max-width: 1024px) 90vw, 1280px"
           />
         </motion.div>
+        </div>
       </div>
     </section>
   );

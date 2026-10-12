@@ -39,11 +39,12 @@ export default function AIBoundary() {
           w-full
           max-w-[1280px]
           px-5
-          py-20
+          py-16
           sm:px-7
-          sm:py-24
-          lg:px-0
+          sm:py-20
+          lg:px-8
           lg:py-[95.62px]
+          xl:px-0
         "
       >
         {/* ============================================================
@@ -112,8 +113,9 @@ export default function AIBoundary() {
             grid-cols-1
             gap-4
             sm:grid-cols-2
-            lg:grid-cols-4
+            lg:grid-cols-2
             lg:gap-5
+            xl:grid-cols-4
           "
         >
           {/* ==========================================================
@@ -173,7 +175,7 @@ export default function AIBoundary() {
             className="
               relative
               order-first
-              h-[320px]
+              h-[280px]
               w-full
               overflow-hidden
               rounded-2xl
@@ -182,9 +184,12 @@ export default function AIBoundary() {
               bg-white
               sm:order-none
               sm:col-span-2
-              lg:col-span-1
-              lg:row-span-2
+              lg:col-span-2
               lg:h-[320px]
+              xl:col-span-1
+              xl:row-span-2
+              xl:h-full
+              xl:min-h-[380px]
             "
           >
             <Image

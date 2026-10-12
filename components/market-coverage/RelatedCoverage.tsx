@@ -89,12 +89,14 @@ export default function RelatedCoverage() {
           mx-auto
           w-full
           max-w-[1440px]
-          px-6
-          py-20
-          sm:px-8
-          md:px-10
-          lg:px-20
-          lg:py-[96px]
+          px-4
+          py-12
+          sm:px-6
+          md:px-8
+          lg:px-8
+          xl:px-20
+          lg:py-16
+          xl:py-[96px]
         "
       >
         {/* CONTENT WRAPPER */}
@@ -128,7 +130,8 @@ export default function RelatedCoverage() {
           <div
             data-reveal
             className="
-              mt-4
+              mt-3
+              sm:mt-4
               translate-y-8
               opacity-0
               transition-all
@@ -144,12 +147,13 @@ export default function RelatedCoverage() {
                 m-0
                 max-w-[780px]
                 font-['IBM_Plex_Sans']
-                text-[36px]
+                text-[30px]
                 font-bold
-                leading-[1.1]
+                leading-[1.12]
                 tracking-[-1px]
                 text-slate-900
-                sm:text-[42px]
+                sm:text-[38px]
+                md:text-[42px]
                 lg:text-5xl
                 lg:leading-[48.72px]
               "

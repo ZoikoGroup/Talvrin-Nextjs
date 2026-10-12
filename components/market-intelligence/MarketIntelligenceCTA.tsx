@@ -10,14 +10,17 @@ export default function MarketIntelligenceCTA() {
           mx-auto
           flex
           w-full
-          max-w-[1439.8px]
+          max-w-[1440px]
           justify-center
-          px-5
-          py-20
-          sm:px-8
-          lg:min-h-[472.4px]
-          lg:px-[80px]
-          lg:py-0
+          px-4
+          py-14
+          sm:px-6
+          sm:py-16
+          md:px-8
+          lg:min-h-[420px]
+          lg:px-12
+          lg:py-20
+          xl:px-20
         "
       >
         <div
@@ -29,7 +32,6 @@ export default function MarketIntelligenceCTA() {
             items-center
             gap-4
             text-center
-            lg:mt-[88.8px]
           "
         >
           {/* Heading */}
@@ -37,12 +39,13 @@ export default function MarketIntelligenceCTA() {
             className="
               w-full
               font-['IBM_Plex_Sans']
-              text-[36px]
+              text-[28px]
               font-bold
-              leading-[1.08]
+              leading-[1.12]
               tracking-[-0.025em]
               text-slate-900
-              sm:text-[42px]
+              sm:text-[36px]
+              md:text-[42px]
               lg:text-5xl
               lg:leading-[48.3px]
             "

@@ -215,12 +215,15 @@ export default function ResearchAdjacentDestinations() {
           relative
           mx-auto
           w-full
-          max-w-[1273px]
-          px-5
-          py-20
-          sm:px-8
-          lg:px-0
-          lg:py-[96px]
+          max-w-[1320px]
+          px-4
+          py-14
+          sm:px-6
+          sm:py-16
+          md:px-8
+          lg:px-12
+          lg:py-24
+          xl:px-16
         "
       >
         <motion.div style={{ y: contentY }}>
@@ -282,12 +285,13 @@ export default function ResearchAdjacentDestinations() {
               mt-5
               max-w-[1273px]
               font-['IBM_Plex_Sans']
-              text-[36px]
+              text-[28px]
               font-bold
-              leading-[1.08]
+              leading-[1.12]
               tracking-[-0.025em]
               text-slate-900
-              sm:text-[42px]
+              sm:text-[36px]
+              md:text-[42px]
               lg:text-5xl
               lg:leading-[48.3px]
             "
@@ -345,8 +349,11 @@ export default function ResearchAdjacentDestinations() {
               grid
               grid-cols-1
               gap-6
-              lg:grid-cols-[778px_minmax(0,494.8px)]
-              lg:gap-0
+              lg:grid-cols-[minmax(0,1.2fr)_minmax(300px,1fr)]
+              xl:grid-cols-[778px_minmax(0,494.8px)]
+              lg:items-start
+              lg:gap-6
+              xl:gap-0
             "
           >
             {/* ===================================================
@@ -359,7 +366,8 @@ export default function ResearchAdjacentDestinations() {
                 grid-cols-1
                 gap-4
                 sm:grid-cols-2
-                lg:grid-cols-3
+                lg:grid-cols-2
+                xl:grid-cols-3
                 lg:gap-x-[17px]
                 lg:gap-y-[16px]
               "
@@ -400,18 +408,18 @@ export default function ResearchAdjacentDestinations() {
               className="
                 relative
                 mt-2
-                h-[380px]
+                h-[320px]
                 w-full
                 overflow-hidden
                 rounded-2xl
                 border
                 border-slate-900/10
                 bg-violet-50
-                sm:h-[480px]
+                sm:h-[420px]
                 lg:mt-0
-                lg:ml-[2px]
                 lg:h-[384px]
-                lg:w-[494.8px]
+                xl:ml-[2px]
+                xl:w-[494.8px]
               "
             >
               <motion.div

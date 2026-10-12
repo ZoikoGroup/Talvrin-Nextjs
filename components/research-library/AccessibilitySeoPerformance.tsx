@@ -45,11 +45,12 @@ export default function AccessibilitySeoPerformance() {
           w-full
           max-w-[1280px]
           px-5
-          py-20
+          py-16
           sm:px-7
-          sm:py-24
-          lg:px-0
+          sm:py-20
+          lg:px-8
           lg:py-[95.61px]
+          xl:px-0
         "
       >
         {/* ============================================================
@@ -127,10 +128,6 @@ export default function AccessibilitySeoPerformance() {
 
         {/* ============================================================
             CARDS + IMAGE
-            EXACT DESKTOP STRUCTURE:
-            
-            3 CARDS | IMAGE
-            3 CARDS | IMAGE
         ============================================================ */}
 
         <div
@@ -141,9 +138,10 @@ export default function AccessibilitySeoPerformance() {
             grid-cols-1
             gap-4
             sm:grid-cols-2
-            lg:grid-cols-[repeat(3,minmax(0,1fr))_500px]
-            lg:grid-rows-[184px_184px]
+            lg:grid-cols-3
             lg:gap-5
+            xl:grid-cols-[repeat(3,minmax(0,1fr))_500px]
+            xl:grid-rows-[minmax(184px,auto)_minmax(184px,auto)]
           "
         >
           {/* ==========================================================

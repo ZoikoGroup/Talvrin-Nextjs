@@ -77,8 +77,16 @@ export default function PolicyContextInstrumentHistory() {
           relative
           mx-auto
           w-full
-          max-w-[1439.8px]
+          max-w-[1440px]
           bg-white
+          px-4
+          py-14
+          sm:px-6
+          sm:py-16
+          md:px-8
+          lg:px-12
+          lg:py-[96px]
+          xl:px-[80px]
         "
       >
         <div
@@ -87,14 +95,6 @@ export default function PolicyContextInstrumentHistory() {
             mx-auto
             w-full
             max-w-[1280px]
-            px-6
-            py-16
-
-            sm:px-8
-
-            lg:h-[606.41px]
-            lg:px-0
-            lg:py-0
           "
         >
           {/* =====================================================
@@ -108,11 +108,6 @@ export default function PolicyContextInstrumentHistory() {
               flex-col
               items-start
               gap-3
-
-              lg:absolute
-              lg:left-0
-              lg:top-[96.43px]
-              lg:w-[1280px]
             "
           >
             {/* =================================================
@@ -170,17 +165,17 @@ export default function PolicyContextInstrumentHistory() {
               }}
               className="
                 w-full
+                max-w-[760px]
                 font-['IBM_Plex_Sans']
-                text-[38px]
+                text-[30px]
                 font-bold
-                leading-[1.08]
+                leading-[1.1]
                 tracking-[-0.02em]
                 text-slate-900
-
-                sm:text-5xl
-                sm:leading-[48.72px]
-
-                lg:w-[760px]
+                sm:text-[38px]
+                md:text-[44px]
+                lg:text-5xl
+                lg:leading-[48.72px]
               "
             >
               Institution-specific instruments.
@@ -211,21 +206,18 @@ export default function PolicyContextInstrumentHistory() {
               }}
               className="
                 w-full
+                max-w-[780px]
                 pt-2
-                pb-7
+                pb-4
                 font-['IBM_Plex_Sans']
                 text-base
                 font-normal
                 leading-7
                 text-gray-600
-
-                lg:w-[780px]
               "
             >
               Central banks use different instruments and frameworks. Forcing
-              them into one field would mislead
-              <br className="hidden lg:block" />
-              rather than simplify.
+              them into one field would mislead rather than simplify.
             </motion.div>
 
             {/* =================================================
@@ -250,15 +242,12 @@ export default function PolicyContextInstrumentHistory() {
                 delay: 0.15,
               }}
               className="
+                mt-4
                 w-full
                 rounded-2xl
                 bg-violet-50
                 p-6
-
                 sm:p-8
-
-                lg:w-[1280px]
-                lg:p-8
               "
             >
               <div
@@ -266,14 +255,14 @@ export default function PolicyContextInstrumentHistory() {
                   grid
                   w-full
                   grid-cols-1
-                  gap-8
-
+                  gap-6
                   sm:grid-cols-2
-
-                  lg:grid-cols-5
-                  lg:items-start
-                  lg:justify-center
-                  lg:gap-7
+                  md:grid-cols-3
+                  lg:grid-cols-3
+                  xl:grid-cols-5
+                  xl:items-start
+                  xl:justify-center
+                  xl:gap-7
                 "
               >
                 {items.map((item, index) => (
@@ -301,8 +290,6 @@ export default function PolicyContextInstrumentHistory() {
                       flex-col
                       items-start
                       gap-[5px]
-
-                      lg:w-[224px]
                     "
                   >
                     {/* TITLE */}

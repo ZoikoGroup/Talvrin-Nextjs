@@ -101,7 +101,7 @@ export default function CapabilityTruth() {
         ref={sectionRef}
         className="w-full overflow-hidden bg-slate-900 text-violet-50"
       >
-        <div className="mx-auto w-full max-w-[1320px] px-6 py-20 sm:px-8 md:px-10 lg:px-20 lg:py-[96px]">
+        <div className="mx-auto w-full max-w-[1320px] px-4 py-12 sm:px-6 md:px-8 lg:px-8 xl:px-20 lg:py-16 xl:py-[96px]">
           {/* Header */}
           <div className="w-full">
             <p
@@ -113,16 +113,16 @@ export default function CapabilityTruth() {
 
             <h2
               data-reveal
-              className="reveal reveal-1 m-0 w-full max-w-[800px] pt-3 font-['IBM_Plex_Sans'] text-[36px] font-bold leading-[1.1] tracking-[-1px] text-violet-50 sm:text-[42px] lg:text-5xl lg:leading-[48.72px]"
+              className="reveal reveal-1 m-0 w-full max-w-[800px] pt-3 font-['IBM_Plex_Sans'] text-[30px] font-bold leading-[1.12] tracking-[-1px] text-violet-50 sm:text-[38px] md:text-[42px] lg:text-5xl lg:leading-[48.72px]"
             >
-              Verified capabilities, shown plainly.
-              <br className="hidden lg:block" />
+              Verified capabilities, shown plainly.{" "}
+              <br className="hidden xl:block" />
               Nothing else.
             </h2>
 
             <p
               data-reveal
-              className="reveal reveal-2 m-0 w-full max-w-[780px] pt-5 pb-10 font-['IBM_Plex_Sans'] text-base font-normal leading-7 text-violet-50/70"
+              className="reveal reveal-2 m-0 w-full max-w-[780px] pt-4 pb-8 sm:pb-10 font-['IBM_Plex_Sans'] text-sm sm:text-base font-normal leading-6 sm:leading-7 text-violet-50/70"
             >
               Enterprise pages commonly imply admin, identity, and integration
               controls by convention. This one states exactly what is
@@ -136,7 +136,7 @@ export default function CapabilityTruth() {
               <div
                 key={item.capability}
                 data-reveal
-                className="reveal grid w-full grid-cols-1 gap-3 border-b-[0.8px] border-violet-50/10 py-4 md:grid-cols-[minmax(0,1fr)_192px_minmax(0,1fr)] md:items-start md:gap-4"
+                className="reveal grid w-full grid-cols-1 gap-2.5 sm:gap-3 border-b-[0.8px] border-violet-50/10 py-3.5 sm:py-4 md:grid-cols-[minmax(0,1.2fr)_170px_minmax(0,1fr)] lg:grid-cols-[minmax(0,1fr)_192px_minmax(0,1fr)] md:items-start md:gap-4"
                 style={{
                   transitionDelay: `${180 + index * 55}ms`,
                 }}

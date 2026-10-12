@@ -60,14 +60,13 @@ export default function AnswerFirstFaq() {
           mx-auto
           w-full
           max-w-[1280px]
-          px-6
-          py-20
-
+          px-5
+          py-16
           sm:px-8
-          sm:py-24
-
-          lg:px-0
+          sm:py-20
+          lg:px-8
           lg:py-[96px]
+          xl:px-0
         "
       >
         {/* =====================================================
@@ -138,10 +137,11 @@ export default function AnswerFirstFaq() {
             w-full
             grid-cols-1
             gap-8
-
-            lg:grid-cols-[minmax(0,840px)_384px]
+            lg:grid-cols-[minmax(0,1fr)_340px]
             lg:items-start
-            lg:gap-x-[38px]
+            lg:gap-8
+            xl:grid-cols-[minmax(0,840px)_384px]
+            xl:gap-x-[38px]
           "
         >
           {/* =================================================
@@ -256,15 +256,15 @@ export default function AnswerFirstFaq() {
           <div
             className="
               relative
-              h-[520px]
+              h-[400px]
               w-full
               overflow-hidden
               rounded-2xl
               bg-pink-700
-
-              sm:h-[600px]
-
-              lg:h-[627px]
+              sm:h-[500px]
+              lg:h-full
+              lg:min-h-[520px]
+              xl:h-[627px]
             "
           >
             <Image

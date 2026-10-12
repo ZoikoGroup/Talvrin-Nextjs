@@ -35,7 +35,7 @@ function GovernanceCard({
   restricted: string;
 }) {
   return (
-    <div className="flex w-full min-h-[160px] flex-col rounded-2xl border border-slate-900/10 bg-white p-6">
+    <div className="flex h-full w-full min-h-[160px] flex-col rounded-2xl border border-slate-900/10 bg-white p-6">
       {/* Allowed */}
       <div className="flex items-start gap-2.5">
         <span
@@ -70,7 +70,7 @@ function GovernanceCard({
 export default function AIGovernance() {
   return (
     <section className="w-full bg-violet-50">
-      <div className="mx-auto w-full max-w-[1280px] px-6 py-20 sm:px-8 lg:px-10 lg:py-24">
+      <div className="mx-auto w-full max-w-[1280px] px-5 py-16 sm:px-8 sm:py-20 lg:px-8 lg:py-24 xl:px-0">
         {/* Header */}
         <div className="w-full">
           <p className="font-['IBM_Plex_Sans'] text-xs font-bold tracking-wide text-yellow-600">
@@ -78,7 +78,7 @@ export default function AIGovernance() {
           </p>
 
           <div className="w-full max-w-[760px] pt-3">
-            <h2 className="font-['IBM_Plex_Sans'] text-[40px] font-bold leading-[1.08] tracking-[-0.02em] text-slate-900 sm:text-5xl sm:leading-[48.72px]">
+            <h2 className="font-['IBM_Plex_Sans'] text-[36px] font-bold leading-[1.08] tracking-[-0.02em] text-slate-900 sm:text-5xl sm:leading-[48.72px]">
               AI may help organize and explain
               <br className="hidden sm:block" />
               the evidence. It does not become
@@ -90,8 +90,8 @@ export default function AIGovernance() {
 
         {/* Main content */}
         <div className="mt-10 flex w-full flex-col gap-4 lg:flex-row lg:items-stretch">
-          {/* 3 x 2 Cards */}
-          <div className="grid w-full grid-cols-1 gap-4 sm:grid-cols-2 lg:w-[calc(100%-336px)] lg:grid-cols-3">
+          {/* Cards */}
+          <div className="grid w-full grid-cols-1 gap-4 sm:grid-cols-2 lg:w-[calc(100%-336px)] lg:grid-cols-2 xl:grid-cols-3">
             {governanceItems.map((item) => (
               <GovernanceCard
                 key={item.allowed}

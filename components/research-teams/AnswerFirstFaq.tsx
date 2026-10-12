@@ -20,7 +20,6 @@ const fadeUp: Variants = {
     opacity: 0,
     y: 24,
   },
-
   visible: {
     opacity: 1,
     y: 0,
@@ -38,86 +37,38 @@ const fadeUp: Variants = {
 const faqs = [
   {
     question: "What is Talvrin for research teams?",
-    answer: (
-      <>
-        Talvrin helps research teams create more repeatable, source-linked
-        and monitorable public-market
-        <br className="hidden lg:block" />
-        research workflows, with shared evidence and preserved reasoning.
-      </>
-    ),
+    answer:
+      "Talvrin helps research teams create more repeatable, source-linked and monitorable public-market research workflows, with shared evidence and preserved reasoning.",
   },
-
   {
     question: "How can Talvrin reduce duplicated research work?",
-    answer: (
-      <>
-        Talvrin helps teams organize research around shared evidence and
-        reusable research objects, reducing
-        <br className="hidden lg:block" />
-        repeated source gathering and fragmented individual workflows.
-      </>
-    ),
+    answer:
+      "Talvrin helps teams organize research around shared evidence and reusable research objects, reducing repeated source gathering and fragmented individual workflows.",
   },
-
   {
     question: "Does Talvrin support collaboration?",
-    answer: (
-      <>
-        Talvrin supports evidence-led collaboration by making research views,
-        supporting evidence, and relevant
-        <br className="hidden lg:block" />
-        context discoverable to the team.
-      </>
-    ),
+    answer:
+      "Talvrin supports evidence-led collaboration by making research views, supporting evidence, and relevant context discoverable to the team.",
   },
-
   {
     question: "How does Talvrin support reviewability?",
-    answer: (
-      <>
-        Reviewers can follow a conclusion back to its supporting evidence,
-        while keeping evidence, analysis,
-        <br className="hidden lg:block" />
-        and generated interpretation distinguishable.
-      </>
-    ),
+    answer:
+      "Reviewers can follow a conclusion back to its supporting evidence, while keeping evidence, analysis, and generated interpretation distinguishable.",
   },
-
   {
     question: "Can Talvrin preserve institutional knowledge?",
-    answer: (
-      <>
-        Talvrin can preserve the research question, evidence, context, research
-        view, and relevant change
-        <br className="hidden lg:block" />
-        history through the research object.
-      </>
-    ),
+    answer:
+      "Talvrin can preserve the research question, evidence, context, research view, and relevant change history through the research object.",
   },
-
   {
     question: "Does Talvrin replace analysts or research judgment?",
-    answer: (
-      <>
-        No. AI assistance remains subordinate to evidence and policy, and
-        generated interpretation does not become
-        <br className="hidden lg:block" />
-        team consensus or replace research judgment.
-      </>
-    ),
+    answer:
+      "No. AI assistance remains subordinate to evidence and policy, and generated interpretation does not become team consensus or replace research judgment.",
   },
-
   {
     question: "Is Talvrin a trading or recommendation platform?",
-    answer: (
-      <>
-        Talvrin is research infrastructure for source-linked and governed
-        research workflows. It does not
-        <br className="hidden lg:block" />
-        represent itself as a trading or recommendation platform.
-      </>
-    ),
+    answer:
+      "Talvrin is research infrastructure for source-linked and governed research workflows. It does not represent itself as a trading or recommendation platform.",
   },
 ];
 
@@ -127,7 +78,7 @@ const faqs = [
 
 type FAQItemProps = {
   question: string;
-  answer: React.ReactNode;
+  answer: string;
   isOpen: boolean;
   onClick: () => void;
 };
@@ -139,75 +90,24 @@ function FAQItem({
   onClick,
 }: FAQItemProps) {
   return (
-    <div
-      className="
-        self-stretch
-        border-b-[0.8px]
-        border-slate-900/10
-        flex
-        flex-col
-        justify-start
-        items-start
-      "
-    >
-      {/* =================================================
-          QUESTION
-      ================================================= */}
-
+    <div className="w-full border-b border-slate-900/10">
       <button
         type="button"
         onClick={onClick}
         aria-expanded={isOpen}
-        className="
-          self-stretch
-          py-5
-          flex
-          justify-between
-          items-center
-          gap-6
-          text-left
-          cursor-pointer
-        "
+        className="flex w-full cursor-pointer items-center justify-between gap-4 py-5 text-left sm:gap-6"
       >
-        {/* QUESTION */}
-
-        <span
-          className="
-            min-w-0
-            flex-1
-            text-slate-900
-            text-base
-            font-semibold
-            font-['IBM_Plex_Sans']
-            leading-6
-          "
-        >
+        <span className="min-w-0 flex-1 break-words font-['IBM_Plex_Sans'] text-sm font-semibold leading-6 text-slate-900 sm:text-base">
           {question}
         </span>
 
-        {/* PLUS / MINUS */}
-
         <span
-          className="
-            shrink-0
-            w-5
-            flex
-            justify-center
-            items-center
-            text-gray-600
-            text-xl
-            font-normal
-            font-['IBM_Plex_Sans']
-            leading-none
-          "
+          aria-hidden="true"
+          className="flex h-6 w-6 shrink-0 items-center justify-center font-['IBM_Plex_Sans'] text-xl font-normal leading-none text-gray-600"
         >
           {isOpen ? "−" : "+"}
         </span>
       </button>
-
-      {/* =================================================
-          ANSWER
-      ================================================= */}
 
       <motion.div
         initial={false}
@@ -220,29 +120,10 @@ function FAQItem({
           ease: smoothEase,
         }}
         className="w-full overflow-hidden"
+        aria-hidden={!isOpen}
       >
-        <div
-          className="
-            w-full
-            lg:w-[720px]
-            max-w-[720px]
-            pb-5
-            flex
-            flex-col
-            justify-start
-            items-start
-          "
-        >
-          <p
-            className="
-              text-gray-600
-              text-sm
-              sm:text-base
-              font-normal
-              font-['IBM_Plex_Sans']
-              leading-6
-            "
-          >
+        <div className="w-full max-w-[720px] pb-5">
+          <p className="font-['IBM_Plex_Sans'] text-sm font-normal leading-6 text-gray-600 sm:text-base sm:leading-7">
             {answer}
           </p>
         </div>
@@ -259,146 +140,43 @@ export default function AnswerFirstFaq() {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
 
   return (
-    <section
-      className="
-        relative
-        w-full
-        bg-white
-        overflow-hidden
-      "
-    >
-      {/* ===================================================
-          SECTION CONTAINER
-      =================================================== */}
+    <section className="relative w-full overflow-hidden bg-white">
+      <div className="mx-auto w-full max-w-[1440px] px-4 py-12 min-[480px]:px-5 sm:py-16 md:px-8 md:py-20 lg:px-12 xl:px-20 xl:py-24">
+        <div className="w-full max-w-[1280px]">
+          {/* EYEBROW */}
 
-      <div
-        className="
-          relative
-          w-full
-          max-w-[1440px]
-          min-h-[868.4px]
-          mx-auto
-
-          px-6
-          sm:px-8
-
-          lg:px-0
-          lg:py-0
-        "
-      >
-        {/* =================================================
-            CONTENT WRAPPER
-        ================================================= */}
-
-        <div
-          className="
-            w-full
-
-            lg:w-[1280px]
-            lg:left-[80px]
-            lg:top-[96.03px]
-            lg:absolute
-
-            flex
-            flex-col
-            justify-start
-            items-start
-          "
-        >
-          {/* =================================================
-              EYEBROW
-          ================================================= */}
-
-          <motion.div
+          <motion.p
             initial="hidden"
             whileInView="visible"
             viewport={{
               once: true,
-              amount: 0.25,
+              amount: 0.2,
             }}
             variants={fadeUp}
-            className="
-              self-stretch
-              flex
-              flex-col
-              justify-start
-              items-start
-            "
+            className="font-['IBM_Plex_Sans'] text-xs font-bold tracking-wide text-yellow-600 sm:text-sm"
           >
-            <div
-              className="
-                self-stretch
-                text-yellow-600
-                text-xs
-                font-bold
-                font-['IBM_Plex_Sans']
-                tracking-wide
-              "
-            >
-              ANSWER-FIRST FAQ
-            </div>
-          </motion.div>
+            ANSWER-FIRST FAQ
+          </motion.p>
 
-          {/* =================================================
-              HEADING
-          ================================================= */}
+          {/* HEADING */}
 
-          <motion.div
+          <motion.h2
             initial="hidden"
             whileInView="visible"
             viewport={{
               once: true,
-              amount: 0.25,
+              amount: 0.2,
             }}
             variants={fadeUp}
-            className="
-              w-full
-              lg:w-[760px]
-              lg:max-w-[760px]
-
-              mt-[17px]
-
-              flex
-              flex-col
-              justify-start
-              items-start
-            "
+            className="mt-4 w-full max-w-[760px] break-words font-['IBM_Plex_Sans'] text-[clamp(1.8rem,3.5vw,3rem)] font-bold leading-[1.1] tracking-[-0.02em] text-slate-900"
           >
-            <h2
-              className="
-                text-slate-900
-                text-[32px]
-                sm:text-[40px]
-                lg:text-5xl
-                font-bold
-                font-['IBM_Plex_Sans']
-                leading-[1.08]
-                lg:leading-[48.3px]
-              "
-            >
-              Frequently asked, answered first.
-            </h2>
-          </motion.div>
+            Frequently asked, answered first.
+          </motion.h2>
 
-          {/* =================================================
-              MAIN TWO-COLUMN AREA
-          ================================================= */}
+          {/* FAQ AND IMAGE */}
 
-          <div
-            className="
-              w-full
-
-              mt-7
-
-              flex
-              flex-col
-
-              lg:block
-            "
-          >
-            {/* =================================================
-                FAQ LIST
-            ================================================= */}
+          <div className="mt-8 grid w-full grid-cols-1 items-start gap-8 sm:mt-10 sm:gap-10 lg:grid-cols-[minmax(0,1fr)_minmax(280px,384px)] lg:gap-10 xl:mt-12 xl:gap-14 2xl:gap-[72px]">
+            {/* FAQ LIST */}
 
             <motion.div
               initial="hidden"
@@ -407,18 +185,15 @@ export default function AnswerFirstFaq() {
                 once: true,
                 amount: 0.1,
               }}
-              variants={fadeUp}
-              className="
-                w-full
-
-                lg:w-[840px]
-                lg:max-w-[840px]
-
-                flex
-                flex-col
-                justify-start
-                items-start
-              "
+              variants={{
+                hidden: {},
+                visible: {
+                  transition: {
+                    staggerChildren: 0.06,
+                  },
+                },
+              }}
+              className="w-full min-w-0"
             >
               {faqs.map((faq, index) => (
                 <FAQItem
@@ -435,9 +210,7 @@ export default function AnswerFirstFaq() {
               ))}
             </motion.div>
 
-            {/* =================================================
-                IMAGE
-            ================================================= */}
+            {/* IMAGE */}
 
             <motion.div
               initial={{
@@ -450,44 +223,21 @@ export default function AnswerFirstFaq() {
               }}
               viewport={{
                 once: true,
-                amount: 0.2,
+                amount: 0.15,
               }}
               transition={{
                 duration: 0.75,
                 ease: smoothEase,
               }}
-              className="
-                relative
-
-                w-full
-                h-[420px]
-
-                mt-10
-
-                sm:h-[500px]
-
-                lg:absolute
-                lg:w-[384px]
-                lg:h-[580px]
-
-                lg:left-[881px]
-                lg:top-[118px]
-
-                bg-rose-500
-                rounded-2xl
-                overflow-hidden
-              "
+              className="relative aspect-[4/3] w-full min-w-0 overflow-hidden rounded-2xl bg-rose-500 sm:aspect-[5/3] lg:sticky lg:top-8 lg:aspect-[3/4] xl:aspect-[384/580]"
             >
               <Image
                 src="/images/solutions/research-teams/image8.png"
                 alt="Research team collaboration"
                 fill
                 priority
-                sizes="384px"
-                className="
-                  object-cover
-                  object-center
-                "
+                sizes="(max-width: 639px) calc(100vw - 32px), (max-width: 767px) calc(100vw - 40px), (max-width: 1023px) calc(100vw - 64px), (max-width: 1279px) 35vw, 384px"
+                className="object-cover object-center"
               />
             </motion.div>
           </div>

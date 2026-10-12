@@ -105,16 +105,20 @@ export default function InstitutionProfileContract() {
           mx-auto
           w-full
           max-w-[1440px]
-          px-6
-          sm:px-8
-          lg:px-[80px]
+          px-4
+          sm:px-6
+          md:px-8
+          lg:px-12
+          xl:px-[80px]
         "
       >
         <div
           className="
             w-full
             max-w-[1280px]
-            py-[96px]
+            py-14
+            sm:py-16
+            lg:py-[96px]
           "
         >
           {/* =================================================
@@ -177,12 +181,14 @@ export default function InstitutionProfileContract() {
               w-full
               max-w-[780px]
               font-['IBM_Plex_Sans']
-              text-[40px]
+              text-[30px]
               font-bold
-              leading-[48.72px]
+              leading-[1.1]
               tracking-[-0.02em]
               text-slate-900
-              sm:text-5xl
+              sm:text-[40px]
+              sm:leading-[48.72px]
+              lg:text-5xl
             "
           >
             Stable identity, jurisdiction,
@@ -237,7 +243,7 @@ export default function InstitutionProfileContract() {
 
               384px IMAGE
               +
-              170px GAP
+              170px GAP (flexible on tablet/laptop)
               +
               664px INFORMATION
 
@@ -253,7 +259,8 @@ export default function InstitutionProfileContract() {
               gap-10
               lg:flex-row
               lg:items-start
-              lg:gap-[170px]
+              lg:gap-8
+              xl:gap-[170px]
             "
           >
             {/* =================================================
@@ -279,13 +286,17 @@ export default function InstitutionProfileContract() {
               }}
               className="
                 relative
-                h-[384px]
+                h-[280px]
                 w-full
                 shrink-0
                 overflow-hidden
                 rounded-2xl
                 bg-slate-900
-                sm:w-[384px]
+                sm:h-[340px]
+                sm:w-[340px]
+                lg:h-[384px]
+                lg:w-[320px]
+                xl:w-[384px]
               "
             >
               <Image
@@ -330,10 +341,10 @@ export default function InstitutionProfileContract() {
               className="
                 grid
                 w-full
-                max-w-[664px]
                 grid-cols-1
                 gap-x-6
-                lg:grid-cols-2
+                sm:grid-cols-2
+                xl:max-w-[664px]
               "
             >
               {profileFields.map((field) => (

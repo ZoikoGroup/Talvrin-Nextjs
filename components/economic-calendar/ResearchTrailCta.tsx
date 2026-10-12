@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 export default function ResearchTrailCta() {
   return (
     <section className="relative overflow-hidden border-t-[0.8px] border-slate-900/10 bg-white">
-      <div className="mx-auto flex min-h-[384px] w-full max-w-[1320px] items-center justify-center px-6 py-20 sm:px-8 lg:px-10">
+      <div className="mx-auto flex min-h-[300px] sm:min-h-[340px] lg:min-h-[384px] w-full max-w-[1320px] items-center justify-center px-4 py-14 sm:px-6 sm:py-16 md:px-8 lg:px-12 lg:py-20 xl:px-16">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -25,7 +25,7 @@ export default function ResearchTrailCta() {
               duration: 0.55,
               delay: 0.05,
             }}
-            className="font-['IBM_Plex_Sans'] text-[36px] font-bold leading-[1.08] tracking-[-0.02em] text-slate-900 sm:text-[42px] lg:text-5xl lg:leading-[48.3px]"
+            className="font-['IBM_Plex_Sans'] text-[28px] font-bold leading-[1.12] tracking-[-0.02em] text-slate-900 sm:text-[36px] md:text-[42px] lg:text-5xl lg:leading-[48.3px]"
           >
             Turn an event into a research trail.
           </motion.h2>

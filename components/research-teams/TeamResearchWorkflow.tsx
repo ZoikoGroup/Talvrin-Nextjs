@@ -1,7 +1,6 @@
 "use client";
 
 import { motion, type Variants } from "framer-motion";
-import type { ReactNode } from "react";
 
 /* =========================================================
    ANIMATION
@@ -19,7 +18,6 @@ const fadeUp: Variants = {
     opacity: 0,
     y: 28,
   },
-
   visible: {
     opacity: 1,
     y: 0,
@@ -48,35 +46,30 @@ const workflowItems: WorkflowItem[] = [
     behavior:
       "Create a durable research object rather than a transient chat.",
   },
-
   {
     stage: "DISCOVER",
     teamJob: "Find relevant evidence and context.",
     behavior:
       "Govern source classes, rights, coverage, and relevance.",
   },
-
   {
     stage: "INSPECT",
     teamJob: "Review the underlying material.",
     behavior:
       "Preserve source identity, timing, jurisdiction, version, and access state.",
   },
-
   {
     stage: "UNDERSTAND",
     teamJob: "Relate evidence to the question.",
     behavior:
       "Show supports / contradicts / updates / contextualizes.",
   },
-
   {
     stage: "BUILD",
     teamJob: "Develop and preserve the research view.",
     behavior:
       "Separate source facts, Talvrin normalization, analysis, AI assistance, and user/team interpretation.",
   },
-
   {
     stage: "REVIEW",
     teamJob:
@@ -84,7 +77,6 @@ const workflowItems: WorkflowItem[] = [
     behavior:
       "Describe reviewability; exact reviewer workflow remains capability-gated.",
   },
-
   {
     stage: "MONITOR",
     teamJob:
@@ -92,7 +84,6 @@ const workflowItems: WorkflowItem[] = [
     behavior:
       "Surface meaningful changes without noise.",
   },
-
   {
     stage: "REASSESS",
     teamJob: "Return when evidence changes.",
@@ -127,55 +118,55 @@ function WorkflowRow({ item, index }: WorkflowRowProps) {
         w-full
         border-b-[0.8px]
         border-slate-900/10
-        py-4
+        py-5
+        sm:py-5
+        lg:py-4
       "
     >
-      {/* =====================================================
-          DESKTOP / TABLET ROW
-      ===================================================== */}
+      {/* TABLET AND DESKTOP */}
 
       <div
         className="
           hidden
+          w-full
+          items-start
+          gap-4
           md:grid
-          md:grid-cols-[176px_minmax(0,1fr)_minmax(0,1fr)]
-          md:gap-4
-          md:items-start
+          md:grid-cols-[150px_minmax(0,1fr)_minmax(0,1fr)]
+          lg:grid-cols-[176px_minmax(0,1fr)_minmax(0,1fr)]
+          lg:gap-6
+          xl:gap-8
         "
       >
         {/* STAGE */}
 
-        <div
-          className="
-            min-w-0
-            flex
-            justify-center
-            items-center
-          "
-        >
+        <div className="flex min-w-0 items-start justify-center">
           <div
             className="
-              min-w-[176px]
-              min-h-[40px]
-              px-6
-              py-1.5
-              bg-violet-50
+              flex
+              min-h-10
+              w-full
+              max-w-[176px]
+              items-center
+              justify-center
               rounded-md
               border
               border-slate-900/20
-              flex
-              items-center
-              justify-center
+              bg-violet-50
+              px-3
+              py-2
+              sm:px-4
+              lg:px-6
             "
           >
             <span
               className="
                 text-center
-                text-slate-900
+                font-['IBM_Plex_Sans']
                 text-xs
                 font-bold
-                font-['IBM_Plex_Sans']
                 leading-5
+                text-slate-900
               "
             >
               {item.stage}
@@ -188,11 +179,14 @@ function WorkflowRow({ item, index }: WorkflowRowProps) {
         <div className="min-w-0">
           <p
             className="
-              text-slate-700
-              text-base
-              font-normal
+              break-words
               font-['IBM_Plex_Sans']
-              leading-7
+              text-sm
+              font-normal
+              leading-6
+              text-slate-700
+              lg:text-base
+              lg:leading-7
             "
           >
             {item.teamJob}
@@ -204,11 +198,13 @@ function WorkflowRow({ item, index }: WorkflowRowProps) {
         <div className="min-w-0">
           <p
             className="
-              text-gray-600
+              break-words
+              font-['IBM_Plex_Sans']
               text-sm
               font-normal
-              font-['IBM_Plex_Sans']
               leading-6
+              text-gray-600
+              lg:leading-6
             "
           >
             {item.behavior}
@@ -216,74 +212,62 @@ function WorkflowRow({ item, index }: WorkflowRowProps) {
         </div>
       </div>
 
-      {/* =====================================================
-          MOBILE ROW
-      ===================================================== */}
+      {/* MOBILE */}
 
-      <div
-        className="
-          md:hidden
-          w-full
-          flex
-          flex-col
-          gap-5
-        "
-      >
+      <div className="flex w-full flex-col gap-5 md:hidden">
         {/* STAGE */}
 
         <div>
-          <div
+          <span
             className="
               inline-flex
+              min-h-10
               min-w-[140px]
-              min-h-[40px]
-              px-6
-              py-1.5
-              bg-violet-50
+              items-center
+              justify-center
               rounded-md
               border
               border-slate-900/20
-              items-center
-              justify-center
+              bg-violet-50
+              px-6
+              py-2
+              font-['IBM_Plex_Sans']
+              text-xs
+              font-bold
+              leading-5
+              text-slate-900
             "
           >
-            <span
-              className="
-                text-slate-900
-                text-xs
-                font-bold
-                font-['IBM_Plex_Sans']
-                leading-5
-              "
-            >
-              {item.stage}
-            </span>
-          </div>
+            {item.stage}
+          </span>
         </div>
 
         {/* TEAM JOB */}
 
-        <div className="w-full">
-          <div
+        <div className="w-full min-w-0">
+          <p
             className="
               mb-2
-              text-gray-600
+              font-['IBM_Plex_Sans']
               text-[10px]
               font-bold
-              font-['IBM_Plex_Sans']
               tracking-wide
+              text-gray-600
             "
           >
             TEAM JOB
-          </div>
+          </p>
 
           <p
             className="
-              text-slate-700
-              text-base
-              font-normal
+              break-words
               font-['IBM_Plex_Sans']
-              leading-7
+              text-sm
+              font-normal
+              leading-6
+              text-slate-700
+              sm:text-base
+              sm:leading-7
             "
           >
             {item.teamJob}
@@ -292,27 +276,28 @@ function WorkflowRow({ item, index }: WorkflowRowProps) {
 
         {/* REQUIRED BEHAVIOR */}
 
-        <div className="w-full">
-          <div
+        <div className="w-full min-w-0">
+          <p
             className="
               mb-2
-              text-gray-600
+              font-['IBM_Plex_Sans']
               text-[10px]
               font-bold
-              font-['IBM_Plex_Sans']
               tracking-wide
+              text-gray-600
             "
           >
             REQUIRED BEHAVIOR
-          </div>
+          </p>
 
           <p
             className="
-              text-gray-600
+              break-words
+              font-['IBM_Plex_Sans']
               text-sm
               font-normal
-              font-['IBM_Plex_Sans']
               leading-6
+              text-gray-600
             "
           >
             {item.behavior}
@@ -329,35 +314,25 @@ function WorkflowRow({ item, index }: WorkflowRowProps) {
 
 export default function TeamResearchWorkflow() {
   return (
-    <section
-      className="
-        relative
-        w-full
-        bg-white
-        overflow-hidden
-      "
-    >
-      {/* =====================================================
-          1440px DESKTOP CONTAINER
-      ===================================================== */}
+    <section className="relative w-full overflow-hidden bg-white">
+      {/* MAIN CONTAINER */}
 
       <div
         className="
+          mx-auto
           w-full
           max-w-[1440px]
-          mx-auto
-          px-6
-          sm:px-8
-          lg:px-[80px]
-          pt-[72px]
-          pb-[72px]
-          lg:pt-[95.7px]
-          lg:pb-[95px]
+          px-4
+          py-12
+          min-[480px]:px-5
+          sm:py-16
+          md:px-8
+          lg:px-12
+          lg:py-[95px]
+          xl:px-20
         "
       >
-        {/* ===================================================
-            HEADER
-        =================================================== */}
+        {/* HEADER */}
 
         <motion.div
           initial="hidden"
@@ -368,32 +343,29 @@ export default function TeamResearchWorkflow() {
           }}
           variants={{
             hidden: {},
-
             visible: {
               transition: {
                 staggerChildren: 0.12,
               },
             },
           }}
-          className="
-            w-full
-            max-w-[1280px]
-          "
+          className="w-full max-w-[1280px]"
         >
           {/* EYEBROW */}
 
-          <motion.div
+          <motion.p
             variants={fadeUp}
             className="
-              text-yellow-600
+              font-['IBM_Plex_Sans']
               text-xs
               font-bold
-              font-['IBM_Plex_Sans']
               tracking-wide
+              text-yellow-600
+              sm:text-sm
             "
           >
             TEAM RESEARCH WORKFLOW
-          </motion.div>
+          </motion.p>
 
           {/* HEADING */}
 
@@ -401,24 +373,18 @@ export default function TeamResearchWorkflow() {
             variants={fadeUp}
             className="
               w-full
-              max-w-[780px]
+              max-w-[900px]
               pt-3
-              text-slate-900
-              text-[32px]
-              sm:text-[40px]
-              lg:text-5xl
-              font-bold
               font-['IBM_Plex_Sans']
-              leading-[1.08]
-              lg:leading-[48.72px]
+              text-[clamp(1.8rem,3.5vw,3rem)]
+              font-bold
+              leading-[1.1]
               tracking-[-0.02em]
+              text-slate-900
             "
           >
-            Ask → Discover → Inspect →
-            <br className="hidden sm:block" />
-            Understand → Build → Review →
-            <br className="hidden sm:block" />
-            Monitor → Reassess.
+            Ask → Discover → Inspect → Understand → Build → Review → Monitor →
+            Reassess.
           </motion.h2>
 
           {/* DESCRIPTION */}
@@ -428,37 +394,26 @@ export default function TeamResearchWorkflow() {
             className="
               w-full
               max-w-[780px]
-              pt-5
-              text-gray-600
-              text-sm
-              sm:text-base
-              font-normal
+              pt-4
               font-['IBM_Plex_Sans']
+              text-sm
+              font-normal
               leading-6
-              lg:leading-7
+              text-gray-600
+              sm:pt-5
+              sm:text-base
+              sm:leading-7
             "
           >
             The eight-stage process a shared research object moves through —
-            including a review stage no
-            <br className="hidden lg:block" />
-            individual-research workflow needs.
+            including a review stage no individual-research workflow needs.
           </motion.p>
         </motion.div>
 
-        {/* ===================================================
-            TABLE
-        =================================================== */}
+        {/* WORKFLOW TABLE */}
 
-        <div
-          className="
-            w-full
-            max-w-[1280px]
-            mt-10
-          "
-        >
-          {/* =================================================
-              TABLE HEADER
-          ================================================= */}
+        <div className="mt-8 w-full max-w-[1280px] sm:mt-10 lg:mt-10">
+          {/* TABLE HEADER — TABLET AND DESKTOP */}
 
           <motion.div
             initial="hidden"
@@ -470,43 +425,40 @@ export default function TeamResearchWorkflow() {
             variants={fadeUp}
             className="
               hidden
-              md:grid
-              md:grid-cols-[176px_minmax(0,1fr)_minmax(0,1fr)]
-              md:gap-4
               w-full
+              grid-cols-[150px_minmax(0,1fr)_minmax(0,1fr)]
+              gap-4
               pb-3
+              md:grid
+              lg:grid-cols-[176px_minmax(0,1fr)_minmax(0,1fr)]
+              lg:gap-6
+              xl:gap-8
             "
           >
-            {/* Empty stage column */}
-
-            <div className="min-w-0" />
-
-            {/* Team job */}
+            <div aria-hidden="true" />
 
             <div className="min-w-0">
               <span
                 className="
-                  text-gray-600
+                  font-['IBM_Plex_Sans']
                   text-xs
                   font-bold
-                  font-['IBM_Plex_Sans']
                   tracking-wide
+                  text-gray-600
                 "
               >
                 TEAM JOB
               </span>
             </div>
 
-            {/* Required behavior */}
-
             <div className="min-w-0">
               <span
                 className="
-                  text-gray-600
+                  font-['IBM_Plex_Sans']
                   text-xs
                   font-bold
-                  font-['IBM_Plex_Sans']
                   tracking-wide
+                  text-gray-600
                 "
               >
                 REQUIRED BEHAVIOR
@@ -514,9 +466,7 @@ export default function TeamResearchWorkflow() {
             </div>
           </motion.div>
 
-          {/* =================================================
-              WORKFLOW ROWS
-          ================================================= */}
+          {/* WORKFLOW ROWS */}
 
           <div className="w-full">
             {workflowItems.map((item, index) => (

@@ -48,7 +48,7 @@ const governanceItems = [
 export default function MethodologyGovernance() {
   return (
     <section className="w-full overflow-hidden bg-white">
-      <div className="mx-auto w-full max-w-[1440px] px-5 py-16 sm:px-8 sm:py-20 lg:px-20 lg:py-[96px]">
+      <div className="mx-auto w-full max-w-[1440px] px-5 py-16 sm:px-8 sm:py-20 lg:px-8 lg:py-[96px] xl:px-20">
         {/* Section heading */}
         <motion.div
           initial={{ opacity: 0, y: 24 }}
@@ -76,7 +76,7 @@ export default function MethodologyGovernance() {
         </motion.div>
 
         {/* Main governance content */}
-        <div className="mt-10 grid grid-cols-1 gap-8 lg:mt-[58px] lg:grid-cols-[440px_minmax(0,1fr)] lg:gap-[66px]">
+        <div className="mt-10 grid grid-cols-1 gap-8 lg:mt-[58px] lg:grid-cols-[360px_minmax(0,1fr)] lg:gap-8 xl:grid-cols-[440px_minmax(0,1fr)] xl:gap-[66px]">
           {/* Image */}
           <motion.div
             initial={{ opacity: 0, x: -28, scale: 0.97 }}
@@ -86,7 +86,7 @@ export default function MethodologyGovernance() {
               duration: 0.7,
               ease: [0.22, 1, 0.36, 1],
             }}
-            className="relative aspect-square w-full overflow-hidden rounded-2xl bg-slate-900"
+            className="relative aspect-square w-full max-w-[440px] overflow-hidden rounded-2xl bg-slate-900"
           >
             <Image
               src="/images/research/talvrin-methodology/image4.png"
@@ -99,7 +99,7 @@ export default function MethodologyGovernance() {
           </motion.div>
 
           {/* Governance details */}
-          <div className="grid grid-cols-1 md:grid-cols-2 md:gap-x-10">
+          <div className="grid grid-cols-1 md:grid-cols-2 md:gap-x-8 lg:grid-cols-1 xl:grid-cols-2 xl:gap-x-10">
             {governanceItems.map((item, index) => (
               <motion.div
                 key={item.title}

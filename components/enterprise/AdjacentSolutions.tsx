@@ -86,7 +86,7 @@ export default function AdjacentSolutions() {
       ref={sectionRef}
       className="w-full overflow-hidden bg-[#F7F6FE]"
     >
-      <div className="mx-auto w-full max-w-[1440px] px-6 py-20 sm:px-8 md:px-10 lg:px-20 lg:py-[96px]">
+      <div className="mx-auto w-full max-w-[1440px] px-4 py-12 sm:px-6 md:px-8 lg:px-8 xl:px-20 lg:py-16 xl:py-[96px]">
         {/* Eyebrow */}
         <p
           data-reveal
@@ -118,16 +118,16 @@ export default function AdjacentSolutions() {
             pt-3
             opacity-0
             font-['IBM_Plex_Sans']
-            text-[36px]
+            text-[30px]
             font-bold
-            leading-[43px]
+            leading-[38px]
             tracking-[-1px]
             text-[#171735]
             transition-all
             duration-700
             ease-out
-            sm:text-[42px]
-            sm:leading-[48px]
+            sm:text-[38px]
+            sm:leading-[44px]
             lg:text-[48px]
             lg:leading-[48px]
           "
@@ -138,16 +138,17 @@ export default function AdjacentSolutions() {
           Not evaluating at organization scale? Find the right fit.
         </h2>
 
-        {/* Figma layout */}
+        {/* Layout */}
         <div
           className="
-            mt-10
+            mt-8
+            sm:mt-10
             grid
             grid-cols-1
             gap-4
-            md:grid-cols-2
-            lg:grid-cols-[repeat(3,minmax(0,1fr))_288px]
-            lg:grid-rows-[122px_122px]
+            sm:grid-cols-2
+            lg:grid-cols-4
+            xl:grid-cols-[repeat(3,minmax(0,1fr))_288px]
           "
         >
           {/* Cards 1–6 */}
@@ -158,7 +159,7 @@ export default function AdjacentSolutions() {
               className="
                 translate-y-6
                 flex
-                min-h-0
+                min-h-[130px]
                 rounded-[10px]
                 border
                 border-[#171735]/10
@@ -169,7 +170,6 @@ export default function AdjacentSolutions() {
                 transition-all
                 duration-700
                 ease-out
-                lg:px-[18px]
               "
               style={{
                 transitionDelay: `${120 + index * 70}ms`,
@@ -193,7 +193,7 @@ export default function AdjacentSolutions() {
                   className="
                     m-0
                     mt-[8px]
-                    max-w-[235px]
+                    w-full
                     font-['IBM_Plex_Sans']
                     text-[12px]
                     font-normal
@@ -228,7 +228,8 @@ export default function AdjacentSolutions() {
             data-reveal
             className="
               relative
-              min-h-[360px]
+              min-h-[260px]
+              sm:min-h-[300px]
               translate-y-6
               overflow-hidden
               rounded-[10px]
@@ -237,7 +238,7 @@ export default function AdjacentSolutions() {
               transition-all
               duration-700
               ease-out
-              md:col-span-2
+              sm:col-span-2
               lg:col-span-1
               lg:col-start-4
               lg:row-start-1

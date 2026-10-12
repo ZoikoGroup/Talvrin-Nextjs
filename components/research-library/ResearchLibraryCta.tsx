@@ -22,13 +22,14 @@ export default function ResearchLibraryCta() {
           flex-col
           items-center
           px-5
-          py-20
+          py-16
           sm:px-7
-          sm:py-24
-          lg:min-h-[472.4px]
+          sm:py-20
+          lg:min-h-[440px]
           lg:justify-center
-          lg:px-0
-          lg:py-0
+          lg:px-8
+          lg:py-24
+          xl:px-0
         "
       >
         <motion.div

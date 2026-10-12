@@ -30,14 +30,13 @@ export default function AIEditorialProvenance() {
           mx-auto
           w-full
           max-w-[1280px]
-          px-6
-          py-20
-
+          px-5
+          py-16
           sm:px-8
-          sm:py-24
-
-          lg:px-0
+          sm:py-20
+          lg:px-8
           lg:py-[96px]
+          xl:px-0
         "
       >
         {/* =====================================================
@@ -113,9 +112,10 @@ export default function AIEditorialProvenance() {
             w-full
             grid-cols-1
             gap-8
-
-            lg:grid-cols-[minmax(0,630px)_minmax(0,630px)]
-            lg:gap-5
+            lg:grid-cols-2
+            lg:gap-6
+            xl:grid-cols-[minmax(0,630px)_minmax(0,630px)]
+            xl:gap-5
           "
         >
           {/* =================================================
@@ -128,8 +128,9 @@ export default function AIEditorialProvenance() {
               w-full
               grid-cols-1
               gap-4
-
               sm:grid-cols-2
+              lg:grid-cols-1
+              xl:grid-cols-2
             "
           >
             {provenanceCards.map((card, index) => (
@@ -273,16 +274,17 @@ export default function AIEditorialProvenance() {
             }}
             className="
               relative
-              min-h-[300px]
+              min-h-[260px]
               w-full
               overflow-hidden
               rounded-2xl
               border
               border-slate-900/10
               bg-violet-50
-
-              lg:h-[320px]
-              lg:min-h-0
+              sm:min-h-[300px]
+              lg:h-full
+              lg:min-h-[320px]
+              xl:h-[320px]
             "
           >
             <Image

@@ -62,11 +62,12 @@ export default function ResearchLibraryFaq() {
           w-full
           max-w-[1280px]
           px-5
-          py-20
+          py-16
           sm:px-7
-          sm:py-24
-          lg:px-0
+          sm:py-20
+          lg:px-8
           lg:py-[96px]
+          xl:px-0
         "
       >
         {/* ============================================================
@@ -141,9 +142,11 @@ export default function ResearchLibraryFaq() {
             w-full
             grid-cols-1
             gap-8
-            lg:grid-cols-[minmax(0,840px)_384px]
+            lg:grid-cols-[minmax(0,1fr)_340px]
             lg:items-start
-            lg:gap-[45px]
+            lg:gap-8
+            xl:grid-cols-[minmax(0,840px)_384px]
+            xl:gap-[45px]
           "
         >
           {/* ==========================================================
@@ -304,14 +307,17 @@ export default function ResearchLibraryFaq() {
             }}
             className="
               relative
-              h-[500px]
+              h-[400px]
               w-full
               overflow-hidden
               rounded-2xl
               bg-pink-700
-              sm:h-[607px]
-              lg:h-[607px]
-              lg:w-[384px]
+              sm:h-[500px]
+              lg:h-full
+              lg:min-h-[520px]
+              lg:w-full
+              xl:h-[607px]
+              xl:w-[384px]
             "
           >
             <Image
@@ -319,7 +325,7 @@ export default function ResearchLibraryFaq() {
               alt="TALVRIN Research Library"
               fill
               priority
-              sizes="384px"
+              sizes="(max-width: 1024px) 100vw, 384px"
               className="
                 object-cover
                 object-center

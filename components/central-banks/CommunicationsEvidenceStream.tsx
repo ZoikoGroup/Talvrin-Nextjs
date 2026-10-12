@@ -177,22 +177,17 @@ function EvidenceCard({
       }}
       className="
         flex
-        h-[192px]
+        min-h-[192px]
+        h-full
         w-full
         flex-col
         rounded-2xl
         bg-white
-        px-5
-        pt-5
-        pb-11
+        p-5
         outline
         outline-1
         outline-offset-[-1px]
         outline-slate-900/10
-
-        sm:w-full
-
-        lg:w-[240px]
       "
     >
       <div
@@ -228,295 +223,220 @@ function EvidenceCard({
 export default function CommunicationsEvidenceStream() {
   return (
     <section className="w-full bg-violet-50">
-      <div className="mx-auto w-full max-w-[1440px]">
-        <div
-          className="
-            relative
-            w-full
-            px-6
-            sm:px-8
+      <div className="mx-auto w-full max-w-[1440px] px-4 py-14 sm:px-6 sm:py-16 md:px-8 lg:px-12 lg:py-[96px] xl:px-[80px]">
+        <div className="mx-auto w-full max-w-[1280px]">
+          {/* =====================================================
+              EYEBROW
+          ====================================================== */}
 
-            lg:h-[824.6px]
-            lg:px-0
-          "
-        >
-          <div
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            viewport={{
+              once: true,
+              amount: 0.2,
+            }}
+            variants={fadeUp}
             className="
-              relative
-              mx-auto
-              w-full
-              max-w-[1280px]
-
-              py-[64px]
-
-              lg:h-[824.6px]
-              lg:py-0
+              font-['IBM_Plex_Sans']
+              text-xs
+              font-bold
+              uppercase
+              tracking-wide
+              text-indigo-500
             "
           >
-            {/* =====================================================
-                EYEBROW
-            ====================================================== */}
+            COMMUNICATIONS &amp; EVIDENCE STREAM
+          </motion.div>
+
+          {/* =====================================================
+              HEADING
+          ====================================================== */}
+
+          <motion.h2
+            initial="hidden"
+            whileInView="visible"
+            viewport={{
+              once: true,
+              amount: 0.2,
+            }}
+            variants={fadeUp}
+            className="
+              mt-3
+              max-w-[780px]
+              font-['IBM_Plex_Sans']
+              text-[30px]
+              font-bold
+              leading-[1.1]
+              tracking-[-0.02em]
+              text-slate-900
+              sm:text-[38px]
+              md:text-[44px]
+              lg:text-5xl
+              lg:leading-[48.72px]
+            "
+          >
+            Official documents before
+            <br />
+            interpretation.
+          </motion.h2>
+
+          {/* =====================================================
+              DESCRIPTION
+          ====================================================== */}
+
+          <motion.p
+            initial="hidden"
+            whileInView="visible"
+            viewport={{
+              once: true,
+              amount: 0.2,
+            }}
+            variants={fadeUp}
+            className="
+              mt-5
+              max-w-[1000px]
+              font-['IBM_Plex_Sans']
+              text-base
+              font-normal
+              leading-7
+              text-gray-600
+            "
+          >
+            Central-bank research extends beyond a single decision. The
+            stream preserves a chronological, source-governed evidence
+            record rather than collapsing every item into undifferentiated
+            &quot;news.&quot;
+          </motion.p>
+
+          {/* =====================================================
+              RESPONSIVE GRID
+          ====================================================== */}
+
+          <div
+            className="
+              mt-10
+              grid
+              grid-cols-1
+              gap-4
+              sm:grid-cols-2
+              lg:grid-cols-3
+              xl:grid-cols-[repeat(4,minmax(0,1fr))_240px]
+              xl:grid-rows-[minmax(192px,auto)_minmax(192px,auto)]
+              xl:gap-x-5
+              xl:gap-y-[13px]
+            "
+          >
+            {/* =================================================
+                FIRST ROW
+            ================================================== */}
+
+            <EvidenceCard
+              index={0}
+              title={cards[0].title}
+              description={cards[0].description}
+            />
+
+            <EvidenceCard
+              index={1}
+              title={cards[1].title}
+              description={cards[1].description}
+            />
+
+            <EvidenceCard
+              index={2}
+              title={cards[2].title}
+              description={cards[2].description}
+            />
+
+            <EvidenceCard
+              index={3}
+              title={cards[3].title}
+              description={cards[3].description}
+            />
+
+            {/* =================================================
+                SECOND ROW
+            ================================================== */}
+
+            <EvidenceCard
+              index={4}
+              title={cards[4].title}
+              description={cards[4].description}
+            />
+
+            <EvidenceCard
+              index={5}
+              title={cards[5].title}
+              description={cards[5].description}
+            />
+
+            <EvidenceCard
+              index={6}
+              title={cards[6].title}
+              description={cards[6].description}
+            />
+
+            <EvidenceCard
+              index={7}
+              title={cards[7].title}
+              description={cards[7].description}
+            />
+
+            {/* =================================================
+                IMAGE
+            ================================================== */}
 
             <motion.div
-              initial="hidden"
-              whileInView="visible"
+              initial={{
+                opacity: 0,
+                scale: 0.98,
+              }}
+              whileInView={{
+                opacity: 1,
+                scale: 1,
+              }}
               viewport={{
                 once: true,
-                amount: 0.2,
+                amount: 0.15,
               }}
-              variants={fadeUp}
-              className="
-                font-['IBM_Plex_Sans']
-                text-xs
-                font-bold
-                uppercase
-                tracking-wide
-                text-indigo-500
-
-                lg:absolute
-                lg:left-0
-                lg:top-[96.03px]
-                lg:w-[1280px]
-              "
-            >
-              COMMUNICATIONS &amp; EVIDENCE STREAM
-            </motion.div>
-
-            {/* =====================================================
-                HEADING
-            ====================================================== */}
-
-            <motion.h2
-              initial="hidden"
-              whileInView="visible"
-              viewport={{
-                once: true,
-                amount: 0.2,
+              transition={{
+                duration: 0.7,
+                ease,
               }}
-              variants={fadeUp}
               className="
-                mt-5
-                font-['IBM_Plex_Sans']
-                text-[38px]
-                font-bold
-                leading-[1.08]
-                tracking-[-0.02em]
-                text-slate-900
-
-                sm:text-5xl
-                sm:leading-[48.72px]
-
-                lg:absolute
-                lg:left-0
-                lg:top-[124.43px]
-                lg:mt-0
-                lg:w-[780px]
+                relative
+                hidden
+                min-h-[192px]
+                w-full
+                overflow-hidden
+                rounded-2xl
+                bg-white
+                outline
+                outline-1
+                outline-offset-[-1px]
+                outline-slate-900/10
+                lg:block
+                xl:col-start-5
+                xl:row-start-1
+                xl:row-span-2
+                xl:h-full
+                xl:min-h-[397px]
+                xl:w-[240px]
               "
             >
-              Official documents before
-              <br />
-              interpretation.
-            </motion.h2>
-
-            {/* =====================================================
-                DESCRIPTION
-            ====================================================== */}
-
-            <motion.p
-              initial="hidden"
-              whileInView="visible"
-              viewport={{
-                once: true,
-                amount: 0.2,
-              }}
-              variants={fadeUp}
-              className="
-                mt-5
-                max-w-[900px]
-                font-['IBM_Plex_Sans']
-                text-base
-                font-normal
-                leading-7
-                text-gray-600
-
-                lg:absolute
-                lg:left-0
-                lg:top-[242.43px]
-                lg:mt-0
-                lg:w-[1000px]
-              "
-            >
-              Central-bank research extends beyond a single decision. The
-              stream preserves a chronological, source-governed evidence
-              record rather than collapsing every item into undifferentiated
-              &quot;news.&quot;
-            </motion.p>
-
-            {/* =====================================================
-                EXACT DESKTOP FIGMA GRID
-
-                Content:
-                1280px
-
-                Columns:
-                240px + 20px + 240px + 20px + 240px
-                + 20px + 240px + 20px + 240px
-
-                = 1280px
-
-                Rows:
-                192px
-                13px gap
-                192px
-            ====================================================== */}
-
-            <div
-              className="
-                mt-10
-
-                grid
-                grid-cols-1
-                gap-4
-
-                sm:grid-cols-2
-
-                lg:absolute
-                lg:left-0
-                lg:top-[337.03px]
-                lg:mt-0
-
-                lg:h-[384px]
-                lg:w-[1280px]
-
-                lg:grid-cols-[240px_240px_240px_240px_240px]
-                lg:grid-rows-[192px_192px]
-
-                lg:gap-x-[20px]
-                lg:gap-y-[13px]
-              "
-            >
-              {/* =================================================
-                  FIRST ROW
-              ================================================== */}
-
-              <EvidenceCard
-                index={0}
-                title={cards[0].title}
-                description={cards[0].description}
-              />
-
-              <EvidenceCard
-                index={1}
-                title={cards[1].title}
-                description={cards[1].description}
-              />
-
-              <EvidenceCard
-                index={2}
-                title={cards[2].title}
-                description={cards[2].description}
-              />
-
-              <EvidenceCard
-                index={3}
-                title={cards[3].title}
-                description={cards[3].description}
-              />
-
-              {/* =================================================
-                  SECOND ROW
-              ================================================== */}
-
-              <EvidenceCard
-                index={4}
-                title={cards[4].title}
-                description={cards[4].description}
-              />
-
-              <EvidenceCard
-                index={5}
-                title={cards[5].title}
-                description={cards[5].description}
-              />
-
-              <EvidenceCard
-                index={6}
-                title={cards[6].title}
-                description={cards[6].description}
-              />
-
-              <EvidenceCard
-                index={7}
-                title={cards[7].title}
-                description={cards[7].description}
-              />
-
-              {/* =================================================
-                  IMAGE
-
-                  Figma frame:
-                  240px × 384px
-
-                  IMPORTANT:
-                  Do NOT use the previous 391px image with
-                  left:-75px. That was causing the zoom.
-
-                  The image now fills the actual 240×384 frame.
-              ================================================== */}
-
-              <motion.div
-                initial={{
-                  opacity: 0,
-                  scale: 0.98,
-                }}
-                whileInView={{
-                  opacity: 1,
-                  scale: 1,
-                }}
-                viewport={{
-                  once: true,
-                  amount: 0.15,
-                }}
-                transition={{
-                  duration: 0.7,
-                  ease,
-                }}
+              <Image
+                src="/images/markets/central-banks/image3.png"
+                alt="Central bank communications and evidence"
+                fill
+                sizes="(max-width: 1279px) 33vw, 240px"
+                priority={false}
                 className="
-                  relative
-                  hidden
-
-                  h-[384px]
-                  w-[240px]
-
-                  overflow-hidden
-                  rounded-2xl
-
-                  bg-white
-
-                  outline
-                  outline-1
-                  outline-offset-[-1px]
-                  outline-slate-900/10
-
-                  lg:col-start-5
-                  lg:row-start-1
-                  lg:row-span-2
-                  lg:block
+                  object-cover
+                  object-center
                 "
-              >
-                <Image
-                  src="/images/markets/central-banks/image3.png"
-                  alt="Central bank communications and evidence"
-                  fill
-                  sizes="240px"
-                  priority={false}
-                  className="
-                    object-cover
-                    object-center
-                  "
-                />
-              </motion.div>
-            </div>
+              />
+            </motion.div>
           </div>
         </div>
       </div>

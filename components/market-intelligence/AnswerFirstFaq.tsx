@@ -65,12 +65,15 @@ export default function AnswerFirstFaq() {
         className="
           mx-auto
           w-full
-          max-w-[1439.8px]
-          px-5
-          py-20
-          sm:px-8
-          lg:px-[80px]
-          lg:py-[96px]
+          max-w-[1440px]
+          px-4
+          py-14
+          sm:px-6
+          sm:py-16
+          md:px-8
+          lg:px-12
+          lg:py-24
+          xl:px-20
         "
       >
         {/* =====================================================
@@ -95,12 +98,13 @@ export default function AnswerFirstFaq() {
               mt-3
               max-w-[760px]
               font-['IBM_Plex_Sans']
-              text-[36px]
+              text-[28px]
               font-bold
-              leading-[1.08]
+              leading-[1.12]
               tracking-[-0.025em]
               text-slate-900
-              sm:text-[42px]
+              sm:text-[36px]
+              md:text-[42px]
               lg:text-5xl
               lg:leading-[48.3px]
             "
@@ -120,9 +124,9 @@ export default function AnswerFirstFaq() {
             grid-cols-1
             gap-8
             lg:mt-[28px]
-            lg:grid-cols-[minmax(0,840px)_384px]
+            lg:grid-cols-[minmax(0,1fr)_320px]
             lg:items-start
-            lg:gap-[36px]
+            lg:gap-8
             xl:grid-cols-[840px_384px]
             xl:gap-[36px]
           "

@@ -70,101 +70,107 @@ export default function TrustDataRights() {
         className="
           mx-auto
           w-full
-          max-w-[1280px]
-          px-6
-          py-20
-          sm:px-8
-          sm:py-24
-          lg:px-0
+          max-w-[1440px]
+          px-4
+          py-14
+          sm:px-6
+          sm:py-16
+          md:px-8
+          lg:px-12
           lg:py-[96px]
+          xl:px-[80px]
         "
       >
-        {/* Header */}
-        <motion.div
-          style={{
-            y: headerY,
-            opacity: headerOpacity,
-          }}
-        >
-          {/* Eyebrow */}
+        <div className="mx-auto w-full max-w-[1280px]">
+          {/* Header */}
+          <motion.div
+            style={{
+              y: headerY,
+              opacity: headerOpacity,
+            }}
+          >
+            {/* Eyebrow */}
+            <div
+              className="
+                font-['IBM_Plex_Sans']
+                text-xs
+                font-bold
+                tracking-wide
+                text-indigo-500
+              "
+            >
+              TRUST &amp; DATA RIGHTS
+            </div>
+
+            {/* Heading */}
+            <h2
+              className="
+                mt-4
+                max-w-[760px]
+                font-['IBM_Plex_Sans']
+                text-[30px]
+                font-bold
+                leading-[1.1]
+                text-violet-50
+                sm:text-[38px]
+                sm:leading-[44px]
+                md:text-[44px]
+                lg:text-5xl
+                lg:leading-[48.72px]
+              "
+            >
+              Central-bank research requires
+              <br className="hidden sm:block" />
+              institutional-grade controls.
+            </h2>
+          </motion.div>
+
+          {/* Main content */}
           <div
             className="
-              font-['IBM_Plex_Sans']
-              text-xs
-              font-bold
-              tracking-wide
-              text-indigo-500
-            "
-          >
-            TRUST &amp; DATA RIGHTS
-          </div>
-
-          {/* Heading */}
-          <h2
-            className="
-              mt-4
-              max-w-[760px]
-              font-['IBM_Plex_Sans']
-              text-[38px]
-              font-bold
-              leading-[42px]
-              text-violet-50
-              sm:text-[44px]
-              sm:leading-[46px]
-              lg:text-5xl
-              lg:leading-[48.72px]
-            "
-          >
-            Central-bank research requires
-            <br className="hidden sm:block" />
-            institutional-grade controls.
-          </h2>
-        </motion.div>
-
-        {/* Main content */}
-        <div
-          className="
-            mt-10
-            grid
-            grid-cols-1
-            gap-10
-            lg:grid-cols-[1fr_497.6px]
-            lg:gap-6
-          "
-        >
-          {/* Left content */}
-          <div
-            className="
+              mt-10
               grid
               grid-cols-1
-              gap-x-6
-              gap-y-10
-              sm:grid-cols-2
-              lg:grid-cols-3
+              gap-10
+              lg:grid-cols-[minmax(0,1.2fr)_minmax(0,1fr)]
+              lg:gap-6
+              xl:grid-cols-[1fr_497.6px]
             "
           >
-            {trustItems.map((item, index) => (
-              <motion.div
-                key={item.title}
-                initial={{
-                  opacity: 0,
-                  y: 30,
-                }}
-                whileInView={{
-                  opacity: 1,
-                  y: 0,
-                }}
-                viewport={{
-                  once: true,
-                  amount: 0.15,
-                }}
-                transition={{
-                  duration: 0.6,
-                  delay: index * 0.07,
-                  ease: [0.22, 1, 0.36, 1],
-                }}
-                className="w-full max-w-[240px]"
-              >
+            {/* Left content */}
+            <div
+              className="
+                grid
+                grid-cols-1
+                gap-x-6
+                gap-y-10
+                sm:grid-cols-2
+                lg:grid-cols-2
+                xl:grid-cols-3
+              "
+            >
+              {trustItems.map((item, index) => (
+                <motion.div
+                  key={item.title}
+                  initial={{
+                    opacity: 0,
+                    y: 30,
+                  }}
+                  whileInView={{
+                    opacity: 1,
+                    y: 0,
+                  }}
+                  viewport={{
+                    once: true,
+                    amount: 0.15,
+                  }}
+                  transition={{
+                    duration: 0.6,
+                    delay: index * 0.07,
+                    ease: [0.22, 1, 0.36, 1],
+                  }}
+                  className="w-full max-w-full xl:max-w-[240px]"
+                >
                 {/* Accent line */}
                 <div className="h-[2px] w-7 bg-indigo-500" />
 
@@ -219,14 +225,15 @@ export default function TrustDataRights() {
             }}
             className="
               relative
-              h-[280px]
+              h-[260px]
               w-full
               overflow-hidden
               rounded-2xl
               bg-white
-              sm:h-[360px]
-              lg:h-[240px]
-              lg:w-[497.6px]
+              sm:h-[340px]
+              lg:h-[280px]
+              xl:h-[240px]
+              xl:w-[497.6px]
             "
           >
             <motion.div
@@ -250,6 +257,7 @@ export default function TrustDataRights() {
               />
             </motion.div>
           </motion.div>
+        </div>
         </div>
       </div>
     </section>

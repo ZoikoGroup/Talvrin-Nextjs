@@ -69,7 +69,7 @@ export default function TrustArchitecture() {
         ref={sectionRef}
         className="w-full overflow-hidden bg-white text-slate-900"
       >
-        <div className="mx-auto w-full max-w-[1320px] px-6 py-20 sm:px-8 md:px-10 lg:px-20 lg:py-[96px]">
+        <div className="mx-auto w-full max-w-[1320px] px-4 py-12 sm:px-6 md:px-8 lg:px-8 xl:px-20 lg:py-16 xl:py-[96px]">
           {/* Header */}
           <div className="w-full">
             <p
@@ -81,18 +81,18 @@ export default function TrustArchitecture() {
 
             <h2
               data-reveal
-              className="reveal reveal-1 m-0 w-full max-w-[1000px] pt-3 font-['IBM_Plex_Sans'] text-[36px] font-bold leading-[1.1] tracking-[-1px] text-slate-900 sm:text-[42px] lg:text-5xl lg:leading-[48.72px]"
+              className="reveal reveal-1 m-0 w-full max-w-[1000px] pt-3 font-['IBM_Plex_Sans'] text-[30px] font-bold leading-[1.12] tracking-[-1px] text-slate-900 sm:text-[38px] md:text-[42px] lg:text-5xl lg:leading-[48.72px]"
             >
-              Organization-scale research requires
-              <br className="hidden lg:block" />
+              Organization-scale research requires{" "}
+              <br className="hidden xl:block" />
               verified trust, not badges.
             </h2>
           </div>
 
           {/* Content */}
-          <div className="mt-10 grid w-full grid-cols-1 gap-8 lg:grid-cols-[minmax(0,780px)_minmax(0,498px)] lg:items-center lg:gap-5">
+          <div className="mt-8 sm:mt-10 grid w-full grid-cols-1 gap-8 lg:grid-cols-[minmax(0,1.4fr)_minmax(0,1fr)] xl:grid-cols-[minmax(0,780px)_minmax(0,498px)] lg:items-center lg:gap-6 xl:gap-8">
             {/* Trust items */}
-            <div className="grid w-full grid-cols-1 gap-x-5 gap-y-10 sm:grid-cols-2 lg:grid-cols-3 lg:gap-y-12">
+            <div className="grid w-full grid-cols-1 gap-x-5 gap-y-8 sm:grid-cols-2 lg:grid-cols-3 lg:gap-y-10">
               {trustItems.map((item, index) => (
                 <div
                   key={item.title}
@@ -121,13 +121,13 @@ export default function TrustArchitecture() {
             {/* Image */}
             <div
               data-reveal
-              className="reveal reveal-image relative h-[240px] w-full overflow-hidden rounded-2xl bg-white outline outline-1 outline-offset-[-1px] outline-slate-900/10"
+              className="reveal reveal-image relative min-h-[240px] sm:min-h-[280px] lg:min-h-[320px] w-full overflow-hidden rounded-2xl bg-white outline outline-1 outline-offset-[-1px] outline-slate-900/10"
             >
               <Image
                 src="/images/solutions/enterprise/image6.png"
                 alt="Talvrin trust architecture"
                 fill
-                sizes="(max-width: 1023px) 100vw, 498px"
+                sizes="(max-width: 1023px) 100vw, (max-width: 1279px) 40vw, 498px"
                 className="object-cover"
               />
             </div>

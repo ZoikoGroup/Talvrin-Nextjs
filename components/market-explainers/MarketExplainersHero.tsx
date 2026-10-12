@@ -111,16 +111,14 @@ export default function MarketExplainersHero() {
           mx-auto
           w-full
           max-w-[1440px]
-          px-6
-          py-16
-
+          px-5
+          py-14
           sm:px-8
-          sm:py-20
-
-          lg:px-16
-          lg:py-[72px]
-
+          sm:py-18
+          lg:px-10
+          lg:py-16
           xl:px-[100px]
+          xl:py-[72px]
         "
       >
         <div
@@ -128,12 +126,11 @@ export default function MarketExplainersHero() {
             grid
             grid-cols-1
             items-center
-            gap-12
-
-            lg:grid-cols-[minmax(0,578px)_minmax(0,518px)]
-            lg:justify-between
-            lg:gap-16
-
+            gap-10
+            lg:grid-cols-2
+            lg:items-center
+            lg:gap-8
+            xl:grid-cols-[minmax(0,578px)_minmax(0,518px)]
             xl:gap-[70px]
           "
         >
@@ -211,28 +208,26 @@ export default function MarketExplainersHero() {
                 w-full
                 pt-2
                 font-['IBM_Plex_Sans']
-                text-[40px]
+                text-[36px]
                 font-bold
                 leading-[1.08]
                 tracking-[-0.025em]
                 text-violet-50
-
-                sm:text-[48px]
+                sm:text-[44px]
                 sm:leading-[1.08]
-
-                lg:text-[56px]
-                lg:leading-[63.8px]
-
+                lg:text-[46px]
+                lg:leading-[1.12]
                 xl:text-[60px]
+                xl:leading-[63.8px]
               "
             >
               Understand how
-              <br className="hidden sm:block" />
-              markets work — with
-              <br className="hidden sm:block" />
-              the evidence still
-              <br className="hidden sm:block" />
-              visible.
+              <br className="hidden sm:block lg:hidden xl:block" />
+              {" "}markets work — with
+              <br className="hidden sm:block lg:hidden xl:block" />
+              {" "}the evidence still
+              <br className="hidden sm:block lg:hidden xl:block" />
+              {" "}visible.
             </motion.h1>
 
             {/* ---------------------------------------------

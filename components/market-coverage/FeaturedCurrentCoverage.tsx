@@ -71,8 +71,8 @@ export default function FeaturedCurrentCoverage() {
       ref={sectionRef}
       className="w-full overflow-hidden bg-slate-900"
     >
-      <div className="mx-auto w-full max-w-[1440px] px-6 py-20 sm:px-8 md:px-10 lg:px-20 lg:py-[96px]">
-        <div className="grid grid-cols-1 gap-10 lg:grid-cols-[minmax(0,1fr)_461px] lg:gap-[45px]">
+      <div className="mx-auto w-full max-w-[1440px] px-4 py-12 sm:px-6 md:px-8 lg:px-8 xl:px-20 lg:py-16 xl:py-[96px]">
+        <div className="grid grid-cols-1 gap-8 lg:grid-cols-[minmax(0,1.2fr)_minmax(0,1fr)] xl:grid-cols-[minmax(0,1fr)_461px] lg:gap-8 xl:gap-[45px] lg:items-center">
           {/* LEFT CONTENT */}
           <div className="min-w-0">
             {/* LABEL */}
@@ -104,7 +104,8 @@ export default function FeaturedCurrentCoverage() {
             <div
               data-reveal
               className="
-                mt-6
+                mt-4
+                sm:mt-6
                 translate-y-8
                 opacity-0
                 transition-all
@@ -117,12 +118,13 @@ export default function FeaturedCurrentCoverage() {
                   m-0
                   max-w-[780px]
                   font-['IBM_Plex_Sans']
-                  text-[36px]
+                  text-[30px]
                   font-bold
-                  leading-[1.1]
+                  leading-[1.12]
                   tracking-[-1px]
                   text-violet-50
-                  sm:text-[42px]
+                  sm:text-[38px]
+                  md:text-[42px]
                   lg:text-5xl
                   lg:leading-[48.72px]
                 "
@@ -252,7 +254,13 @@ export default function FeaturedCurrentCoverage() {
           <div
             data-reveal
             className="
-              h-[360px]
+              h-[280px]
+              sm:h-[360px]
+              lg:h-[420px]
+              xl:h-[461px]
+              w-full
+              lg:w-auto
+              xl:w-[461px]
               translate-y-8
               overflow-hidden
               rounded-2xl
@@ -261,9 +269,6 @@ export default function FeaturedCurrentCoverage() {
               transition-all
               duration-1000
               ease-out
-              sm:h-[400px]
-              lg:h-[461px]
-              lg:w-[461px]
             "
             style={{
               transitionDelay: "300ms",

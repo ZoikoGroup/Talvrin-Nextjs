@@ -59,7 +59,7 @@ export default function FeaturedLatestResearch() {
         }}
       />
 
-      <div className="relative mx-auto w-full max-w-[1275px] px-5 py-20 sm:px-8 lg:px-0 lg:py-[96px]">
+      <div className="relative mx-auto w-full max-w-[1320px] px-4 py-14 sm:px-6 sm:py-16 md:px-8 lg:px-12 lg:py-24 xl:px-16">
         {/* =========================================================
             HEADER
         ========================================================== */}
@@ -96,12 +96,13 @@ export default function FeaturedLatestResearch() {
               mt-5
               max-w-[1000px]
               font-['IBM_Plex_Sans']
-              text-[36px]
+              text-[28px]
               font-bold
-              leading-[1.08]
+              leading-[1.12]
               tracking-[-0.025em]
               text-slate-900
-              sm:text-[42px]
+              sm:text-[36px]
+              md:text-[42px]
               lg:text-[48px]
               lg:leading-[48.72px]
             "
@@ -151,7 +152,8 @@ export default function FeaturedLatestResearch() {
             grid
             grid-cols-1
             gap-4
-            lg:grid-cols-[1fr_1fr_2.18fr]
+            lg:grid-cols-[minmax(0,1.2fr)_minmax(0,1fr)]
+            xl:grid-cols-[1fr_1fr_2.18fr]
             lg:gap-4
           "
         >
@@ -159,7 +161,7 @@ export default function FeaturedLatestResearch() {
               LEFT SIDE — FOUR INFORMATION CARDS
           ====================================================== */}
 
-          <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:col-span-2">
+          <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:col-span-1 xl:col-span-2">
             {editorialCards.map((card, index) => (
               <motion.article
                 key={card.title}

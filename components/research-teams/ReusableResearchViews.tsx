@@ -20,7 +20,6 @@ const fadeUp: Variants = {
     opacity: 0,
     y: 24,
   },
-
   visible: {
     opacity: 1,
     y: 0,
@@ -43,85 +42,46 @@ type ResearchView = {
 const researchViews: ResearchView[] = [
   {
     title: "Question / scope",
-    description: (
-      <>
-        Stable statement of what the team is
-        <br className="hidden lg:block" />
-        investigating.
-      </>
-    ),
+    description: <>Stable statement of what the team is investigating.</>,
   },
-
   {
     title: "Current view",
-    description: (
-      <>
-        Concise synthesis with visible
-        <br className="hidden lg:block" />
-        provenance to evidence.
-      </>
-    ),
+    description: <>Concise synthesis with visible provenance to evidence.</>,
   },
-
   {
     title: "Supporting evidence",
     description: <>Linked governed sources.</>,
   },
-
   {
     title: "Challenging evidence",
     description: (
-      <>
-        Contradictory evidence stays visible
-        <br className="hidden lg:block" />
-        rather than suppressed.
-      </>
+      <>Contradictory evidence stays visible rather than suppressed.</>
     ),
   },
-
   {
     title: "Last reviewed",
     description: (
-      <>
-        Shown only if backed by real review
-        <br className="hidden lg:block" />
-        metadata; no cosmetic freshness.
-      </>
+      <>Shown only if backed by real review metadata; no cosmetic freshness.</>
     ),
   },
-
   {
     title: "Monitoring state",
-    description: (
-      <>
-        What evidence remains under
-        <br className="hidden lg:block" />
-        observation.
-      </>
-    ),
+    description: <>What evidence remains under observation.</>,
   },
-
   {
     title: "Change history",
     description: (
       <>
-        New/updated/unchanged evidence
-        <br className="hidden lg:block" />
-        shown conceptually; exact audit
-        <br className="hidden lg:block" />
-        mechanics remain capability-gated.
+        New/updated/unchanged evidence shown conceptually; exact audit mechanics
+        remain capability-gated.
       </>
     ),
   },
-
   {
     title: "Assumptions",
     description: (
       <>
-        Represented only if the product
-        <br className="hidden lg:block" />
-        supports the field; exact schema is
-        <br className="hidden lg:block" />
+        Represented only if the product supports the field; exact schema is
         capability-gated.
       </>
     ),
@@ -143,54 +103,54 @@ function ResearchViewItem({
 }: ResearchViewItemProps) {
   return (
     <motion.div
-      variants={fadeUp}
       initial="hidden"
       whileInView="visible"
       viewport={{
         once: true,
         amount: 0.2,
       }}
+      variants={fadeUp}
       transition={{
         delay: index * 0.06,
       }}
       className="
-        w-full
-        min-w-0
-        pt-4
-        pb-9
-        border-b-[0.8px]
-        border-slate-900/10
         flex
+        min-w-0
+        w-full
         flex-col
         items-start
         gap-1
+        border-b-[0.8px]
+        border-slate-900/10
+        py-5
+        sm:py-6
+        lg:py-5
       "
     >
-      {/* TITLE */}
-
-      <div
+      <h3
         className="
           w-full
-          text-slate-900
+          break-words
+          font-['IBM_Plex_Sans']
           text-base
           font-bold
-          font-['IBM_Plex_Sans']
           leading-5
+          text-slate-900
         "
       >
         {item.title}
-      </div>
-
-      {/* DESCRIPTION */}
+      </h3>
 
       <div
         className="
           w-full
-          text-gray-600
+          break-words
+          font-['IBM_Plex_Sans']
           text-xs
           font-normal
-          font-['IBM_Plex_Sans']
           leading-5
+          text-gray-600
+          sm:text-sm
         "
       >
         {item.description}
@@ -205,35 +165,24 @@ function ResearchViewItem({
 
 export default function ReusableResearchViews() {
   return (
-    <section
-      className="
-        relative
-        w-full
-        bg-white
-        overflow-hidden
-      "
-    >
-      {/* =====================================================
-          MAIN 1440PX CONTAINER
-      ===================================================== */}
-
+    <section className="relative w-full overflow-hidden bg-white">
       <div
         className="
+          mx-auto
           w-full
           max-w-[1440px]
-          mx-auto
-          px-6
-          sm:px-8
-          lg:px-[80px]
-          pt-[72px]
-          pb-[72px]
-          lg:pt-[96.4px]
-          lg:pb-[96px]
+          px-4
+          py-12
+          min-[480px]:px-5
+          sm:py-16
+          md:px-8
+          lg:px-12
+          lg:py-20
+          xl:px-20
+          xl:py-[96px]
         "
       >
-        {/* ===================================================
-            HEADER
-        =================================================== */}
+        {/* HEADER */}
 
         <motion.div
           initial="hidden"
@@ -244,34 +193,27 @@ export default function ReusableResearchViews() {
           }}
           variants={{
             hidden: {},
-
             visible: {
               transition: {
                 staggerChildren: 0.12,
               },
             },
           }}
-          className="
-            w-full
-            max-w-[1280px]
-          "
+          className="w-full max-w-[1280px]"
         >
-          {/* EYEBROW */}
-
-          <motion.div
+          <motion.p
             variants={fadeUp}
             className="
-              text-indigo-500
+              font-['IBM_Plex_Sans']
               text-xs
               font-bold
-              font-['IBM_Plex_Sans']
               tracking-wide
+              text-indigo-500
+              sm:text-sm
             "
           >
             REUSABLE RESEARCH VIEWS
-          </motion.div>
-
-          {/* HEADING */}
+          </motion.p>
 
           <motion.h2
             variants={fadeUp}
@@ -279,78 +221,59 @@ export default function ReusableResearchViews() {
               w-full
               max-w-[1000px]
               pt-3
-              text-slate-900
-              text-[32px]
-              sm:text-[40px]
-              lg:text-5xl
-              font-bold
               font-['IBM_Plex_Sans']
-              leading-[1.08]
-              lg:leading-[48.72px]
+              text-[clamp(1.8rem,3.5vw,3rem)]
+              font-bold
+              leading-[1.1]
               tracking-[-0.02em]
+              text-slate-900
             "
           >
-            A research view that survives beyond
-            <br className="hidden sm:block" />
-            one analyst or document.
+            A research view that survives beyond one analyst or document.
           </motion.h2>
-
-          {/* DESCRIPTION */}
 
           <motion.p
             variants={fadeUp}
             className="
               w-full
               max-w-[800px]
-              pt-2
-              text-gray-600
-              text-sm
-              sm:text-base
-              font-normal
+              pt-3
               font-['IBM_Plex_Sans']
+              text-sm
+              font-normal
               leading-6
-              lg:leading-7
+              text-gray-600
+              sm:text-base
+              sm:leading-7
             "
           >
             Reasoning stays discoverable through the research object — not
-            scattered across an individual&apos;s tabs,
-            <br className="hidden lg:block" />
-            notes, and memory.
+            scattered across an individual&apos;s tabs, notes, and memory.
           </motion.p>
         </motion.div>
 
-        {/* ===================================================
-            MAIN CONTENT
-
-            DESKTOP:
-
-            224px
-            224px
-            224px
-            224px
-            240px IMAGE
-
-            The image occupies the fifth column and spans
-            both content rows.
-        =================================================== */}
+        {/* MAIN CONTENT GRID */}
 
         <div
           className="
+            mt-8
+            grid
             w-full
             max-w-[1280px]
-            mt-[59px]
-            grid
             grid-cols-1
-            sm:grid-cols-2
-            lg:grid-cols-[repeat(4,minmax(0,1fr))_240px]
-            gap-x-[38.4px]
-            gap-y-0
             items-start
+            gap-x-8
+            gap-y-0
+            sm:mt-10
+            sm:grid-cols-2
+            sm:gap-x-8
+            lg:mt-[59px]
+            lg:grid-cols-[repeat(4,minmax(0,1fr))_240px]
+            lg:gap-x-6
+            xl:gap-x-[38.4px]
           "
         >
-          {/* =================================================
-              FIRST 8 RESEARCH ITEMS
-          ================================================= */}
+          {/* RESEARCH VIEW ITEMS */}
 
           {researchViews.map((item, index) => (
             <ResearchViewItem
@@ -360,14 +283,7 @@ export default function ReusableResearchViews() {
             />
           ))}
 
-          {/* =================================================
-              IMAGE
-
-              Figma:
-              240 × 240
-              x = 1129.60
-              y = 337.80
-          ================================================= */}
+          {/* IMAGE */}
 
           <motion.div
             initial={{
@@ -391,20 +307,24 @@ export default function ReusableResearchViews() {
             }}
             className="
               relative
+              mt-6
+              aspect-square
               w-full
-              h-[240px]
-              bg-red-700
+              min-w-0
+              overflow-hidden
               rounded-2xl
               border-b-[0.8px]
               border-slate-900/10
-              overflow-hidden
-              mt-4
+              bg-red-700
               sm:col-span-2
+              sm:mx-auto
+              sm:max-w-[360px]
               lg:col-span-1
+              lg:col-start-5
               lg:row-span-2
               lg:row-start-1
-              lg:col-start-5
               lg:mt-0
+              lg:max-w-none
             "
           >
             <Image
@@ -412,7 +332,7 @@ export default function ReusableResearchViews() {
               alt="Reusable research view"
               fill
               priority
-              sizes="240px"
+              sizes="(max-width: 639px) calc(100vw - 32px), (max-width: 1023px) 360px, (max-width: 1279px) 220px, 240px"
               className="object-cover object-center"
             />
           </motion.div>

@@ -14,7 +14,7 @@ const principles = [
 export default function ResearchPrinciples() {
   return (
     <section className="relative w-full border-y border-slate-900/10 bg-white">
-      <div className="mx-auto flex min-h-[80px] w-full max-w-[1320px] items-center justify-center px-5 py-5 sm:px-8 lg:px-14">
+      <div className="mx-auto flex min-h-[64px] sm:min-h-[80px] w-full max-w-[1320px] items-center justify-center px-4 py-4 sm:px-6 sm:py-5 md:px-8 lg:px-12 xl:px-16">
         <motion.div
           initial={{ opacity: 0, y: 10 }}
           whileInView={{ opacity: 1, y: 0 }}

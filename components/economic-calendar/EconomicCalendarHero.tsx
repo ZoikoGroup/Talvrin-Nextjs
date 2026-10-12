@@ -12,15 +12,15 @@ export default function EconomicCalendarHero() {
         className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_16%_6%,rgba(99,102,241,0.20),transparent_65%)]"
       />
 
-      <div className="relative mx-auto flex min-h-[719px] w-full max-w-[1440px] items-center px-6 py-20 sm:px-8 lg:px-16">
-        <div className="grid w-full grid-cols-1 items-center gap-12 lg:grid-cols-[minmax(0,1fr)_minmax(420px,560px)] lg:gap-14">
+      <div className="relative mx-auto flex min-h-auto w-full max-w-[1440px] items-center px-4 py-14 sm:px-6 sm:py-20 md:px-8 lg:min-h-[640px] lg:px-12 xl:min-h-[719px] xl:px-16">
+        <div className="grid w-full grid-cols-1 items-center gap-12 lg:grid-cols-2 lg:gap-8 xl:grid-cols-[minmax(0,1fr)_minmax(420px,560px)] xl:gap-14">
           {/* Content */}
           <motion.div
             initial={{ opacity: 0, y: 35 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: 0.25 }}
             transition={{ duration: 0.7, ease: "easeOut" }}
-            className="flex w-full max-w-[578px] flex-col items-start gap-4"
+            className="flex w-full max-w-full flex-col items-start gap-4 xl:max-w-[578px]"
           >
             {/* Eyebrow */}
             <motion.div
@@ -41,7 +41,7 @@ export default function EconomicCalendarHero() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.05 }}
-              className="pt-1.5 font-['IBM_Plex_Sans'] text-[42px] font-bold leading-[1.08] tracking-[-0.025em] text-violet-50 sm:text-[50px] sm:leading-[1.08] lg:text-[60px] lg:leading-[63.8px]"
+              className="pt-1.5 font-['IBM_Plex_Sans'] text-[32px] font-bold leading-[1.08] tracking-[-0.025em] text-violet-50 sm:text-[44px] md:text-[50px] lg:text-[46px] lg:leading-[1.1] xl:text-[60px] xl:leading-[63.8px]"
             >
               Economic events,
               <br />

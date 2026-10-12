@@ -149,12 +149,14 @@ export default function CoverageDimensions() {
           mx-auto
           w-full
           max-w-[1440px]
-          px-6
-          py-20
-          sm:px-8
-          md:px-10
-          lg:px-20
-          lg:py-[95px]
+          px-4
+          py-12
+          sm:px-6
+          md:px-8
+          lg:px-8
+          xl:px-20
+          lg:py-16
+          xl:py-[95px]
         "
       >
         {/* EYEBROW */}
@@ -191,13 +193,13 @@ export default function CoverageDimensions() {
             max-w-[780px]
             pt-3
             font-['IBM_Plex_Sans']
-            text-[36px]
+            text-[30px]
             font-bold
-            leading-[43px]
+            leading-[38px]
             tracking-[-0.8px]
             text-slate-900
-            sm:text-[42px]
-            sm:leading-[46px]
+            sm:text-[38px]
+            sm:leading-[44px]
             lg:text-5xl
             lg:leading-[48.72px]
           "
@@ -221,13 +223,14 @@ export default function CoverageDimensions() {
             ease-out
             m-0
             max-w-[800px]
-            pt-5
+            pt-4
             font-['IBM_Plex_Sans']
-            text-[15px]
+            text-[14px]
             font-normal
-            leading-7
+            leading-6
             text-gray-600
             sm:text-base
+            sm:leading-7
           "
           style={{
             transitionDelay: "160ms",
@@ -241,12 +244,15 @@ export default function CoverageDimensions() {
         {/* CARDS */}
         <div
           className="
-            mt-9
+            mt-8
+            sm:mt-9
             grid
             grid-cols-1
             gap-4
             sm:grid-cols-2
-            lg:grid-cols-5
+            md:grid-cols-3
+            lg:grid-cols-3
+            xl:grid-cols-5
           "
         >
           {dimensions.map((dimension, index) => (

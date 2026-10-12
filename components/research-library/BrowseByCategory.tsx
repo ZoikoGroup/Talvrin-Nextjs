@@ -161,11 +161,12 @@ export default function BrowseByCategory() {
           w-full
           max-w-[1280px]
           px-5
-          py-20
+          py-16
           sm:px-7
-          sm:py-24
-          lg:px-0
+          sm:py-20
+          lg:px-8
           lg:py-[96px]
+          xl:px-0
         "
       >
         {/* ============================================================
@@ -261,10 +262,10 @@ export default function BrowseByCategory() {
             mt-10
             hidden
             w-full
-            lg:grid
-            lg:grid-cols-[repeat(5,minmax(0,1fr))]
-            lg:grid-rows-[225px_225px]
-            lg:gap-5
+            xl:grid
+            xl:grid-cols-[repeat(5,minmax(0,1fr))]
+            xl:grid-rows-[minmax(225px,auto)_minmax(225px,auto)]
+            xl:gap-5
           "
         >
           {/* ==========================================================
@@ -427,7 +428,8 @@ export default function BrowseByCategory() {
             grid-cols-1
             gap-4
             sm:grid-cols-2
-            lg:hidden
+            lg:grid-cols-3
+            xl:hidden
           "
         >
           {categories.map((category, index) => (
@@ -461,7 +463,7 @@ export default function BrowseByCategory() {
             }}
             className="
               relative
-              min-h-[360px]
+              min-h-[280px]
               w-full
               overflow-hidden
               rounded-2xl
@@ -469,13 +471,15 @@ export default function BrowseByCategory() {
               border-slate-900/10
               bg-violet-50
               sm:col-span-2
+              lg:col-span-1
+              lg:min-h-[225px]
             "
           >
             <Image
               src="/images/research/research-library/image.png"
               alt="Research collaboration"
               fill
-              sizes="(max-width: 639px) 100vw, 100vw"
+              sizes="(max-width: 639px) 100vw, (max-width: 1023px) 100vw, 33vw"
               className="
                 object-cover
                 object-center

@@ -19,7 +19,6 @@ const fadeUp: Variants = {
     opacity: 0,
     y: 24,
   },
-
   visible: {
     opacity: 1,
     y: 0,
@@ -36,143 +35,83 @@ const fadeUp: Variants = {
 
 export default function ContinuousMonitoring() {
   return (
-    <section
-      className="
-        relative
-        w-full
-        bg-violet-50
-        overflow-hidden
-      "
-    >
-      {/* ===================================================
-          MAIN SECTION CONTAINER
-      =================================================== */}
-
+    <section className="relative w-full overflow-hidden bg-violet-50">
       <div
         className="
-          relative
-          w-full
-          max-w-[1440px]
-          min-h-[829px]
-          mx-auto
-          px-6
-          sm:px-8
-          lg:px-0
-          py-20
-          lg:py-0
+          mx-auto w-full max-w-[1440px]
+          px-4 py-12
+          min-[480px]:px-5
+          sm:py-16
+          md:px-8 md:py-20
+          lg:px-12
+          xl:px-20 xl:py-24
         "
       >
-        {/* =================================================
-            CONTENT WRAPPER
-        ================================================= */}
+        <div className="w-full max-w-[1280px]">
+          {/* EYEBROW */}
 
-        <div
-          className="
-            w-full
-            lg:w-[1280px]
-            lg:left-[80px]
-            lg:top-[95.9px]
-            lg:absolute
-          "
-        >
-          {/* =================================================
-              EYEBROW
-          ================================================= */}
-
-          <motion.div
+          <motion.p
             initial="hidden"
             whileInView="visible"
             viewport={{
               once: true,
-              amount: 0.25,
+              amount: 0.2,
             }}
             variants={fadeUp}
             className="
-              w-full
-              text-indigo-500
-              text-xs
-              font-bold
               font-['IBM_Plex_Sans']
-              tracking-wide
+              text-xs font-bold tracking-wide text-indigo-500
+              sm:text-sm
             "
           >
             CONTINUOUS MONITORING FOR TEAMS
-          </motion.div>
+          </motion.p>
 
-          {/* =================================================
-              HEADING
-          ================================================= */}
+          {/* HEADING */}
 
-          <motion.div
+          <motion.h2
             initial="hidden"
             whileInView="visible"
             viewport={{
               once: true,
-              amount: 0.25,
+              amount: 0.2,
             }}
             variants={fadeUp}
             className="
-              w-full
-              max-w-[1000px]
-              mt-[16.3px]
+              mt-4 w-full max-w-[1000px]
+              break-words
+              font-['IBM_Plex_Sans']
+              text-[clamp(1.8rem,3.5vw,3rem)]
+              font-bold leading-[1.1]
+              tracking-[-0.02em] text-slate-900
             "
           >
-            <h2
-              className="
-                text-slate-900
-                text-[32px]
-                sm:text-[40px]
-                lg:text-5xl
-                font-bold
-                font-['IBM_Plex_Sans']
-                leading-[1.08]
-                lg:leading-[48.72px]
-              "
-            >
-              Focus the team&apos;s attention on evidence
-              <br className="hidden lg:block" />
-              that may affect the view.
-            </h2>
-          </motion.div>
+            Focus the team&apos;s attention on evidence that may affect the
+            view.
+          </motion.h2>
 
-          {/* =================================================
-              DESCRIPTION
-          ================================================= */}
+          {/* DESCRIPTION */}
 
-          <motion.div
+          <motion.p
             initial="hidden"
             whileInView="visible"
             viewport={{
               once: true,
-              amount: 0.25,
+              amount: 0.2,
             }}
             variants={fadeUp}
             className="
-              w-full
-              max-w-[780px]
-              pt-2
-              mt-[17.4px]
+              mt-4 w-full max-w-[780px]
+              font-['IBM_Plex_Sans']
+              text-sm font-normal leading-6 text-gray-600
+              sm:text-base sm:leading-7
             "
           >
-            <p
-              className="
-                text-gray-600
-                text-sm
-                sm:text-base
-                font-normal
-                font-['IBM_Plex_Sans']
-                leading-6
-                lg:leading-7
-              "
-            >
-              Not a real-time alert feed. Monitoring keeps a shared research
-              object connected to relevant evidence.
-            </p>
-          </motion.div>
+            Not a real-time alert feed. Monitoring keeps a shared research
+            object connected to relevant evidence.
+          </motion.p>
 
-          {/* =================================================
-              IMAGE
-          ================================================= */}
+          {/* IMAGE */}
 
           <motion.div
             initial={{
@@ -185,27 +124,21 @@ export default function ContinuousMonitoring() {
             }}
             viewport={{
               once: true,
-              amount: 0.2,
+              amount: 0.15,
             }}
             transition={{
               duration: 0.8,
               ease: smoothEase,
             }}
             className="
-              relative
-              w-full
-              h-[320px]
-              lg:w-[1280px]
-              lg:h-[320px]
-              mt-10
-              lg:mt-[40px]
+              relative mt-8 w-full min-w-0
+              aspect-[4/3] overflow-hidden
+              rounded-2xl border border-slate-900/10
               bg-white
-              rounded-2xl
-              outline
-              outline-1
-              outline-offset-[-1px]
-              outline-slate-900/10
-              overflow-hidden
+              min-[480px]:aspect-[5/3]
+              sm:mt-10
+              lg:aspect-[4/1]
+              xl:mt-[40px]
             "
           >
             <Image
@@ -213,96 +146,56 @@ export default function ContinuousMonitoring() {
               alt="Continuous monitoring for research teams"
               fill
               priority
-              sizes="1280px"
-              className="
-                object-cover
-                object-center
-              "
+              sizes="(max-width: 479px) calc(100vw - 32px), (max-width: 639px) calc(100vw - 40px), (max-width: 1023px) calc(100vw - 64px), (max-width: 1279px) calc(100vw - 96px), 1280px"
+              className="object-cover object-center"
             />
           </motion.div>
 
-          {/* =================================================
-              MONITORING BOUNDARY
-          ================================================= */}
+          {/* MONITORING BOUNDARY */}
 
           <motion.div
             initial="hidden"
             whileInView="visible"
             viewport={{
               once: true,
-              amount: 0.2,
+              amount: 0.15,
             }}
             variants={fadeUp}
             className="
-              w-full
-              lg:w-[1280px]
-              mt-5
-              lg:mt-[18.2px]
-              px-6
-              py-5
-              bg-slate-900
-              rounded-2xl
-              flex
-              flex-col
-              justify-start
-              items-start
-              gap-2
+              mt-5 flex w-full flex-col items-start
+              gap-2 rounded-2xl bg-slate-900
+              px-5 py-5
+              sm:px-6 sm:py-6
+              xl:mt-[18px]
             "
           >
             {/* LABEL */}
 
-            <div
+            <p
               className="
-                self-stretch
-                flex
-                flex-col
-                justify-start
-                items-start
+                font-['IBM_Plex_Sans']
+                text-xs font-bold tracking-wide text-yellow-600
+                sm:text-sm
               "
             >
-              <div
-                className="
-                  self-stretch
-                  text-yellow-600
-                  text-xs
-                  font-bold
-                  font-['IBM_Plex_Sans']
-                  tracking-wide
-                "
-              >
-                MONITORING BOUNDARY
-              </div>
-            </div>
+              MONITORING BOUNDARY
+            </p>
 
             {/* DESCRIPTION */}
 
-            <div
+            <p
               className="
-                self-stretch
-                flex
-                flex-col
-                justify-start
-                items-start
+                w-full break-words
+                font-['IBM_Plex_Sans']
+                text-sm font-normal leading-6 text-violet-50/80
+                sm:text-base sm:leading-7
               "
             >
-              <p
-                className="
-                  self-stretch
-                  text-violet-50/80
-                  text-sm
-                  font-normal
-                  font-['IBM_Plex_Sans']
-                  leading-6
-                "
-              >
-                Monitoring can focus attention on changes that may affect a
-                view. The sources do not define team assignment, escalation,
-                inbox ownership, notification routing, or response SLAs —
-                those mechanics
-                <br className="hidden lg:block" />
-                remain capability-gated.
-              </p>
-            </div>
+              Monitoring can focus attention on changes that may affect a
+              view. The sources do not define team assignment, escalation,
+              inbox ownership, notification routing, or response SLAs — those
+              mechanics remain capability-gated.
+            </p>
           </motion.div>
         </div>
       </div>

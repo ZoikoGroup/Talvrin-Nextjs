@@ -63,14 +63,13 @@ export default function ResearchWorkflow() {
           mx-auto
           w-full
           max-w-[1439.8px]
-          px-6
+          px-5
           py-16
-
           sm:px-8
           sm:py-20
-
-          lg:px-20
+          lg:px-8
           lg:py-[96px]
+          xl:px-20
         "
       >
         <div className="mx-auto w-full max-w-[1280px]">

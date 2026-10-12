@@ -5,51 +5,44 @@ import Image from 'next/image'
 export default function TechnicalDeveloperDocumentation() {
   return (
     <section
-      id="developer-docs"
+      id="technical-developer-documentation"
       className="
         w-full
         overflow-hidden
         bg-violet-50
       "
     >
-      {/* =====================================================
-          DESKTOP
-          Figma: 1440 × 545.20
-          ===================================================== */}
-
       <div
         className="
           mx-auto
-          hidden
-          min-h-[545.2px]
           w-full
           max-w-[1440px]
-          lg:block
+          px-5
+          py-16
+          sm:px-8
+          sm:py-20
+          lg:px-8
+          lg:py-24
+          xl:px-20
         "
       >
         <div
           className="
-            relative
             mx-auto
-            h-[545.2px]
-            w-[1200px]
+            grid
+            w-full
+            max-w-[1200px]
+            items-center
+            gap-10
+            lg:grid-cols-[minmax(0,1fr)_340px]
+            lg:gap-8
+            xl:grid-cols-[minmax(0,1fr)_384px]
+            xl:gap-12
           "
         >
-          {/* =================================================
-              LABEL
-              Figma:
-              x = 112.40
-              y = 96
-              ================================================= */}
-
-          <div
-            className="
-              absolute
-              left-0
-              top-[96px]
-              w-[1200px]
-            "
-          >
+          {/* LEFT CONTENT */}
+          <div className="flex w-full flex-col items-start">
+            {/* LABEL */}
             <span
               className="
                 text-xs
@@ -61,184 +54,148 @@ export default function TechnicalDeveloperDocumentation() {
             >
               TECHNICAL / DEVELOPER DOCUMENTATION
             </span>
+
+            {/* HEADING */}
+            <h2
+              className="
+                m-0
+                mt-4
+                max-w-[800px]
+                text-[28px]
+                font-bold
+                leading-9
+                tracking-[-0.015em]
+                text-slate-900
+                [font-family:'IBM_Plex_Sans',sans-serif]
+                sm:text-[34px]
+                sm:leading-10
+                lg:text-4xl
+                lg:leading-10
+              "
+            >
+              General product documentation is separate
+              <br className="hidden sm:block" />
+              {" "}from developer and API documentation.
+            </h2>
+
+            {/* DESCRIPTION */}
+            <p
+              className="
+                m-0
+                mt-4
+                max-w-[760px]
+                text-base
+                font-normal
+                leading-6
+                text-gray-600
+                [font-family:'IBM_Plex_Sans',sans-serif]
+              "
+            >
+              Talvrin references developer-oriented documentation, API and
+              integration surfaces elsewhere. Those pages publish independently
+              and only once an approved developer-platform contract exists — this
+              hub never duplicates or guesses at their content.
+            </p>
+
+            {/* BUTTONS */}
+            <div
+              className="
+                mt-6
+                flex
+                w-full
+                flex-col
+                items-stretch
+                gap-3
+                sm:w-auto
+                sm:flex-row
+                sm:items-center
+              "
+            >
+              <a
+                href="#developer-overview"
+                className="
+                  inline-flex
+                  h-12
+                  items-center
+                  justify-center
+                  rounded-lg
+                  bg-slate-900
+                  px-5
+                  py-3
+                  text-base
+                  font-semibold
+                  text-violet-50
+                  transition-all
+                  duration-200
+                  hover:-translate-y-0.5
+                  hover:bg-slate-800
+                  [font-family:'IBM_Plex_Sans',sans-serif]
+                "
+              >
+                Developer Overview
+              </a>
+
+              <a
+                href="#api-documentation"
+                className="
+                  inline-flex
+                  h-12
+                  items-center
+                  justify-center
+                  rounded-lg
+                  border
+                  border-slate-900/20
+                  px-5
+                  py-3
+                  text-base
+                  font-semibold
+                  text-slate-900
+                  transition-all
+                  duration-200
+                  hover:-translate-y-0.5
+                  hover:bg-white
+                  [font-family:'IBM_Plex_Sans',sans-serif]
+                "
+              >
+                API Documentation
+              </a>
+            </div>
+
+            {/* SUPPORTING NOTE */}
+            <p
+              className="
+                m-0
+                mt-6
+                max-w-[760px]
+                text-xs
+                font-normal
+                leading-5
+                text-gray-600
+                [font-family:'IBM_Plex_Sans',sans-serif]
+              "
+            >
+              Rate limits, auth flows, SDKs and sandbox/production environments
+              are never inferred here — each is only ever documented from its own
+              approved contract.
+            </p>
           </div>
 
-          {/* =================================================
-              HEADING
-              Figma:
-              y = 125
-              36px / 40px
-              ================================================= */}
-
-          <h2
-            className="
-              absolute
-              left-0
-              top-[125px]
-              m-0
-              w-[800px]
-              text-4xl
-              font-bold
-              leading-10
-              text-slate-900
-              [font-family:'IBM_Plex_Sans',sans-serif]
-            "
-          >
-            General product documentation is separate
-            <br />
-            from developer and API documentation.
-          </h2>
-
-          {/* =================================================
-              DESCRIPTION
-              Figma:
-              y = 228
-              ================================================= */}
-
-          <p
-            className="
-              absolute
-              left-0
-              top-[228px]
-              m-0
-              w-[800px]
-              text-base
-              font-normal
-              leading-6
-              text-gray-600
-              [font-family:'IBM_Plex_Sans',sans-serif]
-            "
-          >
-            Talvrin references developer-oriented documentation, API and
-            integration surfaces elsewhere. Those
-            <br />
-            pages publish independently and only once an approved
-            developer-platform contract exists — this hub
-            <br />
-            never duplicates or guesses at their content.
-          </p>
-
-          {/* =================================================
-              DEVELOPER OVERVIEW BUTTON
-              Figma:
-              x = 112.40
-              y = 336.99
-              h = 48
-              ================================================= */}
-
-          <a
-            href="/developers/overview"
-            className="
-              absolute
-              left-0
-              top-[336.99px]
-              inline-flex
-              h-12
-              items-center
-              rounded-lg
-              bg-slate-900
-              px-5
-              py-3
-              text-base
-              font-semibold
-              text-violet-50
-              [font-family:'IBM_Plex_Sans',sans-serif]
-              transition-opacity
-              duration-200
-              hover:opacity-90
-            "
-          >
-            Developer Overview
-          </a>
-
-          {/* =================================================
-              API DOCUMENTATION BUTTON
-              Figma:
-              x = 310.11
-              y = 336.99
-              h = 48
-              ================================================= */}
-
-          <a
-            href="/developers/api-documentation"
-            className="
-              absolute
-              left-[197.71px]
-              top-[336.99px]
-              inline-flex
-              h-12
-              items-center
-              rounded-lg
-              px-5
-              py-3
-              text-base
-              font-semibold
-              text-slate-900
-              outline
-              outline-1
-              outline-offset-[-1px]
-              outline-slate-900/20
-              [font-family:'IBM_Plex_Sans',sans-serif]
-              transition-colors
-              duration-200
-              hover:bg-white
-            "
-          >
-            API Documentation
-          </a>
-
-          {/* =================================================
-              SUPPORTING NOTE
-              Figma:
-              y = 407.20
-              ================================================= */}
-
-          <p
-            className="
-              absolute
-              left-0
-              top-[407.2px]
-              m-0
-              w-[800px]
-              text-xs
-              font-normal
-              leading-5
-              text-gray-600
-              [font-family:'IBM_Plex_Sans',sans-serif]
-            "
-          >
-            Rate limits, auth flows, SDKs and sandbox/production environments
-            are never inferred here — each is only ever documented from
-            <br />
-            its own approved contract.
-          </p>
-
-          {/* =================================================
-              IMAGE
-              Figma:
-              x = 916
-              y = 95.75
-              w = 384
-              h = 384
-
-              Original Figma image:
-              w = 368
-              h = 510
-              left = 1
-              top = -24
-
-              No blue border.
-              ================================================= */}
-
+          {/* RIGHT IMAGE */}
           <div
             className="
-              absolute
-              left-[803.6px]
-              top-[95.75px]
-              h-96
-              w-96
+              relative
+              mx-auto
+              h-[300px]
+              w-full
+              max-w-[384px]
               overflow-hidden
               rounded-2xl
+              bg-violet-50
+              sm:h-[360px]
+              lg:h-[384px]
+              lg:w-[340px]
+              xl:h-[384px]
+              xl:w-[384px]
             "
           >
             <Image
@@ -247,209 +204,6 @@ export default function TechnicalDeveloperDocumentation() {
               width={368}
               height={510}
               priority
-              className="
-                absolute
-                left-[1px]
-                top-[-24px]
-                h-[510px]
-                w-[368px]
-                max-w-none
-                object-cover
-              "
-            />
-          </div>
-        </div>
-      </div>
-
-      {/* =====================================================
-          TABLET / MOBILE
-          ===================================================== */}
-
-      <div
-        className="
-          block
-          w-full
-          px-6
-          py-20
-
-          sm:px-8
-          sm:py-24
-
-          md:px-10
-
-          lg:hidden
-        "
-      >
-        <div
-          className="
-            mx-auto
-            flex
-            w-full
-            max-w-[800px]
-            flex-col
-          "
-        >
-          {/* =================================================
-              LABEL
-              ================================================= */}
-
-          <span
-            className="
-              text-xs
-              font-bold
-              tracking-wide
-              text-yellow-600
-              [font-family:'IBM_Plex_Sans',sans-serif]
-            "
-          >
-            TECHNICAL / DEVELOPER DOCUMENTATION
-          </span>
-
-          {/* =================================================
-              HEADING
-              ================================================= */}
-
-          <h2
-            className="
-              m-0
-              mt-4
-              text-[30px]
-              font-bold
-              leading-9
-              tracking-[-0.015em]
-              text-slate-900
-              [font-family:'IBM_Plex_Sans',sans-serif]
-
-              sm:text-[34px]
-              sm:leading-10
-            "
-          >
-            General product documentation is separate from
-            developer and API documentation.
-          </h2>
-
-          {/* =================================================
-              DESCRIPTION
-              ================================================= */}
-
-          <p
-            className="
-              m-0
-              mt-5
-              text-base
-              font-normal
-              leading-6
-              text-gray-600
-              [font-family:'IBM_Plex_Sans',sans-serif]
-            "
-          >
-            Talvrin references developer-oriented documentation, API and
-            integration surfaces elsewhere. Those pages publish independently
-            and only once an approved developer-platform contract exists —
-            this hub never duplicates or guesses at their content.
-          </p>
-
-          {/* =================================================
-              BUTTONS
-              ================================================= */}
-
-          <div
-            className="
-              mt-8
-              flex
-              flex-col
-              items-start
-              gap-3
-
-              sm:flex-row
-              sm:items-center
-            "
-          >
-            <a
-              href="/developers/overview"
-              className="
-                inline-flex
-                h-12
-                items-center
-                rounded-lg
-                bg-slate-900
-                px-5
-                py-3
-                text-base
-                font-semibold
-                text-violet-50
-                [font-family:'IBM_Plex_Sans',sans-serif]
-              "
-            >
-              Developer Overview
-            </a>
-
-            <a
-              href="/developers/api-documentation"
-              className="
-                inline-flex
-                h-12
-                items-center
-                rounded-lg
-                px-5
-                py-3
-                text-base
-                font-semibold
-                text-slate-900
-                outline
-                outline-1
-                outline-offset-[-1px]
-                outline-slate-900/20
-                [font-family:'IBM_Plex_Sans',sans-serif]
-              "
-            >
-              API Documentation
-            </a>
-          </div>
-
-          {/* =================================================
-              NOTE
-              ================================================= */}
-
-          <p
-            className="
-              m-0
-              mt-6
-              text-xs
-              font-normal
-              leading-5
-              text-gray-600
-              [font-family:'IBM_Plex_Sans',sans-serif]
-            "
-          >
-            Rate limits, auth flows, SDKs and sandbox/production environments
-            are never inferred here — each is only ever documented from its
-            own approved contract.
-          </p>
-
-          {/* =================================================
-              IMAGE
-              ================================================= */}
-
-          <div
-            className="
-              relative
-              mt-10
-              h-[360px]
-              w-full
-              overflow-hidden
-              rounded-2xl
-
-              sm:h-[420px]
-
-              md:h-[480px]
-            "
-          >
-            <Image
-              src="/images/resources/documentation/image3.png"
-              alt="Developer documentation"
-              width={368}
-              height={510}
               className="
                 h-full
                 w-full

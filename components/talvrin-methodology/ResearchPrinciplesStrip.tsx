@@ -30,7 +30,7 @@ export default function ResearchPrinciplesStrip() {
           sm:px-8
 
           lg:px-12
-          lg:py-0
+          lg:py-6
         "
       >
         <motion.div

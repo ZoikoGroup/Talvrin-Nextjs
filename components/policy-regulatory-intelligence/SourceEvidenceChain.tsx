@@ -36,7 +36,7 @@ const evidenceLayers = [
 export default function SourceEvidenceChain() {
   return (
     <section className="w-full bg-white">
-      <div className="mx-auto w-full max-w-[1280px] px-6 py-20 sm:px-8 lg:px-10 lg:py-24">
+      <div className="mx-auto w-full max-w-[1280px] px-5 py-16 sm:px-8 sm:py-20 lg:px-8 lg:py-24 xl:px-0">
         {/* Eyebrow */}
         <div className="w-full">
           <p className="font-['IBM_Plex_Sans'] text-xs font-bold tracking-wide text-yellow-600">
@@ -46,7 +46,7 @@ export default function SourceEvidenceChain() {
 
         {/* Heading */}
         <div className="w-full max-w-[1000px] pt-3">
-          <h2 className="font-['IBM_Plex_Sans'] text-[40px] font-bold leading-[1.08] tracking-[-0.02em] text-slate-900 sm:text-5xl sm:leading-[48.72px]">
+          <h2 className="font-['IBM_Plex_Sans'] text-[36px] font-bold leading-[1.08] tracking-[-0.02em] text-slate-900 sm:text-5xl sm:leading-[48.72px]">
             The source should never disappear
             <br className="hidden sm:block" />
             behind the summary.
@@ -73,7 +73,7 @@ export default function SourceEvidenceChain() {
         </div>
 
         {/* Layer cards */}
-        <div className="mt-10 grid w-full grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-5">
+        <div className="mt-10 grid w-full grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-5">
           {evidenceLayers.map((layer) => (
             <div
               key={
@@ -81,7 +81,7 @@ export default function SourceEvidenceChain() {
                   ? layer.title
                   : "User Notes / Research Links"
               }
-              className="flex min-h-[190px] w-full flex-col items-start rounded-2xl border border-slate-900/10 bg-violet-50 p-5"
+              className="flex h-full min-h-[190px] w-full flex-col items-start rounded-2xl border border-slate-900/10 bg-violet-50 p-5"
             >
               <h3 className="font-['IBM_Plex_Sans'] text-base font-bold leading-6 text-slate-900">
                 {layer.title}

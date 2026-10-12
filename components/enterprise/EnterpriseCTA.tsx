@@ -14,17 +14,21 @@ export default function EnterpriseCTA() {
         className="
           mx-auto
           flex
-          min-h-[512px]
+          min-h-[380px]
+          sm:min-h-[440px]
+          lg:min-h-[512px]
           w-full
           max-w-[1440px]
           items-center
           justify-center
-          px-6
-          py-20
-          sm:px-8
-          md:px-10
-          lg:px-20
-          lg:py-[88px]
+          px-4
+          py-12
+          sm:px-6
+          md:px-8
+          lg:px-8
+          xl:px-20
+          lg:py-16
+          xl:py-[88px]
         "
       >
         <div
@@ -44,13 +48,13 @@ export default function EnterpriseCTA() {
               m-0
               w-full
               font-['IBM_Plex_Sans']
-              text-[36px]
+              text-[28px]
               font-bold
-              leading-[43px]
+              leading-[36px]
               tracking-[-0.8px]
               text-slate-900
-              sm:text-[42px]
-              sm:leading-[46px]
+              sm:text-[38px]
+              sm:leading-[44px]
               lg:text-[48px]
               lg:leading-[48.3px]
             "

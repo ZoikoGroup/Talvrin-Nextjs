@@ -20,7 +20,6 @@ const fadeUp: Variants = {
     opacity: 0,
     y: 30,
   },
-
   visible: {
     opacity: 1,
     y: 0,
@@ -35,87 +34,67 @@ const fadeUp: Variants = {
    DATA
 ========================================================= */
 
-const problems = [
+type Problem = {
+  number: string;
+  title: string;
+  description: ReactNode;
+  solution: ReactNode;
+};
+
+const problems: Problem[] = [
   {
     number: "01",
     title: "Duplicated source gathering",
-
     description: (
       <>
-        Multiple analysts repeat the same
-        <br className="hidden md:block" />
-        discovery and verification work.
+        Multiple analysts repeat the same discovery and verification work.
       </>
     ),
-
     solution: (
       <>
-        Preserve source-linked evidence
-        <br className="hidden md:block" />
-        around a research object.
+        Preserve source-linked evidence around a research object.
       </>
     ),
   },
-
   {
     number: "02",
     title: "Inconsistent evidence sets",
-
     description: (
       <>
-        Different people may reason from
-        <br className="hidden md:block" />
-        different source versions or context.
+        Different people may reason from different source versions or context.
       </>
     ),
-
     solution: (
       <>
-        Make source identity, date, period,
-        <br className="hidden md:block" />
-        jurisdiction, and version visible.
+        Make source identity, date, period, jurisdiction, and version visible.
       </>
     ),
   },
-
   {
     number: "03",
     title: "Weak institutional memory",
-
     description: (
       <>
-        Reasoning can disappear when people
-        <br className="hidden md:block" />
-        change roles or documents are lost.
+        Reasoning can disappear when people change roles or documents are lost.
       </>
     ),
-
     solution: (
       <>
-        Preserve the research view and
-        <br className="hidden md:block" />
-        evidence relationship over time.
+        Preserve the research view and evidence relationship over time.
       </>
     ),
   },
-
   {
     number: "04",
     title: "Review friction",
-
     description: (
       <>
-        Reviewers must reconstruct why a
-        <br className="hidden md:block" />
-        conclusion was reached.
+        Reviewers must reconstruct why a conclusion was reached.
       </>
     ),
-
     solution: (
       <>
-        Provide a navigable source trail and
-        <br className="hidden md:block" />
-        explicit interpretation layers.
+        Provide a navigable source trail and explicit interpretation layers.
       </>
     ),
   },
@@ -126,130 +105,58 @@ const problems = [
 ========================================================= */
 
 type ProblemCardProps = {
-  number: string;
-  title: string;
-  description: ReactNode;
-  solution: ReactNode;
+  problem: Problem;
   index: number;
 };
 
 function ProblemCard({
-  number,
-  title,
-  description,
-  solution,
+  problem,
   index,
 }: ProblemCardProps) {
   return (
     <motion.div
-      variants={fadeUp}
       initial="hidden"
       whileInView="visible"
       viewport={{
         once: true,
         amount: 0.2,
       }}
+      variants={fadeUp}
       transition={{
         delay: index * 0.08,
       }}
-      className="
-        w-full
-        min-h-[236px]
-        bg-white
-        rounded-2xl
-        border
-        border-slate-900/10
-        p-7
-        flex
-        flex-col
-      "
+      className="flex min-h-[236px] w-full min-w-0 flex-col rounded-2xl border border-slate-900/10 bg-white p-5 sm:p-6 lg:p-5 xl:p-6"
     >
       {/* NUMBER */}
 
-      <div
-        className="
-          self-stretch
-          text-indigo-500/40
-          text-sm
-          font-bold
-          font-['IBM_Plex_Sans']
-          tracking-wide
-        "
-      >
-        {number}
-      </div>
+      <span className="font-['IBM_Plex_Sans'] text-sm font-bold tracking-wide text-indigo-500/40">
+        {problem.number}
+      </span>
 
       {/* TITLE */}
 
-      <div className="pt-2">
-        <h3
-          className="
-            self-stretch
-            text-slate-900
-            text-base
-            font-bold
-            font-['IBM_Plex_Sans']
-            leading-6
-          "
-        >
-          {title}
-        </h3>
-      </div>
+      <h3 className="break-words pt-2 font-['IBM_Plex_Sans'] text-base font-bold leading-6 text-slate-900">
+        {problem.title}
+      </h3>
 
       {/* DESCRIPTION */}
 
-      <div className="pt-1 pb-1.5">
-        <p
-          className="
-            self-stretch
-            text-gray-600
-            text-sm
-            font-normal
-            font-['IBM_Plex_Sans']
-            leading-6
-          "
-        >
-          {description}
-        </p>
-      </div>
+      <p className="pb-4 pt-1 font-['IBM_Plex_Sans'] text-sm font-normal leading-6 text-gray-600">
+        {problem.description}
+      </p>
 
       {/* SOLUTION */}
 
-      <div
-        className="
-          mt-auto
-          pt-3.5
-          border-t-[0.8px]
-          border-slate-900/10
-          flex
-          items-start
-          gap-2
-        "
-      >
-        {/* YELLOW INDICATOR */}
-
-        <div
-          className="
-            w-3
-            h-1
-            mt-[7px]
-            shrink-0
-            bg-yellow-600
-          "
-        />
-
-        {/* SOLUTION TEXT */}
-
-        <p
-          className="
-            text-slate-900
-            text-xs
-            font-medium
-            font-['IBM_Plex_Sans']
-            leading-5
-          "
+      <div className="mt-auto flex min-w-0 items-start gap-2 border-t-[0.8px] border-slate-900/10 pt-3.5">
+        <span
+          aria-hidden="true"
+          className="shrink-0 font-['IBM_Plex_Sans'] text-sm leading-5 text-amber-600"
         >
-          {solution}
+          →
+        </span>
+
+        <p className="min-w-0 flex-1 break-words font-['IBM_Plex_Sans'] text-xs font-medium leading-5 text-slate-900 sm:text-sm">
+          {problem.solution}
         </p>
       </div>
     </motion.div>
@@ -262,33 +169,11 @@ function ProblemCard({
 
 export default function TeamResearchProblem() {
   return (
-    <section
-      className="
-        relative
-        w-full
-        bg-violet-50
-        overflow-hidden
-      "
-    >
-      {/* =====================================================
-          MAIN CONTAINER
-      ===================================================== */}
+    <section className="relative w-full overflow-hidden bg-violet-50">
+      {/* MAIN CONTAINER */}
 
-      <div
-        className="
-          w-full
-          max-w-[1440px]
-          mx-auto
-          px-6
-          sm:px-8
-          lg:px-[80px]
-          py-[72px]
-          lg:py-[96.1px]
-        "
-      >
-        {/* ===================================================
-            HEADER
-        =================================================== */}
+      <div className="mx-auto w-full max-w-[1440px] px-4 py-12 min-[480px]:px-5 sm:py-16 md:px-8 lg:px-12 lg:py-20 xl:px-20 xl:py-[96px]">
+        {/* HEADER */}
 
         <motion.div
           initial="hidden"
@@ -299,128 +184,61 @@ export default function TeamResearchProblem() {
           }}
           variants={{
             hidden: {},
-
             visible: {
               transition: {
                 staggerChildren: 0.12,
               },
             },
           }}
-          className="
-            w-full
-            max-w-[780px]
-          "
+          className="w-full max-w-[780px]"
         >
           {/* EYEBROW */}
 
-          <motion.div
+          <motion.p
             variants={fadeUp}
-            className="
-              text-indigo-500
-              text-xs
-              font-bold
-              font-['IBM_Plex_Sans']
-              tracking-wide
-            "
+            className="font-['IBM_Plex_Sans'] text-xs font-bold tracking-wide text-indigo-500 sm:text-sm"
           >
             THE TEAM RESEARCH PROBLEM
-          </motion.div>
+          </motion.p>
 
           {/* HEADING */}
 
           <motion.h2
             variants={fadeUp}
-            className="
-              mt-[22px]
-              max-w-[780px]
-              text-slate-900
-              text-[32px]
-              sm:text-[40px]
-              lg:text-5xl
-              font-bold
-              font-['IBM_Plex_Sans']
-              leading-[1.08]
-              lg:leading-[48.72px]
-              tracking-[-0.02em]
-            "
+            className="mt-5 w-full max-w-[780px] font-['IBM_Plex_Sans'] text-[clamp(1.8rem,3.5vw,3rem)] font-bold leading-[1.1] tracking-[-0.02em] text-slate-900 sm:mt-6"
           >
-            Fragmented individual research
-            <br className="hidden lg:block" />
-            doesn&apos;t scale into a team capability.
+            Fragmented individual research doesn&apos;t scale into a team
+            capability.
           </motion.h2>
 
           {/* DESCRIPTION */}
 
           <motion.p
             variants={fadeUp}
-            className="
-              mt-5
-              max-w-[780px]
-              text-gray-600
-              text-sm
-              sm:text-base
-              font-normal
-              font-['IBM_Plex_Sans']
-              leading-6
-              lg:leading-7
-            "
+            className="mt-4 w-full max-w-[780px] font-['IBM_Plex_Sans'] text-sm font-normal leading-6 text-gray-600 sm:mt-5 sm:text-base sm:leading-7"
           >
             Duplicated work, inconsistent evidence, weak institutional memory,
-            review friction, and manual
-            <br className="hidden lg:block" />
-            rechecking — five costs of research that never became a shared,
-            reusable object.
+            review friction, and manual rechecking — five costs of research
+            that never became a shared, reusable object.
           </motion.p>
         </motion.div>
 
-        {/* ===================================================
-            CONTENT GRID
+        {/* CONTENT GRID */}
 
-            DESKTOP:
-            630px LEFT
-            630px RIGHT
-            20px GAP
-            TOTAL = 1280px
-        =================================================== */}
+        <div className="mt-8 grid w-full grid-cols-1 items-start gap-6 sm:mt-10 sm:gap-7 lg:mt-[57px] lg:grid-cols-2 lg:gap-6 xl:gap-8">
+          {/* LEFT — FOUR PROBLEM CARDS */}
 
-        <div
-          className="
-            mt-[60px]
-            lg:mt-[57px]
-            grid
-            grid-cols-1
-            lg:grid-cols-[630px_630px]
-            gap-5
-          "
-        >
-          {/* =================================================
-              LEFT — FOUR PROBLEM CARDS
-          ================================================= */}
-
-          <div
-            className="
-              grid
-              grid-cols-1
-              sm:grid-cols-2
-              gap-4
-              lg:gap-[14px]
-            "
-          >
+          <div className="grid w-full min-w-0 grid-cols-1 gap-4 min-[480px]:grid-cols-2 lg:gap-[14px]">
             {problems.map((problem, index) => (
               <ProblemCard
                 key={problem.number}
-                number={problem.number}
-                title={problem.title}
-                description={problem.description}
-                solution={problem.solution}
+                problem={problem}
                 index={index}
               />
             ))}
           </div>
 
-          {/* =================================================
-              RIGHT — IMAGE
-          ================================================= */}
+          {/* RIGHT — IMAGE */}
 
           <motion.div
             initial={{
@@ -442,25 +260,14 @@ export default function TeamResearchProblem() {
               ease: smoothEase,
               delay: 0.15,
             }}
-            className="
-              relative
-              w-full
-              h-[420px]
-              sm:h-[500px]
-              lg:h-[494px]
-              bg-white
-              rounded-2xl
-              border
-              border-slate-900/10
-              overflow-hidden
-            "
+            className="relative aspect-[4/3] w-full min-w-0 overflow-hidden rounded-2xl border border-slate-900/10 bg-white sm:aspect-[5/4] lg:aspect-auto lg:h-[494px]"
           >
             <Image
               src="/images/solutions/research-teams/image.png"
               alt="Research team collaboration"
               fill
               priority
-              sizes="630px"
+              sizes="(max-width: 479px) calc(100vw - 32px), (max-width: 639px) calc(100vw - 40px), (max-width: 1023px) calc(100vw - 64px), (max-width: 1279px) 50vw, 630px"
               className="object-cover object-center"
             />
           </motion.div>

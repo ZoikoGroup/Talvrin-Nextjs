@@ -10,12 +10,12 @@ export default function MarketExplainersCta() {
           flex-col
           items-center
           gap-4
-          px-6
-          py-20
+          px-5
+          py-16
           text-center
-
           sm:px-8
-          sm:py-[88px]
+          sm:py-20
+          lg:py-24
         "
       >
         {/* Heading */}

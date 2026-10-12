@@ -91,12 +91,15 @@ export default function CurrentnessChangeGovernance() {
           mx-auto
           w-full
           max-w-[1440px]
-          px-6
-          sm:px-8
-          md:px-10
-          lg:px-20
-          py-[80px]
-          lg:py-[95.63px]
+          px-4
+          sm:px-6
+          md:px-8
+          lg:px-8
+          xl:px-20
+          py-12
+          sm:py-16
+          lg:py-20
+          xl:py-[95.63px]
         "
       >
         {/* CONTENT WRAPPER */}
@@ -145,18 +148,19 @@ export default function CurrentnessChangeGovernance() {
               className="
                 m-0
                 font-['IBM_Plex_Sans']
-                text-[36px]
+                text-[30px]
                 font-bold
-                leading-[1.1]
+                leading-[1.12]
                 tracking-[-0.8px]
                 text-slate-900
-                sm:text-[42px]
+                sm:text-[38px]
+                md:text-[42px]
                 lg:text-5xl
                 lg:leading-[48.72px]
               "
             >
-              Coverage changes propagate — it is
-              <br className="hidden lg:block" />
+              Coverage changes propagate — it is{" "}
+              <br className="hidden xl:block" />
               never left stale on one page.
             </h2>
           </div>
@@ -167,11 +171,14 @@ export default function CurrentnessChangeGovernance() {
               mt-7
               grid
               grid-cols-1
-              gap-x-8
-              gap-y-0
+              gap-x-6
+              gap-y-6
               sm:grid-cols-2
-              lg:grid-cols-5
-              lg:gap-x-[32px]
+              md:grid-cols-3
+              lg:grid-cols-3
+              xl:grid-cols-6
+              xl:gap-x-[32px]
+              xl:gap-y-0
             "
           >
             {governanceItems.map((item, index) => (

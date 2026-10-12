@@ -18,7 +18,7 @@ export default function CommercialAccess() {
         className="
           mx-auto
           flex
-          min-h-[384px]
+          min-h-auto
           w-full
           max-w-[640px]
           flex-col
@@ -28,12 +28,12 @@ export default function CommercialAccess() {
           px-5
           py-16
 
-          sm:px-6
+          sm:px-8
           sm:py-20
 
-          lg:min-h-[384px]
-          lg:px-0
-          lg:py-0
+          lg:min-h-[340px]
+          lg:px-8
+          lg:py-24
         "
       >
         {/* =====================================================
@@ -77,14 +77,17 @@ export default function CommercialAccess() {
             className="
               text-center
               font-['IBM_Plex_Sans']
-              text-[32px]
+              text-[28px]
               font-bold
-              leading-10
+              leading-9
               tracking-[-0.02em]
               text-slate-900
 
-              sm:text-4xl
+              sm:text-[34px]
               sm:leading-10
+
+              lg:text-4xl
+              lg:leading-10
             "
           >
             Commercial and request-access

@@ -95,12 +95,14 @@ export default function ResearchCapabilityCoverage() {
           mx-auto
           w-full
           max-w-[1440px]
-          px-6
-          py-20
-          sm:px-8
-          md:px-10
-          lg:px-20
-          lg:py-[95.83px]
+          px-4
+          py-12
+          sm:px-6
+          md:px-8
+          lg:px-8
+          xl:px-20
+          lg:py-16
+          xl:py-[95.83px]
         "
       >
         {/* CONTENT */}
@@ -149,20 +151,21 @@ export default function ResearchCapabilityCoverage() {
               className="
                 m-0
                 font-['IBM_Plex_Sans']
-                text-4xl
+                text-[30px]
                 font-bold
-                leading-[1.08]
+                leading-[1.12]
                 tracking-[-1px]
                 text-slate-900
-                sm:text-[42px]
+                sm:text-[40px]
+                md:text-[44px]
                 lg:text-5xl
                 lg:leading-[48.72px]
               "
             >
-              A released market does not
-              <br className="hidden lg:block" />
-              automatically mean every workflow
-              <br className="hidden lg:block" />
+              A released market does not{" "}
+              <br className="hidden xl:block" />
+              automatically mean every workflow{" "}
+              <br className="hidden xl:block" />
               works there.
             </h2>
           </div>
