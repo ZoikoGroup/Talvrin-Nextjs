@@ -16,7 +16,11 @@ export const metadata: Metadata = {
     "Talvrin brings evidence, monitoring, and AI assistance together for global public markets research.",
 };
 
-export default function RootLayout({ children }: LayoutProps<"/">) {
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
   return (
     <html lang="en" className={`${ibmPlexSans.variable} h-full antialiased`}>
       <body className="flex min-h-full flex-col font-sans">

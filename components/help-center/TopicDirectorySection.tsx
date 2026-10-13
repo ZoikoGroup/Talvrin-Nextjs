@@ -31,7 +31,7 @@ const topics: TopicItem[] = [
       </>
     ),
     linkLabel: "See how Talvrin works",
-    href: "/product/how-talvrin-works",
+    href: "/how-talvrin-works",
     anchor: true,
   },
   {

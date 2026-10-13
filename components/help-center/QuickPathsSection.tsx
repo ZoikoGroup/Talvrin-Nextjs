@@ -39,7 +39,7 @@ const quickPaths: QuickPathItem[] = [
       </>
     ),
     linkLabel: "See how Talvrin works",
-    href: "/product/how-talvrin-works",
+    href: "/how-talvrin-works",
   },
   {
     title: "Understand AI assistance",
