@@ -21,14 +21,14 @@ export default function AccessibilityCTA() {
 
           <div className="flex w-full flex-col sm:flex-row sm:flex-wrap items-stretch sm:items-center justify-center gap-2.5 sm:gap-3.5 pt-2 sm:pt-3">
             <Link
-              href="/contact"
+              href="/support/accessibility-support"
               className="inline-flex min-h-11 sm:min-h-12 w-full sm:w-auto items-center justify-center rounded-lg bg-slate-900 px-5 sm:px-6 py-3 sm:py-3.5 text-center text-sm font-semibold text-violet-50 transition-colors hover:bg-slate-800 sm:text-base"
             >
               Report an accessibility barrier
             </Link>
 
             <Link
-              href="/trust-center"
+              href="/trust/trust-center"
               className="inline-flex min-h-11 sm:min-h-12 w-full sm:w-auto items-center justify-center rounded-lg border border-slate-900/25 px-5 sm:px-6 py-3 sm:py-3.5 text-center text-sm font-semibold text-slate-900 transition-colors hover:bg-slate-900/5 sm:text-base"
             >
               Explore Trust Center →

@@ -192,7 +192,7 @@ function makeId(title: string) {
 
 export default function AUContent() {
   return (
-    <section className="w-full bg-violet-50 font-['IBM_Plex_Sans']">
+    <section id="contents" className="w-full scroll-mt-20 bg-violet-50 font-['IBM_Plex_Sans']">
       <div className="mx-auto grid max-w-[1440px] grid-cols-1 gap-8 px-4 sm:px-6 md:px-8 lg:px-12 lg:py-14 xl:grid-cols-[264px_minmax(0,1fr)] xl:gap-[34px] xl:px-20 xl:py-[72px]">
         <aside className="self-start xl:sticky xl:top-8">
           <div className="rounded-xl border border-slate-900/10 bg-white/70 p-4 xl:border-0 xl:bg-transparent xl:p-0">

@@ -24,14 +24,14 @@ export default function DataMarketInformationCTA() {
           {/* ACTION BUTTONS */}
           <div className="flex w-full flex-col sm:flex-row items-center justify-center gap-3 sm:gap-3.5 pt-2 sm:pt-3">
             <Link
-              href="/contact-support"
+              href="/resources/contact-support"
               className="inline-flex min-h-11 sm:min-h-12 w-full sm:w-auto items-center justify-center rounded-lg bg-slate-900 px-6 py-3 sm:py-3.5 text-sm sm:text-base font-semibold text-violet-50 transition-colors hover:bg-slate-800 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-900 focus-visible:ring-offset-2"
             >
               Contact Support
             </Link>
 
             <Link
-              href="/trust-center"
+              href="/trust/trust-center"
               className="inline-flex min-h-11 sm:min-h-12 w-full sm:w-auto items-center justify-center rounded-lg border border-slate-900/25 px-6 py-3 sm:py-3.5 text-sm sm:text-base font-semibold text-slate-900 transition-colors hover:bg-slate-900/5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-900 focus-visible:ring-offset-2"
             >
               Explore Trust Center →

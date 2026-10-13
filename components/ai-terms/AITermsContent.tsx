@@ -237,7 +237,7 @@ const sectionImages: Record<number, string> = {
 
 export default function AITermsContent() {
   return (
-    <section className="w-full bg-violet-50 font-['IBM_Plex_Sans',sans-serif] text-slate-900">
+    <section id="ai-terms-content" className="w-full scroll-mt-20 bg-violet-50 font-['IBM_Plex_Sans',sans-serif] text-slate-900">
       <div className="mx-auto grid w-full max-w-[1440px] grid-cols-1 gap-8 px-4 sm:px-6 md:px-8 lg:grid-cols-[220px_minmax(0,1fr)] lg:gap-8 lg:px-12 lg:py-14 xl:grid-cols-[240px_minmax(0,1fr)] xl:gap-8 xl:px-20 xl:py-[72px] py-8 sm:py-10">
         {/* Table of contents */}
         <nav

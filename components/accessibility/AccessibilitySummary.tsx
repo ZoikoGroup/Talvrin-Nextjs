@@ -8,19 +8,19 @@ const capabilities = [
     title: "Navigate & Operate",
     description:
       "Keyboard, focus, zoom/reflow and mobile touch behavior.",
-    href: "#navigate-operate",
+    href: "#keyboard-focus",
   },
   {
     title: "Perceive & Understand",
     description:
       "Screen readers, color/contrast, motion and equivalent chart data.",
-    href: "#perceive-understand",
+    href: "#screen-readers",
   },
   {
     title: "Forms & Access",
     description:
       "Forms, accessible authentication, documents and media.",
-    href: "#forms-access",
+    href: "#forms-errors",
   },
 ];
 

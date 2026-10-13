@@ -56,8 +56,8 @@ const clauses: Clause[] = [
     description:
       "These Data & Market Information Terms govern your use of market information, source content and related evidence made available through Talvrin, and apply together with Talvrin’s Terms of Service, Acceptable Use policy, Privacy Notice and AI Terms. They do not replace those documents — where a specific data-rights behavior is also addressed elsewhere, the more specific, currently approved term controls.",
     related: [
-      { label: "Terms of Service", href: "/terms-of-service" },
-      { label: "Acceptable Use", href: "/acceptable-use" },
+      { label: "Terms of Service", href: "/legal/terms-of-service" },
+      { label: "Acceptable Use", href: "/legal/acceptable-use" },
     ],
     image: "/images/legal/data-market-information-terms/image1.png",
     imageAlt: "Colleagues discussing market information at a workplace",
@@ -71,8 +71,8 @@ const clauses: Clause[] = [
     notice:
       "A public Source / Data Rights Registry has not yet been supplied. Source-specific licence terms, redistribution permissions and derived-data rights for named providers remain governed dependencies and are not invented on this page.",
     related: [
-      { label: "Data Sources", href: "/data-sources" },
-      { label: "Evidence Standards", href: "/evidence-standards" },
+      { label: "Data Sources", href: "/trust/data-sources" },
+      { label: "Evidence Standards", href: "/trust/evidence-standards" },
     ],
   },
   {
@@ -103,7 +103,7 @@ const clauses: Clause[] = [
     group: clauseGroups.permitted,
     description:
       "Where a source’s rights permit it, you may use displayed market information for your own internal research, analysis and workspace purposes. Internal use permission does not itself include copying, extraction, redistribution or export rights, which are governed separately below.",
-    related: [{ label: "Acceptable Use", href: "/acceptable-use" }],
+    related: [{ label: "Acceptable Use", href: "/legal/acceptable-use" }],
   },
   {
     id: "attribution-source-identity",
@@ -137,8 +137,8 @@ const clauses: Clause[] = [
     notice:
       "An approved export / API / download policy has not been supplied. This page does not publish numeric usage limits, rate limits or permitted file formats until that policy is approved.",
     related: [
-      { label: "API Documentation", href: "/api-documentation" },
-      { label: "Data APIs", href: "/data-apis" },
+      { label: "API Documentation", href: "/developers/api-documentation" },
+      { label: "Data APIs", href: "/developers/data-apis" },
     ],
   },
   {
@@ -168,8 +168,8 @@ const clauses: Clause[] = [
     description:
       "AI-assisted processing of market information is permitted only where the underlying source’s rights and Talvrin’s AI Terms both allow it. Using a source as an AI input, or receiving an AI-generated summary of it, does not expand your underlying rights to copy, export or redistribute that source.",
     related: [
-      { label: "AI Terms", href: "/ai-terms" },
-      { label: "AI Principles", href: "/ai-principles" },
+      { label: "AI Terms", href: "/legal/ai-terms" },
+      { label: "AI Principles", href: "/trust/ai-principles" },
     ],
   },
   {
@@ -180,7 +180,7 @@ const clauses: Clause[] = [
       "Caching, local storage or retention of market information follows source-specific rules where an approved source agreement defines them, together with Talvrin’s general retention commitments in its Privacy Notice and Data Processing Addendum.",
     notice:
       "Source-specific caching or retention durations have not been supplied for every provider. Until approved, Talvrin’s general platform retention rules apply.",
-    related: [{ label: "Privacy", href: "/privacy" }],
+    related: [{ label: "Privacy", href: "/trust/privacy" }],
   },
   {
     id: "historical-information",

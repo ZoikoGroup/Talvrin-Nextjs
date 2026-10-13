@@ -6,37 +6,37 @@ const clauses = [
     title: "Scope & Capabilities",
     description:
       "What AI-assisted features actually do — and what counts as an approved capability versus an illustrative example.",
-    id: "scope-capabilities",
+    id: "ai-assisted-features",
   },
   {
     title: "Evidence Boundary",
     description:
       "AI output is assistance, not authoritative evidence — the underlying source stays separately inspectable.",
-    id: "evidence-boundary",
+    id: "assistance-not-evidence",
   },
   {
     title: "Inputs & Outputs",
     description:
       "What you may submit as a prompt, and how you may reuse or represent what AI returns.",
-    id: "inputs-outputs",
+    id: "prompt-input-responsibilities",
   },
   {
     title: "Governance & Changes",
     description:
       "Prohibited use, IP, enforcement and version changes stay sourced from approved registries and Legal review.",
-    id: "governance-changes",
+    id: "prohibited-ai-use",
   },
   {
     title: "Your Responsibility",
     description:
       "Verify sources, apply human judgment, and treat non-advice and non-trade-execution boundaries as fixed.",
-    id: "your-responsibility",
+    id: "human-judgment",
   },
   {
     title: "Privacy & Data Rights",
     description:
       "Prompt, output, retention, training and market-data-rights facts stay governed by approved policy, not marketing copy.",
-    id: "privacy-data-rights",
+    id: "privacy-data-retention",
   },
 ];
 

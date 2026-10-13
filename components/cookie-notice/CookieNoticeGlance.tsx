@@ -23,13 +23,13 @@ const categories = [
     title: "Marketing",
     description:
       "Advertising, remarketing or social technologies — disclosed only if actually used and approved.",
-    href: "#marketing",
+    href: "#marketing-advertising",
   },
   {
     title: "Functional Technologies",
     description:
       "Technologies supporting preferences and useful site functionality, where applicable.",
-    href: "#functional-technologies",
+    href: "#preference-functional",
   },
 ];
 

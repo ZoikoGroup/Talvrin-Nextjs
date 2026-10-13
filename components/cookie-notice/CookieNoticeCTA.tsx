@@ -22,14 +22,14 @@ export default function CookieNoticeCTA() {
           {/* CTA buttons */}
           <div className="flex w-full flex-col sm:flex-row items-center justify-center gap-3 sm:gap-3.5 pt-2 sm:pt-3">
             <Link
-              href="/contact-support"
+              href="/resources/contact-support"
               className="inline-flex min-h-11 sm:min-h-12 w-full sm:w-auto items-center justify-center rounded-lg bg-slate-900 px-6 py-3 sm:py-3.5 text-center font-['IBM_Plex_Sans',sans-serif] text-sm font-semibold text-violet-50 transition-colors hover:bg-slate-800 sm:text-base"
             >
               Contact Support
             </Link>
 
             <Link
-              href="/privacy"
+              href="/trust/privacy"
               className="inline-flex min-h-11 sm:min-h-12 w-full sm:w-auto items-center justify-center rounded-lg border border-slate-900/25 px-6 py-3 sm:py-3.5 text-center font-['IBM_Plex_Sans',sans-serif] text-sm font-semibold text-slate-900 transition-colors hover:bg-slate-900/5 sm:text-base"
             >
               Explore Privacy →

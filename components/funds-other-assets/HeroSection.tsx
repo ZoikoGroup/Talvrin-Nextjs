@@ -53,7 +53,7 @@ export default function HeroSection() {
               Request Access
             </LinkButton>
             <Link
-              href="#coverage-truth"
+              href="/markets/market-coverage"
               className="inline-flex items-center justify-center rounded-lg border-2 border-white/30 px-7 py-[15px] text-sm font-semibold text-white transition-colors duration-300 hover:border-white/60 hover:bg-white/5"
             >
               View Market Coverage →
