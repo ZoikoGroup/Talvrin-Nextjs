@@ -25,7 +25,7 @@ const paths: QuickPath[] = [
   {
     title: "Build a research view",
     body: "Research organization and evidence-linked reasoning.",
-    link: { label: "See how Talvrin works", href: "/product/how-talvrin-works" },
+    link: { label: "See how Talvrin works", href: "/how-talvrin-works" },
   },
   {
     title: "Fix a sign-in or access issue",

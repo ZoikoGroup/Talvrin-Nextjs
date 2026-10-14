@@ -29,7 +29,7 @@ export default function CtaSection() {
             Explore Talvrin
           </LinkButton>
           <Link
-            href="/product/how-talvrin-works"
+            href="/how-talvrin-works"
             className="inline-flex items-center justify-center rounded-lg border-2 border-ink/15 px-7 py-[15px] text-sm font-semibold text-ink transition-colors duration-300 hover:border-ink/40 hover:bg-ink/5"
           >
             See How Talvrin Works

@@ -83,14 +83,14 @@ export default function StartByGoal() {
 
           <div className="mt-3 w-full max-w-[760px]">
             <h2 className="m-0 text-[28px] font-bold leading-9 tracking-[-0.015em] text-slate-900 [font-family:'IBM_Plex_Sans',sans-serif] sm:text-[34px] sm:leading-10 lg:text-4xl lg:leading-10">
-              Find documentation by what you're trying
+              Find documentation by what you&apos;re trying
               <br className="hidden sm:block" /> to do.
             </h2>
           </div>
 
           <div className="mt-4 w-full max-w-[720px]">
             <p className="m-0 text-base font-normal leading-6 text-gray-600 [font-family:'IBM_Plex_Sans',sans-serif]">
-              A dedicated Getting Started guide isn't published on this build
+              A dedicated Getting Started guide isn&apos;t published on this build
               yet — the goals below cover the same first-task ground and route
               to the real, current product pages that explain them.
             </p>
@@ -181,7 +181,7 @@ export default function StartByGoal() {
                     <br />
                     safe path to support if self-service
                     <br />
-                    doesn't resolve it.
+                    doesn&apos;t resolve it.
                   </>
                 }
                 link="Go to troubleshooting"

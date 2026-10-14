@@ -161,12 +161,12 @@ export const megaMenus: Record<string, MegaMenuContent> = {
           {
             title: "Saved Research",
             description: "Return to saved research objects and preserved evidence states.",
-            href: "/product/saved-research",
+            href: "/saved-research",
           },
           {
             title: "How Talvrin Works",
             description: "From question to evidence to monitored view.",
-            href: "/product/how-talvrin-works",
+            href: "/how-talvrin-works",
           },
         ],
       },
