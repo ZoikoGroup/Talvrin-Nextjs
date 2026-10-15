@@ -61,7 +61,13 @@ export default function MegaMenuPanel({ content, isOpen, onNavigate }: MegaMenuP
             </div>
 
             <div className="relative hidden w-[240px] shrink-0 overflow-hidden rounded-xl lg:block">
-              <Image src={menuImage.src} alt={menuImage.alt} fill className="object-cover" sizes="240px" />
+              <Image
+                src={(content.image ?? menuImage).src}
+                alt={(content.image ?? menuImage).alt}
+                fill
+                className="object-cover"
+                sizes="240px"
+              />
             </div>
           </>
         )}
