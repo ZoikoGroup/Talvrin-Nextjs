@@ -116,6 +116,8 @@ export type MegaMenuColumn = {
 export type MegaMenuContent = {
   columns: MegaMenuColumn[];
   cta: { label: string; href: string };
+  /** Overrides the shared menuImage for this dropdown. */
+  image?: { src: string; alt: string };
 };
 
 /** Shared decorative image shown on the right of every header mega menu. */
@@ -233,6 +235,16 @@ export const megaMenus: Record<string, MegaMenuContent> = {
             description: "Deep-coverage market page with explicit status.",
             href: "/markets/uk-gilts",
           },
+          {
+            title: "German Bunds",
+            description: "Deep-coverage U.K. Eurozone sovereign benchmark with explicit status.",
+            href: "/markets/german-bunds",
+          },
+          {
+            title: "Japanese Government Bonds",
+            description: "Deep-coverage Japanese sovereign benchmark with explicit status.",
+            href: "/markets/japanese-government-bonds",
+          },
         ],
       },
       {
@@ -262,6 +274,7 @@ export const megaMenus: Record<string, MegaMenuContent> = {
       },
     ],
     cta: { label: "View Market Coverage", href: "/markets/market-coverage" },
+    image: { src: "/images/menu/menu-markets-world-map.webp", alt: "" },
   },
   Solutions: {
     columns: [
