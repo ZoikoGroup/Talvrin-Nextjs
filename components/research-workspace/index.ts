@@ -1,0 +1,12 @@
+export { default as HeroSection } from "./HeroSection";
+export { default as DirectAnswerSection } from "./DirectAnswerSection";
+export { default as QuestionStarterSection } from "./QuestionStarterSection";
+export { default as DifferentiatorSection } from "./DifferentiatorSection";
+export { default as ProvenanceSection } from "./ProvenanceSection";
+export { default as ResearchViewSection } from "./ResearchViewSection";
+export { default as SaveMonitorSection } from "./SaveMonitorSection";
+export { default as AiGovernanceSection } from "./AiGovernanceSection";
+export { default as CoverageTrustSection } from "./CoverageTrustSection";
+export { default as AudienceSection } from "./AudienceSection";
+export { default as FaqSection } from "./FaqSection";
+export { default as CtaSection } from "./CtaSection";

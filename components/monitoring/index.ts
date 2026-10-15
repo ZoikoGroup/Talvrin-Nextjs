@@ -1,0 +1,12 @@
+export { default as HeroSection } from "./HeroSection";
+export { default as DirectAnswerSection } from "./DirectAnswerSection";
+export { default as WorkflowSection } from "./WorkflowSection";
+export { default as ScopeSection } from "./ScopeSection";
+export { default as LifecycleSection } from "./LifecycleSection";
+export { default as ProposedControlsSection } from "./ProposedControlsSection";
+export { default as RelevanceSection } from "./RelevanceSection";
+export { default as CoverageTrustSection } from "./CoverageTrustSection";
+export { default as AiGovernanceSection } from "./AiGovernanceSection";
+export { default as ConnectedPathwaysSection } from "./ConnectedPathwaysSection";
+export { default as FaqSection } from "./FaqSection";
+export { default as CtaSection } from "./CtaSection";
