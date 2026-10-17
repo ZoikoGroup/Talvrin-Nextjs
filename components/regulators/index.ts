@@ -1,0 +1,15 @@
+export { default as RegulatorsHero } from "./RegulatorsHero";
+export { default as RegulatorsPrinciples } from "./RegulatorsPrinciples";
+export { default as ScopeClaimControls } from "./ScopeClaimControls";
+export { default as RegulatorDirectory } from "./RegulatorDirectory";
+export { default as AuthorityProfileTemplate } from "./AuthorityProfileTemplate";
+export { default as RegulatorySourceFamilies } from "./RegulatorySourceFamilies";
+export { default as EvidenceSearchResults } from "./EvidenceSearchResults";
+export { default as DocumentDetailProvenance } from "./DocumentDetailProvenance";
+export { default as TimingVersionHistory } from "./TimingVersionHistory";
+export { default as RelatedRegulatoryResearch } from "./RelatedRegulatoryResearch";
+export { default as MonitoringHandoff } from "./MonitoringHandoff";
+export { default as AdjacentMarketRoutes } from "./AdjacentMarketRoutes";
+export { default as RightsTrustLimitations } from "./RightsTrustLimitations";
+export { default as AnswerFirstFaq } from "./AnswerFirstFaq";
+export { default as RegulatorsCTA } from "./RegulatorsCTA";
