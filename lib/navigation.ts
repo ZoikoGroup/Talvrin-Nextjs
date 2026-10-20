@@ -71,7 +71,7 @@ export const primaryNav: NavGroup[] = [
       { label: "Getting Started", href: "/resources/getting-started" },
       { label: "Documentation", href: "/resources/documentation" },
       { label: "Research Guides", href: "/resources/research-guides" },
-      { label: "Glossary", href: "/resources/glossary" },
+      { label: "Glossary", href: "/research/glossary" },
       { label: "FAQs", href: "/resources/faqs" },
       { label: "Release Notes", href: "/resources/release-notes" },
       { label: "Contact Support", href: "/resources/contact-support" },
