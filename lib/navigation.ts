@@ -57,7 +57,7 @@ export const primaryNav: NavGroup[] = [
       { label: "Market Intelligence", href: "/research/market-intelligence" },
       { label: "Research Library", href: "/research/research-library" },
       { label: "Economic Calendar", href: "/research/economic-calendar" },
-      { label: "Central Banks", href: "/research/central-banks" },
+      { label: "Central Banks", href: "/central-banks" },
       { label: "Policy & Regulation", href: "/research/policy-regulatory-intelligence" },
       { label: "Market Explainers", href: "/research/market-explainers" },
       { label: "Talvrin Methodology", href: "/research/talvrin-methodology" },
@@ -263,7 +263,7 @@ export const megaMenus: Record<string, MegaMenuContent> = {
           {
             title: "Economic Statistics",
             description: "Official statistical releases and supporting context.",
-            href: "/markets/economic-statistics",
+            href: "/economic-statistics",
           },
           {
             title: "Public Companies",
