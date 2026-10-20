@@ -69,7 +69,7 @@ export default function QuickFactsSection() {
           </button>
           <span className="text-xs text-slate-600">Last reviewed {lastReviewed}</span>
           <Link
-            href="/company/about-talvrin"
+            href="/about-talvrin"
             className="text-sm font-semibold text-accent-violet transition-colors hover:text-ink"
           >
             About Talvrin →

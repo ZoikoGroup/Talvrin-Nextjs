@@ -15,7 +15,7 @@ const trustCards = [
       "security.",
     ],
     cta: "About Talvrin →",
-    href: "/company/about-talvrin",
+    href: "/about-talvrin",
   },
   {
     title: "AI is assistive, not authoritative",

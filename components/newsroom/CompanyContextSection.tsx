@@ -6,8 +6,8 @@ import { SectionHeading, SectionLede } from "./shared";
 
 const links = [
   { label: "About Zoiko Markets →", href: "/company/about-zoiko-markets" },
-  { label: "Zoiko Financial Group →", href: "/company/zoiko-financial-group" },
-  { label: "About Talvrin →", href: "/company/about-talvrin" },
+  { label: "Zoiko Financial Group →", href: "/zoiko-financial-group" },
+  { label: "About Talvrin →", href: "/about-talvrin" },
 ];
 
 export default function CompanyContextSection() {

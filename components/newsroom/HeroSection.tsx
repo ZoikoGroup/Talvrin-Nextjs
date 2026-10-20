@@ -43,7 +43,7 @@ export default function HeroSection() {
               View Publications
             </LinkButton>
             <Link
-              href="/company/about-talvrin"
+              href="/about-talvrin"
               className="inline-flex items-center justify-center text-base font-semibold text-indigo-300 transition-colors hover:text-white"
             >
               About Talvrin →

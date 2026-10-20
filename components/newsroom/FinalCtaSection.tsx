@@ -14,7 +14,7 @@ export default function FinalCtaSection() {
             Review how Talvrin approaches public-market evidence, trust, and ongoing monitoring.
           </h2>
           <div className="mt-2 flex w-full flex-col items-stretch gap-4 sm:w-auto sm:flex-row sm:items-center">
-            <LinkButton href="/company/about-talvrin" variant="primary">
+            <LinkButton href="/about-talvrin" variant="primary">
               About Talvrin
             </LinkButton>
             <LinkButton href="/trust/trust-center" variant="secondary">

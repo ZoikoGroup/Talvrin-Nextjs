@@ -44,7 +44,7 @@ export const primaryNav: NavGroup[] = [
       { label: "Individual Investors", href: "/solutions/individual-investors" },
       { label: "Investment Professionals", href: "/solutions/investment-professionals" },
       { label: "Research Teams", href: "/solutions/research-teams" },
-      { label: "Asset Managers", href: "/solutions/asset-managers" },
+      { label: "Asset Managers", href: "/asset-managers" },
       { label: "Wealth & Advisory Research", href: "/solutions/wealth-advisory-research" },
       { label: "Financial Institutions", href: "/solutions/financial-institutions" },
       { label: "Enterprise", href: "/solutions/enterprise" },
@@ -70,7 +70,7 @@ export const primaryNav: NavGroup[] = [
       { label: "Help Center", href: "/resources/help-center" },
       { label: "Getting Started", href: "/resources/getting-started" },
       { label: "Documentation", href: "/resources/documentation" },
-      { label: "Research Guides", href: "/resources/research-guides" },
+      { label: "Research Guides", href: "/research-guides" },
       { label: "Glossary", href: "/resources/glossary" },
       { label: "FAQs", href: "/resources/faqs" },
       { label: "Release Notes", href: "/resources/release-notes" },
@@ -96,11 +96,11 @@ export const primaryNav: NavGroup[] = [
     label: "Company",
     href: "/company",
     items: [
-      { label: "About Talvrin", href: "/company/about-talvrin" },
+      { label: "About Talvrin", href: "/about-talvrin" },
       { label: "About Zoiko Markets", href: "/company/about-zoiko-markets" },
-      { label: "Zoiko Financial Group", href: "/company/zoiko-financial-group" },
-      { label: "Leadership", href: "/company/leadership" },
-      { label: "Careers", href: "/company/careers" },
+      { label: "Zoiko Financial Group", href: "/zoiko-financial-group" },
+      { label: "Leadership", href: "/leadership" },
+      { label: "Careers", href: "/careers" },
       { label: "Newsroom", href: "/company/newsroom" },
       { label: "Press & Media", href: "/company/press-media" },
       { label: "Contact", href: "/company/contact" },
@@ -304,7 +304,7 @@ export const megaMenus: Record<string, MegaMenuContent> = {
           {
             title: "Asset Managers",
             description: "Research workflows for asset-management teams.",
-            href: "/solutions/asset-managers",
+            href: "/asset-managers",
           },
           {
             title: "Wealth & Advisory Research",
@@ -459,7 +459,7 @@ export const megaMenus: Record<string, MegaMenuContent> = {
           {
             title: "Research Guides",
             description: "Practical guides for evidence-led research workflows.",
-            href: "/resources/research-guides",
+            href: "/research-guides",
           },
         ],
       },
@@ -499,17 +499,17 @@ export const megaMenus: Record<string, MegaMenuContent> = {
           {
             title: "About Talvrin",
             description: "Company, category and product purpose.",
-            href: "/company/about-talvrin",
+            href: "/about-talvrin",
           },
           {
             title: "Leadership",
             description: "Approved leadership information.",
-            href: "/company/leadership",
+            href: "/leadership",
           },
           {
             title: "Careers",
             description: "Open roles and Talvrin employment information.",
-            href: "/company/careers",
+            href: "/careers",
           },
         ],
       },
@@ -534,7 +534,7 @@ export const megaMenus: Record<string, MegaMenuContent> = {
         ],
       },
     ],
-    cta: { label: "About Talvrin", href: "/company/about-talvrin" },
+    cta: { label: "About Talvrin", href: "/about-talvrin" },
   },
 };
 
@@ -607,7 +607,7 @@ export const footerNav: NavGroup[] = [
       { label: "Press Enquiries", href: "/connect/press-enquiries" },
       { label: "Partnerships", href: "/connect/partnerships" },
       { label: "Data Provider Enquiries", href: "/connect/data-provider-enquiries" },
-      { label: "Careers", href: "/company/careers" },
+      { label: "Careers", href: "/careers" },
     ],
   },
 ];
