@@ -23,7 +23,7 @@ export default function FinalCtaSection() {
             </LinkButton>
           </div>
           <Link
-            href="/company/about-talvrin"
+            href="/about-talvrin"
             className="text-sm font-semibold text-accent-violet transition-colors hover:text-ink"
           >
             About Talvrin →
