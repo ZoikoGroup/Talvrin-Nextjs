@@ -19,7 +19,7 @@ jobs:
       - run: npm ci
       - run: npm run build
 
-           - name: Prepare SSH
+      - name: Prepare SSH
         env:
           SSH_KEY: ${{ secrets.GCP_SSH_KEY }}
         run: |
