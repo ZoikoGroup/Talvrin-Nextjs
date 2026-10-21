@@ -19,13 +19,16 @@ jobs:
       - run: npm ci
       - run: npm run build
 
-      - name: Prepare SSH
+           - name: Prepare SSH
+        env:
+          SSH_KEY: ${{ secrets.GCP_SSH_KEY }}
         run: |
+          [ -n "$SSH_KEY" ] || { echo "GCP_SSH_KEY secret is EMPTY in this repo"; exit 1; }
           install -m 700 -d ~/.ssh
-          echo "${{ secrets.GCP_SSH_KEY }}" > ~/.ssh/deploy_key
+          printf '%s\n' "$SSH_KEY" > ~/.ssh/deploy_key
           chmod 600 ~/.ssh/deploy_key
+          ssh-keygen -lf ~/.ssh/deploy_key
           ssh-keyscan -H 35.255.235.201 >> ~/.ssh/known_hosts
-
       - name: Upload build
         run: rsync -az --delete -e "ssh -i ~/.ssh/deploy_key" .next/ lennox@35.255.235.201:/var/www/talvrin-website/app/.next.incoming/
 
