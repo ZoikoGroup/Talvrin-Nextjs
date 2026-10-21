@@ -1,30 +1,50 @@
-name: Deploy Talvrin Website
+name: Deploy website
+on:
+  push:
+    branches: [main]
 
 concurrency:
   group: deploy-talvrin-website
   cancel-in-progress: false
 
-on:
-  push:
-    branches: [main]
-
 jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-      - name: SSH and deploy
-        uses: appleboy/ssh-action@v1.0.3
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
         with:
-          host: ${{ secrets.GCP_SSH_HOST }}
-          username: ${{ secrets.GCP_SSH_USER }}
-          key: ${{ secrets.GCP_SSH_KEY }}
-          command_timeout: 30m
-          script: |
-            set -e
-            cd /var/www/talvrin-website/app
-            git fetch origin main
-            git reset --hard origin/main
+          node-version: 22        # must match the VM's Node version
+          cache: npm
+      - run: npm ci
+      - run: npm run build
+
+      - name: Prepare SSH
+        run: |
+          install -m 700 -d ~/.ssh
+          echo "${{ secrets.GCP_SSH_KEY }}" > ~/.ssh/deploy_key
+          chmod 600 ~/.ssh/deploy_key
+          ssh-keyscan -H 35.255.235.201 >> ~/.ssh/known_hosts
+
+      - name: Upload build
+        run: rsync -az --delete -e "ssh -i ~/.ssh/deploy_key" .next/ lennox@35.255.235.201:/var/www/talvrin-website/app/.next.incoming/
+
+      - name: Activate on VM
+        run: |
+          ssh -i ~/.ssh/deploy_key lennox@35.255.235.201 'bash -s' <<'EOF'
+          set -e
+          cd /var/www/talvrin-website/app
+          git fetch origin main
+          git reset --hard origin/main
+          NEW=$(sha256sum package-lock.json | cut -d' ' -f1)
+          OLD=$(cat .deps-hash 2>/dev/null || true)
+          if [ "$NEW" != "$OLD" ] || [ ! -d node_modules ]; then
             npm ci
-            npm run build
-            pm2 restart talvrin-website
-            pm2 save
+            echo "$NEW" > .deps-hash
+          fi
+          rm -rf .next.old
+          [ -d .next ] && mv .next .next.old
+          mv .next.incoming .next
+          pm2 restart talvrin-website
+          pm2 save
+          EOF
