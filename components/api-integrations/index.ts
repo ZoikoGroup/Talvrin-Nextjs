@@ -1,0 +1,11 @@
+export { default as HeroSection } from "./HeroSection";
+export { default as SubNav } from "./SubNav";
+export { default as CapabilitiesSection } from "./CapabilitiesSection";
+export { default as HowAccessWorksSection } from "./HowAccessWorksSection";
+export { default as ReleaseGovernanceSection } from "./ReleaseGovernanceSection";
+export { default as IntegrationPatternsSection } from "./IntegrationPatternsSection";
+export { default as EvidenceRightsSection } from "./EvidenceRightsSection";
+export { default as DocumentationPreviewSection } from "./DocumentationPreviewSection";
+export { default as SecurityOperationsSection } from "./SecurityOperationsSection";
+export { default as FaqSection } from "./FaqSection";
+export { default as FinalCtaSection } from "./FinalCtaSection";
