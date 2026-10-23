@@ -1,0 +1,9 @@
+export { default as HeroSection } from "./HeroSection";
+export { default as AuthoritySection } from "./AuthoritySection";
+export { default as StatusesSection } from "./StatusesSection";
+export { default as RegionsSection } from "./RegionsSection";
+export { default as RecordFieldsSection } from "./RecordFieldsSection";
+export { default as LimitationsSection } from "./LimitationsSection";
+export { default as GovernanceSection } from "./GovernanceSection";
+export { default as FaqSection } from "./FaqSection";
+export { default as FinalCtaSection } from "./FinalCtaSection";

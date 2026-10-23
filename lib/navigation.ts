@@ -70,6 +70,7 @@ export const primaryNav: NavGroup[] = [
       { label: "Help Center", href: "/resources/help-center" },
       { label: "Getting Started", href: "/resources/getting-started" },
       { label: "Documentation", href: "/resources/documentation" },
+      { label: "API & Integrations", href: "/resources/api-integrations" },
       { label: "Research Guides", href: "/research-guides" },
       { label: "Glossary", href: "/research/glossary" },
       { label: "FAQs", href: "/resources/faqs" },
@@ -474,7 +475,7 @@ export const megaMenus: Record<string, MegaMenuContent> = {
           {
             title: "API & Integrations",
             description: "Developer resources only when externally available.",
-            href: "/developers/api-documentation",
+            href: "/resources/api-integrations",
           },
           {
             title: "Release Notes",
@@ -529,7 +530,7 @@ export const megaMenus: Record<string, MegaMenuContent> = {
           {
             title: "Legal & Policies",
             description: "Canonical index of public legal and policy documents.",
-            href: "/legal",
+            href: "/company/legal",
           },
         ],
       },
@@ -584,7 +585,7 @@ export const footerNav: NavGroup[] = [
   },
   {
     label: "Legal",
-    href: "/legal",
+    href: "/company/legal",
     items: [
       { label: "Terms of Service", href: "/legal/terms-of-service" },
       { label: "Privacy Notice", href: "/legal/privacy-notice" },
@@ -636,7 +637,7 @@ export const footerLegalLinks: NavLink[] = [
   { label: "Privacy", href: "/legal/privacy-notice" },
   { label: "Cookies", href: "/legal/cookie-notice" },
   { label: "Accessibility", href: "/legal/accessibility" },
-  { label: "Legal", href: "/legal" },
+  { label: "Legal", href: "/company/legal" },
   { label: "Cookie Preferences", href: "/legal/cookie-preferences" },
 ];
 
