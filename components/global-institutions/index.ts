@@ -1,0 +1,10 @@
+export { default as Hero } from "./Hero";
+export { default as AuthorityBoundaries } from "./AuthorityBoundaries";
+export { default as InstitutionalProposition } from "./InstitutionalProposition";
+export { default as WhoItServes } from "./WhoItServes";
+export { default as EvidenceOperatingModel } from "./EvidenceOperatingModel";
+export { default as GovernedResearchCollaboration } from "./GovernedResearchCollaboration";
+export { default as DataRightsControls } from "./DataRightsControls";
+export { default as EvaluationRoute } from "./EvaluationRoute";
+export { default as AnswerFirstFaq } from "./AnswerFirstFaq";
+export { default as CTA } from "./CTA";

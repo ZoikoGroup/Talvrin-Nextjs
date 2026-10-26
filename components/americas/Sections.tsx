@@ -85,7 +85,7 @@ export function HeroSection() {
               Market, source, language, and access availability depend on published verification.
               Research is not trade execution or investment advice. Security researcher? Use{" "}
               <Link
-                href="/support/security-contact"
+                href="/security-contact"
                 className="text-white/75 underline transition-colors hover:text-white"
               >
                 Security Contact

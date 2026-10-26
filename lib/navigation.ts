@@ -566,7 +566,7 @@ export const footerNav: NavGroup[] = [
       { label: "Accessibility Support", href: "/support/accessibility-support" },
       { label: "Report a Problem", href: "/support/report-a-problem" },
       { label: "System Status", href: "/support/system-status" },
-      { label: "Security Contact", href: "/support/security-contact" },
+      { label: "Security Contact", href: "/security-contact" },
     ],
   },
   {
@@ -579,7 +579,7 @@ export const footerNav: NavGroup[] = [
       { label: "Asia-Pacific", href: "/global/asia-pacific" },
       { label: "Middle East", href: "/global/middle-east" },
       { label: "Africa", href: "/global/africa" },
-      { label: "Global Institutions", href: "/global/institutions" },
+      { label: "Global Institutions", href: "/global-institutions" },
       { label: "Language & Region", href: "/global/language-region" },
     ],
   },
