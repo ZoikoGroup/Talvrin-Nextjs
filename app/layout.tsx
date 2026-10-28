@@ -1,13 +1,18 @@
 import type { Metadata } from "next";
-import { IBM_Plex_Sans } from "next/font/google";
-import Header from "@/components/layout/Header";
-import Footer from "@/components/layout/Footer";
+import { IBM_Plex_Sans, Inter } from "next/font/google";
+import SiteChrome from "@/components/layout/SiteChrome";
 import "./globals.css";
 
 const ibmPlexSans = IBM_Plex_Sans({
   variable: "--font-ibm-plex-sans",
   subsets: ["latin"],
   weight: ["300", "400", "500", "600", "700"],
+});
+
+const inter = Inter({
+  variable: "--font-inter",
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
 });
 
 export const metadata: Metadata = {
@@ -22,11 +27,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={`${ibmPlexSans.variable} h-full antialiased`}>
+    <html
+      lang="en"
+      className={`${ibmPlexSans.variable} ${inter.variable} h-full antialiased`}
+    >
       <body className="flex min-h-full flex-col font-sans">
-        <Header />
-        <main className="flex-1">{children}</main>
-        <Footer />
+        <SiteChrome>{children}</SiteChrome>
       </body>
     </html>
   );

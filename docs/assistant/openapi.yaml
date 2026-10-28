@@ -1,0 +1,203 @@
+openapi: 3.1.0
+info:
+  title: Talvrin Research Assistant — demo BFF contract
+  version: 0.1.0-demo
+  description: |
+    Contract for the mock routes under /api/assistant (WF-01 to WF-12).
+    Everything is synthetic and in-memory. Path families are NOT canonical:
+    ADR-012-01 to ADR-012-06 remain unresolved (see /assistant/integration).
+
+    Shared conventions (WF-12 §8):
+    - Every request from the browser sends `x-talvrin-guest-session` (per-tab
+      opaque key). Jobs, comparisons and exports are bound to it; other
+      sessions get the same 404 as an unknown reference.
+    - Every JSON response carries `requestId` and an `x-request-id` header.
+    - Errors use the ErrorEnvelope schema. 429 and 503 send `Retry-After`.
+    - Repeatable POSTs accept an `Idempotency-Key` header (or body field).
+    - Mock account routes additionally require `x-talvrin-demo-mode: account`.
+      That header is browser-asserted and must never be trusted in production.
+servers:
+  - url: /api/assistant
+components:
+  parameters:
+    GuestSession:
+      name: x-talvrin-guest-session
+      in: header
+      required: true
+      schema: { type: string, pattern: "^gs_[A-Za-z0-9]{8,64}$" }
+    DemoMode:
+      name: x-talvrin-demo-mode
+      in: header
+      required: true
+      schema: { type: string, enum: [account] }
+    IdempotencyKey:
+      name: Idempotency-Key
+      in: header
+      required: false
+      schema: { type: string, maxLength: 128 }
+  schemas:
+    ErrorEnvelope:
+      type: object
+      required: [error, safeMessage, code, retryable, requestId]
+      properties:
+        error: { type: string, description: Alias of safeMessage }
+        safeMessage: { type: string }
+        code:
+          type: string
+          examples: [INVALID_INPUT, RATE_LIMITED, SERVICE_UNAVAILABLE, JOB_NOT_FOUND, JOB_EXPIRED, ANSWER_REVOKED, ANSWER_SUPERSEDED, PREFLIGHT_STALE, AUTH_REQUIRED, VERSION_CONFLICT]
+        retryable: { type: boolean }
+        retryAfterSeconds: { type: integer }
+        fields: { type: object, additionalProperties: { type: string } }
+        requestId: { type: string }
+  responses:
+    NotAvailable:
+      description: Unknown, expired, cleared or owned by another session (indistinguishable).
+      content: { application/json: { schema: { $ref: "#/components/schemas/ErrorEnvelope" } } }
+    RateLimited:
+      description: Too many requests. `Retry-After` header is set.
+      content: { application/json: { schema: { $ref: "#/components/schemas/ErrorEnvelope" } } }
+paths:
+  /config:
+    get:
+      summary: Public config (WF-01 §7.1) — scopes, limits, allowedIntents, coverageMessage, legalCopyVersion, featureFlags
+      responses: { "200": { description: ConfigResponse } }
+  /research:
+    post:
+      summary: Create a research job (WF-01 §7.2)
+      parameters: [{ $ref: "#/components/parameters/GuestSession" }, { $ref: "#/components/parameters/IdempotencyKey" }]
+      responses:
+        "202": { description: "{ job: ResearchJobView, replayed?: true }" }
+        "422": { description: INVALID_INPUT with fields }
+        "429": { $ref: "#/components/responses/RateLimited" }
+        "503": { description: SERVICE_UNAVAILABLE }
+  /research/{ref}:
+    get:
+      summary: Job status with stage and eventSeq (WF-02 §9). No percentage.
+      responses: { "200": { description: "{ job }" }, "404": { $ref: "#/components/responses/NotAvailable" } }
+    delete:
+      summary: Guest clear — later reads return 404 (WF-06 P0-07). Idempotent.
+      responses: { "200": { description: "{ cleared: true }" } }
+  /research/{ref}/answer:
+    get:
+      summary: Published answer and rights-redacted source records
+      responses:
+        "200": { description: "{ answer: PublishedAnswer, sources: SourceRecord[] }" }
+        "409": { description: ANSWER_NOT_READY }
+        "410": { description: JOB_EXPIRED or ANSWER_REVOKED }
+  /research/{ref}/turns:
+    post:
+      summary: Follow-up turn (WF-02 C12)
+      parameters: [{ $ref: "#/components/parameters/IdempotencyKey" }]
+      responses: { "202": { description: "{ job }" } }
+  /research/{ref}/cancel:
+    post:
+      summary: Cancel; client shows "Stopping research…" until confirmed
+      responses: { "200": { description: "{ job }" } }
+  /research/{ref}/copy:
+    get:
+      summary: Plain-text answer with numbered citations; no restricted content (WF-02 I06)
+      responses: { "200": { description: "{ text }" } }
+  /research/{ref}/evidence:
+    get:
+      summary: Evidence package for an exact answer version (WF-03 §9)
+      parameters:
+        - { name: answerVersion, in: query, schema: { type: string } }
+        - { name: citation, in: query, schema: { type: string } }
+      responses: { "200": { description: "{ evidence: EvidencePackage }" }, "409": { description: ANSWER_SUPERSEDED } }
+  /research/{ref}/sources/{sourceId}:
+    get:
+      summary: Source detail; excerpt only when the current rights decision permits (WF-03 §9.1)
+      responses: { "200": { description: "{ source: EvidenceSourceDetail }" } }
+  /citations/copy:
+    post:
+      summary: Server-built, rights-checked citation line (WF-10 EXP-16)
+      responses: { "200": { description: "{ text }" }, "403": { description: COPY_NOT_PERMITTED } }
+  /comparisons/catalog:
+    get: { summary: Metrics, periods, currency modes, methods, flags (WF-04 CMP-06–09), responses: { "200": { description: "{ catalog }" } } }
+  /instruments/search:
+    get:
+      summary: Authorised resolver, min 2 characters; `id` repeats resolve a selection (WF-04 CMP-03)
+      parameters:
+        - { name: q, in: query, schema: { type: string, minLength: 2, maxLength: 64 } }
+        - { name: id, in: query, schema: { type: array, items: { type: string } } }
+      responses: { "200": { description: InstrumentSearchResponse } }
+  /comparisons/preflight:
+    post: { summary: Server preflight with decision token and repair codes (WF-04 §8.1), responses: { "200": { description: PreflightResult } } }
+  /comparisons:
+    post:
+      summary: Execute with token; blocked or stale preflight refused (409)
+      parameters: [{ $ref: "#/components/parameters/IdempotencyKey" }]
+      responses: { "202": { description: "{ job: ComparisonJobView }" } }
+  /comparisons/{ref}:
+    get: { summary: Job view (state machine WF-05 §5.1) plus rights-filtered sources, responses: { "200": { description: "{ job, sources }" } } }
+  /exports/entitlement:
+    get: { summary: Server-held demo grant view, responses: { "200": { description: "{ entitlement }" } } }
+    post: { summary: Issue synthetic demo grant for this session, responses: { "201": { description: "{ entitlement }" } } }
+    delete: { summary: Revoke grant, responses: { "200": { description: "{ entitlement }" } } }
+  /exports/preflight:
+    post: { summary: Eligibility with per-item omissions and manifest hash (WF-10 §10), responses: { "200": { description: ExportPreflight } } }
+  /exports:
+    post:
+      summary: Create job from a pinned answer revision; manifest hash and decision id required
+      parameters: [{ $ref: "#/components/parameters/IdempotencyKey" }]
+      responses: { "202": { description: "{ job: ExportJobView }" }, "409": { description: MANIFEST_STALE or IDEMPOTENCY_KEY_REUSED } }
+  /exports/{id}:
+    get: { summary: Authoritative job state, responses: { "200": { description: "{ job }" } } }
+    delete: { summary: Cancel or withdraw; downloaded copies are not erased, responses: { "200": { description: "{ job }" } } }
+  /exports/{id}/download:
+    post: { summary: Re-authorise and issue a one-use, short-TTL token, responses: { "200": { description: "{ download: ExportDownloadGrant, job }" } } }
+    get:
+      summary: Redeem token (session header required)
+      parameters: [{ name: token, in: query, required: true, schema: { type: string } }]
+      responses: { "200": { description: Artifact bytes }, "401": { description: DOWNLOAD_TOKEN_REQUIRED } }
+  /help:
+    get: { summary: Approved public help corpus search, responses: { "200": { description: "{ articles, categories, query }" } } }
+  /help/capabilities:
+    get: { summary: Whether report intake is available (WF-08 AC-14), responses: { "200": { description: capabilities } } }
+  /cases:
+    post:
+      summary: Research report; claim references validated against the caller's session (WF-08)
+      parameters: [{ $ref: "#/components/parameters/IdempotencyKey" }]
+      responses: { "201": { description: "{ receipt }" }, "422": { description: INVALID_PAYLOAD } }
+  /cases/context:
+    get: { summary: Server-resolved claim context for a report, responses: { "200": { description: context } } }
+  /settings/capabilities:
+    get: { summary: Which settings this mode may change (WF-07 ST-04), responses: { "200": { description: capabilities } } }
+  /settings:
+    get: { summary: Settings with revision and ETag, responses: { "200": { description: settings } } }
+    put: { summary: Save with If-Match; 412 on conflict (WF-07 AC-15–17), responses: { "200": { description: settings }, "412": { description: conflict } } }
+  /updates:
+    get:
+      summary: Principal-scoped inbox with server unread counts (WF-09 NTF-02)
+      parameters: [{ $ref: "#/components/parameters/DemoMode" }]
+      responses: { "200": { description: UpdatesResponse }, "401": { description: AUTH_REQUIRED } }
+  /updates/read:
+    post: { summary: Bulk mark read with named scope (AC-31), responses: { "200": { description: "{ changed, response }" } } }
+  /updates/{id}:
+    patch: { summary: Hide or change read state with version (409 on conflict), responses: { "200": { description: "{ item }" } } }
+  /updates/{id}/open:
+    post: { summary: Re-check access and resolve opaque deeplink (AC-06), responses: { "200": { description: "{ href, item }" }, "403": { description: ACCESS_CHANGED } } }
+  /alerts:
+    get: { summary: Server-held, versioned rules and canonical subjects, responses: { "200": { description: "{ rules, subjects }" } } }
+    post:
+      summary: Commit a rule — the only way a rule becomes ACTIVE (AC-12)
+      parameters: [{ $ref: "#/components/parameters/IdempotencyKey" }]
+      responses: { "201": { description: "{ rule }" }, "409": { description: PREFLIGHT_STALE }, "422": { description: CONSENT_REQUIRED } }
+  /alerts/preflight:
+    post: { summary: Strict eligibility checks before create or resume (NTF-13), responses: { "200": { description: AlertPreflight } } }
+  /alerts/{id}:
+    patch: { summary: pause, resume (fresh preflight + consent) or unsubscribe, responses: { "200": { description: "{ rule }" } } }
+  /access/context:
+    get: { summary: Synthetic identity and capability context (WF-11 §10), responses: { "200": { description: context } } }
+  /access/entitlements:
+    get: { summary: Effective entitlements with typed reasons, responses: { "200": { description: entitlements } } }
+  /access/evaluate:
+    post: { summary: Evaluate one action; typed denial codes (AUTH_REQUIRED, PLAN_REQUIRED, QUOTA_EXCEEDED, POLICY_UNAVAILABLE …), responses: { "200": { description: decision } } }
+  /access/import-intents:
+    post: { summary: Explicit per-item guest-save selection; nothing selected by default, responses: { "200": { description: receipts } } }
+  /auth/intents:
+    post: { summary: Opaque, short-lived return intent instead of a raw path, responses: { "201": { description: intent } } }
+  /auth/intents/consume:
+    post: { summary: Single-use consume of a return intent, responses: { "200": { description: "{ returnPath }" } } }
+  /auth/logout:
+    post: { summary: End demo session; client clears subject-scoped caches, responses: { "200": { description: ok } } }

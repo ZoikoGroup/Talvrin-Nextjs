@@ -24,6 +24,24 @@
      blue-violet used for row detail text in its comparison tables. */
   --color-muted: #5d5a72;
   --color-ink-soft: #322e52;
+
+  /* Public research assistant palette (WF-01 to WF-12). These are scoped
+     to the /assistant surface so the marketing site keeps its existing
+     violet brand scale. Token names come from the chatbot handoff docs:
+     Midnight, Iris, Platinum and Haze, plus the five answer-state tones. */
+  --color-midnight: #08111f;
+  --color-midnight-soft: #0b1626;
+  --color-as-panel: #0e1b2d;
+  --color-as-panel-soft: #12233a;
+  --color-as-line: #1f3149;
+  --color-platinum: #edf1f8;
+  --color-haze: #9ba9c0;
+  --color-iris: #6f5bff;
+  --color-iris-soft: #8b7bff;
+  --color-ok: #4fd1a1;
+  --color-warn: #f2b45c;
+  --color-danger: #ff7a8a;
+  --color-info: #6fb6ff;
 }
 
 @theme inline {
@@ -39,6 +57,19 @@
   --color-surface: var(--color-surface);
   --color-muted: var(--color-muted);
   --color-ink-soft: var(--color-ink-soft);
+  --color-midnight: var(--color-midnight);
+  --color-midnight-soft: var(--color-midnight-soft);
+  --color-as-panel: var(--color-as-panel);
+  --color-as-panel-soft: var(--color-as-panel-soft);
+  --color-as-line: var(--color-as-line);
+  --color-platinum: var(--color-platinum);
+  --color-haze: var(--color-haze);
+  --color-iris: var(--color-iris);
+  --color-iris-soft: var(--color-iris-soft);
+  --color-ok: var(--color-ok);
+  --color-warn: var(--color-warn);
+  --color-danger: var(--color-danger);
+  --color-info: var(--color-info);
   --font-sans: var(--font-ibm-plex-sans);
   --animate-marquee: marquee 32s linear infinite;
 }
@@ -78,4 +109,107 @@ body {
   -ms-overflow-style: none;
   scrollbar-width: none;
 }
+
+/* ------------------------------------------------------------------ */
+/* Public research assistant surface                                   */
+/* ------------------------------------------------------------------ */
+
+.as-app {
+  color-scheme: dark;
+  font-family: var(--font-inter), var(--font-ibm-plex-sans), system-ui, sans-serif;
+  background:
+    radial-gradient(1100px 620px at 58% -18%, rgba(111, 91, 255, 0.1), transparent 65%),
+    var(--color-midnight);
+  color: var(--color-platinum);
+  font-size: 15px;
+}
+
+/* The handoff specifies 15–18 px primary copy and at least 13 px secondary
+   copy. Several implementation primitives started at 8–12 px for dense
+   metadata; lift the small end of the scale without changing the layout grid. */
+.as-app [class*="text-[8px]"],
+.as-app [class*="text-[9px]"] {
+  font-size: 0.6875rem !important;
+  line-height: 1.4 !important;
+}
+.as-app [class*="text-[10px]"] {
+  font-size: 0.75rem !important;
+  line-height: 1.45 !important;
+}
+.as-app [class*="text-[11px]"] {
+  font-size: 0.8125rem !important;
+  line-height: 1.5 !important;
+}
+.as-app [class*="text-[12px]"] {
+  font-size: 0.875rem !important;
+  line-height: 1.5 !important;
+}
+
+.as-app ::selection {
+  background: rgba(111, 91, 255, 0.4);
+  color: #fff;
+}
+
+.as-app :focus-visible {
+  outline: 2px solid var(--color-iris-soft);
+  outline-offset: 2px;
+}
+
+.as-hairline {
+  border-color: color-mix(in srgb, var(--color-as-line) 78%, transparent);
+}
+
+.as-scroll {
+  scrollbar-color: #2a3d5a transparent;
+  scrollbar-width: thin;
+}
+
+.as-scroll::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+.as-scroll::-webkit-scrollbar-thumb {
+  background: #2a3d5a;
+  border-radius: 999px;
+  border: 3px solid transparent;
+  background-clip: content-box;
+}
+
+/* A very light grid used behind the research entry hero. */
+.as-grid {
+  background-image:
+    linear-gradient(to right, rgba(155, 169, 192, 0.06) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(155, 169, 192, 0.06) 1px, transparent 1px);
+  background-size: 56px 56px;
+  mask-image: linear-gradient(to bottom, black, transparent 85%);
+}
+
+/* Reduced motion is a presentation preference users can set in WF-07 as
+   well as an OS preference. Both paths collapse non-essential motion. */
+.as-reduce-motion *,
+.as-reduce-motion *::before,
+.as-reduce-motion *::after {
+  animation-duration: 0.01ms !important;
+  animation-iteration-count: 1 !important;
+  transition-duration: 0.01ms !important;
+  scroll-behavior: auto !important;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .as-motion-safe {
+    animation: none !important;
+    transition: none !important;
+  }
+}
+
+@keyframes as-pulse {
+  0%,
+  100% {
+    opacity: 0.45;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
 
