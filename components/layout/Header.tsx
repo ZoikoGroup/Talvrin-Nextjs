@@ -47,7 +47,7 @@ export default function Header() {
               <LinkButton href="/sign-in" variant="ghost">
                 Sign In
               </LinkButton>
-              <LinkButton href="/request-access" variant="primary">
+              <LinkButton href="/connect/request-access" variant="primary">
                 Request Access
               </LinkButton>
             </div>
