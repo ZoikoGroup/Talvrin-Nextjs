@@ -42,3 +42,13 @@ next-env.d.ts
 
 # AI Assistant configs
 .mcp.json
+
+# Local test scripts
+test_*.js
+check.js
+fix_comparison.js
+
+# Docs/reports
+assistant-test-report.md
+today-work-report.md
+work-report-*.md
