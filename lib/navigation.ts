@@ -603,7 +603,7 @@ export const footerNav: NavGroup[] = [
     href: "/connect",
     items: [
       { label: "Contact Talvrin", href: "/connect/contact-talvrin" },
-      { label: "Request Access", href: "/request-access" },
+      { label: "Request Access", href: "/connect/request-access" },
       { label: "Enterprise Enquiries", href: "/connect/enterprise-enquiries" },
       { label: "Press Enquiries", href: "/connect/press-enquiries" },
       { label: "Partnerships", href: "/connect/partnerships" },

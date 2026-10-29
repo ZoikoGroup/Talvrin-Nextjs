@@ -89,7 +89,7 @@ export default function MobileNav({ open, onClose }: MobileNavProps) {
               <LinkButton href="/sign-in" variant="secondary" className="w-full" onClick={onClose}>
                 Sign In
               </LinkButton>
-              <LinkButton href="/request-access" variant="primary" className="w-full" onClick={onClose}>
+              <LinkButton href="/connect/request-access" variant="primary" className="w-full" onClick={onClose}>
                 Request Access
               </LinkButton>
             </div>
