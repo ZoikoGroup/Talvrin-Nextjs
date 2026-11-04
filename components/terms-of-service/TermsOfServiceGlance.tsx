@@ -71,7 +71,7 @@ export default function TermsOfServiceGlance() {
             {clauses.map((clause) => (
               <article
                 key={clause.id}
-                className="flex min-h-[140px] sm:min-h-[150px] h-full min-w-0 flex-col items-start rounded-2xl border border-slate-900/10 bg-violet-50 p-4 sm:p-5 transition-colors hover:border-indigo-300 hover:bg-indigo-50/70"
+                className="flex min-h-[140px] sm:min-h-[150px] h-full min-w-0 flex-col items-start rounded-2xl border border-slate-900/10 bg-surface p-4 sm:p-5 transition-colors hover:border-indigo-300 hover:bg-indigo-50/70"
               >
                 <h3 className="text-sm sm:text-base font-bold leading-5 text-slate-900">
                   {clause.title}
@@ -94,8 +94,8 @@ export default function TermsOfServiceGlance() {
           {/* Image */}
           <div className="relative aspect-[4/3] sm:aspect-[16/9] lg:aspect-auto lg:min-h-[320px] xl:min-h-[372px] w-full min-w-0 overflow-hidden rounded-2xl border border-slate-900/10 bg-violet-50">
             <Image
-              src="/images/legal/terms-of-service/terms-of-service-glance-laptop-review.webp"
-              alt="Three colleagues reviewing work together on a laptop"
+              src="/images/legal/terms-of-service/terms-of-service-glance-team-laughing.webp"
+              alt="A team laughing together around a laptop in a meeting"
               fill
               sizes="(max-width: 639px) calc(100vw - 32px), (max-width: 1023px) calc(100vw - 48px), (max-width: 1279px) 300px, 40vw"
               className="object-cover object-center"

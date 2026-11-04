@@ -635,7 +635,7 @@ export const footerDisclosures: { title: string; body: string }[] = [
 export const footerLegalLinks: NavLink[] = [
   { label: "Terms", href: "/legal/terms-of-service" },
   { label: "Privacy", href: "/legal/privacy-notice" },
-  { label: "Cookies", href: "/legal/cookie-notice" },
+  { label: "Cookies", href: "/legal/cookies" },
   { label: "Accessibility", href: "/legal/accessibility" },
   { label: "Legal", href: "/company/legal" },
   { label: "Cookie Preferences", href: "/legal/cookie-preferences" },

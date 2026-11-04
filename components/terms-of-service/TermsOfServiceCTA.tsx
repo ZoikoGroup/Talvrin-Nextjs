@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export default function TermsOfServiceCTA() {
   return (
-    <section className="w-full border-t border-slate-900/10 bg-violet-50 font-['IBM_Plex_Sans',sans-serif]">
+    <section className="w-full border-t border-slate-900/10 bg-surface font-['IBM_Plex_Sans',sans-serif]">
       <div className="mx-auto flex min-h-[300px] sm:min-h-[340px] lg:min-h-[384px] w-full max-w-[1440px] flex-col items-center justify-center px-4 sm:px-6 md:px-8 lg:px-12 xl:px-20 py-10 sm:py-14 lg:py-16 xl:py-20 text-center">
         <div className="flex w-full max-w-[700px] flex-col items-center gap-3.5 sm:gap-4">
           <h2 className="text-center text-2xl font-bold leading-tight text-slate-900 sm:text-3xl sm:leading-10 lg:text-4xl">
