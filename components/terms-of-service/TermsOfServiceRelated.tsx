@@ -41,7 +41,7 @@ export default function TermsOfServiceRelated() {
           </p>
 
           {/* LEGAL STATUS LIST */}
-          <div className="mt-3 w-full overflow-hidden rounded-2xl border border-slate-900/10 bg-violet-50">
+          <div className="mt-3 w-full overflow-hidden rounded-2xl border border-slate-900/10 bg-surface">
             {legalItems.map((item, index) => (
               <a
                 key={item.number}

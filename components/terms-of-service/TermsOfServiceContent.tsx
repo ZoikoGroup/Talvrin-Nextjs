@@ -9,6 +9,7 @@ type Section = {
   warning?: boolean;
   notice?: string;
   callout?: string;
+  examples?: string[];
   related?: { label: string; href: string }[];
 };
 
@@ -24,6 +25,22 @@ const sections: Section[] = [
     related: [
       { label: "Privacy Notice", href: "/legal/privacy-notice" },
       { label: "Acceptable Use", href: "/legal/acceptable-use" },
+    ],
+  },
+  {
+    id: "defined-terms",
+    title: "Defined terms",
+    category: "AGREEMENT & ELIGIBILITY",
+    warning: true,
+    text: "A few terms recur throughout these Terms. The descriptions below are plain-language orientation to help you read this page — they are not binding legal definitions.",
+    notice:
+      "Counsel-approved legal definitions for terms used in a binding sense have not been supplied and are not published here until Legal confirms them.",
+    examples: [
+      "“Talvrin” — the research and intelligence platform operated under the Talvrin trading name, as described in these Terms.",
+      "“You” / “your” — the individual, or the organization on whose behalf the individual acts, accessing or using Talvrin.",
+      "“Content” — evidence, data, research and other material made available through Talvrin.",
+      "“Workspace content” — material you create or save within Talvrin, such as watchlists, notes and annotations.",
+      "“AI-assisted features” — functionality that uses AI to help navigate, summarize or organize Content.",
     ],
   },
   {
@@ -44,6 +61,15 @@ const sections: Section[] = [
       { label: "Account Support", href: "/support/account-support" },
       { label: "Security", href: "/trust/security" },
     ],
+  },
+  {
+    id: "organization-and-team-usage",
+    title: "Organization and team usage",
+    category: "AGREEMENT & ELIGIBILITY",
+    warning: true,
+    text: "Where your organization provides you access to Talvrin, your organization may set role-based permissions, usage policies and account-administration rules that apply in addition to these Terms. An executed enterprise agreement, where one exists, governs the organization’s use alongside these Terms.",
+    notice:
+      "Precedence rules between an individual’s acceptance of these Terms and an executed enterprise agreement, and specific role or permission defaults, have not been supplied by an approved source and are not published here until Legal and Product confirm them.",
   },
   {
     id: "access-and-permitted-use",
@@ -203,14 +229,8 @@ const sections: Section[] = [
   },
 ];
 
-const sectionImages: Record<number, string> = {
-  1: "terms-of-service-section-plan-review.webp",
-  4: "terms-of-service-section-city-office-desk.webp",
-  8: "terms-of-service-section-analytics-briefing.webp",
-  12: "terms-of-service-section-team-presentation.webp",
-  15: "terms-of-service-section-document-workshop.webp",
-  19: "terms-of-service-section-studio-collaboration.webp",
-};
+// The current design has no per-section images. Add entries here (section number -> file) to bring one back.
+const sectionImages: Record<number, string> = {};
 
 function TocLinks() {
   return sections.map((section, index) => (
@@ -229,7 +249,7 @@ export default function TermsOfServiceContent() {
   return (
     <section
       id="terms-of-service-content"
-      className="w-full scroll-mt-16 bg-violet-50 font-['IBM_Plex_Sans',sans-serif] text-slate-900"
+      className="w-full scroll-mt-16 bg-surface font-['IBM_Plex_Sans',sans-serif] text-slate-900"
     >
       <div className="mx-auto grid w-full max-w-[1440px] grid-cols-1 gap-6 px-4 sm:px-6 md:px-8 lg:grid-cols-[220px_minmax(0,1fr)] lg:gap-8 lg:px-12 lg:py-14 xl:grid-cols-[240px_minmax(0,1fr)] xl:gap-8 xl:px-20 xl:py-[72px] py-8 sm:py-10">
         {/* Table of contents: collapsible on mobile/tablet, sticky sidebar on desktop */}
@@ -319,6 +339,27 @@ export default function TermsOfServiceContent() {
                         <p className="break-words text-xs sm:text-sm leading-5 text-yellow-900">
                           {section.notice}
                         </p>
+                      </div>
+                    )}
+
+                    {section.examples && (
+                      <div className="mt-4 rounded-[10px] border border-slate-900/10 bg-white px-4 py-4">
+                        <p className="text-[11px] sm:text-xs font-bold tracking-wide text-gray-600">
+                          ILLUSTRATIVE EXAMPLES — NON-EXHAUSTIVE
+                        </p>
+                        <ul className="mt-2 flex flex-col gap-1.5">
+                          {section.examples.map((example) => (
+                            <li
+                              key={example}
+                              className="flex gap-2 break-words text-xs sm:text-sm leading-5 text-gray-600"
+                            >
+                              <span aria-hidden="true" className="text-yellow-600">
+                                •
+                              </span>
+                              <span className="min-w-0">{example}</span>
+                            </li>
+                          ))}
+                        </ul>
                       </div>
                     )}
 

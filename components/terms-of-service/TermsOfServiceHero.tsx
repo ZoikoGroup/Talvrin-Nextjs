@@ -5,7 +5,7 @@ import Link from "next/link";
 
 export default function TermsOfServiceHero() {
   return (
-    <section className="relative isolate w-full overflow-hidden bg-[#17122F] text-violet-50">
+    <section className="relative isolate w-full overflow-hidden bg-ink text-violet-50">
       <div
         aria-hidden="true"
         className="pointer-events-none absolute inset-0 -z-10 bg-[radial-gradient(ellipse_at_15%_10%,rgba(91,70,180,0.28),transparent_45%),radial-gradient(ellipse_at_90%_85%,rgba(115,67,91,0.18),transparent_40%)]"
@@ -74,8 +74,8 @@ export default function TermsOfServiceHero() {
         <div className="relative mx-auto w-full min-w-0 max-w-[420px] sm:max-w-[480px] lg:max-w-[460px] xl:max-w-[480px]">
           <div className="relative aspect-[4/3] sm:aspect-square w-full overflow-hidden rounded-2xl border border-violet-50/10 bg-violet-50/5">
             <Image
-              src="/images/legal/terms-of-service/terms-of-service-hero-plan-review.webp"
-              alt="Three colleagues reviewing documents together at a sunlit desk"
+              src="/images/legal/terms-of-service/terms-of-service-hero-team-desk.webp"
+              alt="Overhead view of a team working with laptops and notebooks around a table"
               fill
               priority
               sizes="(max-width: 639px) calc(100vw - 32px), (max-width: 1023px) min(100vw - 48px, 480px), (max-width: 1440px) 40vw, 480px"
