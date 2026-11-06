@@ -45,7 +45,7 @@ export default function AsiaPacificHero() {
           <p className="text-xs sm:text-sm text-slate-400 font-normal leading-relaxed mb-8 max-w-xl">
             Talvrin is building a source-linked research and monitoring
             workspace for global public markets. This page explains
-            Asia-Pacific's place in that architecture without naming unsupported
+            Asia-Pacific&apos;s place in that architecture without naming unsupported
             active countries, calendars or languages.
           </p>
 

@@ -540,7 +540,7 @@ export default function AssistantShell({
         </div>
       </header>
 
-      {isEntry ? (
+      {!showSidebar ? (
         <main id="assistant-main" tabIndex={-1} className="flex-1 focus:outline-none">
           {children}
         </main>
