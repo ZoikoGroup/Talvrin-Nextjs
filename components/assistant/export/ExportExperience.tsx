@@ -279,7 +279,6 @@ export default function ExportExperience({ initialRef }: { initialRef?: string }
 
   const preflight =
     preflightState.state === "ready" ? preflightState.result : null;
-  const answer = context.state === "ready" ? context.answer : null;
   const sources = useMemo(
     () => (context.state === "ready" ? context.sources : []),
     [context]

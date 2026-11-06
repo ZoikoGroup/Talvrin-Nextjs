@@ -163,7 +163,8 @@ export default function ReportExperience({
   const [statusText, setStatusText] = useState("");
   const receiptRef = useRef<HTMLHeadingElement>(null);
   const reviewRef = useRef<HTMLHeadingElement>(null);
-  const idempotencyKey = useRef(newIdempotencyKey());
+  // Held in state (not a ref) because the review step displays it.
+  const [idempotencyKey, setIdempotencyKey] = useState(() => newIdempotencyKey());
 
   const limits = capabilities.limits;
   const intakeAvailable = capabilities.intake.research_cases === "AVAILABLE";
@@ -328,7 +329,7 @@ export default function ReportExperience({
     setIssue(null);
     setStatusText("Submitting. Waiting for durable intake acknowledgment.");
     const body = {
-      idempotency_key: idempotencyKey.current,
+      idempotency_key: idempotencyKey,
       request_type: topic,
       answer_ref: resolved?.answer_ref ?? undefined,
       comparison_ref: resolved?.comparison_ref ?? undefined,
@@ -346,7 +347,7 @@ export default function ReportExperience({
         method: "POST",
         headers: {
           "content-type": "application/json",
-          "idempotency-key": idempotencyKey.current,
+          "idempotency-key": idempotencyKey,
           [GUEST_SESSION_HEADER]: guestSessionId(),
         },
         body: JSON.stringify(body),
@@ -465,7 +466,7 @@ export default function ReportExperience({
     setConsent(false);
     setErrors({});
     setIssue(null);
-    idempotencyKey.current = newIdempotencyKey();
+    setIdempotencyKey(newIdempotencyKey());
   }
 
   const errorEntries = FIELD_ORDER.filter((item) => errors[item.key]);
@@ -820,7 +821,7 @@ export default function ReportExperience({
                         label: "Submission reference",
                         value: (
                           <span className="font-mono text-[12px] text-haze">
-                            {redact(idempotencyKey.current)} · reused on retry
+                            {redact(idempotencyKey)} · reused on retry
                           </span>
                         ),
                       },
