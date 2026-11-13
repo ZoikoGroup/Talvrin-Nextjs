@@ -48,6 +48,12 @@ const paths: AccessPath[] = [
   },
 ];
 
+type SubmitStatus =
+  | { state: "idle" }
+  | { state: "sending" }
+  | { state: "sent"; reference: string }
+  | { state: "error"; message: string };
+
 const fieldClass =
   "w-full rounded-lg border border-ink/20 bg-surface px-3.5 py-3 text-base text-ink placeholder:text-neutral-500 focus:border-ink/40 focus:outline-none focus-visible:ring-2 focus-visible:ring-accent-violet/40";
 
@@ -78,14 +84,53 @@ function Field({
 
 export default function AccessFlowSection() {
   const [pathId, setPathId] = useState<PathId>("self-directed");
-  const [submitted, setSubmitted] = useState(false);
+  const [status, setStatus] = useState<SubmitStatus>({ state: "idle" });
   const path = paths.find((p) => p.id === pathId) ?? paths[0];
+  const sending = status.state === "sending";
 
-  function handleSubmit(event: FormEvent<HTMLFormElement>) {
+  async function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
-    // No access-request endpoint exists yet, so confirm locally rather than
-    // implying a request was received or a reference was issued.
-    setSubmitted(true);
+    if (sending) return;
+    const form = event.currentTarget;
+    const data = new FormData(form);
+    const text = (key: string) => String(data.get(key) ?? "").trim();
+
+    setStatus({ state: "sending" });
+    try {
+      const response = await fetch("/api/request-access", {
+        method: "POST",
+        headers: { "content-type": "application/json" },
+        body: JSON.stringify({
+          path: pathId,
+          name: text("name"),
+          email: text("email"),
+          organization: text("organization"),
+          country: text("country"),
+          use: text("use"),
+          privacy: data.get("privacy") === "on",
+          updates: data.get("updates") === "on",
+          website: text("website"),
+        }),
+      });
+      const result = (await response.json().catch(() => ({}))) as {
+        reference?: string;
+        safeMessage?: string;
+      };
+      if (!response.ok || !result.reference) {
+        setStatus({
+          state: "error",
+          message: result.safeMessage ?? "We couldn't send your request. Please try again in a few minutes.",
+        });
+        return;
+      }
+      form.reset();
+      setStatus({ state: "sent", reference: result.reference });
+    } catch {
+      setStatus({
+        state: "error",
+        message: "We couldn't reach the server. Check your connection and try again.",
+      });
+    }
   }
 
   return (
@@ -122,7 +167,7 @@ export default function AccessFlowSection() {
                         checked={selected}
                         onChange={() => {
                           setPathId(option.id);
-                          setSubmitted(false);
+                          setStatus({ state: "idle" });
                         }}
                         className="size-4 shrink-0 accent-accent-violet"
                       />
@@ -247,6 +292,12 @@ export default function AccessFlowSection() {
                 </label>
               </div>
 
+              {/* Honeypot for bots; hidden from people and assistive tech. */}
+              <div aria-hidden="true" className="absolute -left-[9999px] h-px w-px overflow-hidden">
+                <label htmlFor="access-website">Website</label>
+                <input id="access-website" name="website" type="text" tabIndex={-1} autoComplete="off" />
+              </div>
+
               <div className="flex flex-col gap-2 rounded-xl border border-ink/10 bg-surface px-5 py-4">
                 <p className="text-xs font-bold uppercase tracking-[0.6px] text-muted">Why we ask</p>
                 <p className="text-sm leading-6 text-ink">
@@ -259,9 +310,11 @@ export default function AccessFlowSection() {
               <div className="flex flex-col items-stretch gap-4 pt-1 sm:flex-row sm:items-center">
                 <button
                   type="submit"
-                  className="rounded-lg bg-ink px-6 py-3.5 text-base font-semibold text-surface transition-colors hover:bg-ink-2"
+                  disabled={sending}
+                  aria-busy={sending}
+                  className="rounded-lg bg-ink px-6 py-3.5 text-base font-semibold text-surface transition-colors hover:bg-ink-2 disabled:cursor-wait disabled:opacity-70"
                 >
-                  Request Access
+                  {sending ? "Sending…" : "Request Access"}
                 </button>
                 <Link
                   href="/legal/privacy-notice"
@@ -271,12 +324,20 @@ export default function AccessFlowSection() {
                 </Link>
               </div>
 
-              {submitted && (
-                <p role="status" className="rounded-lg border border-ink/10 bg-surface px-4 py-3 text-sm text-ink">
-                  Access requests aren&apos;t connected yet, so nothing was sent and no reference number was issued.
-                  Request routing will be enabled before launch.
-                </p>
-              )}
+              <div aria-live="polite">
+                {status.state === "sent" && (
+                  <p role="status" className="rounded-lg border border-ink/10 bg-surface px-4 py-3 text-sm text-ink">
+                    Request received. Your reference is{" "}
+                    <strong className="font-bold">{status.reference}</strong>. We&apos;ll review it and reply by
+                    email — approval and response time aren&apos;t guaranteed.
+                  </p>
+                )}
+                {status.state === "error" && (
+                  <p role="alert" className="rounded-lg border border-red-300 bg-red-50 px-4 py-3 text-sm text-red-800">
+                    {status.message}
+                  </p>
+                )}
+              </div>
             </form>
           </div>
 
