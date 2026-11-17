@@ -17,7 +17,7 @@ env:
 jobs:
   deploy:
     runs-on: ubuntu-latest
-    timeout-minutes: 30
+    timeout-minutes: 40
 
     steps:
       - name: Checkout
@@ -51,6 +51,7 @@ jobs:
             User $VM_USER
             IdentityFile ~/.ssh/deploy_key
             IdentitiesOnly yes
+            ServerAliveInterval 30
           CONF
           chmod 600 ~/.ssh/config
 
@@ -72,7 +73,7 @@ jobs:
           NEW_HASH=$(sha256sum package-lock.json | cut -d' ' -f1)
           OLD_HASH=$(cat .deps-hash 2>/dev/null || true)
           if [ "$NEW_HASH" != "$OLD_HASH" ] || [ ! -d node_modules ]; then
-            npm ci
+            npm ci --no-audit --no-fund
             echo "$NEW_HASH" > .deps-hash
           fi
 
@@ -80,7 +81,11 @@ jobs:
           if [ -d .next ]; then mv .next .next.old; fi
           mv .next.incoming .next
           pm2 restart talvrin-website
-          sleep 6
+
+          for i in $(seq 1 30); do
+            curl -s -o /dev/null http://127.0.0.1:3000 && break
+            sleep 2
+          done
 
           CHUNK=$(curl -s http://127.0.0.1:3000 | grep -o '/_next/static/[^"]*\.js' | head -1 || true)
           CODE=000
